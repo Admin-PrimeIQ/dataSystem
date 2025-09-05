@@ -1,0 +1,87 @@
+{
+  "kind": "collectionType",
+  "collectionName": "unit_industrials",
+  "info": {
+    "singularName": "unit-industrial",
+    "pluralName": "unit-industrials",
+    "displayName": "Unit Industrial",
+    "description": "Industrial unit subtype with land, warehouse, mezzanine, and dimensions"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "unit": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::unit.unit"
+    },
+    "land": {
+      "type": "json"
+    },
+    "warehouse": {
+      "type": "json"
+    },
+    "mezzanine": {
+      "type": "json"
+    },
+    "dimensions": {
+      "type": "json"
+    },
+    "ceilingHeight": {
+      "type": "decimal"
+    },
+    "loadingDock": {
+      "type": "boolean",
+      "default": false
+    },
+    "loadingDockCount": {
+      "type": "integer",
+      "default": 0,
+      "min": 0
+    },
+    "truckAccess": {
+      "type": "boolean",
+      "default": false
+    },
+    "railAccess": {
+      "type": "boolean",
+      "default": false
+    },
+    "powerCapacity": {
+      "type": "decimal"
+    },
+    "powerUnit": {
+      "type": "enumeration",
+      "enum": ["kW", "kVA", "HP"],
+      "default": "kW"
+    },
+    "waterSupply": {
+      "type": "boolean",
+      "default": false
+    },
+    "sewageSystem": {
+      "type": "boolean",
+      "default": false
+    },
+    "fireSuppression": {
+      "type": "boolean",
+      "default": false
+    },
+    "securitySystem": {
+      "type": "boolean",
+      "default": false
+    },
+    "officeSpace": {
+      "type": "decimal"
+    },
+    "storageCapacity": {
+      "type": "decimal"
+    },
+    "zoning": {
+      "type": "string",
+      "maxLength": 50
+    }
+  }
+}

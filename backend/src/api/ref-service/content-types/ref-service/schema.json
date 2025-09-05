@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ref_services",
+  "info": {
+    "singularName": "ref-service",
+    "pluralName": "ref-services",
+    "displayName": "Reference Service",
+    "description": "Property services (Water, Power Plant, Security, etc.)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 100
+    },
+    "description": {
+      "type": "text"
+    },
+    "code": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 10
+    },
+    "serviceType": {
+      "type": "enumeration",
+      "enum": ["utility", "security", "maintenance", "administrative", "other"],
+      "default": "other"
+    },
+    "isEssential": {
+      "type": "boolean",
+      "default": false
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "sortOrder": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

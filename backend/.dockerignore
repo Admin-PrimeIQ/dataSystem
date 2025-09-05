@@ -1,0 +1,16 @@
+.cache
+build
+docker
+node_modules
+.git
+test
+.gitignore
+gulpfile.js
+LICENCE
+README.md
+deploy/
+.vscode/
+.data/dir/*
+!.data/dir/README.md
+public/uploads/*
+!public/uploads/.gitkeep

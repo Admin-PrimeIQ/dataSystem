@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "unit_residentials",
+  "info": {
+    "singularName": "unit-residential",
+    "pluralName": "unit-residentials",
+    "displayName": "Unit Residential",
+    "description": "Residential unit subtype"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "unit": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::unit.unit"
+    },
+    "bedrooms": {
+      "type": "integer",
+      "required": true,
+      "min": 0
+    },
+    "bathrooms": {
+      "type": "integer",
+      "required": true,
+      "min": 0
+    },
+    "parkingSpaces": {
+      "type": "integer",
+      "default": 0,
+      "min": 0
+    },
+    "balcony": {
+      "type": "boolean",
+      "default": false
+    },
+    "terrace": {
+      "type": "boolean",
+      "default": false
+    },
+    "garden": {
+      "type": "boolean",
+      "default": false
+    },
+    "floor": {
+      "type": "integer"
+    },
+    "orientation": {
+      "type": "enumeration",
+      "enum": ["north", "south", "east", "west", "northeast", "northwest", "southeast", "southwest"]
+    },
+    "furnished": {
+      "type": "enumeration",
+      "enum": ["unfurnished", "semi-furnished", "fully-furnished"],
+      "default": "unfurnished"
+    },
+    "petFriendly": {
+      "type": "boolean",
+      "default": false
+    },
+    "smokingAllowed": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

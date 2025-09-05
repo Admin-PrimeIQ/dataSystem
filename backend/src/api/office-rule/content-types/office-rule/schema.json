@@ -1,0 +1,102 @@
+{
+  "kind": "collectionType",
+  "collectionName": "office_rules",
+  "info": {
+    "singularName": "office-rule",
+    "pluralName": "office-rules",
+    "displayName": "Office Rule",
+    "description": "Business rules for office units (min/max rent per m², unit size)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 100
+    },
+    "description": {
+      "type": "text"
+    },
+    "ruleType": {
+      "type": "enumeration",
+      "enum": ["rent_pricing", "unit_size", "class_requirements", "employee_capacity", "location", "other"],
+      "required": true
+    },
+    "minRentPerSqm": {
+      "type": "decimal",
+      "min": 0
+    },
+    "maxRentPerSqm": {
+      "type": "decimal",
+      "min": 0
+    },
+    "minUnitSize": {
+      "type": "decimal",
+      "min": 0
+    },
+    "maxUnitSize": {
+      "type": "decimal",
+      "min": 0
+    },
+    "minEmployees": {
+      "type": "integer",
+      "min": 0
+    },
+    "maxEmployees": {
+      "type": "integer",
+      "min": 0
+    },
+    "requiredClass": {
+      "type": "enumeration",
+      "enum": ["A", "B", "C", "premium", "standard", "basic"]
+    },
+    "meetingRoomRequirement": {
+      "type": "boolean",
+      "default": false
+    },
+    "minMeetingRooms": {
+      "type": "integer",
+      "min": 0
+    },
+    "receptionAreaRequired": {
+      "type": "boolean",
+      "default": false
+    },
+    "kitchenetteRequired": {
+      "type": "boolean",
+      "default": false
+    },
+    "parkingSpacesRequired": {
+      "type": "integer",
+      "min": 0
+    },
+    "elevatorAccessRequired": {
+      "type": "boolean",
+      "default": false
+    },
+    "airConditioningRequired": {
+      "type": "boolean",
+      "default": false
+    },
+    "locationRestrictions": {
+      "type": "json"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "effectiveDate": {
+      "type": "date"
+    },
+    "expirationDate": {
+      "type": "date"
+    },
+    "priority": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

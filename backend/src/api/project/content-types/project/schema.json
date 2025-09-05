@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project",
+    "description": "Real estate development projects"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 200
+    },
+    "code": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 20
+    },
+    "description": {
+      "type": "text"
+    },
+    "categoryId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::ref-category.ref-category"
+    },
+    "developer": {
+      "type": "json"
+    },
+    "location": {
+      "type": "json"
+    },
+    "dates": {
+      "type": "json"
+    },
+    "totals": {
+      "type": "json"
+    },
+    "projectFinancingParam": {
+      "type": "json"
+    },
+    "projectSegmentRule": {
+      "type": "json"
+    },
+    "projectAmenity": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::ref-amenity.ref-amenity"
+    },
+    "projectService": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::ref-service.ref-service"
+    },
+    "projectBankShare": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::ref-bank.ref-bank"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": ["planning", "development", "marketing", "construction", "completed", "cancelled"],
+      "default": "planning"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

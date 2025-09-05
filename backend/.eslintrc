@@ -1,0 +1,22 @@
+{
+  "extends": "airbnb-base",
+  "env": {
+    "commonjs": true,
+    "es6": true,
+    "node": true,
+    "browser": false
+  },
+  "globals": {
+    "strapi": true,
+    "window": true
+  },
+  "rules": {
+    "semi": [
+      "error",
+      "never"
+    ],
+    "no-console": "off",
+    "no-tabs": "off",
+    "no-throw-literal": "off"
+  }
+}

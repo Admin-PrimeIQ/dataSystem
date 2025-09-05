@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ref_amenities",
+  "info": {
+    "singularName": "ref-amenity",
+    "pluralName": "ref-amenities",
+    "displayName": "Reference Amenity",
+    "description": "Property amenities (Pool, Gym, Helipad, etc.)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 100
+    },
+    "description": {
+      "type": "text"
+    },
+    "code": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 10
+    },
+    "icon": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": ["recreation", "security", "convenience", "luxury", "business", "other"],
+      "default": "other"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "sortOrder": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

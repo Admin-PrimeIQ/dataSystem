@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ref_categories",
+  "info": {
+    "singularName": "ref-category",
+    "pluralName": "ref-categories",
+    "displayName": "Reference Category",
+    "description": "Categories for property types (Residential, Office, Industrial, etc.)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 100
+    },
+    "description": {
+      "type": "text"
+    },
+    "code": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 10
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "sortOrder": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

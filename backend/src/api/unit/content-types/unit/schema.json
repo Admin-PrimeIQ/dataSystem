@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "units",
+  "info": {
+    "singularName": "unit",
+    "pluralName": "units",
+    "displayName": "Unit",
+    "description": "Generic unit with area, price, rent, and KPIs"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 200
+    },
+    "code": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 20
+    },
+    "description": {
+      "type": "text"
+    },
+    "unitType": {
+      "type": "enumeration",
+      "enum": ["residential", "office", "industrial"],
+      "required": true
+    },
+    "area": {
+      "type": "decimal",
+      "required": true
+    },
+    "areaUnit": {
+      "type": "enumeration",
+      "enum": ["sqm", "sqft", "hectares", "acres"],
+      "default": "sqm"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "rent": {
+      "type": "decimal"
+    },
+    "currency": {
+      "type": "string",
+      "maxLength": 3,
+      "default": "GTQ"
+    },
+    "kpis": {
+      "type": "json"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": ["available", "reserved", "sold", "rented", "maintenance", "inactive"],
+      "default": "available"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

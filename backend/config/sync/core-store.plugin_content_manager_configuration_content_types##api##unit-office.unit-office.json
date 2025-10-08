@@ -1,0 +1,371 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::unit-office.unit-office",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "documentId",
+      "defaultSortBy": "documentId",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "unit": {
+        "edit": {
+          "label": "unit",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "unit",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "class": {
+        "edit": {
+          "label": "class",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "class",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "legends": {
+        "edit": {
+          "label": "legends",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "legends",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "employees": {
+        "edit": {
+          "label": "employees",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "employees",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "receptionArea": {
+        "edit": {
+          "label": "receptionArea",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "receptionArea",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "meetingRooms": {
+        "edit": {
+          "label": "meetingRooms",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "meetingRooms",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "privateOffices": {
+        "edit": {
+          "label": "privateOffices",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "privateOffices",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "openSpace": {
+        "edit": {
+          "label": "openSpace",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "openSpace",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "kitchenette": {
+        "edit": {
+          "label": "kitchenette",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "kitchenette",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "storageRoom": {
+        "edit": {
+          "label": "storageRoom",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "storageRoom",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "floor": {
+        "edit": {
+          "label": "floor",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "floor",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "view": {
+        "edit": {
+          "label": "view",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "view",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "airConditioning": {
+        "edit": {
+          "label": "airConditioning",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "airConditioning",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "elevatorAccess": {
+        "edit": {
+          "label": "elevatorAccess",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "elevatorAccess",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "documentId": {
+        "edit": {},
+        "list": {
+          "label": "documentId",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "createdAt",
+        "updatedAt",
+        "createdBy"
+      ],
+      "edit": [
+        [
+          {
+            "name": "unit",
+            "size": 6
+          },
+          {
+            "name": "class",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "legends",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "employees",
+            "size": 4
+          },
+          {
+            "name": "receptionArea",
+            "size": 4
+          },
+          {
+            "name": "meetingRooms",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "privateOffices",
+            "size": 4
+          },
+          {
+            "name": "openSpace",
+            "size": 4
+          },
+          {
+            "name": "kitchenette",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "storageRoom",
+            "size": 4
+          },
+          {
+            "name": "floor",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "view",
+            "size": 6
+          },
+          {
+            "name": "airConditioning",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "elevatorAccess",
+            "size": 4
+          }
+        ]
+      ]
+    },
+    "uid": "api::unit-office.unit-office"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

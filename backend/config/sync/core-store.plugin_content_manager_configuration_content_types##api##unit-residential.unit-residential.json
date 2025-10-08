@@ -1,0 +1,331 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::unit-residential.unit-residential",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "documentId",
+      "defaultSortBy": "documentId",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "unit": {
+        "edit": {
+          "label": "unit",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "unit",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "bedrooms": {
+        "edit": {
+          "label": "bedrooms",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "bedrooms",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "bathrooms": {
+        "edit": {
+          "label": "bathrooms",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "bathrooms",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "parkingSpaces": {
+        "edit": {
+          "label": "parkingSpaces",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "parkingSpaces",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "balcony": {
+        "edit": {
+          "label": "balcony",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "balcony",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "terrace": {
+        "edit": {
+          "label": "terrace",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "terrace",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "garden": {
+        "edit": {
+          "label": "garden",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "garden",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "floor": {
+        "edit": {
+          "label": "floor",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "floor",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "orientation": {
+        "edit": {
+          "label": "orientation",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "orientation",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "furnished": {
+        "edit": {
+          "label": "furnished",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "furnished",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "petFriendly": {
+        "edit": {
+          "label": "petFriendly",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "petFriendly",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "smokingAllowed": {
+        "edit": {
+          "label": "smokingAllowed",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "smokingAllowed",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "documentId": {
+        "edit": {},
+        "list": {
+          "label": "documentId",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "unit",
+        "bedrooms",
+        "bathrooms"
+      ],
+      "edit": [
+        [
+          {
+            "name": "unit",
+            "size": 6
+          },
+          {
+            "name": "bedrooms",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "bathrooms",
+            "size": 4
+          },
+          {
+            "name": "parkingSpaces",
+            "size": 4
+          },
+          {
+            "name": "balcony",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "terrace",
+            "size": 4
+          },
+          {
+            "name": "garden",
+            "size": 4
+          },
+          {
+            "name": "floor",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "orientation",
+            "size": 6
+          },
+          {
+            "name": "furnished",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "petFriendly",
+            "size": 4
+          },
+          {
+            "name": "smokingAllowed",
+            "size": 4
+          }
+        ]
+      ]
+    },
+    "uid": "api::unit-residential.unit-residential"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

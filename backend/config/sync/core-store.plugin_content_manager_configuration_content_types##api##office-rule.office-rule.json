@@ -1,0 +1,520 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::office-rule.office-rule",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "name",
+      "defaultSortBy": "name",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "name": {
+        "edit": {
+          "label": "name",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "description": {
+        "edit": {
+          "label": "description",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "description",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "ruleType": {
+        "edit": {
+          "label": "ruleType",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "ruleType",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "minRentPerSqm": {
+        "edit": {
+          "label": "minRentPerSqm",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "minRentPerSqm",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "maxRentPerSqm": {
+        "edit": {
+          "label": "maxRentPerSqm",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "maxRentPerSqm",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "minUnitSize": {
+        "edit": {
+          "label": "minUnitSize",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "minUnitSize",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "maxUnitSize": {
+        "edit": {
+          "label": "maxUnitSize",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "maxUnitSize",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "minEmployees": {
+        "edit": {
+          "label": "minEmployees",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "minEmployees",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "maxEmployees": {
+        "edit": {
+          "label": "maxEmployees",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "maxEmployees",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "requiredClass": {
+        "edit": {
+          "label": "requiredClass",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "requiredClass",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "meetingRoomRequirement": {
+        "edit": {
+          "label": "meetingRoomRequirement",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "meetingRoomRequirement",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "minMeetingRooms": {
+        "edit": {
+          "label": "minMeetingRooms",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "minMeetingRooms",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "receptionAreaRequired": {
+        "edit": {
+          "label": "receptionAreaRequired",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "receptionAreaRequired",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "kitchenetteRequired": {
+        "edit": {
+          "label": "kitchenetteRequired",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "kitchenetteRequired",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "parkingSpacesRequired": {
+        "edit": {
+          "label": "parkingSpacesRequired",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "parkingSpacesRequired",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "elevatorAccessRequired": {
+        "edit": {
+          "label": "elevatorAccessRequired",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "elevatorAccessRequired",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "airConditioningRequired": {
+        "edit": {
+          "label": "airConditioningRequired",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "airConditioningRequired",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "locationRestrictions": {
+        "edit": {
+          "label": "locationRestrictions",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "locationRestrictions",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "isActive": {
+        "edit": {
+          "label": "isActive",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "isActive",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "effectiveDate": {
+        "edit": {
+          "label": "effectiveDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "effectiveDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "expirationDate": {
+        "edit": {
+          "label": "expirationDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "expirationDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "priority": {
+        "edit": {
+          "label": "priority",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "priority",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "documentId": {
+        "edit": {},
+        "list": {
+          "label": "documentId",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "name",
+        "description",
+        "ruleType"
+      ],
+      "edit": [
+        [
+          {
+            "name": "name",
+            "size": 6
+          },
+          {
+            "name": "description",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "ruleType",
+            "size": 6
+          },
+          {
+            "name": "minRentPerSqm",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "maxRentPerSqm",
+            "size": 4
+          },
+          {
+            "name": "minUnitSize",
+            "size": 4
+          },
+          {
+            "name": "maxUnitSize",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "minEmployees",
+            "size": 4
+          },
+          {
+            "name": "maxEmployees",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "requiredClass",
+            "size": 6
+          },
+          {
+            "name": "meetingRoomRequirement",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "minMeetingRooms",
+            "size": 4
+          },
+          {
+            "name": "receptionAreaRequired",
+            "size": 4
+          },
+          {
+            "name": "kitchenetteRequired",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "parkingSpacesRequired",
+            "size": 4
+          },
+          {
+            "name": "elevatorAccessRequired",
+            "size": 4
+          },
+          {
+            "name": "airConditioningRequired",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "locationRestrictions",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "isActive",
+            "size": 4
+          },
+          {
+            "name": "effectiveDate",
+            "size": 4
+          },
+          {
+            "name": "expirationDate",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "priority",
+            "size": 4
+          }
+        ]
+      ]
+    },
+    "uid": "api::office-rule.office-rule"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

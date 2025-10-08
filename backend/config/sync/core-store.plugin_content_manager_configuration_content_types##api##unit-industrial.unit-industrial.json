@@ -1,0 +1,469 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::unit-industrial.unit-industrial",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "documentId",
+      "defaultSortBy": "documentId",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "unit": {
+        "edit": {
+          "label": "unit",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "unit",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "land": {
+        "edit": {
+          "label": "land",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "land",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "warehouse": {
+        "edit": {
+          "label": "warehouse",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "warehouse",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "mezzanine": {
+        "edit": {
+          "label": "mezzanine",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "mezzanine",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "dimensions": {
+        "edit": {
+          "label": "dimensions",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "dimensions",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "ceilingHeight": {
+        "edit": {
+          "label": "ceilingHeight",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "ceilingHeight",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "loadingDock": {
+        "edit": {
+          "label": "loadingDock",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "loadingDock",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "loadingDockCount": {
+        "edit": {
+          "label": "loadingDockCount",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "loadingDockCount",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "truckAccess": {
+        "edit": {
+          "label": "truckAccess",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "truckAccess",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "railAccess": {
+        "edit": {
+          "label": "railAccess",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "railAccess",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "powerCapacity": {
+        "edit": {
+          "label": "powerCapacity",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "powerCapacity",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "powerUnit": {
+        "edit": {
+          "label": "powerUnit",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "powerUnit",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "waterSupply": {
+        "edit": {
+          "label": "waterSupply",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "waterSupply",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "sewageSystem": {
+        "edit": {
+          "label": "sewageSystem",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "sewageSystem",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "fireSuppression": {
+        "edit": {
+          "label": "fireSuppression",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "fireSuppression",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "securitySystem": {
+        "edit": {
+          "label": "securitySystem",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "securitySystem",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "officeSpace": {
+        "edit": {
+          "label": "officeSpace",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "officeSpace",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "storageCapacity": {
+        "edit": {
+          "label": "storageCapacity",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "storageCapacity",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "zoning": {
+        "edit": {
+          "label": "zoning",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "zoning",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "documentId": {
+        "edit": {},
+        "list": {
+          "label": "documentId",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "createdAt",
+        "updatedAt",
+        "createdBy"
+      ],
+      "edit": [
+        [
+          {
+            "name": "unit",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "land",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "warehouse",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "mezzanine",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "dimensions",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "ceilingHeight",
+            "size": 4
+          },
+          {
+            "name": "loadingDock",
+            "size": 4
+          },
+          {
+            "name": "loadingDockCount",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "truckAccess",
+            "size": 4
+          },
+          {
+            "name": "railAccess",
+            "size": 4
+          },
+          {
+            "name": "powerCapacity",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "powerUnit",
+            "size": 6
+          },
+          {
+            "name": "waterSupply",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "sewageSystem",
+            "size": 4
+          },
+          {
+            "name": "fireSuppression",
+            "size": 4
+          },
+          {
+            "name": "securitySystem",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "officeSpace",
+            "size": 4
+          },
+          {
+            "name": "storageCapacity",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "zoning",
+            "size": 6
+          }
+        ]
+      ]
+    },
+    "uid": "api::unit-industrial.unit-industrial"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

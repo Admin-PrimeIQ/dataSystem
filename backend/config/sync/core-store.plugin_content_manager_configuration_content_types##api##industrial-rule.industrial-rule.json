@@ -1,0 +1,634 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::industrial-rule.industrial-rule",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "name",
+      "defaultSortBy": "name",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "name": {
+        "edit": {
+          "label": "name",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "description": {
+        "edit": {
+          "label": "description",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "description",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "ruleType": {
+        "edit": {
+          "label": "ruleType",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "ruleType",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "minWarehouseHeight": {
+        "edit": {
+          "label": "minWarehouseHeight",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "minWarehouseHeight",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "maxWarehouseHeight": {
+        "edit": {
+          "label": "maxWarehouseHeight",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "maxWarehouseHeight",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "minLoadingAreaSize": {
+        "edit": {
+          "label": "minLoadingAreaSize",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "minLoadingAreaSize",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "maxLoadingAreaSize": {
+        "edit": {
+          "label": "maxLoadingAreaSize",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "maxLoadingAreaSize",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "minLoadingDocks": {
+        "edit": {
+          "label": "minLoadingDocks",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "minLoadingDocks",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "maxLoadingDocks": {
+        "edit": {
+          "label": "maxLoadingDocks",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "maxLoadingDocks",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "minPowerCapacity": {
+        "edit": {
+          "label": "minPowerCapacity",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "minPowerCapacity",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "maxPowerCapacity": {
+        "edit": {
+          "label": "maxPowerCapacity",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "maxPowerCapacity",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "powerUnit": {
+        "edit": {
+          "label": "powerUnit",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "powerUnit",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "truckAccessRequired": {
+        "edit": {
+          "label": "truckAccessRequired",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "truckAccessRequired",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "railAccessRequired": {
+        "edit": {
+          "label": "railAccessRequired",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "railAccessRequired",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "waterSupplyRequired": {
+        "edit": {
+          "label": "waterSupplyRequired",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "waterSupplyRequired",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "sewageSystemRequired": {
+        "edit": {
+          "label": "sewageSystemRequired",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "sewageSystemRequired",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "fireSuppressionRequired": {
+        "edit": {
+          "label": "fireSuppressionRequired",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "fireSuppressionRequired",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "securitySystemRequired": {
+        "edit": {
+          "label": "securitySystemRequired",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "securitySystemRequired",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "minOfficeSpace": {
+        "edit": {
+          "label": "minOfficeSpace",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "minOfficeSpace",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "maxOfficeSpace": {
+        "edit": {
+          "label": "maxOfficeSpace",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "maxOfficeSpace",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "minStorageCapacity": {
+        "edit": {
+          "label": "minStorageCapacity",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "minStorageCapacity",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "maxStorageCapacity": {
+        "edit": {
+          "label": "maxStorageCapacity",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "maxStorageCapacity",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "allowedZoning": {
+        "edit": {
+          "label": "allowedZoning",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "allowedZoning",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "restrictedZoning": {
+        "edit": {
+          "label": "restrictedZoning",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "restrictedZoning",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "isActive": {
+        "edit": {
+          "label": "isActive",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "isActive",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "effectiveDate": {
+        "edit": {
+          "label": "effectiveDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "effectiveDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "expirationDate": {
+        "edit": {
+          "label": "expirationDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "expirationDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "priority": {
+        "edit": {
+          "label": "priority",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "priority",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "documentId": {
+        "edit": {},
+        "list": {
+          "label": "documentId",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "name",
+        "description",
+        "ruleType"
+      ],
+      "edit": [
+        [
+          {
+            "name": "name",
+            "size": 6
+          },
+          {
+            "name": "description",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "ruleType",
+            "size": 6
+          },
+          {
+            "name": "minWarehouseHeight",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "maxWarehouseHeight",
+            "size": 4
+          },
+          {
+            "name": "minLoadingAreaSize",
+            "size": 4
+          },
+          {
+            "name": "maxLoadingAreaSize",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "minLoadingDocks",
+            "size": 4
+          },
+          {
+            "name": "maxLoadingDocks",
+            "size": 4
+          },
+          {
+            "name": "minPowerCapacity",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "maxPowerCapacity",
+            "size": 4
+          },
+          {
+            "name": "powerUnit",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "truckAccessRequired",
+            "size": 4
+          },
+          {
+            "name": "railAccessRequired",
+            "size": 4
+          },
+          {
+            "name": "waterSupplyRequired",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "sewageSystemRequired",
+            "size": 4
+          },
+          {
+            "name": "fireSuppressionRequired",
+            "size": 4
+          },
+          {
+            "name": "securitySystemRequired",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "minOfficeSpace",
+            "size": 4
+          },
+          {
+            "name": "maxOfficeSpace",
+            "size": 4
+          },
+          {
+            "name": "minStorageCapacity",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "maxStorageCapacity",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "allowedZoning",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "restrictedZoning",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "isActive",
+            "size": 4
+          },
+          {
+            "name": "effectiveDate",
+            "size": 4
+          },
+          {
+            "name": "expirationDate",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "priority",
+            "size": 4
+          }
+        ]
+      ]
+    },
+    "uid": "api::industrial-rule.industrial-rule"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

@@ -1,0 +1,1821 @@
+{
+  "documentId": "idmfiga228dxkndxh2njysct",
+  "name": "Super Admin",
+  "code": "strapi-super-admin",
+  "description": "Super Admins can access and manage all features and settings.",
+  "locale": null,
+  "permissions": [
+    {
+      "documentId": "j20hq84ylo07a7h54gvpjz24",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::industrial-rule.industrial-rule",
+      "properties": {
+        "fields": [
+          "name",
+          "description",
+          "ruleType",
+          "minWarehouseHeight",
+          "maxWarehouseHeight",
+          "minLoadingAreaSize",
+          "maxLoadingAreaSize",
+          "minLoadingDocks",
+          "maxLoadingDocks",
+          "minPowerCapacity",
+          "maxPowerCapacity",
+          "powerUnit",
+          "truckAccessRequired",
+          "railAccessRequired",
+          "waterSupplyRequired",
+          "sewageSystemRequired",
+          "fireSuppressionRequired",
+          "securitySystemRequired",
+          "minOfficeSpace",
+          "maxOfficeSpace",
+          "minStorageCapacity",
+          "maxStorageCapacity",
+          "allowedZoning",
+          "restrictedZoning",
+          "isActive",
+          "effectiveDate",
+          "expirationDate",
+          "priority"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "nnf1ey7w1dxmic0q9gyp4kio",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::industrial-rule.industrial-rule",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "ccfhisflvv7danno9c50j9z5",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::industrial-rule.industrial-rule",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "yoqfwn0ckdubuo6ian7ugfme",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::industrial-rule.industrial-rule",
+      "properties": {
+        "fields": [
+          "name",
+          "description",
+          "ruleType",
+          "minWarehouseHeight",
+          "maxWarehouseHeight",
+          "minLoadingAreaSize",
+          "maxLoadingAreaSize",
+          "minLoadingDocks",
+          "maxLoadingDocks",
+          "minPowerCapacity",
+          "maxPowerCapacity",
+          "powerUnit",
+          "truckAccessRequired",
+          "railAccessRequired",
+          "waterSupplyRequired",
+          "sewageSystemRequired",
+          "fireSuppressionRequired",
+          "securitySystemRequired",
+          "minOfficeSpace",
+          "maxOfficeSpace",
+          "minStorageCapacity",
+          "maxStorageCapacity",
+          "allowedZoning",
+          "restrictedZoning",
+          "isActive",
+          "effectiveDate",
+          "expirationDate",
+          "priority"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "zzcpyki9c2iapujpc8pc1cd5",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::industrial-rule.industrial-rule",
+      "properties": {
+        "fields": [
+          "name",
+          "description",
+          "ruleType",
+          "minWarehouseHeight",
+          "maxWarehouseHeight",
+          "minLoadingAreaSize",
+          "maxLoadingAreaSize",
+          "minLoadingDocks",
+          "maxLoadingDocks",
+          "minPowerCapacity",
+          "maxPowerCapacity",
+          "powerUnit",
+          "truckAccessRequired",
+          "railAccessRequired",
+          "waterSupplyRequired",
+          "sewageSystemRequired",
+          "fireSuppressionRequired",
+          "securitySystemRequired",
+          "minOfficeSpace",
+          "maxOfficeSpace",
+          "minStorageCapacity",
+          "maxStorageCapacity",
+          "allowedZoning",
+          "restrictedZoning",
+          "isActive",
+          "effectiveDate",
+          "expirationDate",
+          "priority"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "h5zjisgbxb8z167vzt8rm14y",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::office-rule.office-rule",
+      "properties": {
+        "fields": [
+          "name",
+          "description",
+          "ruleType",
+          "minRentPerSqm",
+          "maxRentPerSqm",
+          "minUnitSize",
+          "maxUnitSize",
+          "minEmployees",
+          "maxEmployees",
+          "requiredClass",
+          "meetingRoomRequirement",
+          "minMeetingRooms",
+          "receptionAreaRequired",
+          "kitchenetteRequired",
+          "parkingSpacesRequired",
+          "elevatorAccessRequired",
+          "airConditioningRequired",
+          "locationRestrictions",
+          "isActive",
+          "effectiveDate",
+          "expirationDate",
+          "priority"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "j5a37xy0gggmi32s34s4m39p",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::office-rule.office-rule",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "ic2tyw5xadzqn0uetovx22d1",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::office-rule.office-rule",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "ftgpxx5aut42rxgu4o3r1bbh",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::office-rule.office-rule",
+      "properties": {
+        "fields": [
+          "name",
+          "description",
+          "ruleType",
+          "minRentPerSqm",
+          "maxRentPerSqm",
+          "minUnitSize",
+          "maxUnitSize",
+          "minEmployees",
+          "maxEmployees",
+          "requiredClass",
+          "meetingRoomRequirement",
+          "minMeetingRooms",
+          "receptionAreaRequired",
+          "kitchenetteRequired",
+          "parkingSpacesRequired",
+          "elevatorAccessRequired",
+          "airConditioningRequired",
+          "locationRestrictions",
+          "isActive",
+          "effectiveDate",
+          "expirationDate",
+          "priority"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "xor2ynajz514jipdy5hoks87",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::office-rule.office-rule",
+      "properties": {
+        "fields": [
+          "name",
+          "description",
+          "ruleType",
+          "minRentPerSqm",
+          "maxRentPerSqm",
+          "minUnitSize",
+          "maxUnitSize",
+          "minEmployees",
+          "maxEmployees",
+          "requiredClass",
+          "meetingRoomRequirement",
+          "minMeetingRooms",
+          "receptionAreaRequired",
+          "kitchenetteRequired",
+          "parkingSpacesRequired",
+          "elevatorAccessRequired",
+          "airConditioningRequired",
+          "locationRestrictions",
+          "isActive",
+          "effectiveDate",
+          "expirationDate",
+          "priority"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "za5i1l4vikzagvdagxcbpvh4",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::project.project",
+      "properties": {
+        "fields": [
+          "name",
+          "code",
+          "description",
+          "categoryId",
+          "developer",
+          "location",
+          "dates",
+          "totals",
+          "projectFinancingParam",
+          "projectSegmentRule",
+          "projectAmenity",
+          "projectService",
+          "projectBankShare",
+          "status",
+          "isActive"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "nkso0vdqmvjaoyvml6nmvut1",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::project.project",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "xxnr21w9cmap6l5wztrdvcq7",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::project.project",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "ucd7ddcvx1qpo5ibmfii8c3p",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::project.project",
+      "properties": {
+        "fields": [
+          "name",
+          "code",
+          "description",
+          "categoryId",
+          "developer",
+          "location",
+          "dates",
+          "totals",
+          "projectFinancingParam",
+          "projectSegmentRule",
+          "projectAmenity",
+          "projectService",
+          "projectBankShare",
+          "status",
+          "isActive"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "dpokrink07rzquh3y5r2hrg8",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::project.project",
+      "properties": {
+        "fields": [
+          "name",
+          "code",
+          "description",
+          "categoryId",
+          "developer",
+          "location",
+          "dates",
+          "totals",
+          "projectFinancingParam",
+          "projectSegmentRule",
+          "projectAmenity",
+          "projectService",
+          "projectBankShare",
+          "status",
+          "isActive"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "sf09u5ce87h1ca1awaxefvod",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::ref-amenity.ref-amenity",
+      "properties": {
+        "fields": [
+          "name",
+          "description",
+          "code",
+          "icon",
+          "category",
+          "isActive",
+          "sortOrder"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "kdaaomp8xoxw44lpzedthf8u",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::ref-amenity.ref-amenity",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "q0yfpanuqngaq8j2ewffn2s4",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::ref-amenity.ref-amenity",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "sipk0gwxk5azgubbcg9c5uu0",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::ref-amenity.ref-amenity",
+      "properties": {
+        "fields": [
+          "name",
+          "description",
+          "code",
+          "icon",
+          "category",
+          "isActive",
+          "sortOrder"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "gm7ay4l19rc095h9fuf4wydt",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::ref-amenity.ref-amenity",
+      "properties": {
+        "fields": [
+          "name",
+          "description",
+          "code",
+          "icon",
+          "category",
+          "isActive",
+          "sortOrder"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "f3kfo6p5bunzs1k81hzh3u6b",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::ref-bank.ref-bank",
+      "properties": {
+        "fields": [
+          "name",
+          "code",
+          "swiftCode",
+          "country",
+          "website",
+          "phone",
+          "address",
+          "isActive",
+          "sortOrder"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "l78ylp4w3641fp7w9keayceb",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::ref-bank.ref-bank",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "tpvb6abd5k05py82b4kyspxs",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::ref-bank.ref-bank",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "eph4geijoc7t5h1zrmgwb68d",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::ref-bank.ref-bank",
+      "properties": {
+        "fields": [
+          "name",
+          "code",
+          "swiftCode",
+          "country",
+          "website",
+          "phone",
+          "address",
+          "isActive",
+          "sortOrder"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "kxtje0jnntl73zt3xddd3m0b",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::ref-bank.ref-bank",
+      "properties": {
+        "fields": [
+          "name",
+          "code",
+          "swiftCode",
+          "country",
+          "website",
+          "phone",
+          "address",
+          "isActive",
+          "sortOrder"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "geiprionxjjqcavj8iv7b1b7",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::ref-category.ref-category",
+      "properties": {
+        "fields": [
+          "name",
+          "description",
+          "code",
+          "isActive",
+          "sortOrder"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "ji8ss33ezxrox0c9n0w3bi4l",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::ref-category.ref-category",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "p8gn0mdcco2zdxdnxwaum8zl",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::ref-category.ref-category",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "x9k0x5bo7rgykcksh951fr06",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::ref-category.ref-category",
+      "properties": {
+        "fields": [
+          "name",
+          "description",
+          "code",
+          "isActive",
+          "sortOrder"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "gapgvzqht7cj99mqsc4neqo9",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::ref-category.ref-category",
+      "properties": {
+        "fields": [
+          "name",
+          "description",
+          "code",
+          "isActive",
+          "sortOrder"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "j7ejr9qjx5artj072xgisjw2",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::ref-feature.ref-feature",
+      "properties": {
+        "fields": [
+          "name",
+          "description",
+          "code",
+          "dataType",
+          "isRequired",
+          "defaultValue",
+          "validationRules",
+          "appliesTo",
+          "category",
+          "isActive",
+          "sortOrder"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "w0bniy9puy1vei7iq5di0o40",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::ref-feature.ref-feature",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "cc07kcefgatd5s0ws1xbuqsh",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::ref-feature.ref-feature",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "n087p45dathidqz0z6ug5bvv",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::ref-feature.ref-feature",
+      "properties": {
+        "fields": [
+          "name",
+          "description",
+          "code",
+          "dataType",
+          "isRequired",
+          "defaultValue",
+          "validationRules",
+          "appliesTo",
+          "category",
+          "isActive",
+          "sortOrder"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "kbb9c0yxf5n1vtvb7jmursf2",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::ref-feature.ref-feature",
+      "properties": {
+        "fields": [
+          "name",
+          "description",
+          "code",
+          "dataType",
+          "isRequired",
+          "defaultValue",
+          "validationRules",
+          "appliesTo",
+          "category",
+          "isActive",
+          "sortOrder"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "pxbo7aesl0dszn5g1oupatt1",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::ref-service.ref-service",
+      "properties": {
+        "fields": [
+          "name",
+          "description",
+          "code",
+          "serviceType",
+          "isEssential",
+          "isActive",
+          "sortOrder"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "b14db4otgpxz20nwyrhvnti1",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::ref-service.ref-service",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "y30yyhd7hd2e4rzx6597zpyg",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::ref-service.ref-service",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "og6t97hpc67921pf8n5o6rhh",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::ref-service.ref-service",
+      "properties": {
+        "fields": [
+          "name",
+          "description",
+          "code",
+          "serviceType",
+          "isEssential",
+          "isActive",
+          "sortOrder"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "dc0lhqid2oh12tunptgxl6ns",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::ref-service.ref-service",
+      "properties": {
+        "fields": [
+          "name",
+          "description",
+          "code",
+          "serviceType",
+          "isEssential",
+          "isActive",
+          "sortOrder"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "dqzr2euyd9u0upt64brnmodp",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::residential-rule.residential-rule",
+      "properties": {
+        "fields": [
+          "name",
+          "description",
+          "ruleType",
+          "minPricePerSqm",
+          "maxPricePerSqm",
+          "minArea",
+          "maxArea",
+          "minBedrooms",
+          "maxBedrooms",
+          "minBathrooms",
+          "maxBathrooms",
+          "locationRestrictions",
+          "amenityRequirements",
+          "isActive",
+          "effectiveDate",
+          "expirationDate",
+          "priority"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "y15zagii7jh5fgxtb3kcdvvj",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::residential-rule.residential-rule",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "m1hj0215mfawhrz8s3x2m7fe",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::residential-rule.residential-rule",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "ftke5etmy726t0daaxll2rfn",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::residential-rule.residential-rule",
+      "properties": {
+        "fields": [
+          "name",
+          "description",
+          "ruleType",
+          "minPricePerSqm",
+          "maxPricePerSqm",
+          "minArea",
+          "maxArea",
+          "minBedrooms",
+          "maxBedrooms",
+          "minBathrooms",
+          "maxBathrooms",
+          "locationRestrictions",
+          "amenityRequirements",
+          "isActive",
+          "effectiveDate",
+          "expirationDate",
+          "priority"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "kwkdfhaensiycjog4dthn6cg",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::residential-rule.residential-rule",
+      "properties": {
+        "fields": [
+          "name",
+          "description",
+          "ruleType",
+          "minPricePerSqm",
+          "maxPricePerSqm",
+          "minArea",
+          "maxArea",
+          "minBedrooms",
+          "maxBedrooms",
+          "minBathrooms",
+          "maxBathrooms",
+          "locationRestrictions",
+          "amenityRequirements",
+          "isActive",
+          "effectiveDate",
+          "expirationDate",
+          "priority"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "c8ihi4naw8j21hnvg01igt82",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::unit-industrial.unit-industrial",
+      "properties": {
+        "fields": [
+          "unit",
+          "land",
+          "warehouse",
+          "mezzanine",
+          "dimensions",
+          "ceilingHeight",
+          "loadingDock",
+          "loadingDockCount",
+          "truckAccess",
+          "railAccess",
+          "powerCapacity",
+          "powerUnit",
+          "waterSupply",
+          "sewageSystem",
+          "fireSuppression",
+          "securitySystem",
+          "officeSpace",
+          "storageCapacity",
+          "zoning"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "qpszve153ypvhv9iqoa7641r",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::unit-industrial.unit-industrial",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "ceee0zuwkyawb8vb1d4tkvz0",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::unit-industrial.unit-industrial",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "sujoz0iuxjz1sa06ravhxc4n",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::unit-industrial.unit-industrial",
+      "properties": {
+        "fields": [
+          "unit",
+          "land",
+          "warehouse",
+          "mezzanine",
+          "dimensions",
+          "ceilingHeight",
+          "loadingDock",
+          "loadingDockCount",
+          "truckAccess",
+          "railAccess",
+          "powerCapacity",
+          "powerUnit",
+          "waterSupply",
+          "sewageSystem",
+          "fireSuppression",
+          "securitySystem",
+          "officeSpace",
+          "storageCapacity",
+          "zoning"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "zhjokb5cveudtk75extgyk13",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::unit-industrial.unit-industrial",
+      "properties": {
+        "fields": [
+          "unit",
+          "land",
+          "warehouse",
+          "mezzanine",
+          "dimensions",
+          "ceilingHeight",
+          "loadingDock",
+          "loadingDockCount",
+          "truckAccess",
+          "railAccess",
+          "powerCapacity",
+          "powerUnit",
+          "waterSupply",
+          "sewageSystem",
+          "fireSuppression",
+          "securitySystem",
+          "officeSpace",
+          "storageCapacity",
+          "zoning"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "wgknow4sy0wagyij9u09g8fv",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::unit-office.unit-office",
+      "properties": {
+        "fields": [
+          "unit",
+          "class",
+          "legends",
+          "employees",
+          "receptionArea",
+          "meetingRooms",
+          "privateOffices",
+          "openSpace",
+          "kitchenette",
+          "storageRoom",
+          "floor",
+          "view",
+          "airConditioning",
+          "elevatorAccess"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "zzha5vgpwwvyrkdied5ll1rm",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::unit-office.unit-office",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "zliz9sfcnnl4einkhj6d0brv",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::unit-office.unit-office",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "ips8jsuwmikzim9ldo0stejh",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::unit-office.unit-office",
+      "properties": {
+        "fields": [
+          "unit",
+          "class",
+          "legends",
+          "employees",
+          "receptionArea",
+          "meetingRooms",
+          "privateOffices",
+          "openSpace",
+          "kitchenette",
+          "storageRoom",
+          "floor",
+          "view",
+          "airConditioning",
+          "elevatorAccess"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "box4i76o9i8mktbn03jvqfm6",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::unit-office.unit-office",
+      "properties": {
+        "fields": [
+          "unit",
+          "class",
+          "legends",
+          "employees",
+          "receptionArea",
+          "meetingRooms",
+          "privateOffices",
+          "openSpace",
+          "kitchenette",
+          "storageRoom",
+          "floor",
+          "view",
+          "airConditioning",
+          "elevatorAccess"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "hk6gbrhvcdd0ho0j00jk2iuh",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::unit-residential.unit-residential",
+      "properties": {
+        "fields": [
+          "unit",
+          "bedrooms",
+          "bathrooms",
+          "parkingSpaces",
+          "balcony",
+          "terrace",
+          "garden",
+          "floor",
+          "orientation",
+          "furnished",
+          "petFriendly",
+          "smokingAllowed"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "lwb2rc02cq7u1djt5fv50ob7",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::unit-residential.unit-residential",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "ci7wxrlv4qg62tx2wsx850qy",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::unit-residential.unit-residential",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "zknalfztmq2bj1v3lns5vl1y",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::unit-residential.unit-residential",
+      "properties": {
+        "fields": [
+          "unit",
+          "bedrooms",
+          "bathrooms",
+          "parkingSpaces",
+          "balcony",
+          "terrace",
+          "garden",
+          "floor",
+          "orientation",
+          "furnished",
+          "petFriendly",
+          "smokingAllowed"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "ae2vvr95p7fnjy2q9u7ofg2e",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::unit-residential.unit-residential",
+      "properties": {
+        "fields": [
+          "unit",
+          "bedrooms",
+          "bathrooms",
+          "parkingSpaces",
+          "balcony",
+          "terrace",
+          "garden",
+          "floor",
+          "orientation",
+          "furnished",
+          "petFriendly",
+          "smokingAllowed"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "qnrqw5nlu228xjimx9ecm9ah",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::unit.unit",
+      "properties": {
+        "fields": [
+          "name",
+          "code",
+          "description",
+          "unitType",
+          "area",
+          "areaUnit",
+          "price",
+          "rent",
+          "currency",
+          "kpis",
+          "status",
+          "isActive"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "ntnqrwkwxw2l2kjrxe9q8nhf",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::unit.unit",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "bi8wrci68oobb19gjef8cg9d",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::unit.unit",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "k6zbxjjn6ilv0rttbuwlvty9",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::unit.unit",
+      "properties": {
+        "fields": [
+          "name",
+          "code",
+          "description",
+          "unitType",
+          "area",
+          "areaUnit",
+          "price",
+          "rent",
+          "currency",
+          "kpis",
+          "status",
+          "isActive"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "ia2ubxyihia2kn9f031qvpl7",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::unit.unit",
+      "properties": {
+        "fields": [
+          "name",
+          "code",
+          "description",
+          "unitType",
+          "area",
+          "areaUnit",
+          "price",
+          "rent",
+          "currency",
+          "kpis",
+          "status",
+          "isActive"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "t7e2unh4amp5eothc2kdg11m",
+      "action": "admin::api-tokens.access",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "plwhq2i86y9x7u2mw4mnnqkg",
+      "action": "admin::api-tokens.create",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "ry191vpqzlt926l4f2nn4kau",
+      "action": "admin::api-tokens.delete",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "idv92b6j6k59626dhvkw4w49",
+      "action": "admin::api-tokens.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "u1jz76w157vrgyippozjhuw9",
+      "action": "admin::api-tokens.regenerate",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "qqpv521fyhglu686i2rkf1mn",
+      "action": "admin::api-tokens.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "jbswaegxr7a34276d1u8nhmj",
+      "action": "admin::marketplace.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "dlkr5zlvzn9qgjlvgzmt2zxk",
+      "action": "admin::project-settings.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "ipd5xtpzh15opsm0aflx2idj",
+      "action": "admin::project-settings.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "f8abw5h1kvaxy2htbeznk5b7",
+      "action": "admin::roles.create",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "c7g4qrrmgq9b8i1wtc9r8hnb",
+      "action": "admin::roles.delete",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "wmf2xr2phwvfudh1rpgax6hv",
+      "action": "admin::roles.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "s89emy41e6gbfsojekvag5d8",
+      "action": "admin::roles.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "wph0v4k9dxrcf1dpdyig3f8a",
+      "action": "admin::transfer.tokens.access",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "dwns9bxvlwcr7jy17irnxy4h",
+      "action": "admin::transfer.tokens.create",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "kpo4sewipf1wpmr9ggzelnr5",
+      "action": "admin::transfer.tokens.delete",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "sfgejy5pf0u89lmefhhyygqs",
+      "action": "admin::transfer.tokens.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "xv7zfghqpwmhrn43a0hmatfi",
+      "action": "admin::transfer.tokens.regenerate",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "v78bnqe0vbwctagkpzg9lb9b",
+      "action": "admin::transfer.tokens.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "cojsutjc98c80etsf34rnckj",
+      "action": "admin::users.create",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "gi5uk9rtwqmm7mhacu1b767p",
+      "action": "admin::users.delete",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "aekmet0ycdyl8rwt2rwenasz",
+      "action": "admin::users.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "nbgajjfx6lkerfso2tenzxpq",
+      "action": "admin::users.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "i7idi8s3rc7lhyu2m74bjlj9",
+      "action": "admin::webhooks.create",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "w8arppn4eiv9q7tp4s6q2gn1",
+      "action": "admin::webhooks.delete",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "ip3p6rt3ynnlnimig2wq2ul0",
+      "action": "admin::webhooks.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "dirk7ev7kgowztsl330p8kc3",
+      "action": "admin::webhooks.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "wm8fyrx8mmqpdcoimgf6g7jt",
+      "action": "plugin::config-sync.menu-link",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "u6wzu4adbmq3xpwn7xr5vrat",
+      "action": "plugin::config-sync.settings.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "y2dqgnvnho3wmzjn1oxhz2ys",
+      "action": "plugin::content-manager.collection-types.configure-view",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "z2x330scvebp3ur896aat4a4",
+      "action": "plugin::content-manager.components.configure-layout",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "humwo0jwsyiets4kx5bxdj1o",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "plugin::users-permissions.user",
+      "properties": {
+        "fields": [
+          "username",
+          "email",
+          "provider",
+          "password",
+          "resetPasswordToken",
+          "confirmationToken",
+          "confirmed",
+          "blocked",
+          "role"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "smpn3cz8nhxjsvmtsw7tjdt4",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "plugin::users-permissions.user",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "jb4tw0xzykobhxpvl6o8jyil",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "plugin::users-permissions.user",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "fkjaihiqyc9h33kzqxhydiuo",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "plugin::users-permissions.user",
+      "properties": {
+        "fields": [
+          "username",
+          "email",
+          "provider",
+          "password",
+          "resetPasswordToken",
+          "confirmationToken",
+          "confirmed",
+          "blocked",
+          "role"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "ybdozpo9d58943mrpqrkl3vh",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "plugin::users-permissions.user",
+      "properties": {
+        "fields": [
+          "username",
+          "email",
+          "provider",
+          "password",
+          "resetPasswordToken",
+          "confirmationToken",
+          "confirmed",
+          "blocked",
+          "role"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "rqiyki1erbkamcglrqtpensh",
+      "action": "plugin::content-manager.single-types.configure-view",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "s9m2z4rzbotl8chsmimzgkl5",
+      "action": "plugin::content-type-builder.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "cjuaxeozb783gbhtz2z7k149",
+      "action": "plugin::email.settings.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "v1gmecbvqjafcnc1inqvhbnq",
+      "action": "plugin::i18n.locale.create",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "hw54nbjk7if3tcwmsst4c9wx",
+      "action": "plugin::i18n.locale.delete",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "zynx14qdso4wbr8hugp17uid",
+      "action": "plugin::i18n.locale.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "k6vuanfdjmkdz3pkpqngxee7",
+      "action": "plugin::i18n.locale.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "hk5i87vh7pdkho1zlojnu0yx",
+      "action": "plugin::upload.assets.copy-link",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "fpklmfzx5txj3ulskt6jm1k6",
+      "action": "plugin::upload.assets.create",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "ianb7g1faa45h14e4a9oiup3",
+      "action": "plugin::upload.assets.download",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "ugkhlbx5dnwhkca64afmb7ex",
+      "action": "plugin::upload.assets.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "zfsb6w34npwb03by9cuqz3d0",
+      "action": "plugin::upload.configure-view",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "c33z7fm8ej0dlydvzynijm8w",
+      "action": "plugin::upload.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "ws1rq66iv0ul64mrxj5v377m",
+      "action": "plugin::upload.settings.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "v9up46doasp6ggg339pkimol",
+      "action": "plugin::users-permissions.advanced-settings.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "hnn44y7bwhzgm86llnpif87t",
+      "action": "plugin::users-permissions.advanced-settings.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "xs3ulrn71mk3ik7q42oamrk1",
+      "action": "plugin::users-permissions.email-templates.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "s8ju87dt1caqnpu88isrt7t1",
+      "action": "plugin::users-permissions.email-templates.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "horcftax75aa63hgwso6mvz7",
+      "action": "plugin::users-permissions.providers.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "se5k320y6rkulom5d8br0ynl",
+      "action": "plugin::users-permissions.providers.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "nvqn4avx1y3rmkhky0i1yj46",
+      "action": "plugin::users-permissions.roles.create",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "phw9w11cvrpwhagzyp0m04yl",
+      "action": "plugin::users-permissions.roles.delete",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "j672yms54gkpmn32aiv57lp2",
+      "action": "plugin::users-permissions.roles.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "xsf4elq39mqyygvsvslayznj",
+      "action": "plugin::users-permissions.roles.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    }
+  ]
+}

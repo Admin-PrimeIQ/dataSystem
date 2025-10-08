@@ -1,0 +1,400 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::project.project",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "documentId",
+      "defaultSortBy": "documentId",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "name": {
+        "edit": {
+          "label": "Nombre",
+          "description": "Nombre comercial del proyecto inmobiliario",
+          "placeholder": "Ej: Torres del Sol, Residencial Los Pinos",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "code": {
+        "edit": {
+          "label": "code",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "code",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "description": {
+        "edit": {
+          "label": "description",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "description",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "categoryId": {
+        "edit": {
+          "label": "categoryId",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "categoryId",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "developer": {
+        "edit": {
+          "label": "developer",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "developer",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "location": {
+        "edit": {
+          "label": "location",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "location",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "dates": {
+        "edit": {
+          "label": "dates",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "dates",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "totals": {
+        "edit": {
+          "label": "totals",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "totals",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "projectFinancingParam": {
+        "edit": {
+          "label": "projectFinancingParam",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "projectFinancingParam",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "projectSegmentRule": {
+        "edit": {
+          "label": "projectSegmentRule",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "projectSegmentRule",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "projectAmenity": {
+        "edit": {
+          "label": "projectAmenity",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "projectAmenity",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "projectService": {
+        "edit": {
+          "label": "projectService",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "projectService",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "projectBankShare": {
+        "edit": {
+          "label": "projectBankShare",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "projectBankShare",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "status": {
+        "edit": {
+          "label": "status",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "status",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "isActive": {
+        "edit": {
+          "label": "isActive",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "isActive",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "documentId": {
+        "edit": {},
+        "list": {
+          "label": "documentId",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "edit": [
+        [
+          {
+            "name": "name",
+            "size": 6
+          },
+          {
+            "name": "code",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "description",
+            "size": 6
+          },
+          {
+            "name": "categoryId",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "developer",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "location",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "dates",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "totals",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "projectFinancingParam",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "projectSegmentRule",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "projectAmenity",
+            "size": 6
+          },
+          {
+            "name": "projectService",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "projectBankShare",
+            "size": 6
+          },
+          {
+            "name": "status",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "isActive",
+            "size": 4
+          }
+        ]
+      ],
+      "list": [
+        "id",
+        "createdAt",
+        "updatedAt",
+        "createdBy"
+      ]
+    },
+    "uid": "api::project.project"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

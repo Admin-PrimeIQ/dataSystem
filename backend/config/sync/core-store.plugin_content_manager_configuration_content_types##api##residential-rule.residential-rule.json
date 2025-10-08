@@ -1,0 +1,428 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::residential-rule.residential-rule",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "name",
+      "defaultSortBy": "name",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "name": {
+        "edit": {
+          "label": "name",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "description": {
+        "edit": {
+          "label": "description",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "description",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "ruleType": {
+        "edit": {
+          "label": "ruleType",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "ruleType",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "minPricePerSqm": {
+        "edit": {
+          "label": "minPricePerSqm",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "minPricePerSqm",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "maxPricePerSqm": {
+        "edit": {
+          "label": "maxPricePerSqm",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "maxPricePerSqm",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "minArea": {
+        "edit": {
+          "label": "minArea",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "minArea",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "maxArea": {
+        "edit": {
+          "label": "maxArea",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "maxArea",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "minBedrooms": {
+        "edit": {
+          "label": "minBedrooms",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "minBedrooms",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "maxBedrooms": {
+        "edit": {
+          "label": "maxBedrooms",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "maxBedrooms",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "minBathrooms": {
+        "edit": {
+          "label": "minBathrooms",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "minBathrooms",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "maxBathrooms": {
+        "edit": {
+          "label": "maxBathrooms",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "maxBathrooms",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "locationRestrictions": {
+        "edit": {
+          "label": "locationRestrictions",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "locationRestrictions",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "amenityRequirements": {
+        "edit": {
+          "label": "amenityRequirements",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "amenityRequirements",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "isActive": {
+        "edit": {
+          "label": "isActive",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "isActive",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "effectiveDate": {
+        "edit": {
+          "label": "effectiveDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "effectiveDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "expirationDate": {
+        "edit": {
+          "label": "expirationDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "expirationDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "priority": {
+        "edit": {
+          "label": "priority",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "priority",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "documentId": {
+        "edit": {},
+        "list": {
+          "label": "documentId",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "name",
+        "description",
+        "ruleType"
+      ],
+      "edit": [
+        [
+          {
+            "name": "name",
+            "size": 6
+          },
+          {
+            "name": "description",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "ruleType",
+            "size": 6
+          },
+          {
+            "name": "minPricePerSqm",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "maxPricePerSqm",
+            "size": 4
+          },
+          {
+            "name": "minArea",
+            "size": 4
+          },
+          {
+            "name": "maxArea",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "minBedrooms",
+            "size": 4
+          },
+          {
+            "name": "maxBedrooms",
+            "size": 4
+          },
+          {
+            "name": "minBathrooms",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "maxBathrooms",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "locationRestrictions",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "amenityRequirements",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "isActive",
+            "size": 4
+          },
+          {
+            "name": "effectiveDate",
+            "size": 4
+          },
+          {
+            "name": "expirationDate",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "priority",
+            "size": 4
+          }
+        ]
+      ]
+    },
+    "uid": "api::residential-rule.residential-rule"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

@@ -783,7 +783,7 @@ export interface ApiRefAmenityRefAmenity extends Struct.CollectionTypeSchema {
   collectionName: 'ref_amenities';
   info: {
     description: 'Property amenities (Pool, Gym, Helipad, etc.)';
-    displayName: 'Amenities';
+    displayName: 'Projects - Amenities';
     pluralName: 'ref-amenities';
     singularName: 'ref-amenity';
   };
@@ -792,15 +792,26 @@ export interface ApiRefAmenityRefAmenity extends Struct.CollectionTypeSchema {
   };
   attributes: {
     category: Schema.Attribute.Enumeration<
-      ['recreation', 'security', 'convenience', 'luxury', 'business', 'other']
+      [
+        'recreation',
+        'wellness',
+        'leisure',
+        'outdoor',
+        'business',
+        'technology',
+        'residential',
+        'parking',
+        'security',
+        'sustainability',
+        'convenience',
+        'luxury',
+        'other',
+      ]
     > &
       Schema.Attribute.DefaultTo<'other'>;
     code: Schema.Attribute.String &
       Schema.Attribute.Required &
-      Schema.Attribute.Unique &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 10;
-      }>;
+      Schema.Attribute.Unique;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -834,7 +845,7 @@ export interface ApiRefBankRefBank extends Struct.CollectionTypeSchema {
   collectionName: 'ref_banks';
   info: {
     description: 'Bank references (BAC, BAM, Banrural, etc.)';
-    displayName: 'Reference Bank';
+    displayName: 'Projects - Banks';
     pluralName: 'ref-banks';
     singularName: 'ref-bank';
   };
@@ -845,10 +856,7 @@ export interface ApiRefBankRefBank extends Struct.CollectionTypeSchema {
     address: Schema.Attribute.Text;
     code: Schema.Attribute.String &
       Schema.Attribute.Required &
-      Schema.Attribute.Unique &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 10;
-      }>;
+      Schema.Attribute.Unique;
     country: Schema.Attribute.String &
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 50;
@@ -876,17 +884,11 @@ export interface ApiRefBankRefBank extends Struct.CollectionTypeSchema {
       }>;
     publishedAt: Schema.Attribute.DateTime;
     sortOrder: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
-    swiftCode: Schema.Attribute.String &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 11;
-      }>;
+    swiftCode: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    website: Schema.Attribute.String &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 255;
-      }>;
+    website: Schema.Attribute.String;
   };
 }
 
@@ -894,7 +896,7 @@ export interface ApiRefCategoryRefCategory extends Struct.CollectionTypeSchema {
   collectionName: 'ref_categories';
   info: {
     description: 'Categories for property types (Residential, Office, Industrial, etc.)';
-    displayName: 'Reference Category';
+    displayName: 'Projects - Categories';
     pluralName: 'ref-categories';
     singularName: 'ref-category';
   };
@@ -904,10 +906,7 @@ export interface ApiRefCategoryRefCategory extends Struct.CollectionTypeSchema {
   attributes: {
     code: Schema.Attribute.String &
       Schema.Attribute.Required &
-      Schema.Attribute.Unique &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 10;
-      }>;
+      Schema.Attribute.Unique;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -921,10 +920,7 @@ export interface ApiRefCategoryRefCategory extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     name: Schema.Attribute.String &
       Schema.Attribute.Required &
-      Schema.Attribute.Unique &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 100;
-      }>;
+      Schema.Attribute.Unique;
     publishedAt: Schema.Attribute.DateTime;
     sortOrder: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
     updatedAt: Schema.Attribute.DateTime;
@@ -995,7 +991,7 @@ export interface ApiRefServiceRefService extends Struct.CollectionTypeSchema {
   collectionName: 'ref_services';
   info: {
     description: 'Property services (Water, Power Plant, Security, etc.)';
-    displayName: 'Reference Service';
+    displayName: 'Projects - Service';
     pluralName: 'ref-services';
     singularName: 'ref-service';
   };
@@ -1005,10 +1001,7 @@ export interface ApiRefServiceRefService extends Struct.CollectionTypeSchema {
   attributes: {
     code: Schema.Attribute.String &
       Schema.Attribute.Required &
-      Schema.Attribute.Unique &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 10;
-      }>;
+      Schema.Attribute.Unique;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

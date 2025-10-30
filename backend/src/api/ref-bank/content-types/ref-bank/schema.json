@@ -4,7 +4,7 @@
   "info": {
     "singularName": "ref-bank",
     "pluralName": "ref-banks",
-    "displayName": "Reference Bank",
+    "displayName": "Projects - Banks",
     "description": "Bank references (BAC, BAM, Banrural, etc.)"
   },
   "options": {
@@ -14,28 +14,25 @@
   "attributes": {
     "name": {
       "type": "string",
+      "maxLength": 100,
       "required": true,
-      "unique": true,
-      "maxLength": 100
+      "unique": true
     },
     "code": {
       "type": "string",
       "required": true,
-      "unique": true,
-      "maxLength": 10
+      "unique": true
     },
     "swiftCode": {
-      "type": "string",
-      "maxLength": 11
+      "type": "string"
     },
     "country": {
       "type": "string",
-      "maxLength": 50,
-      "default": "Guatemala"
+      "default": "Guatemala",
+      "maxLength": 50
     },
     "website": {
-      "type": "string",
-      "maxLength": 255
+      "type": "string"
     },
     "phone": {
       "type": "string",

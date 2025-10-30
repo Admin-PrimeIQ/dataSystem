@@ -16,7 +16,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-10-30T17:27:49.636Z"
+    "x-generation-date": "2025-10-30T19:27:53.791Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -10104,10 +10104,17 @@
                   "type": "string",
                   "enum": [
                     "recreation",
+                    "wellness",
+                    "leisure",
+                    "outdoor",
+                    "business",
+                    "technology",
+                    "residential",
+                    "parking",
                     "security",
+                    "sustainability",
                     "convenience",
                     "luxury",
-                    "business",
                     "other"
                   ]
                 },
@@ -10609,10 +10616,17 @@
                 "type": "string",
                 "enum": [
                   "recreation",
+                  "wellness",
+                  "leisure",
+                  "outdoor",
+                  "business",
+                  "technology",
+                  "residential",
+                  "parking",
                   "security",
+                  "sustainability",
                   "convenience",
                   "luxury",
-                  "business",
                   "other"
                 ]
               },
@@ -10707,10 +10721,17 @@
             "type": "string",
             "enum": [
               "recreation",
+              "wellness",
+              "leisure",
+              "outdoor",
+              "business",
+              "technology",
+              "residential",
+              "parking",
               "security",
+              "sustainability",
               "convenience",
               "luxury",
-              "business",
               "other"
             ]
           },
@@ -11036,10 +11057,17 @@
                   "type": "string",
                   "enum": [
                     "recreation",
+                    "wellness",
+                    "leisure",
+                    "outdoor",
+                    "business",
+                    "technology",
+                    "residential",
+                    "parking",
                     "security",
+                    "sustainability",
                     "convenience",
                     "luxury",
-                    "business",
                     "other"
                   ]
                 },

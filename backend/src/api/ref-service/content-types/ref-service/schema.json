@@ -4,7 +4,7 @@
   "info": {
     "singularName": "ref-service",
     "pluralName": "ref-services",
-    "displayName": "Reference Service",
+    "displayName": "Projects - Service",
     "description": "Property services (Water, Power Plant, Security, etc.)"
   },
   "options": {
@@ -14,9 +14,9 @@
   "attributes": {
     "name": {
       "type": "string",
+      "maxLength": 100,
       "required": true,
-      "unique": true,
-      "maxLength": 100
+      "unique": true
     },
     "description": {
       "type": "text"
@@ -24,13 +24,18 @@
     "code": {
       "type": "string",
       "required": true,
-      "unique": true,
-      "maxLength": 10
+      "unique": true
     },
     "serviceType": {
       "type": "enumeration",
-      "enum": ["utility", "security", "maintenance", "administrative", "other"],
-      "default": "other"
+      "default": "other",
+      "enum": [
+        "utility",
+        "security",
+        "maintenance",
+        "administrative",
+        "other"
+      ]
     },
     "isEssential": {
       "type": "boolean",

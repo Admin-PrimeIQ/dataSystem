@@ -4,7 +4,7 @@
   "info": {
     "singularName": "ref-category",
     "pluralName": "ref-categories",
-    "displayName": "Reference Category",
+    "displayName": "Projects - Categories",
     "description": "Categories for property types (Residential, Office, Industrial, etc.)"
   },
   "options": {
@@ -15,8 +15,7 @@
     "name": {
       "type": "string",
       "required": true,
-      "unique": true,
-      "maxLength": 100
+      "unique": true
     },
     "description": {
       "type": "text"
@@ -24,8 +23,7 @@
     "code": {
       "type": "string",
       "required": true,
-      "unique": true,
-      "maxLength": 10
+      "unique": true
     },
     "isActive": {
       "type": "boolean",

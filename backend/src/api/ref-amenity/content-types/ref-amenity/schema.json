@@ -4,7 +4,7 @@
   "info": {
     "singularName": "ref-amenity",
     "pluralName": "ref-amenities",
-    "displayName": "Amenities",
+    "displayName": "Projects - Amenities",
     "description": "Property amenities (Pool, Gym, Helipad, etc.)"
   },
   "options": {
@@ -23,7 +23,6 @@
     },
     "code": {
       "type": "string",
-      "maxLength": 10,
       "required": true,
       "unique": true
     },
@@ -36,10 +35,17 @@
       "default": "other",
       "enum": [
         "recreation",
+        "wellness",
+        "leisure",
+        "outdoor",
+        "business",
+        "technology",
+        "residential",
+        "parking",
         "security",
+        "sustainability",
         "convenience",
         "luxury",
-        "business",
         "other"
       ]
     },

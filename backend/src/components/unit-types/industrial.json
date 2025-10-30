@@ -1,22 +1,11 @@
 {
-  "kind": "collectionType",
-  "collectionName": "unit_industrials",
+  "collectionName": "components_units_industrials",
   "info": {
-    "singularName": "unit-industrial",
-    "pluralName": "unit-industrials",
-    "displayName": "Unit Industrial",
-    "description": "Industrial unit subtype with land, warehouse, mezzanine, and dimensions"
+    "displayName": "Industrial",
+    "description": "Industrial unit details (land, warehouse, mezzanine, dimensions, utilities)"
   },
-  "options": {
-    "draftAndPublish": false
-  },
-  "pluginOptions": {},
+  "options": {},
   "attributes": {
-    "unit": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::unit.unit"
-    },
     "land": {
       "type": "json"
     },
@@ -54,8 +43,12 @@
     },
     "powerUnit": {
       "type": "enumeration",
-      "enum": ["kW", "kVA", "HP"],
-      "default": "kW"
+      "default": "kW",
+      "enum": [
+        "kW",
+        "kVA",
+        "HP"
+      ]
     },
     "waterSupply": {
       "type": "boolean",
@@ -85,3 +78,5 @@
     }
   }
 }
+
+

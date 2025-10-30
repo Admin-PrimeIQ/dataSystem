@@ -1,5 +1,5 @@
 {
-  "key": "plugin_content_manager_configuration_content_types::api::unit-office.unit-office",
+  "key": "plugin_content_manager_configuration_components::unit-types.office",
   "value": {
     "settings": {
       "bulkable": true,
@@ -15,30 +15,15 @@
         "edit": {},
         "list": {
           "label": "id",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "unit": {
-        "edit": {
-          "label": "Unit",
-          "description": "Base unit this office details belong to",
-          "placeholder": "Select the unit",
-          "visible": true,
-          "editable": true,
-          "mainField": "name"
-        },
-        "list": {
-          "label": "unit",
-          "searchable": true,
-          "sortable": true
+          "searchable": false,
+          "sortable": false
         }
       },
       "class": {
         "edit": {
-          "label": "Class",
-          "description": "Office building class (A, B, C)",
-          "placeholder": "Ex: A",
+          "label": "class",
+          "description": "",
+          "placeholder": "",
           "visible": true,
           "editable": true
         },
@@ -50,9 +35,9 @@
       },
       "legends": {
         "edit": {
-          "label": "Legends",
-          "description": "Additional notes or legend for the office",
-          "placeholder": "Ex: Includes shared amenities access",
+          "label": "legends",
+          "description": "",
+          "placeholder": "",
           "visible": true,
           "editable": true
         },
@@ -64,9 +49,9 @@
       },
       "employees": {
         "edit": {
-          "label": "Employees",
-          "description": "Number of employees supported",
-          "placeholder": "Ex: 50",
+          "label": "employees",
+          "description": "",
+          "placeholder": "",
           "visible": true,
           "editable": true
         },
@@ -78,9 +63,9 @@
       },
       "receptionArea": {
         "edit": {
-          "label": "Reception Area",
-          "description": "Indicates if a reception area is available",
-          "placeholder": "Enable if available",
+          "label": "receptionArea",
+          "description": "",
+          "placeholder": "",
           "visible": true,
           "editable": true
         },
@@ -92,9 +77,9 @@
       },
       "meetingRooms": {
         "edit": {
-          "label": "Meeting Rooms",
-          "description": "Number of meeting rooms",
-          "placeholder": "Ex: 3",
+          "label": "meetingRooms",
+          "description": "",
+          "placeholder": "",
           "visible": true,
           "editable": true
         },
@@ -106,9 +91,9 @@
       },
       "privateOffices": {
         "edit": {
-          "label": "Private Offices",
-          "description": "Number of private offices",
-          "placeholder": "Ex: 4",
+          "label": "privateOffices",
+          "description": "",
+          "placeholder": "",
           "visible": true,
           "editable": true
         },
@@ -120,9 +105,9 @@
       },
       "openSpace": {
         "edit": {
-          "label": "Open Space",
-          "description": "Indicates if there is open workspace area",
-          "placeholder": "Enable if available",
+          "label": "openSpace",
+          "description": "",
+          "placeholder": "",
           "visible": true,
           "editable": true
         },
@@ -134,9 +119,9 @@
       },
       "kitchenette": {
         "edit": {
-          "label": "Kitchenette",
-          "description": "Indicates if a kitchenette is available",
-          "placeholder": "Enable if available",
+          "label": "kitchenette",
+          "description": "",
+          "placeholder": "",
           "visible": true,
           "editable": true
         },
@@ -148,9 +133,9 @@
       },
       "storageRoom": {
         "edit": {
-          "label": "Storage Room",
-          "description": "Indicates if a storage room is available",
-          "placeholder": "Enable if available",
+          "label": "storageRoom",
+          "description": "",
+          "placeholder": "",
           "visible": true,
           "editable": true
         },
@@ -162,9 +147,9 @@
       },
       "floor": {
         "edit": {
-          "label": "Floor",
-          "description": "Floor number the unit is located on",
-          "placeholder": "Ex: 5",
+          "label": "floor",
+          "description": "",
+          "placeholder": "",
           "visible": true,
           "editable": true
         },
@@ -176,9 +161,9 @@
       },
       "view": {
         "edit": {
-          "label": "View",
-          "description": "View description or type",
-          "placeholder": "Ex: City, Mountain, Park",
+          "label": "view",
+          "description": "",
+          "placeholder": "",
           "visible": true,
           "editable": true
         },
@@ -190,9 +175,9 @@
       },
       "airConditioning": {
         "edit": {
-          "label": "Air Conditioning",
-          "description": "Indicates if air conditioning is available",
-          "placeholder": "Enable if available",
+          "label": "airConditioning",
+          "description": "",
+          "placeholder": "",
           "visible": true,
           "editable": true
         },
@@ -204,72 +189,14 @@
       },
       "elevatorAccess": {
         "edit": {
-          "label": "Elevator Access",
-          "description": "Indicates if elevator access is available",
-          "placeholder": "Enable if available",
+          "label": "elevatorAccess",
+          "description": "",
+          "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
           "label": "elevatorAccess",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "createdAt": {
-        "edit": {
-          "label": "createdAt",
-          "description": "",
-          "placeholder": "",
-          "visible": false,
-          "editable": true
-        },
-        "list": {
-          "label": "createdAt",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "updatedAt": {
-        "edit": {
-          "label": "updatedAt",
-          "description": "",
-          "placeholder": "",
-          "visible": false,
-          "editable": true
-        },
-        "list": {
-          "label": "updatedAt",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "createdBy": {
-        "edit": {
-          "label": "createdBy",
-          "description": "",
-          "placeholder": "",
-          "visible": false,
-          "editable": true,
-          "mainField": "firstname"
-        },
-        "list": {
-          "label": "createdBy",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "updatedBy": {
-        "edit": {
-          "label": "updatedBy",
-          "description": "",
-          "placeholder": "",
-          "visible": false,
-          "editable": true,
-          "mainField": "firstname"
-        },
-        "list": {
-          "label": "updatedBy",
           "searchable": true,
           "sortable": true
         }
@@ -286,16 +213,12 @@
     "layouts": {
       "list": [
         "id",
-        "createdAt",
-        "updatedAt",
-        "createdBy"
+        "class",
+        "employees",
+        "receptionArea"
       ],
       "edit": [
         [
-          {
-            "name": "unit",
-            "size": 6
-          },
           {
             "name": "class",
             "size": 6
@@ -363,7 +286,8 @@
         ]
       ]
     },
-    "uid": "api::unit-office.unit-office"
+    "uid": "unit-types.office",
+    "isComponent": true
   },
   "type": "object",
   "environment": null,

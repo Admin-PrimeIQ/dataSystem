@@ -6,5 +6,8 @@ module.exports = ({ env }) => ({
         autoGenerate: true,     // genera automáticamente la documentación
       },
     },
+    'schema-visualizer': {
+      enabled: true,
+    }
   });
   

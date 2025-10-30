@@ -861,304 +861,7 @@
       "locale": null
     },
     {
-      "documentId": "c8ihi4naw8j21hnvg01igt82",
-      "action": "plugin::content-manager.explorer.create",
-      "actionParameters": {},
-      "subject": "api::unit-industrial.unit-industrial",
-      "properties": {
-        "fields": [
-          "unit",
-          "land",
-          "warehouse",
-          "mezzanine",
-          "dimensions",
-          "ceilingHeight",
-          "loadingDock",
-          "loadingDockCount",
-          "truckAccess",
-          "railAccess",
-          "powerCapacity",
-          "powerUnit",
-          "waterSupply",
-          "sewageSystem",
-          "fireSuppression",
-          "securitySystem",
-          "officeSpace",
-          "storageCapacity",
-          "zoning"
-        ]
-      },
-      "conditions": [],
-      "locale": null
-    },
-    {
-      "documentId": "qpszve153ypvhv9iqoa7641r",
-      "action": "plugin::content-manager.explorer.delete",
-      "actionParameters": {},
-      "subject": "api::unit-industrial.unit-industrial",
-      "properties": {},
-      "conditions": [],
-      "locale": null
-    },
-    {
-      "documentId": "ceee0zuwkyawb8vb1d4tkvz0",
-      "action": "plugin::content-manager.explorer.publish",
-      "actionParameters": {},
-      "subject": "api::unit-industrial.unit-industrial",
-      "properties": {},
-      "conditions": [],
-      "locale": null
-    },
-    {
-      "documentId": "sujoz0iuxjz1sa06ravhxc4n",
-      "action": "plugin::content-manager.explorer.read",
-      "actionParameters": {},
-      "subject": "api::unit-industrial.unit-industrial",
-      "properties": {
-        "fields": [
-          "unit",
-          "land",
-          "warehouse",
-          "mezzanine",
-          "dimensions",
-          "ceilingHeight",
-          "loadingDock",
-          "loadingDockCount",
-          "truckAccess",
-          "railAccess",
-          "powerCapacity",
-          "powerUnit",
-          "waterSupply",
-          "sewageSystem",
-          "fireSuppression",
-          "securitySystem",
-          "officeSpace",
-          "storageCapacity",
-          "zoning"
-        ]
-      },
-      "conditions": [],
-      "locale": null
-    },
-    {
-      "documentId": "zhjokb5cveudtk75extgyk13",
-      "action": "plugin::content-manager.explorer.update",
-      "actionParameters": {},
-      "subject": "api::unit-industrial.unit-industrial",
-      "properties": {
-        "fields": [
-          "unit",
-          "land",
-          "warehouse",
-          "mezzanine",
-          "dimensions",
-          "ceilingHeight",
-          "loadingDock",
-          "loadingDockCount",
-          "truckAccess",
-          "railAccess",
-          "powerCapacity",
-          "powerUnit",
-          "waterSupply",
-          "sewageSystem",
-          "fireSuppression",
-          "securitySystem",
-          "officeSpace",
-          "storageCapacity",
-          "zoning"
-        ]
-      },
-      "conditions": [],
-      "locale": null
-    },
-    {
-      "documentId": "wgknow4sy0wagyij9u09g8fv",
-      "action": "plugin::content-manager.explorer.create",
-      "actionParameters": {},
-      "subject": "api::unit-office.unit-office",
-      "properties": {
-        "fields": [
-          "unit",
-          "class",
-          "legends",
-          "employees",
-          "receptionArea",
-          "meetingRooms",
-          "privateOffices",
-          "openSpace",
-          "kitchenette",
-          "storageRoom",
-          "floor",
-          "view",
-          "airConditioning",
-          "elevatorAccess"
-        ]
-      },
-      "conditions": [],
-      "locale": null
-    },
-    {
-      "documentId": "zzha5vgpwwvyrkdied5ll1rm",
-      "action": "plugin::content-manager.explorer.delete",
-      "actionParameters": {},
-      "subject": "api::unit-office.unit-office",
-      "properties": {},
-      "conditions": [],
-      "locale": null
-    },
-    {
-      "documentId": "zliz9sfcnnl4einkhj6d0brv",
-      "action": "plugin::content-manager.explorer.publish",
-      "actionParameters": {},
-      "subject": "api::unit-office.unit-office",
-      "properties": {},
-      "conditions": [],
-      "locale": null
-    },
-    {
-      "documentId": "ips8jsuwmikzim9ldo0stejh",
-      "action": "plugin::content-manager.explorer.read",
-      "actionParameters": {},
-      "subject": "api::unit-office.unit-office",
-      "properties": {
-        "fields": [
-          "unit",
-          "class",
-          "legends",
-          "employees",
-          "receptionArea",
-          "meetingRooms",
-          "privateOffices",
-          "openSpace",
-          "kitchenette",
-          "storageRoom",
-          "floor",
-          "view",
-          "airConditioning",
-          "elevatorAccess"
-        ]
-      },
-      "conditions": [],
-      "locale": null
-    },
-    {
-      "documentId": "box4i76o9i8mktbn03jvqfm6",
-      "action": "plugin::content-manager.explorer.update",
-      "actionParameters": {},
-      "subject": "api::unit-office.unit-office",
-      "properties": {
-        "fields": [
-          "unit",
-          "class",
-          "legends",
-          "employees",
-          "receptionArea",
-          "meetingRooms",
-          "privateOffices",
-          "openSpace",
-          "kitchenette",
-          "storageRoom",
-          "floor",
-          "view",
-          "airConditioning",
-          "elevatorAccess"
-        ]
-      },
-      "conditions": [],
-      "locale": null
-    },
-    {
-      "documentId": "hk6gbrhvcdd0ho0j00jk2iuh",
-      "action": "plugin::content-manager.explorer.create",
-      "actionParameters": {},
-      "subject": "api::unit-residential.unit-residential",
-      "properties": {
-        "fields": [
-          "unit",
-          "bedrooms",
-          "bathrooms",
-          "parkingSpaces",
-          "balcony",
-          "terrace",
-          "garden",
-          "floor",
-          "orientation",
-          "furnished",
-          "petFriendly",
-          "smokingAllowed"
-        ]
-      },
-      "conditions": [],
-      "locale": null
-    },
-    {
-      "documentId": "lwb2rc02cq7u1djt5fv50ob7",
-      "action": "plugin::content-manager.explorer.delete",
-      "actionParameters": {},
-      "subject": "api::unit-residential.unit-residential",
-      "properties": {},
-      "conditions": [],
-      "locale": null
-    },
-    {
-      "documentId": "ci7wxrlv4qg62tx2wsx850qy",
-      "action": "plugin::content-manager.explorer.publish",
-      "actionParameters": {},
-      "subject": "api::unit-residential.unit-residential",
-      "properties": {},
-      "conditions": [],
-      "locale": null
-    },
-    {
-      "documentId": "zknalfztmq2bj1v3lns5vl1y",
-      "action": "plugin::content-manager.explorer.read",
-      "actionParameters": {},
-      "subject": "api::unit-residential.unit-residential",
-      "properties": {
-        "fields": [
-          "unit",
-          "bedrooms",
-          "bathrooms",
-          "parkingSpaces",
-          "balcony",
-          "terrace",
-          "garden",
-          "floor",
-          "orientation",
-          "furnished",
-          "petFriendly",
-          "smokingAllowed"
-        ]
-      },
-      "conditions": [],
-      "locale": null
-    },
-    {
-      "documentId": "ae2vvr95p7fnjy2q9u7ofg2e",
-      "action": "plugin::content-manager.explorer.update",
-      "actionParameters": {},
-      "subject": "api::unit-residential.unit-residential",
-      "properties": {
-        "fields": [
-          "unit",
-          "bedrooms",
-          "bathrooms",
-          "parkingSpaces",
-          "balcony",
-          "terrace",
-          "garden",
-          "floor",
-          "orientation",
-          "furnished",
-          "petFriendly",
-          "smokingAllowed"
-        ]
-      },
-      "conditions": [],
-      "locale": null
-    },
-    {
-      "documentId": "qnrqw5nlu228xjimx9ecm9ah",
+      "documentId": "jmwaa3vr12meyt1cd3p9klvk",
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
       "subject": "api::unit.unit",
@@ -1175,7 +878,8 @@
           "currency",
           "kpis",
           "status",
-          "isActive"
+          "isActive",
+          "type"
         ]
       },
       "conditions": [],
@@ -1200,7 +904,7 @@
       "locale": null
     },
     {
-      "documentId": "k6zbxjjn6ilv0rttbuwlvty9",
+      "documentId": "j38fr5ocrribfngyw6iu7n3v",
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::unit.unit",
@@ -1217,14 +921,15 @@
           "currency",
           "kpis",
           "status",
-          "isActive"
+          "isActive",
+          "type"
         ]
       },
       "conditions": [],
       "locale": null
     },
     {
-      "documentId": "ia2ubxyihia2kn9f031qvpl7",
+      "documentId": "d8jfoxo0yhq9otdlxfux2sh2",
       "action": "plugin::content-manager.explorer.update",
       "actionParameters": {},
       "subject": "api::unit.unit",
@@ -1241,7 +946,8 @@
           "currency",
           "kpis",
           "status",
-          "isActive"
+          "isActive",
+          "type"
         ]
       },
       "conditions": [],

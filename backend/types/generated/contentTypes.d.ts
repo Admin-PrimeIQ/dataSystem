@@ -1133,218 +1133,11 @@ export interface ApiResidentialRuleResidentialRule
   };
 }
 
-export interface ApiUnitIndustrialUnitIndustrial
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'unit_industrials';
-  info: {
-    description: 'Industrial unit subtype with land, warehouse, mezzanine, and dimensions';
-    displayName: 'Unit Industrial';
-    pluralName: 'unit-industrials';
-    singularName: 'unit-industrial';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    ceilingHeight: Schema.Attribute.Decimal;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    dimensions: Schema.Attribute.JSON;
-    fireSuppression: Schema.Attribute.Boolean &
-      Schema.Attribute.DefaultTo<false>;
-    land: Schema.Attribute.JSON;
-    loadingDock: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    loadingDockCount: Schema.Attribute.Integer &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      > &
-      Schema.Attribute.DefaultTo<0>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::unit-industrial.unit-industrial'
-    > &
-      Schema.Attribute.Private;
-    mezzanine: Schema.Attribute.JSON;
-    officeSpace: Schema.Attribute.Decimal;
-    powerCapacity: Schema.Attribute.Decimal;
-    powerUnit: Schema.Attribute.Enumeration<['kW', 'kVA', 'HP']> &
-      Schema.Attribute.DefaultTo<'kW'>;
-    publishedAt: Schema.Attribute.DateTime;
-    railAccess: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    securitySystem: Schema.Attribute.Boolean &
-      Schema.Attribute.DefaultTo<false>;
-    sewageSystem: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    storageCapacity: Schema.Attribute.Decimal;
-    truckAccess: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    unit: Schema.Attribute.Relation<'oneToOne', 'api::unit.unit'>;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    warehouse: Schema.Attribute.JSON;
-    waterSupply: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    zoning: Schema.Attribute.String &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 50;
-      }>;
-  };
-}
-
-export interface ApiUnitOfficeUnitOffice extends Struct.CollectionTypeSchema {
-  collectionName: 'unit_offices';
-  info: {
-    description: 'Office unit subtype with class, legends, and employees';
-    displayName: 'Unit Office';
-    pluralName: 'unit-offices';
-    singularName: 'unit-office';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    airConditioning: Schema.Attribute.Boolean &
-      Schema.Attribute.DefaultTo<false>;
-    class: Schema.Attribute.Enumeration<
-      ['A', 'B', 'C', 'premium', 'standard', 'basic']
-    > &
-      Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    elevatorAccess: Schema.Attribute.Boolean &
-      Schema.Attribute.DefaultTo<false>;
-    employees: Schema.Attribute.Integer &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    floor: Schema.Attribute.Integer;
-    kitchenette: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    legends: Schema.Attribute.JSON;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::unit-office.unit-office'
-    > &
-      Schema.Attribute.Private;
-    meetingRooms: Schema.Attribute.Integer &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      > &
-      Schema.Attribute.DefaultTo<0>;
-    openSpace: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    privateOffices: Schema.Attribute.Integer &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      > &
-      Schema.Attribute.DefaultTo<0>;
-    publishedAt: Schema.Attribute.DateTime;
-    receptionArea: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    storageRoom: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    unit: Schema.Attribute.Relation<'oneToOne', 'api::unit.unit'>;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    view: Schema.Attribute.Enumeration<
-      ['city', 'park', 'street', 'courtyard', 'none']
-    >;
-  };
-}
-
-export interface ApiUnitResidentialUnitResidential
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'unit_residentials';
-  info: {
-    description: 'Residential unit subtype';
-    displayName: 'Unit Residential';
-    pluralName: 'unit-residentials';
-    singularName: 'unit-residential';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    balcony: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    bathrooms: Schema.Attribute.Integer &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    bedrooms: Schema.Attribute.Integer &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    floor: Schema.Attribute.Integer;
-    furnished: Schema.Attribute.Enumeration<
-      ['unfurnished', 'semi-furnished', 'fully-furnished']
-    > &
-      Schema.Attribute.DefaultTo<'unfurnished'>;
-    garden: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::unit-residential.unit-residential'
-    > &
-      Schema.Attribute.Private;
-    orientation: Schema.Attribute.Enumeration<
-      [
-        'north',
-        'south',
-        'east',
-        'west',
-        'northeast',
-        'northwest',
-        'southeast',
-        'southwest',
-      ]
-    >;
-    parkingSpaces: Schema.Attribute.Integer &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      > &
-      Schema.Attribute.DefaultTo<0>;
-    petFriendly: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    publishedAt: Schema.Attribute.DateTime;
-    smokingAllowed: Schema.Attribute.Boolean &
-      Schema.Attribute.DefaultTo<false>;
-    terrace: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    unit: Schema.Attribute.Relation<'oneToOne', 'api::unit.unit'>;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiUnitUnit extends Struct.CollectionTypeSchema {
   collectionName: 'units';
   info: {
     description: 'Generic unit with area, price, rent, and KPIs';
-    displayName: 'Unit';
+    displayName: 'Units';
     pluralName: 'units';
     singularName: 'unit';
   };
@@ -1389,6 +1182,9 @@ export interface ApiUnitUnit extends Struct.CollectionTypeSchema {
       ['available', 'reserved', 'sold', 'rented', 'maintenance', 'inactive']
     > &
       Schema.Attribute.DefaultTo<'available'>;
+    type: Schema.Attribute.DynamicZone<
+      ['unit-types.residential', 'unit-types.office', 'unit-types.industrial']
+    >;
     unitType: Schema.Attribute.Enumeration<
       ['residential', 'office', 'industrial']
     > &
@@ -1918,9 +1714,6 @@ declare module '@strapi/strapi' {
       'api::ref-feature.ref-feature': ApiRefFeatureRefFeature;
       'api::ref-service.ref-service': ApiRefServiceRefService;
       'api::residential-rule.residential-rule': ApiResidentialRuleResidentialRule;
-      'api::unit-industrial.unit-industrial': ApiUnitIndustrialUnitIndustrial;
-      'api::unit-office.unit-office': ApiUnitOfficeUnitOffice;
-      'api::unit-residential.unit-residential': ApiUnitResidentialUnitResidential;
       'api::unit.unit': ApiUnitUnit;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

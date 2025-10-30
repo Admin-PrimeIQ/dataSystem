@@ -4,7 +4,7 @@
   "info": {
     "singularName": "unit",
     "pluralName": "units",
-    "displayName": "Unit",
+    "displayName": "Units",
     "description": "Generic unit with area, price, rent, and KPIs"
   },
   "options": {
@@ -14,22 +14,26 @@
   "attributes": {
     "name": {
       "type": "string",
-      "required": true,
-      "maxLength": 200
+      "maxLength": 200,
+      "required": true
     },
     "code": {
       "type": "string",
+      "maxLength": 20,
       "required": true,
-      "unique": true,
-      "maxLength": 20
+      "unique": true
     },
     "description": {
       "type": "text"
     },
     "unitType": {
       "type": "enumeration",
-      "enum": ["residential", "office", "industrial"],
-      "required": true
+      "required": true,
+      "enum": [
+        "residential",
+        "office",
+        "industrial"
+      ]
     },
     "area": {
       "type": "decimal",
@@ -37,8 +41,13 @@
     },
     "areaUnit": {
       "type": "enumeration",
-      "enum": ["sqm", "sqft", "hectares", "acres"],
-      "default": "sqm"
+      "default": "sqm",
+      "enum": [
+        "sqm",
+        "sqft",
+        "hectares",
+        "acres"
+      ]
     },
     "price": {
       "type": "decimal"
@@ -48,20 +57,35 @@
     },
     "currency": {
       "type": "string",
-      "maxLength": 3,
-      "default": "GTQ"
+      "default": "GTQ",
+      "maxLength": 3
     },
     "kpis": {
       "type": "json"
     },
     "status": {
       "type": "enumeration",
-      "enum": ["available", "reserved", "sold", "rented", "maintenance", "inactive"],
-      "default": "available"
+      "default": "available",
+      "enum": [
+        "available",
+        "reserved",
+        "sold",
+        "rented",
+        "maintenance",
+        "inactive"
+      ]
     },
     "isActive": {
       "type": "boolean",
       "default": true
+    },
+    "type": {
+      "type": "dynamiczone",
+      "components": [
+        "unit-types.residential",
+        "unit-types.office",
+        "unit-types.industrial"
+      ]
     }
   }
 }

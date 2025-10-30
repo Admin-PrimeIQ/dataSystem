@@ -7,6 +7,7 @@ import documentation from "@strapi/plugin-documentation/strapi-admin";
 import graphql from "@strapi/plugin-graphql/strapi-admin";
 import usersPermissions from "@strapi/plugin-users-permissions/strapi-admin";
 import configSync from "strapi-plugin-config-sync/strapi-admin";
+import schemaVisualizer from "strapi-plugin-schema-visualizer/strapi-admin";
 import { renderAdmin } from "@strapi/strapi/admin";
 
 renderAdmin(document.getElementById("strapi"), {
@@ -16,5 +17,6 @@ renderAdmin(document.getElementById("strapi"), {
     graphql: graphql,
     "users-permissions": usersPermissions,
     "config-sync": configSync,
+    "schema-visualizer": schemaVisualizer,
   },
 });

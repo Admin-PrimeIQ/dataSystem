@@ -1,22 +1,11 @@
 {
-  "kind": "collectionType",
-  "collectionName": "unit_residentials",
+  "collectionName": "components_units_residentials",
   "info": {
-    "singularName": "unit-residential",
-    "pluralName": "unit-residentials",
-    "displayName": "Unit Residential",
-    "description": "Residential unit subtype"
+    "displayName": "Residential",
+    "description": "Residential unit details (rooms, features, flags)"
   },
-  "options": {
-    "draftAndPublish": false
-  },
-  "pluginOptions": {},
+  "options": {},
   "attributes": {
-    "unit": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::unit.unit"
-    },
     "bedrooms": {
       "type": "integer",
       "required": true,
@@ -49,12 +38,25 @@
     },
     "orientation": {
       "type": "enumeration",
-      "enum": ["north", "south", "east", "west", "northeast", "northwest", "southeast", "southwest"]
+      "enum": [
+        "north",
+        "south",
+        "east",
+        "west",
+        "northeast",
+        "northwest",
+        "southeast",
+        "southwest"
+      ]
     },
     "furnished": {
       "type": "enumeration",
-      "enum": ["unfurnished", "semi-furnished", "fully-furnished"],
-      "default": "unfurnished"
+      "default": "unfurnished",
+      "enum": [
+        "unfurnished",
+        "semi-furnished",
+        "fully-furnished"
+      ]
     },
     "petFriendly": {
       "type": "boolean",
@@ -66,3 +68,5 @@
     }
   }
 }
+
+

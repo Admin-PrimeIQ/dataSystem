@@ -187,6 +187,20 @@
           "sortable": true
         }
       },
+      "type": {
+        "edit": {
+          "label": "type",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "type",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -322,6 +336,12 @@
           {
             "name": "isActive",
             "size": 4
+          }
+        ],
+        [
+          {
+            "name": "type",
+            "size": 12
           }
         ]
       ]

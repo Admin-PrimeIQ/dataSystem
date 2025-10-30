@@ -1,26 +1,22 @@
 {
-  "kind": "collectionType",
-  "collectionName": "unit_offices",
+  "collectionName": "components_units_offices",
   "info": {
-    "singularName": "unit-office",
-    "pluralName": "unit-offices",
-    "displayName": "Unit Office",
-    "description": "Office unit subtype with class, legends, and employees"
+    "displayName": "Office",
+    "description": "Office unit details (class, layout, amenities)"
   },
-  "options": {
-    "draftAndPublish": false
-  },
-  "pluginOptions": {},
+  "options": {},
   "attributes": {
-    "unit": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::unit.unit"
-    },
     "class": {
       "type": "enumeration",
-      "enum": ["A", "B", "C", "premium", "standard", "basic"],
-      "required": true
+      "required": true,
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "premium",
+        "standard",
+        "basic"
+      ]
     },
     "legends": {
       "type": "json"
@@ -60,7 +56,13 @@
     },
     "view": {
       "type": "enumeration",
-      "enum": ["city", "park", "street", "courtyard", "none"]
+      "enum": [
+        "city",
+        "park",
+        "street",
+        "courtyard",
+        "none"
+      ]
     },
     "airConditioning": {
       "type": "boolean",
@@ -72,3 +74,5 @@
     }
   }
 }
+
+

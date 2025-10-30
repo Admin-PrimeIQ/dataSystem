@@ -21,9 +21,9 @@
       },
       "bedrooms": {
         "edit": {
-          "label": "bedrooms",
-          "description": "",
-          "placeholder": "",
+          "label": "Bedrooms",
+          "description": "Number of bedrooms",
+          "placeholder": "e.g. 3",
           "visible": true,
           "editable": true
         },
@@ -35,9 +35,9 @@
       },
       "bathrooms": {
         "edit": {
-          "label": "bathrooms",
-          "description": "",
-          "placeholder": "",
+          "label": "Bathrooms",
+          "description": "Number of bathrooms",
+          "placeholder": "e.g. 2",
           "visible": true,
           "editable": true
         },
@@ -49,9 +49,9 @@
       },
       "parkingSpaces": {
         "edit": {
-          "label": "parkingSpaces",
-          "description": "",
-          "placeholder": "",
+          "label": "Parking spaces",
+          "description": "Parking spaces",
+          "placeholder": "e.g. 1",
           "visible": true,
           "editable": true
         },
@@ -63,8 +63,8 @@
       },
       "balcony": {
         "edit": {
-          "label": "balcony",
-          "description": "",
+          "label": "Balcony",
+          "description": "Has balcony?",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -77,8 +77,8 @@
       },
       "terrace": {
         "edit": {
-          "label": "terrace",
-          "description": "",
+          "label": "Terrace",
+          "description": "Has terrace?",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -91,8 +91,8 @@
       },
       "garden": {
         "edit": {
-          "label": "garden",
-          "description": "",
+          "label": "Garden",
+          "description": "Has garden?",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -105,9 +105,9 @@
       },
       "floor": {
         "edit": {
-          "label": "floor",
-          "description": "",
-          "placeholder": "",
+          "label": "Floor",
+          "description": "Floor/level",
+          "placeholder": "e.g. 5",
           "visible": true,
           "editable": true
         },
@@ -119,9 +119,9 @@
       },
       "orientation": {
         "edit": {
-          "label": "orientation",
-          "description": "",
-          "placeholder": "",
+          "label": "Orientation",
+          "description": "Orientation",
+          "placeholder": "Select orientation",
           "visible": true,
           "editable": true
         },
@@ -133,9 +133,9 @@
       },
       "furnished": {
         "edit": {
-          "label": "furnished",
-          "description": "",
-          "placeholder": "",
+          "label": "Furnished",
+          "description": "Furnished",
+          "placeholder": "Select option",
           "visible": true,
           "editable": true
         },
@@ -147,8 +147,8 @@
       },
       "petFriendly": {
         "edit": {
-          "label": "petFriendly",
-          "description": "",
+          "label": "Pet friendly",
+          "description": "Allows pets?",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -161,8 +161,8 @@
       },
       "smokingAllowed": {
         "edit": {
-          "label": "smokingAllowed",
-          "description": "",
+          "label": "Smoking allowed",
+          "description": "Allows smoking?",
           "placeholder": "",
           "visible": true,
           "editable": true

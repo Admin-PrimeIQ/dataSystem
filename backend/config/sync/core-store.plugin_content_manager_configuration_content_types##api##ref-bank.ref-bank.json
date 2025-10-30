@@ -21,9 +21,9 @@
       },
       "name": {
         "edit": {
-          "label": "name",
-          "description": "",
-          "placeholder": "",
+          "label": "Name",
+          "description": "Official bank name used across projects",
+          "placeholder": "Ex: Banco Industrial, BAC Credomatic, Banrural",
           "visible": true,
           "editable": true
         },
@@ -35,9 +35,9 @@
       },
       "code": {
         "edit": {
-          "label": "code",
-          "description": "",
-          "placeholder": "",
+          "label": "Code",
+          "description": "Unique short code for internal references and integrations",
+          "placeholder": "Ex: BIBANK, BAC, BANRURAL",
           "visible": true,
           "editable": true
         },
@@ -49,9 +49,9 @@
       },
       "swiftCode": {
         "edit": {
-          "label": "swiftCode",
-          "description": "",
-          "placeholder": "",
+          "label": "SWIFT/BIC Code",
+          "description": "International bank identifier for transfers (8 or 11 characters)",
+          "placeholder": "Ex: INDLGTGC, BACAGTGCXXX",
           "visible": true,
           "editable": true
         },
@@ -63,9 +63,9 @@
       },
       "country": {
         "edit": {
-          "label": "country",
-          "description": "",
-          "placeholder": "",
+          "label": "Country",
+          "description": "Country where the bank is headquartered or operates for this project",
+          "placeholder": "Ex: Guatemala, El Salvador, Costa Rica",
           "visible": true,
           "editable": true
         },
@@ -77,9 +77,9 @@
       },
       "website": {
         "edit": {
-          "label": "website",
-          "description": "",
-          "placeholder": "",
+          "label": "Website",
+          "description": "Official bank website for client reference",
+          "placeholder": "Ex: https://www.bancoindustrial.com",
           "visible": true,
           "editable": true
         },
@@ -91,9 +91,9 @@
       },
       "phone": {
         "edit": {
-          "label": "phone",
-          "description": "",
-          "placeholder": "",
+          "label": "Phone",
+          "description": "Primary customer service or corporate contact number",
+          "placeholder": "Ex: +502 2420-0000",
           "visible": true,
           "editable": true
         },
@@ -105,9 +105,9 @@
       },
       "address": {
         "edit": {
-          "label": "address",
-          "description": "",
-          "placeholder": "",
+          "label": "Address",
+          "description": "Head office or primary branch address relevant to financing",
+          "placeholder": "Ex: 7a Ave 5-10 Zona 4, Guatemala City",
           "visible": true,
           "editable": true
         },
@@ -119,9 +119,9 @@
       },
       "isActive": {
         "edit": {
-          "label": "isActive",
-          "description": "",
-          "placeholder": "",
+          "label": "Active",
+          "description": "Toggle to enable/disable bank availability for project financing",
+          "placeholder": "Enable to make it selectable",
           "visible": true,
           "editable": true
         },
@@ -133,9 +133,9 @@
       },
       "sortOrder": {
         "edit": {
-          "label": "sortOrder",
-          "description": "",
-          "placeholder": "",
+          "label": "Sort Order",
+          "description": "Display priority where lower numbers appear first",
+          "placeholder": "Ex: 1, 5, 10",
           "visible": true,
           "editable": true
         },

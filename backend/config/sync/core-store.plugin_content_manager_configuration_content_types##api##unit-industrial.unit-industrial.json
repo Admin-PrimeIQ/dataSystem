@@ -21,9 +21,9 @@
       },
       "unit": {
         "edit": {
-          "label": "unit",
-          "description": "",
-          "placeholder": "",
+          "label": "Unit",
+          "description": "Base unit this industrial details belong to",
+          "placeholder": "Select the unit",
           "visible": true,
           "editable": true,
           "mainField": "name"
@@ -36,9 +36,9 @@
       },
       "land": {
         "edit": {
-          "label": "land",
-          "description": "",
-          "placeholder": "",
+          "label": "Land",
+          "description": "JSON describing land area and characteristics",
+          "placeholder": "Ex: {\"area\": 5000, \"shape\": \"rectangular\" }",
           "visible": true,
           "editable": true
         },
@@ -50,9 +50,9 @@
       },
       "warehouse": {
         "edit": {
-          "label": "warehouse",
-          "description": "",
-          "placeholder": "",
+          "label": "Warehouse",
+          "description": "JSON describing warehouse area and specs",
+          "placeholder": "Ex: {\"area\": 3500, \"dockDoors\": 5 }",
           "visible": true,
           "editable": true
         },
@@ -64,9 +64,9 @@
       },
       "mezzanine": {
         "edit": {
-          "label": "mezzanine",
-          "description": "",
-          "placeholder": "",
+          "label": "Mezzanine",
+          "description": "JSON for mezzanine area and specs",
+          "placeholder": "Ex: {\"area\": 600 }",
           "visible": true,
           "editable": true
         },
@@ -78,9 +78,9 @@
       },
       "dimensions": {
         "edit": {
-          "label": "dimensions",
-          "description": "",
-          "placeholder": "",
+          "label": "Dimensions",
+          "description": "JSON with dimensions (frontage, depth, turning radius)",
+          "placeholder": "Ex: {\"frontage\": 50, \"depth\": 100 }",
           "visible": true,
           "editable": true
         },
@@ -92,9 +92,9 @@
       },
       "ceilingHeight": {
         "edit": {
-          "label": "ceilingHeight",
-          "description": "",
-          "placeholder": "",
+          "label": "Ceiling Height (m)",
+          "description": "Internal clear height in meters",
+          "placeholder": "Ex: 10",
           "visible": true,
           "editable": true
         },
@@ -106,9 +106,9 @@
       },
       "loadingDock": {
         "edit": {
-          "label": "loadingDock",
-          "description": "",
-          "placeholder": "",
+          "label": "Loading Dock",
+          "description": "Indicates if there is a loading dock",
+          "placeholder": "Enable if available",
           "visible": true,
           "editable": true
         },
@@ -120,9 +120,9 @@
       },
       "loadingDockCount": {
         "edit": {
-          "label": "loadingDockCount",
-          "description": "",
-          "placeholder": "",
+          "label": "Loading Dock Count",
+          "description": "Number of loading docks",
+          "placeholder": "Ex: 6",
           "visible": true,
           "editable": true
         },
@@ -134,9 +134,9 @@
       },
       "truckAccess": {
         "edit": {
-          "label": "truckAccess",
-          "description": "",
-          "placeholder": "",
+          "label": "Truck Access",
+          "description": "Indicates if truck access is available",
+          "placeholder": "Enable if available",
           "visible": true,
           "editable": true
         },
@@ -148,9 +148,9 @@
       },
       "railAccess": {
         "edit": {
-          "label": "railAccess",
-          "description": "",
-          "placeholder": "",
+          "label": "Rail Access",
+          "description": "Indicates if rail access is available",
+          "placeholder": "Enable if available",
           "visible": true,
           "editable": true
         },
@@ -162,9 +162,9 @@
       },
       "powerCapacity": {
         "edit": {
-          "label": "powerCapacity",
-          "description": "",
-          "placeholder": "",
+          "label": "Power Capacity",
+          "description": "Electrical capacity available to the unit",
+          "placeholder": "Ex: 200",
           "visible": true,
           "editable": true
         },
@@ -176,9 +176,9 @@
       },
       "powerUnit": {
         "edit": {
-          "label": "powerUnit",
-          "description": "",
-          "placeholder": "",
+          "label": "Power Unit",
+          "description": "Unit for power capacity",
+          "placeholder": "Choose: kW, kVA, HP",
           "visible": true,
           "editable": true
         },
@@ -190,9 +190,9 @@
       },
       "waterSupply": {
         "edit": {
-          "label": "waterSupply",
-          "description": "",
-          "placeholder": "",
+          "label": "Water Supply",
+          "description": "Indicates if water supply is available",
+          "placeholder": "Enable if available",
           "visible": true,
           "editable": true
         },
@@ -204,9 +204,9 @@
       },
       "sewageSystem": {
         "edit": {
-          "label": "sewageSystem",
-          "description": "",
-          "placeholder": "",
+          "label": "Sewage System",
+          "description": "Indicates if sewage system is available",
+          "placeholder": "Enable if available",
           "visible": true,
           "editable": true
         },
@@ -218,9 +218,9 @@
       },
       "fireSuppression": {
         "edit": {
-          "label": "fireSuppression",
-          "description": "",
-          "placeholder": "",
+          "label": "Fire Suppression",
+          "description": "Indicates if fire suppression system is available",
+          "placeholder": "Enable if available",
           "visible": true,
           "editable": true
         },
@@ -232,9 +232,9 @@
       },
       "securitySystem": {
         "edit": {
-          "label": "securitySystem",
-          "description": "",
-          "placeholder": "",
+          "label": "Security System",
+          "description": "Indicates if security system is available",
+          "placeholder": "Enable if available",
           "visible": true,
           "editable": true
         },
@@ -246,9 +246,9 @@
       },
       "officeSpace": {
         "edit": {
-          "label": "officeSpace",
-          "description": "",
-          "placeholder": "",
+          "label": "Office Space (m²)",
+          "description": "Office area available in the unit",
+          "placeholder": "Ex: 120",
           "visible": true,
           "editable": true
         },
@@ -260,9 +260,9 @@
       },
       "storageCapacity": {
         "edit": {
-          "label": "storageCapacity",
-          "description": "",
-          "placeholder": "",
+          "label": "Storage Capacity (m³)",
+          "description": "Storage capacity available in the unit",
+          "placeholder": "Ex: 800",
           "visible": true,
           "editable": true
         },
@@ -274,9 +274,9 @@
       },
       "zoning": {
         "edit": {
-          "label": "zoning",
-          "description": "",
-          "placeholder": "",
+          "label": "Zoning",
+          "description": "Zoning type applicable to the unit",
+          "placeholder": "Ex: I1, I2, I3",
           "visible": true,
           "editable": true
         },

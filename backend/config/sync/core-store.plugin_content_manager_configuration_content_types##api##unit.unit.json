@@ -21,9 +21,9 @@
       },
       "name": {
         "edit": {
-          "label": "name",
-          "description": "",
-          "placeholder": "",
+          "label": "Name",
+          "description": "Unit display name as shown to users",
+          "placeholder": "Ex: Tower A - Apt 1203, Office 501",
           "visible": true,
           "editable": true
         },
@@ -35,9 +35,9 @@
       },
       "code": {
         "edit": {
-          "label": "code",
-          "description": "",
-          "placeholder": "",
+          "label": "Code",
+          "description": "Unique unit code for references and integrations",
+          "placeholder": "Ex: A-1203, OFF-501, IND-01",
           "visible": true,
           "editable": true
         },
@@ -49,9 +49,9 @@
       },
       "description": {
         "edit": {
-          "label": "description",
-          "description": "",
-          "placeholder": "",
+          "label": "Description",
+          "description": "Short description of the unit",
+          "placeholder": "Ex: Corner unit with panoramic views",
           "visible": true,
           "editable": true
         },
@@ -63,9 +63,9 @@
       },
       "unitType": {
         "edit": {
-          "label": "unitType",
-          "description": "",
-          "placeholder": "",
+          "label": "Unit Type",
+          "description": "Select the type of unit",
+          "placeholder": "Choose: residential, office, industrial",
           "visible": true,
           "editable": true
         },
@@ -77,9 +77,9 @@
       },
       "area": {
         "edit": {
-          "label": "area",
-          "description": "",
-          "placeholder": "",
+          "label": "Area (m²)",
+          "description": "Total unit area in square meters",
+          "placeholder": "Ex: 85",
           "visible": true,
           "editable": true
         },
@@ -91,9 +91,9 @@
       },
       "areaUnit": {
         "edit": {
-          "label": "areaUnit",
-          "description": "",
-          "placeholder": "",
+          "label": "Area Unit",
+          "description": "Measurement unit for area",
+          "placeholder": "Choose: sqm, sqft, hectares, acres",
           "visible": true,
           "editable": true
         },
@@ -105,9 +105,9 @@
       },
       "price": {
         "edit": {
-          "label": "price",
-          "description": "",
-          "placeholder": "",
+          "label": "Price",
+          "description": "Sale price (if applicable)",
+          "placeholder": "Ex: 125000",
           "visible": true,
           "editable": true
         },
@@ -119,9 +119,9 @@
       },
       "rent": {
         "edit": {
-          "label": "rent",
-          "description": "",
-          "placeholder": "",
+          "label": "Rent",
+          "description": "Monthly rent (if applicable)",
+          "placeholder": "Ex: 850",
           "visible": true,
           "editable": true
         },
@@ -133,9 +133,9 @@
       },
       "currency": {
         "edit": {
-          "label": "currency",
-          "description": "",
-          "placeholder": "",
+          "label": "Currency",
+          "description": "ISO currency code for price/rent",
+          "placeholder": "Ex: GTQ, USD",
           "visible": true,
           "editable": true
         },
@@ -147,9 +147,9 @@
       },
       "kpis": {
         "edit": {
-          "label": "kpis",
-          "description": "",
-          "placeholder": "",
+          "label": "KPIs",
+          "description": "JSON with unit KPIs (yield, NOI, etc.)",
+          "placeholder": "Ex: {\"yield\": 6.5, \"noi\": 12000 }",
           "visible": true,
           "editable": true
         },
@@ -161,9 +161,9 @@
       },
       "status": {
         "edit": {
-          "label": "status",
-          "description": "",
-          "placeholder": "",
+          "label": "Status",
+          "description": "Current status of the unit",
+          "placeholder": "Choose: available, reserved, sold, rented, maintenance, inactive",
           "visible": true,
           "editable": true
         },
@@ -175,9 +175,9 @@
       },
       "isActive": {
         "edit": {
-          "label": "isActive",
-          "description": "",
-          "placeholder": "",
+          "label": "Active",
+          "description": "Toggle to enable or disable this unit",
+          "placeholder": "Enable to make it available",
           "visible": true,
           "editable": true
         },

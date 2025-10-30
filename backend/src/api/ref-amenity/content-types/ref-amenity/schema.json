@@ -4,28 +4,28 @@
   "info": {
     "singularName": "ref-amenity",
     "pluralName": "ref-amenities",
-    "displayName": "Reference Amenity",
+    "displayName": "Amenities",
     "description": "Property amenities (Pool, Gym, Helipad, etc.)"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
     "name": {
       "type": "string",
+      "maxLength": 100,
       "required": true,
-      "unique": true,
-      "maxLength": 100
+      "unique": true
     },
     "description": {
       "type": "text"
     },
     "code": {
       "type": "string",
+      "maxLength": 10,
       "required": true,
-      "unique": true,
-      "maxLength": 10
+      "unique": true
     },
     "icon": {
       "type": "string",
@@ -33,8 +33,15 @@
     },
     "category": {
       "type": "enumeration",
-      "enum": ["recreation", "security", "convenience", "luxury", "business", "other"],
-      "default": "other"
+      "default": "other",
+      "enum": [
+        "recreation",
+        "security",
+        "convenience",
+        "luxury",
+        "business",
+        "other"
+      ]
     },
     "isActive": {
       "type": "boolean",

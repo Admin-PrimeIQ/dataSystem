@@ -21,9 +21,9 @@
       },
       "name": {
         "edit": {
-          "label": "name",
-          "description": "",
-          "placeholder": "",
+          "label": "Name",
+          "description": "Human-friendly amenity name shown to users",
+          "placeholder": "Ex: Swimming Pool, Gym, Co-working Area",
           "visible": true,
           "editable": true
         },
@@ -35,9 +35,9 @@
       },
       "description": {
         "edit": {
-          "label": "description",
-          "description": "",
-          "placeholder": "",
+          "label": "Description",
+          "description": "Short description explaining what this amenity offers",
+          "placeholder": "Ex: Heated rooftop pool with city view",
           "visible": true,
           "editable": true
         },
@@ -49,9 +49,9 @@
       },
       "code": {
         "edit": {
-          "label": "code",
-          "description": "",
-          "placeholder": "",
+          "label": "Code",
+          "description": "Unique code for integrations and references (uppercase, no spaces)",
+          "placeholder": "Ex: POOL, GYM, COWORK",
           "visible": true,
           "editable": true
         },
@@ -63,9 +63,9 @@
       },
       "icon": {
         "edit": {
-          "label": "icon",
-          "description": "",
-          "placeholder": "",
+          "label": "Icon",
+          "description": "Optional icon name or media to represent this amenity",
+          "placeholder": "Ex: pool, dumbbell, coffee",
           "visible": true,
           "editable": true
         },
@@ -77,9 +77,9 @@
       },
       "category": {
         "edit": {
-          "label": "category",
-          "description": "",
-          "placeholder": "",
+          "label": "Category",
+          "description": "Category or grouping this amenity belongs to",
+          "placeholder": "Ex: Wellness, Outdoors, Business",
           "visible": true,
           "editable": true
         },
@@ -91,9 +91,9 @@
       },
       "isActive": {
         "edit": {
-          "label": "isActive",
-          "description": "",
-          "placeholder": "",
+          "label": "Active",
+          "description": "Toggle to enable or disable this amenity",
+          "placeholder": "Enable to make it selectable",
           "visible": true,
           "editable": true
         },
@@ -105,9 +105,9 @@
       },
       "sortOrder": {
         "edit": {
-          "label": "sortOrder",
-          "description": "",
-          "placeholder": "",
+          "label": "Sort Order",
+          "description": "Display priority where lower numbers appear first",
+          "placeholder": "Ex: 1, 5, 10",
           "visible": true,
           "editable": true
         },
@@ -185,37 +185,11 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "createdBy",
-        "createdAt",
-        "name"
-      ],
       "edit": [
         [
           {
             "name": "name",
-            "size": 6
-          },
-          {
-            "name": "description",
-            "size": 6
-          }
-        ],
-        [
-          {
-            "name": "code",
-            "size": 6
-          },
-          {
-            "name": "icon",
-            "size": 6
-          }
-        ],
-        [
-          {
-            "name": "category",
-            "size": 6
+            "size": 8
           },
           {
             "name": "isActive",
@@ -224,10 +198,36 @@
         ],
         [
           {
+            "name": "description",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "code",
+            "size": 4
+          },
+          {
+            "name": "icon",
+            "size": 4
+          },
+          {
             "name": "sortOrder",
             "size": 4
           }
+        ],
+        [
+          {
+            "name": "category",
+            "size": 12
+          }
         ]
+      ],
+      "list": [
+        "id",
+        "createdBy",
+        "createdAt",
+        "name"
       ]
     },
     "uid": "api::ref-amenity.ref-amenity"

@@ -264,7 +264,7 @@
       "locale": null
     },
     {
-      "documentId": "za5i1l4vikzagvdagxcbpvh4",
+      "documentId": "adc63afkwgjsc63ekfau8w2y",
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
       "subject": "api::project.project",
@@ -276,7 +276,9 @@
           "categoryId",
           "developer",
           "location",
-          "dates",
+          "startDate",
+          "deliveryDate",
+          "launchDate",
           "totals",
           "projectFinancingParam",
           "projectSegmentRule",
@@ -309,7 +311,7 @@
       "locale": null
     },
     {
-      "documentId": "ucd7ddcvx1qpo5ibmfii8c3p",
+      "documentId": "qql1ea584oi8rz735svwetp3",
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::project.project",
@@ -321,7 +323,9 @@
           "categoryId",
           "developer",
           "location",
-          "dates",
+          "startDate",
+          "deliveryDate",
+          "launchDate",
           "totals",
           "projectFinancingParam",
           "projectSegmentRule",
@@ -336,7 +340,7 @@
       "locale": null
     },
     {
-      "documentId": "dpokrink07rzquh3y5r2hrg8",
+      "documentId": "iqk49m9vxwxic37ev86s4i5p",
       "action": "plugin::content-manager.explorer.update",
       "actionParameters": {},
       "subject": "api::project.project",
@@ -348,7 +352,9 @@
           "categoryId",
           "developer",
           "location",
-          "dates",
+          "startDate",
+          "deliveryDate",
+          "launchDate",
           "totals",
           "projectFinancingParam",
           "projectSegmentRule",

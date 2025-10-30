@@ -646,12 +646,12 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   collectionName: 'projects';
   info: {
     description: 'Real estate development projects';
-    displayName: 'Project';
+    displayName: 'Projects';
     pluralName: 'projects';
     singularName: 'project';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     categoryId: Schema.Attribute.Relation<
@@ -667,10 +667,15 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    dates: Schema.Attribute.JSON;
+    deliveryDate: Schema.Attribute.Date;
     description: Schema.Attribute.Text;
-    developer: Schema.Attribute.JSON;
+    developer: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
     isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    launchDate: Schema.Attribute.Date;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -698,6 +703,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
       'api::ref-service.ref-service'
     >;
     publishedAt: Schema.Attribute.DateTime;
+    startDate: Schema.Attribute.Date;
     status: Schema.Attribute.Enumeration<
       [
         'planning',
@@ -720,12 +726,12 @@ export interface ApiRefAmenityRefAmenity extends Struct.CollectionTypeSchema {
   collectionName: 'ref_amenities';
   info: {
     description: 'Property amenities (Pool, Gym, Helipad, etc.)';
-    displayName: 'Reference Amenity';
+    displayName: 'Amenities';
     pluralName: 'ref-amenities';
     singularName: 'ref-amenity';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     category: Schema.Attribute.Enumeration<

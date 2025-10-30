@@ -4,24 +4,24 @@
   "info": {
     "singularName": "project",
     "pluralName": "projects",
-    "displayName": "Project",
+    "displayName": "Projects",
     "description": "Real estate development projects"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
     "name": {
       "type": "string",
-      "required": true,
-      "maxLength": 200
+      "maxLength": 200,
+      "required": true
     },
     "code": {
       "type": "string",
+      "maxLength": 20,
       "required": true,
-      "unique": true,
-      "maxLength": 20
+      "unique": true
     },
     "description": {
       "type": "text"
@@ -29,16 +29,25 @@
     "categoryId": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::ref-category.ref-category"
+      "target": "api::ref-category.ref-category",
+      "description": "Project category (residential, commercial, industrial, etc.)"
     },
     "developer": {
-      "type": "json"
+      "type": "string",
+      "maxLength": 200,
+      "required": true
     },
     "location": {
       "type": "json"
     },
-    "dates": {
-      "type": "json"
+    "startDate": {
+      "type": "date"
+    },
+    "deliveryDate": {
+      "type": "date"
+    },
+    "launchDate": {
+      "type": "date"
     },
     "totals": {
       "type": "json"
@@ -52,22 +61,32 @@
     "projectAmenity": {
       "type": "relation",
       "relation": "manyToMany",
-      "target": "api::ref-amenity.ref-amenity"
+      "target": "api::ref-amenity.ref-amenity",
+      "description": "Available project amenities (pool, gym, park, etc.)"
     },
     "projectService": {
       "type": "relation",
       "relation": "manyToMany",
-      "target": "api::ref-service.ref-service"
+      "target": "api::ref-service.ref-service",
+      "description": "Services included in the project (concierge, security, maintenance, etc.)"
     },
     "projectBankShare": {
       "type": "relation",
       "relation": "manyToMany",
-      "target": "api::ref-bank.ref-bank"
+      "target": "api::ref-bank.ref-bank",
+      "description": "Banks associated with the project for financing"
     },
     "status": {
       "type": "enumeration",
-      "enum": ["planning", "development", "marketing", "construction", "completed", "cancelled"],
-      "default": "planning"
+      "default": "planning",
+      "enum": [
+        "planning",
+        "development",
+        "marketing",
+        "construction",
+        "completed",
+        "cancelled"
+      ]
     },
     "isActive": {
       "type": "boolean",

@@ -6,7 +6,7 @@
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "documentId",
+      "mainField": "code",
       "defaultSortBy": "documentId",
       "defaultSortOrder": "ASC"
     },
@@ -21,9 +21,9 @@
       },
       "name": {
         "edit": {
-          "label": "Nombre",
-          "description": "Nombre comercial del proyecto inmobiliario",
-          "placeholder": "Ej: Torres del Sol, Residencial Los Pinos",
+          "label": "Name",
+          "description": "Commercial name of the real estate project",
+          "placeholder": "Ex: Torres del Sol, Residencial Los Pinos",
           "visible": true,
           "editable": true
         },
@@ -35,9 +35,9 @@
       },
       "code": {
         "edit": {
-          "label": "code",
-          "description": "",
-          "placeholder": "",
+          "label": "Code",
+          "description": "Unique identifier code of the project",
+          "placeholder": "Ex: TOR-2024-001, RES-LP-2024",
           "visible": true,
           "editable": true
         },
@@ -49,9 +49,9 @@
       },
       "description": {
         "edit": {
-          "label": "description",
-          "description": "",
-          "placeholder": "",
+          "label": "Description",
+          "description": "Detailed description of the real estate project",
+          "placeholder": "Describe the main features, location, amenities and key aspects of the project",
           "visible": true,
           "editable": true
         },
@@ -63,9 +63,9 @@
       },
       "categoryId": {
         "edit": {
-          "label": "categoryId",
-          "description": "",
-          "placeholder": "",
+          "label": "Category",
+          "description": "Project category (residential, commercial, industrial, etc.)",
+          "placeholder": "Select the project category",
           "visible": true,
           "editable": true,
           "mainField": "name"
@@ -78,9 +78,9 @@
       },
       "developer": {
         "edit": {
-          "label": "developer",
-          "description": "",
-          "placeholder": "",
+          "label": "Developer",
+          "description": "Enter developer information as JSON object with name, contact, and experience. Example: {\"name\": \"Constructora ABC\", \"contact\": \"contacto@abc.com\", \"experience\": \"20 años\"}",
+          "placeholder": "{\"name\": \"Constructora ABC\", \"contact\": \"contacto@abc.com\", \"phone\": \"+502 1234-5678\", \"experience\": \"20 años en el mercado\"}",
           "visible": true,
           "editable": true
         },
@@ -92,9 +92,9 @@
       },
       "location": {
         "edit": {
-          "label": "location",
-          "description": "",
-          "placeholder": "",
+          "label": "Location",
+          "description": "Enter project location details as JSON object including address, city, zone, and geographic coordinates. Example: {\"address\": \"Av. Principal 123\", \"city\": \"Guatemala City\", \"zone\": \"Zona 10\", \"coordinates\": {\"lat\": 14.6349, \"lng\": -90.5069}}",
+          "placeholder": "{\"address\": \"Av. Reforma 10-00\", \"city\": \"Guatemala City\", \"zone\": \"Zona 10\", \"country\": \"Guatemala\", \"coordinates\": {\"lat\": 14.6349, \"lng\": -90.5069}}",
           "visible": true,
           "editable": true
         },
@@ -104,25 +104,53 @@
           "sortable": false
         }
       },
-      "dates": {
+      "startDate": {
         "edit": {
-          "label": "dates",
-          "description": "",
-          "placeholder": "",
+          "label": "Start Date",
+          "description": "Expected or actual project start date when construction begins",
+          "placeholder": "Select project start date",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "dates",
-          "searchable": false,
-          "sortable": false
+          "label": "Start Date",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "deliveryDate": {
+        "edit": {
+          "label": "Delivery Date",
+          "description": "Expected date for project completion and delivery to clients",
+          "placeholder": "Select expected delivery date",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Delivery Date",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "launchDate": {
+        "edit": {
+          "label": "Launch Date",
+          "description": "Marketing launch date when the project is officially announced and sales begin",
+          "placeholder": "Select project launch date",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Launch Date",
+          "searchable": true,
+          "sortable": true
         }
       },
       "totals": {
         "edit": {
-          "label": "totals",
-          "description": "",
-          "placeholder": "",
+          "label": "Totals",
+          "description": "Project totals (total area, number of units, total investment, etc.)",
+          "placeholder": "Ex: {\"totalArea\": 5000, \"units\": 50, \"investment\": 10000000}",
           "visible": true,
           "editable": true
         },
@@ -134,9 +162,9 @@
       },
       "projectFinancingParam": {
         "edit": {
-          "label": "projectFinancingParam",
-          "description": "",
-          "placeholder": "",
+          "label": "Financing Parameters",
+          "description": "Project financing parameters (payment options, credits, etc.)",
+          "placeholder": "Ex: {\"paymentOptions\": [\"contado\", \"financiado\"], \"creditBanks\": [\"BCP\", \"Interbank\"]}",
           "visible": true,
           "editable": true
         },
@@ -148,9 +176,9 @@
       },
       "projectSegmentRule": {
         "edit": {
-          "label": "projectSegmentRule",
-          "description": "",
-          "placeholder": "",
+          "label": "Segmentation Rules",
+          "description": "Project segmentation rules (unit types, distribution, etc.)",
+          "placeholder": "Ex: {\"unitTypes\": [\"departamento\", \"casa\"], \"distribution\": \"50-50\"}",
           "visible": true,
           "editable": true
         },
@@ -162,9 +190,9 @@
       },
       "projectAmenity": {
         "edit": {
-          "label": "projectAmenity",
-          "description": "",
-          "placeholder": "",
+          "label": "Amenities",
+          "description": "Available project amenities (pool, gym, park, etc.)",
+          "placeholder": "Select the project amenities",
           "visible": true,
           "editable": true,
           "mainField": "name"
@@ -177,9 +205,9 @@
       },
       "projectService": {
         "edit": {
-          "label": "projectService",
-          "description": "",
-          "placeholder": "",
+          "label": "Services",
+          "description": "Services included in the project (concierge, security, maintenance, etc.)",
+          "placeholder": "Select the project services",
           "visible": true,
           "editable": true,
           "mainField": "name"
@@ -192,9 +220,9 @@
       },
       "projectBankShare": {
         "edit": {
-          "label": "projectBankShare",
-          "description": "",
-          "placeholder": "",
+          "label": "Associated Banks",
+          "description": "Banks associated with the project for financing",
+          "placeholder": "Select the banks for financing",
           "visible": true,
           "editable": true,
           "mainField": "name"
@@ -207,9 +235,9 @@
       },
       "status": {
         "edit": {
-          "label": "status",
-          "description": "",
-          "placeholder": "",
+          "label": "Status",
+          "description": "Current status of the real estate project",
+          "placeholder": "Select the project status",
           "visible": true,
           "editable": true
         },
@@ -221,9 +249,9 @@
       },
       "isActive": {
         "edit": {
-          "label": "isActive",
-          "description": "",
-          "placeholder": "",
+          "label": "Active",
+          "description": "Indicates if the project is active and available for operations",
+          "placeholder": "Activate/deactivate project",
           "visible": true,
           "editable": true
         },
@@ -305,21 +333,25 @@
         [
           {
             "name": "name",
-            "size": 6
+            "size": 4
           },
           {
             "name": "code",
-            "size": 6
+            "size": 4
+          },
+          {
+            "name": "isActive",
+            "size": 4
           }
         ],
         [
           {
-            "name": "description",
-            "size": 6
+            "name": "categoryId",
+            "size": 12
           },
           {
-            "name": "categoryId",
-            "size": 6
+            "name": "description",
+            "size": 12
           }
         ],
         [
@@ -330,25 +362,21 @@
         ],
         [
           {
-            "name": "location",
-            "size": 12
-          }
-        ],
-        [
+            "name": "startDate",
+            "size": 4
+          },
           {
-            "name": "dates",
-            "size": 12
+            "name": "deliveryDate",
+            "size": 4
+          },
+          {
+            "name": "launchDate",
+            "size": 4
           }
         ],
         [
           {
             "name": "totals",
-            "size": 12
-          }
-        ],
-        [
-          {
-            "name": "projectFinancingParam",
             "size": 12
           }
         ],
@@ -361,27 +389,33 @@
         [
           {
             "name": "projectAmenity",
-            "size": 6
+            "size": 4
           },
           {
             "name": "projectService",
-            "size": 6
-          }
-        ],
-        [
-          {
-            "name": "projectBankShare",
-            "size": 6
+            "size": 4
           },
           {
-            "name": "status",
-            "size": 6
+            "name": "projectBankShare",
+            "size": 4
           }
         ],
         [
           {
-            "name": "isActive",
-            "size": 4
+            "name": "location",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "projectFinancingParam",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "status",
+            "size": 12
           }
         ]
       ],

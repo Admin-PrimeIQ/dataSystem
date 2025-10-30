@@ -21,9 +21,9 @@
       },
       "unit": {
         "edit": {
-          "label": "unit",
-          "description": "",
-          "placeholder": "",
+          "label": "Unit",
+          "description": "Base unit this residential details belong to",
+          "placeholder": "Select the unit",
           "visible": true,
           "editable": true,
           "mainField": "name"
@@ -36,9 +36,9 @@
       },
       "bedrooms": {
         "edit": {
-          "label": "bedrooms",
-          "description": "",
-          "placeholder": "",
+          "label": "Bedrooms",
+          "description": "Number of bedrooms",
+          "placeholder": "Ex: 2",
           "visible": true,
           "editable": true
         },
@@ -50,9 +50,9 @@
       },
       "bathrooms": {
         "edit": {
-          "label": "bathrooms",
-          "description": "",
-          "placeholder": "",
+          "label": "Bathrooms",
+          "description": "Number of bathrooms",
+          "placeholder": "Ex: 2",
           "visible": true,
           "editable": true
         },
@@ -64,9 +64,9 @@
       },
       "parkingSpaces": {
         "edit": {
-          "label": "parkingSpaces",
-          "description": "",
-          "placeholder": "",
+          "label": "Parking Spaces",
+          "description": "Number of parking spaces included",
+          "placeholder": "Ex: 1",
           "visible": true,
           "editable": true
         },
@@ -78,9 +78,9 @@
       },
       "balcony": {
         "edit": {
-          "label": "balcony",
-          "description": "",
-          "placeholder": "",
+          "label": "Balcony",
+          "description": "Indicates if the unit has a balcony",
+          "placeholder": "Enable if available",
           "visible": true,
           "editable": true
         },
@@ -92,9 +92,9 @@
       },
       "terrace": {
         "edit": {
-          "label": "terrace",
-          "description": "",
-          "placeholder": "",
+          "label": "Terrace",
+          "description": "Indicates if the unit has a terrace",
+          "placeholder": "Enable if available",
           "visible": true,
           "editable": true
         },
@@ -106,9 +106,9 @@
       },
       "garden": {
         "edit": {
-          "label": "garden",
-          "description": "",
-          "placeholder": "",
+          "label": "Garden",
+          "description": "Indicates if the unit has access to a garden",
+          "placeholder": "Enable if available",
           "visible": true,
           "editable": true
         },
@@ -120,9 +120,9 @@
       },
       "floor": {
         "edit": {
-          "label": "floor",
-          "description": "",
-          "placeholder": "",
+          "label": "Floor",
+          "description": "Floor number the unit is located on",
+          "placeholder": "Ex: 12",
           "visible": true,
           "editable": true
         },
@@ -134,9 +134,9 @@
       },
       "orientation": {
         "edit": {
-          "label": "orientation",
-          "description": "",
-          "placeholder": "",
+          "label": "Orientation",
+          "description": "Unit orientation",
+          "placeholder": "Ex: North, South, East, West",
           "visible": true,
           "editable": true
         },
@@ -148,9 +148,9 @@
       },
       "furnished": {
         "edit": {
-          "label": "furnished",
-          "description": "",
-          "placeholder": "",
+          "label": "Furnished",
+          "description": "Indicates if the unit is furnished",
+          "placeholder": "Enable if furnished",
           "visible": true,
           "editable": true
         },
@@ -162,9 +162,9 @@
       },
       "petFriendly": {
         "edit": {
-          "label": "petFriendly",
-          "description": "",
-          "placeholder": "",
+          "label": "Pet Friendly",
+          "description": "Indicates if pets are allowed",
+          "placeholder": "Enable if pets are allowed",
           "visible": true,
           "editable": true
         },
@@ -176,9 +176,9 @@
       },
       "smokingAllowed": {
         "edit": {
-          "label": "smokingAllowed",
-          "description": "",
-          "placeholder": "",
+          "label": "Smoking Allowed",
+          "description": "Indicates if smoking is allowed",
+          "placeholder": "Enable if smoking is allowed",
           "visible": true,
           "editable": true
         },

@@ -21,9 +21,9 @@
       },
       "name": {
         "edit": {
-          "label": "name",
-          "description": "",
-          "placeholder": "",
+          "label": "Name",
+          "description": "Rule name for industrial projects",
+          "placeholder": "Ex: Warehouse Dock Requirements",
           "visible": true,
           "editable": true
         },
@@ -35,9 +35,9 @@
       },
       "description": {
         "edit": {
-          "label": "description",
-          "description": "",
-          "placeholder": "",
+          "label": "Description",
+          "description": "Short description of the industrial rule",
+          "placeholder": "Ex: Applies to logistics parks near main highway",
           "visible": true,
           "editable": true
         },
@@ -49,9 +49,9 @@
       },
       "ruleType": {
         "edit": {
-          "label": "ruleType",
-          "description": "",
-          "placeholder": "",
+          "label": "Rule Type",
+          "description": "Category of the rule (height, docks, power, zoning, etc.)",
+          "placeholder": "Ex: height, docks, power, zoning",
           "visible": true,
           "editable": true
         },
@@ -63,9 +63,9 @@
       },
       "minWarehouseHeight": {
         "edit": {
-          "label": "minWarehouseHeight",
-          "description": "",
-          "placeholder": "",
+          "label": "Min Warehouse Height",
+          "description": "Minimum internal clear height (meters)",
+          "placeholder": "Ex: 8",
           "visible": true,
           "editable": true
         },
@@ -77,9 +77,9 @@
       },
       "maxWarehouseHeight": {
         "edit": {
-          "label": "maxWarehouseHeight",
-          "description": "",
-          "placeholder": "",
+          "label": "Max Warehouse Height",
+          "description": "Maximum internal clear height (meters)",
+          "placeholder": "Ex: 18",
           "visible": true,
           "editable": true
         },
@@ -91,9 +91,9 @@
       },
       "minLoadingAreaSize": {
         "edit": {
-          "label": "minLoadingAreaSize",
-          "description": "",
-          "placeholder": "",
+          "label": "Min Loading Area Size",
+          "description": "Minimum loading area size (m²)",
+          "placeholder": "Ex: 200",
           "visible": true,
           "editable": true
         },
@@ -105,9 +105,9 @@
       },
       "maxLoadingAreaSize": {
         "edit": {
-          "label": "maxLoadingAreaSize",
-          "description": "",
-          "placeholder": "",
+          "label": "Max Loading Area Size",
+          "description": "Maximum loading area size (m²)",
+          "placeholder": "Ex: 2000",
           "visible": true,
           "editable": true
         },
@@ -119,9 +119,9 @@
       },
       "minLoadingDocks": {
         "edit": {
-          "label": "minLoadingDocks",
-          "description": "",
-          "placeholder": "",
+          "label": "Min Loading Docks",
+          "description": "Minimum number of loading docks",
+          "placeholder": "Ex: 2",
           "visible": true,
           "editable": true
         },
@@ -133,9 +133,9 @@
       },
       "maxLoadingDocks": {
         "edit": {
-          "label": "maxLoadingDocks",
-          "description": "",
-          "placeholder": "",
+          "label": "Max Loading Docks",
+          "description": "Maximum number of loading docks",
+          "placeholder": "Ex: 20",
           "visible": true,
           "editable": true
         },
@@ -147,9 +147,9 @@
       },
       "minPowerCapacity": {
         "edit": {
-          "label": "minPowerCapacity",
-          "description": "",
-          "placeholder": "",
+          "label": "Min Power Capacity",
+          "description": "Minimum electrical capacity (kW or kVA)",
+          "placeholder": "Ex: 50",
           "visible": true,
           "editable": true
         },
@@ -161,9 +161,9 @@
       },
       "maxPowerCapacity": {
         "edit": {
-          "label": "maxPowerCapacity",
-          "description": "",
-          "placeholder": "",
+          "label": "Max Power Capacity",
+          "description": "Maximum electrical capacity (kW or kVA)",
+          "placeholder": "Ex: 500",
           "visible": true,
           "editable": true
         },
@@ -175,9 +175,9 @@
       },
       "powerUnit": {
         "edit": {
-          "label": "powerUnit",
-          "description": "",
-          "placeholder": "",
+          "label": "Power Unit",
+          "description": "Unit for power capacity values",
+          "placeholder": "Choose: kW, kVA, HP",
           "visible": true,
           "editable": true
         },
@@ -189,9 +189,9 @@
       },
       "truckAccessRequired": {
         "edit": {
-          "label": "truckAccessRequired",
-          "description": "",
-          "placeholder": "",
+          "label": "Truck Access Required",
+          "description": "Specifies if truck access is mandatory",
+          "placeholder": "Enable if truck access is required",
           "visible": true,
           "editable": true
         },
@@ -203,9 +203,9 @@
       },
       "railAccessRequired": {
         "edit": {
-          "label": "railAccessRequired",
-          "description": "",
-          "placeholder": "",
+          "label": "Rail Access Required",
+          "description": "Specifies if rail access is mandatory",
+          "placeholder": "Enable if rail access is required",
           "visible": true,
           "editable": true
         },
@@ -217,9 +217,9 @@
       },
       "waterSupplyRequired": {
         "edit": {
-          "label": "waterSupplyRequired",
-          "description": "",
-          "placeholder": "",
+          "label": "Water Supply Required",
+          "description": "Specifies if water supply is mandatory",
+          "placeholder": "Enable if water supply is required",
           "visible": true,
           "editable": true
         },
@@ -231,9 +231,9 @@
       },
       "sewageSystemRequired": {
         "edit": {
-          "label": "sewageSystemRequired",
-          "description": "",
-          "placeholder": "",
+          "label": "Sewage System Required",
+          "description": "Specifies if sewage system is mandatory",
+          "placeholder": "Enable if sewage system is required",
           "visible": true,
           "editable": true
         },
@@ -245,9 +245,9 @@
       },
       "fireSuppressionRequired": {
         "edit": {
-          "label": "fireSuppressionRequired",
-          "description": "",
-          "placeholder": "",
+          "label": "Fire Suppression Required",
+          "description": "Specifies if fire suppression system is mandatory",
+          "placeholder": "Enable if fire suppression is required",
           "visible": true,
           "editable": true
         },
@@ -259,9 +259,9 @@
       },
       "securitySystemRequired": {
         "edit": {
-          "label": "securitySystemRequired",
-          "description": "",
-          "placeholder": "",
+          "label": "Security System Required",
+          "description": "Specifies if security system is mandatory",
+          "placeholder": "Enable if security system is required",
           "visible": true,
           "editable": true
         },
@@ -273,9 +273,9 @@
       },
       "minOfficeSpace": {
         "edit": {
-          "label": "minOfficeSpace",
-          "description": "",
-          "placeholder": "",
+          "label": "Min Office Space",
+          "description": "Minimum office space (m²)",
+          "placeholder": "Ex: 30",
           "visible": true,
           "editable": true
         },
@@ -287,9 +287,9 @@
       },
       "maxOfficeSpace": {
         "edit": {
-          "label": "maxOfficeSpace",
-          "description": "",
-          "placeholder": "",
+          "label": "Max Office Space",
+          "description": "Maximum office space (m²)",
+          "placeholder": "Ex: 500",
           "visible": true,
           "editable": true
         },
@@ -301,9 +301,9 @@
       },
       "minStorageCapacity": {
         "edit": {
-          "label": "minStorageCapacity",
-          "description": "",
-          "placeholder": "",
+          "label": "Min Storage Capacity",
+          "description": "Minimum storage capacity (m³)",
+          "placeholder": "Ex: 100",
           "visible": true,
           "editable": true
         },
@@ -315,9 +315,9 @@
       },
       "maxStorageCapacity": {
         "edit": {
-          "label": "maxStorageCapacity",
-          "description": "",
-          "placeholder": "",
+          "label": "Max Storage Capacity",
+          "description": "Maximum storage capacity (m³)",
+          "placeholder": "Ex: 5000",
           "visible": true,
           "editable": true
         },
@@ -329,9 +329,9 @@
       },
       "allowedZoning": {
         "edit": {
-          "label": "allowedZoning",
-          "description": "",
-          "placeholder": "",
+          "label": "Allowed Zoning",
+          "description": "JSON list of allowed zoning categories",
+          "placeholder": "Ex: {\"allowed\": [\"I1\", \"I2\"] }",
           "visible": true,
           "editable": true
         },
@@ -343,9 +343,9 @@
       },
       "restrictedZoning": {
         "edit": {
-          "label": "restrictedZoning",
-          "description": "",
-          "placeholder": "",
+          "label": "Restricted Zoning",
+          "description": "JSON list of restricted zoning categories",
+          "placeholder": "Ex: {\"restricted\": [\"R1\", \"C2\"] }",
           "visible": true,
           "editable": true
         },
@@ -357,9 +357,9 @@
       },
       "isActive": {
         "edit": {
-          "label": "isActive",
-          "description": "",
-          "placeholder": "",
+          "label": "Active",
+          "description": "Toggle to enable or disable this rule",
+          "placeholder": "Enable to apply the rule",
           "visible": true,
           "editable": true
         },
@@ -371,9 +371,9 @@
       },
       "effectiveDate": {
         "edit": {
-          "label": "effectiveDate",
-          "description": "",
-          "placeholder": "",
+          "label": "Effective Date",
+          "description": "Date when the rule becomes effective",
+          "placeholder": "Select effective date",
           "visible": true,
           "editable": true
         },
@@ -385,9 +385,9 @@
       },
       "expirationDate": {
         "edit": {
-          "label": "expirationDate",
-          "description": "",
-          "placeholder": "",
+          "label": "Expiration Date",
+          "description": "Date when the rule expires (optional)",
+          "placeholder": "Select expiration date",
           "visible": true,
           "editable": true
         },
@@ -399,9 +399,9 @@
       },
       "priority": {
         "edit": {
-          "label": "priority",
-          "description": "",
-          "placeholder": "",
+          "label": "Priority",
+          "description": "Higher priority rules take precedence",
+          "placeholder": "Ex: 1, 5, 10",
           "visible": true,
           "editable": true
         },

@@ -21,9 +21,9 @@
       },
       "name": {
         "edit": {
-          "label": "name",
-          "description": "",
-          "placeholder": "",
+          "label": "Name",
+          "description": "Feature name that can be attached to projects or units",
+          "placeholder": "Ex: Balcony, Ocean View, High Ceiling",
           "visible": true,
           "editable": true
         },
@@ -35,9 +35,9 @@
       },
       "description": {
         "edit": {
-          "label": "description",
-          "description": "",
-          "placeholder": "",
+          "label": "Description",
+          "description": "Short description explaining the feature",
+          "placeholder": "Ex: Private balcony with panoramic view",
           "visible": true,
           "editable": true
         },
@@ -49,9 +49,9 @@
       },
       "code": {
         "edit": {
-          "label": "code",
-          "description": "",
-          "placeholder": "",
+          "label": "Code",
+          "description": "Unique short code used in rules and references",
+          "placeholder": "Ex: BALCONY, OCEAN_VIEW, HIGH_CEILING",
           "visible": true,
           "editable": true
         },
@@ -63,9 +63,9 @@
       },
       "dataType": {
         "edit": {
-          "label": "dataType",
-          "description": "",
-          "placeholder": "",
+          "label": "Data Type",
+          "description": "Expected value type for this feature",
+          "placeholder": "Choose from: string, number, boolean, date, text, json",
           "visible": true,
           "editable": true
         },
@@ -77,9 +77,9 @@
       },
       "isRequired": {
         "edit": {
-          "label": "isRequired",
-          "description": "",
-          "placeholder": "",
+          "label": "Required",
+          "description": "Indicates if this feature must be provided",
+          "placeholder": "Enable to enforce value",
           "visible": true,
           "editable": true
         },
@@ -91,9 +91,9 @@
       },
       "defaultValue": {
         "edit": {
-          "label": "defaultValue",
-          "description": "",
-          "placeholder": "",
+          "label": "Default Value",
+          "description": "Default value applied when none is provided",
+          "placeholder": "Ex: true, 0, STANDARD, 2025-01-01",
           "visible": true,
           "editable": true
         },
@@ -105,9 +105,9 @@
       },
       "validationRules": {
         "edit": {
-          "label": "validationRules",
-          "description": "",
-          "placeholder": "",
+          "label": "Validation Rules",
+          "description": "JSON with validation constraints (min, max, regex, etc.)",
+          "placeholder": "Ex: {\"min\": 0, \"max\": 100 }",
           "visible": true,
           "editable": true
         },
@@ -119,9 +119,9 @@
       },
       "appliesTo": {
         "edit": {
-          "label": "appliesTo",
-          "description": "",
-          "placeholder": "",
+          "label": "Applies To",
+          "description": "Where this feature is applicable",
+          "placeholder": "Choose: project, unit, both",
           "visible": true,
           "editable": true
         },
@@ -133,9 +133,9 @@
       },
       "category": {
         "edit": {
-          "label": "category",
-          "description": "",
-          "placeholder": "",
+          "label": "Category",
+          "description": "Category grouping for this feature",
+          "placeholder": "Ex: Interior, Exterior, Sustainability",
           "visible": true,
           "editable": true
         },
@@ -147,9 +147,9 @@
       },
       "isActive": {
         "edit": {
-          "label": "isActive",
-          "description": "",
-          "placeholder": "",
+          "label": "Active",
+          "description": "Toggle to enable or disable this feature",
+          "placeholder": "Enable to make it selectable",
           "visible": true,
           "editable": true
         },
@@ -161,9 +161,9 @@
       },
       "sortOrder": {
         "edit": {
-          "label": "sortOrder",
-          "description": "",
-          "placeholder": "",
+          "label": "Sort Order",
+          "description": "Display priority where lower numbers appear first",
+          "placeholder": "Ex: 1, 5, 10",
           "visible": true,
           "editable": true
         },

@@ -21,9 +21,9 @@
       },
       "name": {
         "edit": {
-          "label": "name",
-          "description": "",
-          "placeholder": "",
+          "label": "Name",
+          "description": "Rule name for office projects",
+          "placeholder": "Ex: Class A Office Minimums",
           "visible": true,
           "editable": true
         },
@@ -35,9 +35,9 @@
       },
       "description": {
         "edit": {
-          "label": "description",
-          "description": "",
-          "placeholder": "",
+          "label": "Description",
+          "description": "Short description of the office rule",
+          "placeholder": "Ex: Applies to offices in CBD Class A buildings",
           "visible": true,
           "editable": true
         },
@@ -49,9 +49,9 @@
       },
       "ruleType": {
         "edit": {
-          "label": "ruleType",
-          "description": "",
-          "placeholder": "",
+          "label": "Rule Type",
+          "description": "Category of the rule (rent, size, amenities, etc.)",
+          "placeholder": "Ex: rent, size, amenities",
           "visible": true,
           "editable": true
         },
@@ -63,9 +63,9 @@
       },
       "minRentPerSqm": {
         "edit": {
-          "label": "minRentPerSqm",
-          "description": "",
-          "placeholder": "",
+          "label": "Min Rent per m²",
+          "description": "Minimum rent per square meter",
+          "placeholder": "Ex: 10",
           "visible": true,
           "editable": true
         },
@@ -77,9 +77,9 @@
       },
       "maxRentPerSqm": {
         "edit": {
-          "label": "maxRentPerSqm",
-          "description": "",
-          "placeholder": "",
+          "label": "Max Rent per m²",
+          "description": "Maximum rent per square meter",
+          "placeholder": "Ex: 35",
           "visible": true,
           "editable": true
         },
@@ -91,9 +91,9 @@
       },
       "minUnitSize": {
         "edit": {
-          "label": "minUnitSize",
-          "description": "",
-          "placeholder": "",
+          "label": "Min Unit Size",
+          "description": "Minimum unit size in m²",
+          "placeholder": "Ex: 50",
           "visible": true,
           "editable": true
         },
@@ -105,9 +105,9 @@
       },
       "maxUnitSize": {
         "edit": {
-          "label": "maxUnitSize",
-          "description": "",
-          "placeholder": "",
+          "label": "Max Unit Size",
+          "description": "Maximum unit size in m²",
+          "placeholder": "Ex: 1500",
           "visible": true,
           "editable": true
         },
@@ -119,9 +119,9 @@
       },
       "minEmployees": {
         "edit": {
-          "label": "minEmployees",
-          "description": "",
-          "placeholder": "",
+          "label": "Min Employees",
+          "description": "Minimum number of employees supported",
+          "placeholder": "Ex: 10",
           "visible": true,
           "editable": true
         },
@@ -133,9 +133,9 @@
       },
       "maxEmployees": {
         "edit": {
-          "label": "maxEmployees",
-          "description": "",
-          "placeholder": "",
+          "label": "Max Employees",
+          "description": "Maximum number of employees supported",
+          "placeholder": "Ex: 300",
           "visible": true,
           "editable": true
         },
@@ -147,9 +147,9 @@
       },
       "requiredClass": {
         "edit": {
-          "label": "requiredClass",
-          "description": "",
-          "placeholder": "",
+          "label": "Required Class",
+          "description": "Office building class requirement (A, B, C)",
+          "placeholder": "Ex: A",
           "visible": true,
           "editable": true
         },
@@ -161,9 +161,9 @@
       },
       "meetingRoomRequirement": {
         "edit": {
-          "label": "meetingRoomRequirement",
-          "description": "",
-          "placeholder": "",
+          "label": "Meeting Room Requirement",
+          "description": "Specifies if meeting rooms are required",
+          "placeholder": "Enable if meeting rooms are required",
           "visible": true,
           "editable": true
         },
@@ -175,9 +175,9 @@
       },
       "minMeetingRooms": {
         "edit": {
-          "label": "minMeetingRooms",
-          "description": "",
-          "placeholder": "",
+          "label": "Min Meeting Rooms",
+          "description": "Minimum number of meeting rooms",
+          "placeholder": "Ex: 2",
           "visible": true,
           "editable": true
         },
@@ -189,9 +189,9 @@
       },
       "receptionAreaRequired": {
         "edit": {
-          "label": "receptionAreaRequired",
-          "description": "",
-          "placeholder": "",
+          "label": "Reception Area Required",
+          "description": "Specifies if a reception area is required",
+          "placeholder": "Enable if reception area is required",
           "visible": true,
           "editable": true
         },
@@ -203,9 +203,9 @@
       },
       "kitchenetteRequired": {
         "edit": {
-          "label": "kitchenetteRequired",
-          "description": "",
-          "placeholder": "",
+          "label": "Kitchenette Required",
+          "description": "Specifies if a kitchenette is required",
+          "placeholder": "Enable if kitchenette is required",
           "visible": true,
           "editable": true
         },
@@ -217,9 +217,9 @@
       },
       "parkingSpacesRequired": {
         "edit": {
-          "label": "parkingSpacesRequired",
-          "description": "",
-          "placeholder": "",
+          "label": "Parking Spaces Required",
+          "description": "Specifies if parking spaces are required",
+          "placeholder": "Enable if parking spaces are required",
           "visible": true,
           "editable": true
         },
@@ -231,9 +231,9 @@
       },
       "elevatorAccessRequired": {
         "edit": {
-          "label": "elevatorAccessRequired",
-          "description": "",
-          "placeholder": "",
+          "label": "Elevator Access Required",
+          "description": "Specifies if elevator access is required",
+          "placeholder": "Enable if elevator access is required",
           "visible": true,
           "editable": true
         },
@@ -245,9 +245,9 @@
       },
       "airConditioningRequired": {
         "edit": {
-          "label": "airConditioningRequired",
-          "description": "",
-          "placeholder": "",
+          "label": "Air Conditioning Required",
+          "description": "Specifies if air conditioning is required",
+          "placeholder": "Enable if air conditioning is required",
           "visible": true,
           "editable": true
         },
@@ -259,9 +259,9 @@
       },
       "locationRestrictions": {
         "edit": {
-          "label": "locationRestrictions",
-          "description": "",
-          "placeholder": "",
+          "label": "Location Restrictions",
+          "description": "JSON with location constraints (zones, cities, coordinates)",
+          "placeholder": "Ex: {\"allowedZones\": [\"Zona 4\", \"Zona 10\"] }",
           "visible": true,
           "editable": true
         },
@@ -273,9 +273,9 @@
       },
       "isActive": {
         "edit": {
-          "label": "isActive",
-          "description": "",
-          "placeholder": "",
+          "label": "Active",
+          "description": "Toggle to enable or disable this rule",
+          "placeholder": "Enable to apply the rule",
           "visible": true,
           "editable": true
         },
@@ -287,9 +287,9 @@
       },
       "effectiveDate": {
         "edit": {
-          "label": "effectiveDate",
-          "description": "",
-          "placeholder": "",
+          "label": "Effective Date",
+          "description": "Date when the rule becomes effective",
+          "placeholder": "Select effective date",
           "visible": true,
           "editable": true
         },
@@ -301,9 +301,9 @@
       },
       "expirationDate": {
         "edit": {
-          "label": "expirationDate",
-          "description": "",
-          "placeholder": "",
+          "label": "Expiration Date",
+          "description": "Date when the rule expires (optional)",
+          "placeholder": "Select expiration date",
           "visible": true,
           "editable": true
         },
@@ -315,9 +315,9 @@
       },
       "priority": {
         "edit": {
-          "label": "priority",
-          "description": "",
-          "placeholder": "",
+          "label": "Priority",
+          "description": "Higher priority rules take precedence",
+          "placeholder": "Ex: 1, 5, 10",
           "visible": true,
           "editable": true
         },

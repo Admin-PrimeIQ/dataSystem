@@ -6,9 +6,9 @@
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "documentId",
-      "defaultSortBy": "documentId",
-      "defaultSortOrder": "ASC"
+      "mainField": "name",
+      "defaultSortOrder": "ASC",
+      "defaultSortBy": "name"
     },
     "metadatas": {
       "id": {
@@ -185,40 +185,34 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "createdAt",
-        "updatedAt",
-        "createdBy"
-      ],
       "edit": [
         [
           {
             "name": "name",
-            "size": 6
+            "size": 4
           },
-          {
-            "name": "description",
-            "size": 6
-          }
-        ],
-        [
           {
             "name": "code",
-            "size": 6
-          },
-          {
-            "name": "serviceType",
-            "size": 6
-          }
-        ],
-        [
-          {
-            "name": "isEssential",
             "size": 4
           },
           {
             "name": "isActive",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "description",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "serviceType",
+            "size": 4
+          },
+          {
+            "name": "isEssential",
             "size": 4
           },
           {
@@ -226,6 +220,13 @@
             "size": 4
           }
         ]
+      ],
+      "list": [
+        "name",
+        "description",
+        "code",
+        "serviceType",
+        "isActive"
       ]
     },
     "uid": "api::ref-service.ref-service"

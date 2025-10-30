@@ -7,7 +7,7 @@
       "searchable": true,
       "pageSize": 10,
       "mainField": "name",
-      "defaultSortBy": "id",
+      "defaultSortBy": "name",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -157,27 +157,15 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "name",
-        "description",
-        "code"
-      ],
       "edit": [
         [
           {
             "name": "name",
-            "size": 6
+            "size": 4
           },
           {
-            "name": "description",
-            "size": 6
-          }
-        ],
-        [
-          {
             "name": "code",
-            "size": 6
+            "size": 4
           },
           {
             "name": "isActive",
@@ -186,10 +174,22 @@
         ],
         [
           {
+            "name": "description",
+            "size": 12
+          }
+        ],
+        [
+          {
             "name": "sortOrder",
-            "size": 4
+            "size": 8
           }
         ]
+      ],
+      "list": [
+        "name",
+        "description",
+        "code",
+        "isActive"
       ]
     },
     "uid": "api::ref-category.ref-category"

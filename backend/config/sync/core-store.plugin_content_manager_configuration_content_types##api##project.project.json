@@ -376,13 +376,7 @@
         ],
         [
           {
-            "name": "totals",
-            "size": 12
-          }
-        ],
-        [
-          {
-            "name": "projectSegmentRule",
+            "name": "status",
             "size": 12
           }
         ],
@@ -398,24 +392,6 @@
           {
             "name": "projectBankShare",
             "size": 4
-          }
-        ],
-        [
-          {
-            "name": "location",
-            "size": 12
-          }
-        ],
-        [
-          {
-            "name": "projectFinancingParam",
-            "size": 12
-          }
-        ],
-        [
-          {
-            "name": "status",
-            "size": 12
           }
         ]
       ],

@@ -7,7 +7,7 @@
       "searchable": true,
       "pageSize": 10,
       "mainField": "name",
-      "defaultSortBy": "createdAt",
+      "defaultSortBy": "name",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -224,10 +224,10 @@
         ]
       ],
       "list": [
-        "id",
-        "createdBy",
-        "createdAt",
-        "name"
+        "name",
+        "category",
+        "code",
+        "isActive"
       ]
     },
     "uid": "api::ref-amenity.ref-amenity"

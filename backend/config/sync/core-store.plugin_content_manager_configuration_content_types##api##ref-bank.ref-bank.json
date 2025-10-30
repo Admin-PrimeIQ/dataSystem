@@ -7,7 +7,7 @@
       "searchable": true,
       "pageSize": 10,
       "mainField": "name",
-      "defaultSortBy": "createdAt",
+      "defaultSortBy": "name",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -213,21 +213,25 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "createdAt",
-        "name",
-        "code"
-      ],
       "edit": [
         [
           {
             "name": "name",
-            "size": 6
+            "size": 4
           },
           {
             "name": "code",
-            "size": 6
+            "size": 4
+          },
+          {
+            "name": "isActive",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "address",
+            "size": 12
           }
         ],
         [
@@ -243,29 +247,24 @@
         [
           {
             "name": "website",
-            "size": 6
+            "size": 4
           },
           {
             "name": "phone",
-            "size": 6
-          }
-        ],
-        [
-          {
-            "name": "address",
-            "size": 6
-          },
-          {
-            "name": "isActive",
             "size": 4
-          }
-        ],
-        [
+          },
           {
             "name": "sortOrder",
             "size": 4
           }
         ]
+      ],
+      "list": [
+        "name",
+        "code",
+        "swiftCode",
+        "country",
+        "isActive"
       ]
     },
     "uid": "api::ref-bank.ref-bank"

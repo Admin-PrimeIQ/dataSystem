@@ -8,7 +8,7 @@
     "description": "Flexible attributes for Project/Unit features"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {

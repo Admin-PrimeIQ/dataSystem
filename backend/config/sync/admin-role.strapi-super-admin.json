@@ -1626,6 +1626,42 @@
       "locale": null
     },
     {
+      "documentId": "scs2f9zz8altnl31neivd8yc",
+      "action": "plugin::documentation.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "n1h1lc9qtr3eyoc0qdzeuc1u",
+      "action": "plugin::documentation.settings.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "v1qoss2dq18yp77j0rrs02am",
+      "action": "plugin::documentation.settings.regenerate",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "w3okbjo60c6f58079lrytcaq",
+      "action": "plugin::documentation.settings.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
       "documentId": "cjuaxeozb783gbhtz2z7k149",
       "action": "plugin::email.settings.read",
       "actionParameters": {},

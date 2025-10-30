@@ -8,7 +8,7 @@
     "description": "Bank references (BAC, BAM, Banrural, etc.)"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {

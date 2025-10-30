@@ -8,7 +8,7 @@
     "description": "Business rules for office units (min/max rent per m², unit size)"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {

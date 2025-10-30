@@ -8,7 +8,7 @@
     "description": "Categories for property types (Residential, Office, Industrial, etc.)"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {

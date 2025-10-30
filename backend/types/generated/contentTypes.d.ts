@@ -203,6 +203,63 @@ export interface AdminRole extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface AdminSession extends Struct.CollectionTypeSchema {
+  collectionName: 'strapi_sessions';
+  info: {
+    description: 'Session Manager storage';
+    displayName: 'Session';
+    name: 'Session';
+    pluralName: 'sessions';
+    singularName: 'session';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    'content-manager': {
+      visible: false;
+    };
+    'content-type-builder': {
+      visible: false;
+    };
+    i18n: {
+      localized: false;
+    };
+  };
+  attributes: {
+    absoluteExpiresAt: Schema.Attribute.DateTime & Schema.Attribute.Private;
+    childId: Schema.Attribute.String & Schema.Attribute.Private;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    deviceId: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private;
+    expiresAt: Schema.Attribute.DateTime &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'admin::session'> &
+      Schema.Attribute.Private;
+    origin: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    sessionId: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private &
+      Schema.Attribute.Unique;
+    status: Schema.Attribute.String & Schema.Attribute.Private;
+    type: Schema.Attribute.String & Schema.Attribute.Private;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    userId: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface AdminTransferToken extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_transfer_tokens';
   info: {
@@ -383,7 +440,7 @@ export interface ApiIndustrialRuleIndustrialRule
     singularName: 'industrial-rule';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     allowedZoning: Schema.Attribute.JSON;
@@ -532,7 +589,7 @@ export interface ApiOfficeRuleOfficeRule extends Struct.CollectionTypeSchema {
     singularName: 'office-rule';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     airConditioningRequired: Schema.Attribute.Boolean &
@@ -782,7 +839,7 @@ export interface ApiRefBankRefBank extends Struct.CollectionTypeSchema {
     singularName: 'ref-bank';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     address: Schema.Attribute.Text;
@@ -842,7 +899,7 @@ export interface ApiRefCategoryRefCategory extends Struct.CollectionTypeSchema {
     singularName: 'ref-category';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     code: Schema.Attribute.String &
@@ -885,7 +942,7 @@ export interface ApiRefFeatureRefFeature extends Struct.CollectionTypeSchema {
     singularName: 'ref-feature';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     appliesTo: Schema.Attribute.Enumeration<['project', 'unit', 'both']> &
@@ -943,7 +1000,7 @@ export interface ApiRefServiceRefService extends Struct.CollectionTypeSchema {
     singularName: 'ref-service';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     code: Schema.Attribute.String &
@@ -992,7 +1049,7 @@ export interface ApiResidentialRuleResidentialRule
     singularName: 'residential-rule';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     amenityRequirements: Schema.Attribute.JSON;
@@ -1093,7 +1150,7 @@ export interface ApiUnitIndustrialUnitIndustrial
     singularName: 'unit-industrial';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     ceilingHeight: Schema.Attribute.Decimal;
@@ -1153,7 +1210,7 @@ export interface ApiUnitOfficeUnitOffice extends Struct.CollectionTypeSchema {
     singularName: 'unit-office';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     airConditioning: Schema.Attribute.Boolean &
@@ -1223,7 +1280,7 @@ export interface ApiUnitResidentialUnitResidential
     singularName: 'unit-residential';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     balcony: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
@@ -1299,7 +1356,7 @@ export interface ApiUnitUnit extends Struct.CollectionTypeSchema {
     singularName: 'unit';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     area: Schema.Attribute.Decimal & Schema.Attribute.Required;
@@ -1855,6 +1912,7 @@ declare module '@strapi/strapi' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::permission': AdminPermission;
       'admin::role': AdminRole;
+      'admin::session': AdminSession;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;

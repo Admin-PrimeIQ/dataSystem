@@ -8,7 +8,7 @@
     "description": "Office unit subtype with class, legends, and employees"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {

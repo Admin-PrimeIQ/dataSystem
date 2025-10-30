@@ -8,7 +8,7 @@
     "description": "Industrial unit subtype with land, warehouse, mezzanine, and dimensions"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {

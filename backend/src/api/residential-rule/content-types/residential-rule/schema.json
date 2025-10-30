@@ -8,7 +8,7 @@
     "description": "Business rules for residential units (min/max price per m²)"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {

@@ -8,7 +8,7 @@
     "description": "Property services (Water, Power Plant, Security, etc.)"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {

@@ -1,0 +1,24 @@
+{
+  "key": "core_admin_homepage-layout:2",
+  "value": {
+    "version": 1,
+    "widgets": [
+      {
+        "uid": "plugin::content-manager.last-edited-entries",
+        "width": 6
+      },
+      {
+        "uid": "plugin::content-manager.chart-entries",
+        "width": 6
+      },
+      {
+        "uid": "plugin::admin.key-statistics",
+        "width": 12
+      }
+    ],
+    "updatedAt": "2025-10-30T22:12:16.118Z"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

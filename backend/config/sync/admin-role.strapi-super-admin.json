@@ -264,7 +264,7 @@
       "locale": null
     },
     {
-      "documentId": "adc63afkwgjsc63ekfau8w2y",
+      "documentId": "dgnfhzh1jpyijsieogtv4d8f",
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
       "subject": "api::project.project",
@@ -285,7 +285,7 @@
           "projectAmenity",
           "projectService",
           "projectBankShare",
-          "status",
+          "availability",
           "isActive"
         ]
       },
@@ -311,7 +311,7 @@
       "locale": null
     },
     {
-      "documentId": "qql1ea584oi8rz735svwetp3",
+      "documentId": "g60t67rsk70cmh90nu4e8ucr",
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::project.project",
@@ -332,7 +332,7 @@
           "projectAmenity",
           "projectService",
           "projectBankShare",
-          "status",
+          "availability",
           "isActive"
         ]
       },
@@ -340,7 +340,7 @@
       "locale": null
     },
     {
-      "documentId": "iqk49m9vxwxic37ev86s4i5p",
+      "documentId": "t8tjx323mltx5y0rknla8ggj",
       "action": "plugin::content-manager.explorer.update",
       "actionParameters": {},
       "subject": "api::project.project",
@@ -361,7 +361,7 @@
           "projectAmenity",
           "projectService",
           "projectBankShare",
-          "status",
+          "availability",
           "isActive"
         ]
       },
@@ -861,7 +861,7 @@
       "locale": null
     },
     {
-      "documentId": "jmwaa3vr12meyt1cd3p9klvk",
+      "documentId": "lu8a7yfgkh6iu5zcvn07yrdl",
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
       "subject": "api::unit.unit",
@@ -877,7 +877,7 @@
           "rent",
           "currency",
           "kpis",
-          "status",
+          "availability",
           "isActive",
           "type"
         ]
@@ -904,7 +904,7 @@
       "locale": null
     },
     {
-      "documentId": "j38fr5ocrribfngyw6iu7n3v",
+      "documentId": "yd3aoxpgaf4yvtak423ubg64",
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::unit.unit",
@@ -920,7 +920,7 @@
           "rent",
           "currency",
           "kpis",
-          "status",
+          "availability",
           "isActive",
           "type"
         ]
@@ -929,7 +929,7 @@
       "locale": null
     },
     {
-      "documentId": "d8jfoxo0yhq9otdlxfux2sh2",
+      "documentId": "dlapmg4eez3dnicjx8wmps5s",
       "action": "plugin::content-manager.explorer.update",
       "actionParameters": {},
       "subject": "api::unit.unit",
@@ -945,7 +945,7 @@
           "rent",
           "currency",
           "kpis",
-          "status",
+          "availability",
           "isActive",
           "type"
         ]

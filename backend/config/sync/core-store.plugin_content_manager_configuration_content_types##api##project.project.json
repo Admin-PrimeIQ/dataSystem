@@ -7,8 +7,8 @@
       "searchable": true,
       "pageSize": 10,
       "mainField": "code",
-      "defaultSortBy": "documentId",
-      "defaultSortOrder": "ASC"
+      "defaultSortOrder": "ASC",
+      "defaultSortBy": "name"
     },
     "metadatas": {
       "id": {
@@ -233,16 +233,16 @@
           "sortable": false
         }
       },
-      "status": {
+      "availability": {
         "edit": {
-          "label": "Status",
-          "description": "Current status of the real estate project",
-          "placeholder": "Select the project status",
+          "label": "availability",
+          "description": "",
+          "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "status",
+          "label": "availability",
           "searchable": true,
           "sortable": true
         }
@@ -376,12 +376,6 @@
         ],
         [
           {
-            "name": "status",
-            "size": 12
-          }
-        ],
-        [
-          {
             "name": "projectAmenity",
             "size": 4
           },
@@ -393,13 +387,20 @@
             "name": "projectBankShare",
             "size": 4
           }
+        ],
+        [
+          {
+            "name": "availability",
+            "size": 6
+          }
         ]
       ],
       "list": [
-        "id",
-        "createdAt",
-        "updatedAt",
-        "createdBy"
+        "name",
+        "code",
+        "availability",
+        "developer",
+        "isActive"
       ]
     },
     "uid": "api::project.project"

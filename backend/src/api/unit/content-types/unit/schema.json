@@ -63,7 +63,7 @@
     "kpis": {
       "type": "json"
     },
-    "status": {
+    "availability": {
       "type": "enumeration",
       "default": "available",
       "enum": [

@@ -4,7 +4,7 @@
   "info": {
     "singularName": "office-rule",
     "pluralName": "office-rules",
-    "displayName": "Office Rule",
+    "displayName": "Z - TBD - Office Rule",
     "description": "Business rules for office units (min/max rent per m², unit size)"
   },
   "options": {
@@ -14,16 +14,23 @@
   "attributes": {
     "name": {
       "type": "string",
-      "required": true,
-      "maxLength": 100
+      "maxLength": 100,
+      "required": true
     },
     "description": {
       "type": "text"
     },
     "ruleType": {
       "type": "enumeration",
-      "enum": ["rent_pricing", "unit_size", "class_requirements", "employee_capacity", "location", "other"],
-      "required": true
+      "required": true,
+      "enum": [
+        "rent_pricing",
+        "unit_size",
+        "class_requirements",
+        "employee_capacity",
+        "location",
+        "other"
+      ]
     },
     "minRentPerSqm": {
       "type": "decimal",
@@ -51,7 +58,14 @@
     },
     "requiredClass": {
       "type": "enumeration",
-      "enum": ["A", "B", "C", "premium", "standard", "basic"]
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "premium",
+        "standard",
+        "basic"
+      ]
     },
     "meetingRoomRequirement": {
       "type": "boolean",

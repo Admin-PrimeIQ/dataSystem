@@ -6,7 +6,7 @@
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "zoning",
+      "mainField": "documentId",
       "defaultSortBy": "zoning",
       "defaultSortOrder": "ASC"
     },
@@ -281,13 +281,73 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "ceilingHeight",
-        "loadingDock",
-        "loadingDockCount"
-      ],
       "edit": [
+        [
+          {
+            "name": "ceilingHeight",
+            "size": 4
+          },
+          {
+            "name": "loadingDock",
+            "size": 4
+          },
+          {
+            "name": "loadingDockCount",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "powerUnit",
+            "size": 8
+          },
+          {
+            "name": "waterSupply",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "sewageSystem",
+            "size": 4
+          },
+          {
+            "name": "fireSuppression",
+            "size": 4
+          },
+          {
+            "name": "securitySystem",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "truckAccess",
+            "size": 4
+          },
+          {
+            "name": "railAccess",
+            "size": 4
+          },
+          {
+            "name": "powerCapacity",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "officeSpace",
+            "size": 4
+          },
+          {
+            "name": "storageCapacity",
+            "size": 4
+          },
+          {
+            "name": "zoning",
+            "size": 4
+          }
+        ],
         [
           {
             "name": "land",
@@ -311,75 +371,13 @@
             "name": "dimensions",
             "size": 12
           }
-        ],
-        [
-          {
-            "name": "ceilingHeight",
-            "size": 4
-          },
-          {
-            "name": "loadingDock",
-            "size": 4
-          },
-          {
-            "name": "loadingDockCount",
-            "size": 4
-          }
-        ],
-        [
-          {
-            "name": "truckAccess",
-            "size": 4
-          },
-          {
-            "name": "railAccess",
-            "size": 4
-          },
-          {
-            "name": "powerCapacity",
-            "size": 4
-          }
-        ],
-        [
-          {
-            "name": "powerUnit",
-            "size": 6
-          },
-          {
-            "name": "waterSupply",
-            "size": 4
-          }
-        ],
-        [
-          {
-            "name": "sewageSystem",
-            "size": 4
-          },
-          {
-            "name": "fireSuppression",
-            "size": 4
-          },
-          {
-            "name": "securitySystem",
-            "size": 4
-          }
-        ],
-        [
-          {
-            "name": "officeSpace",
-            "size": 4
-          },
-          {
-            "name": "storageCapacity",
-            "size": 4
-          }
-        ],
-        [
-          {
-            "name": "zoning",
-            "size": 6
-          }
         ]
+      ],
+      "list": [
+        "id",
+        "ceilingHeight",
+        "loadingDock",
+        "loadingDockCount"
       ]
     },
     "uid": "unit-types.industrial",

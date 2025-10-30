@@ -4,7 +4,7 @@
   "info": {
     "singularName": "industrial-rule",
     "pluralName": "industrial-rules",
-    "displayName": "Industrial Rule",
+    "displayName": "Z - TBD - Industrial Rule",
     "description": "Business rules for industrial units (min warehouse height, loading area size)"
   },
   "options": {
@@ -14,16 +14,23 @@
   "attributes": {
     "name": {
       "type": "string",
-      "required": true,
-      "maxLength": 100
+      "maxLength": 100,
+      "required": true
     },
     "description": {
       "type": "text"
     },
     "ruleType": {
       "type": "enumeration",
-      "enum": ["warehouse_height", "loading_area", "power_capacity", "access_requirements", "zoning", "other"],
-      "required": true
+      "required": true,
+      "enum": [
+        "warehouse_height",
+        "loading_area",
+        "power_capacity",
+        "access_requirements",
+        "zoning",
+        "other"
+      ]
     },
     "minWarehouseHeight": {
       "type": "decimal",
@@ -59,8 +66,12 @@
     },
     "powerUnit": {
       "type": "enumeration",
-      "enum": ["kW", "kVA", "HP"],
-      "default": "kW"
+      "default": "kW",
+      "enum": [
+        "kW",
+        "kVA",
+        "HP"
+      ]
     },
     "truckAccessRequired": {
       "type": "boolean",

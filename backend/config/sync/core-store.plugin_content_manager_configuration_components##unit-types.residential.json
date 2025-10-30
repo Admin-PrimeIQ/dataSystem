@@ -183,12 +183,6 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "bedrooms",
-        "bathrooms",
-        "parkingSpaces"
-      ],
       "edit": [
         [
           {
@@ -225,25 +219,29 @@
           },
           {
             "name": "orientation",
-            "size": 6
+            "size": 8
           }
         ],
         [
           {
             "name": "furnished",
-            "size": 6
+            "size": 4
           },
           {
             "name": "petFriendly",
             "size": 4
-          }
-        ],
-        [
+          },
           {
             "name": "smokingAllowed",
             "size": 4
           }
         ]
+      ],
+      "list": [
+        "id",
+        "bedrooms",
+        "bathrooms",
+        "parkingSpaces"
       ]
     },
     "uid": "unit-types.residential",

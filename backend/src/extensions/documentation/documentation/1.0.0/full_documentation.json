@@ -16,7 +16,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-10-30T21:26:53.308Z"
+    "x-generation-date": "2025-10-30T22:53:29.613Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -8118,7 +8118,7 @@
                   "example": "string or id"
                 }
               },
-              "status": {
+              "availability": {
                 "type": "string",
                 "enum": [
                   "planning",
@@ -8845,7 +8845,7 @@
               }
             }
           },
-          "status": {
+          "availability": {
             "type": "string",
             "enum": [
               "planning",
@@ -8988,7 +8988,7 @@
                     }
                   }
                 },
-                "status": {
+                "availability": {
                   "type": "string",
                   "enum": [
                     "planning",
@@ -12457,7 +12457,7 @@
                 "type": "string"
               },
               "kpis": {},
-              "status": {
+              "availability": {
                 "type": "string",
                 "enum": [
                   "available",
@@ -12608,7 +12608,7 @@
             "type": "string"
           },
           "kpis": {},
-          "status": {
+          "availability": {
             "type": "string",
             "enum": [
               "available",
@@ -12988,7 +12988,7 @@
                   "type": "string"
                 },
                 "kpis": {},
-                "status": {
+                "availability": {
                   "type": "string",
                   "enum": [
                     "available",

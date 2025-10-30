@@ -211,23 +211,19 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "class",
-        "employees",
-        "receptionArea"
-      ],
       "edit": [
         [
           {
             "name": "class",
-            "size": 6
-          }
-        ],
-        [
+            "size": 4
+          },
           {
-            "name": "legends",
-            "size": 12
+            "name": "view",
+            "size": 4
+          },
+          {
+            "name": "privateOffices",
+            "size": 4
           }
         ],
         [
@@ -236,31 +232,7 @@
             "size": 4
           },
           {
-            "name": "receptionArea",
-            "size": 4
-          },
-          {
             "name": "meetingRooms",
-            "size": 4
-          }
-        ],
-        [
-          {
-            "name": "privateOffices",
-            "size": 4
-          },
-          {
-            "name": "openSpace",
-            "size": 4
-          },
-          {
-            "name": "kitchenette",
-            "size": 4
-          }
-        ],
-        [
-          {
-            "name": "storageRoom",
             "size": 4
           },
           {
@@ -270,20 +242,44 @@
         ],
         [
           {
-            "name": "view",
-            "size": 6
+            "name": "openSpace",
+            "size": 4
           },
           {
-            "name": "airConditioning",
+            "name": "kitchenette",
+            "size": 4
+          },
+          {
+            "name": "receptionArea",
             "size": 4
           }
         ],
         [
           {
+            "name": "airConditioning",
+            "size": 4
+          },
+          {
             "name": "elevatorAccess",
             "size": 4
+          },
+          {
+            "name": "storageRoom",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "legends",
+            "size": 12
           }
         ]
+      ],
+      "list": [
+        "id",
+        "class",
+        "employees",
+        "receptionArea"
       ]
     },
     "uid": "unit-types.office",

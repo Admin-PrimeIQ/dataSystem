@@ -76,7 +76,7 @@
       "target": "api::ref-bank.ref-bank",
       "description": "Banks associated with the project for financing"
     },
-    "status": {
+    "availability": {
       "type": "enumeration",
       "default": "planning",
       "enum": [

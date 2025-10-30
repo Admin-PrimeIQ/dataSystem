@@ -435,7 +435,7 @@ export interface ApiIndustrialRuleIndustrialRule
   collectionName: 'industrial_rules';
   info: {
     description: 'Business rules for industrial units (min warehouse height, loading area size)';
-    displayName: 'Industrial Rule';
+    displayName: 'Z - TBD - Industrial Rule';
     pluralName: 'industrial-rules';
     singularName: 'industrial-rule';
   };
@@ -584,7 +584,7 @@ export interface ApiOfficeRuleOfficeRule extends Struct.CollectionTypeSchema {
   collectionName: 'office_rules';
   info: {
     description: 'Business rules for office units (min/max rent per m\u00B2, unit size)';
-    displayName: 'Office Rule';
+    displayName: 'Z - TBD - Office Rule';
     pluralName: 'office-rules';
     singularName: 'office-rule';
   };
@@ -711,6 +711,17 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
+    availability: Schema.Attribute.Enumeration<
+      [
+        'planning',
+        'development',
+        'marketing',
+        'construction',
+        'completed',
+        'cancelled',
+      ]
+    > &
+      Schema.Attribute.DefaultTo<'planning'>;
     categoryId: Schema.Attribute.Relation<
       'manyToOne',
       'api::ref-category.ref-category'
@@ -761,17 +772,6 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     >;
     publishedAt: Schema.Attribute.DateTime;
     startDate: Schema.Attribute.Date;
-    status: Schema.Attribute.Enumeration<
-      [
-        'planning',
-        'development',
-        'marketing',
-        'construction',
-        'completed',
-        'cancelled',
-      ]
-    > &
-      Schema.Attribute.DefaultTo<'planning'>;
     totals: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1150,6 +1150,10 @@ export interface ApiUnitUnit extends Struct.CollectionTypeSchema {
       ['sqm', 'sqft', 'hectares', 'acres']
     > &
       Schema.Attribute.DefaultTo<'sqm'>;
+    availability: Schema.Attribute.Enumeration<
+      ['available', 'reserved', 'sold', 'rented', 'maintenance', 'inactive']
+    > &
+      Schema.Attribute.DefaultTo<'available'>;
     code: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique &
@@ -1178,10 +1182,6 @@ export interface ApiUnitUnit extends Struct.CollectionTypeSchema {
     price: Schema.Attribute.Decimal;
     publishedAt: Schema.Attribute.DateTime;
     rent: Schema.Attribute.Decimal;
-    status: Schema.Attribute.Enumeration<
-      ['available', 'reserved', 'sold', 'rented', 'maintenance', 'inactive']
-    > &
-      Schema.Attribute.DefaultTo<'available'>;
     type: Schema.Attribute.DynamicZone<
       ['unit-types.residential', 'unit-types.office', 'unit-types.industrial']
     >;

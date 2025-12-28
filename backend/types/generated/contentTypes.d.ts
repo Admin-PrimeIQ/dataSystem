@@ -773,6 +773,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     startDate: Schema.Attribute.Date;
     totals: Schema.Attribute.JSON;
+    units: Schema.Attribute.Relation<'oneToMany', 'api::unit.unit'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1180,6 +1181,7 @@ export interface ApiUnitUnit extends Struct.CollectionTypeSchema {
         maxLength: 200;
       }>;
     price: Schema.Attribute.Decimal;
+    project: Schema.Attribute.Relation<'manyToOne', 'api::project.project'>;
     publishedAt: Schema.Attribute.DateTime;
     rent: Schema.Attribute.Decimal;
     type: Schema.Attribute.DynamicZone<

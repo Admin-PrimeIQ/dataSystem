@@ -16,7 +16,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-10-30T22:53:29.613Z"
+    "x-generation-date": "2025-12-16T20:50:33.466Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -8132,6 +8132,20 @@
               "isActive": {
                 "type": "boolean"
               },
+              "units": {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ],
+                  "example": "string or id"
+                }
+              },
               "locale": {
                 "type": "string"
               },
@@ -8859,44 +8873,7 @@
           "isActive": {
             "type": "boolean"
           },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "publishedAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "createdBy": {
-            "type": "object",
-            "properties": {
-              "id": {
-                "type": "number"
-              },
-              "documentId": {
-                "type": "string"
-              }
-            }
-          },
-          "updatedBy": {
-            "type": "object",
-            "properties": {
-              "id": {
-                "type": "number"
-              },
-              "documentId": {
-                "type": "string"
-              }
-            }
-          },
-          "locale": {
-            "type": "string"
-          },
-          "localizations": {
+          "units": {
             "type": "array",
             "items": {
               "type": "object",
@@ -8916,7 +8893,78 @@
                 "description": {
                   "type": "string"
                 },
-                "categoryId": {
+                "unitType": {
+                  "type": "string",
+                  "enum": [
+                    "residential",
+                    "office",
+                    "industrial"
+                  ]
+                },
+                "area": {
+                  "type": "number",
+                  "format": "float"
+                },
+                "areaUnit": {
+                  "type": "string",
+                  "enum": [
+                    "sqm",
+                    "sqft",
+                    "hectares",
+                    "acres"
+                  ]
+                },
+                "price": {
+                  "type": "number",
+                  "format": "float"
+                },
+                "rent": {
+                  "type": "number",
+                  "format": "float"
+                },
+                "currency": {
+                  "type": "string"
+                },
+                "kpis": {},
+                "availability": {
+                  "type": "string",
+                  "enum": [
+                    "available",
+                    "reserved",
+                    "sold",
+                    "rented",
+                    "maintenance",
+                    "inactive"
+                  ]
+                },
+                "isActive": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "$ref": "#/components/schemas/UnitTypesResidentialComponent"
+                      },
+                      {
+                        "$ref": "#/components/schemas/UnitTypesOfficeComponent"
+                      },
+                      {
+                        "$ref": "#/components/schemas/UnitTypesIndustrialComponent"
+                      }
+                    ]
+                  },
+                  "discriminator": {
+                    "propertyName": "__component",
+                    "mapping": {
+                      "unit-types.residential": "#/components/schemas/UnitTypesResidentialComponent",
+                      "unit-types.office": "#/components/schemas/UnitTypesOfficeComponent",
+                      "unit-types.industrial": "#/components/schemas/UnitTypesIndustrialComponent"
+                    }
+                  }
+                },
+                "project": {
                   "type": "object",
                   "properties": {
                     "id": {
@@ -8924,83 +8972,168 @@
                     },
                     "documentId": {
                       "type": "string"
-                    }
-                  }
-                },
-                "developer": {
-                  "type": "string"
-                },
-                "location": {},
-                "startDate": {
-                  "type": "string",
-                  "format": "date"
-                },
-                "deliveryDate": {
-                  "type": "string",
-                  "format": "date"
-                },
-                "launchDate": {
-                  "type": "string",
-                  "format": "date"
-                },
-                "totals": {},
-                "projectFinancingParam": {},
-                "projectSegmentRule": {},
-                "projectAmenity": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "type": "number"
-                      },
-                      "documentId": {
-                        "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "categoryId": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "number"
+                        },
+                        "documentId": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "developer": {
+                      "type": "string"
+                    },
+                    "location": {},
+                    "startDate": {
+                      "type": "string",
+                      "format": "date"
+                    },
+                    "deliveryDate": {
+                      "type": "string",
+                      "format": "date"
+                    },
+                    "launchDate": {
+                      "type": "string",
+                      "format": "date"
+                    },
+                    "totals": {},
+                    "projectFinancingParam": {},
+                    "projectSegmentRule": {},
+                    "projectAmenity": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "number"
+                          },
+                          "documentId": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "projectService": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "number"
+                          },
+                          "documentId": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "projectBankShare": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "number"
+                          },
+                          "documentId": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "availability": {
+                      "type": "string",
+                      "enum": [
+                        "planning",
+                        "development",
+                        "marketing",
+                        "construction",
+                        "completed",
+                        "cancelled"
+                      ]
+                    },
+                    "isActive": {
+                      "type": "boolean"
+                    },
+                    "units": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "number"
+                          },
+                          "documentId": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "createdAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "updatedAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "publishedAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "createdBy": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "number"
+                        },
+                        "documentId": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "updatedBy": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "number"
+                        },
+                        "documentId": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "locale": {
+                      "type": "string"
+                    },
+                    "localizations": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "number"
+                          },
+                          "documentId": {
+                            "type": "string"
+                          }
+                        }
                       }
                     }
                   }
-                },
-                "projectService": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "type": "number"
-                      },
-                      "documentId": {
-                        "type": "string"
-                      }
-                    }
-                  }
-                },
-                "projectBankShare": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "type": "number"
-                      },
-                      "documentId": {
-                        "type": "string"
-                      }
-                    }
-                  }
-                },
-                "availability": {
-                  "type": "string",
-                  "enum": [
-                    "planning",
-                    "development",
-                    "marketing",
-                    "construction",
-                    "completed",
-                    "cancelled"
-                  ]
-                },
-                "isActive": {
-                  "type": "boolean"
                 },
                 "createdAt": {
                   "type": "string",
@@ -9055,6 +9188,57 @@
                 }
               }
             }
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "publishedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createdBy": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "documentId": {
+                "type": "string"
+              }
+            }
+          },
+          "updatedBy": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "documentId": {
+                "type": "string"
+              }
+            }
+          },
+          "locale": {
+            "type": "string"
+          },
+          "localizations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number"
+                },
+                "documentId": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -9066,6 +9250,203 @@
           },
           "meta": {
             "type": "object"
+          }
+        }
+      },
+      "UnitTypesResidentialComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "__component": {
+            "type": "string",
+            "enum": [
+              "unit-types.residential"
+            ]
+          },
+          "bedrooms": {
+            "type": "integer"
+          },
+          "bathrooms": {
+            "type": "integer"
+          },
+          "parkingSpaces": {
+            "type": "integer"
+          },
+          "balcony": {
+            "type": "boolean"
+          },
+          "terrace": {
+            "type": "boolean"
+          },
+          "garden": {
+            "type": "boolean"
+          },
+          "floor": {
+            "type": "integer"
+          },
+          "orientation": {
+            "type": "string",
+            "enum": [
+              "north",
+              "south",
+              "east",
+              "west",
+              "northeast",
+              "northwest",
+              "southeast",
+              "southwest"
+            ]
+          },
+          "furnished": {
+            "type": "string",
+            "enum": [
+              "unfurnished",
+              "semi-furnished",
+              "fully-furnished"
+            ]
+          },
+          "petFriendly": {
+            "type": "boolean"
+          },
+          "smokingAllowed": {
+            "type": "boolean"
+          }
+        }
+      },
+      "UnitTypesOfficeComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "__component": {
+            "type": "string",
+            "enum": [
+              "unit-types.office"
+            ]
+          },
+          "class": {
+            "type": "string",
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "premium",
+              "standard",
+              "basic"
+            ]
+          },
+          "legends": {},
+          "employees": {
+            "type": "integer"
+          },
+          "receptionArea": {
+            "type": "boolean"
+          },
+          "meetingRooms": {
+            "type": "integer"
+          },
+          "privateOffices": {
+            "type": "integer"
+          },
+          "openSpace": {
+            "type": "boolean"
+          },
+          "kitchenette": {
+            "type": "boolean"
+          },
+          "storageRoom": {
+            "type": "boolean"
+          },
+          "floor": {
+            "type": "integer"
+          },
+          "view": {
+            "type": "string",
+            "enum": [
+              "city",
+              "park",
+              "street",
+              "courtyard",
+              "none"
+            ]
+          },
+          "airConditioning": {
+            "type": "boolean"
+          },
+          "elevatorAccess": {
+            "type": "boolean"
+          }
+        }
+      },
+      "UnitTypesIndustrialComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "__component": {
+            "type": "string",
+            "enum": [
+              "unit-types.industrial"
+            ]
+          },
+          "land": {},
+          "warehouse": {},
+          "mezzanine": {},
+          "dimensions": {},
+          "ceilingHeight": {
+            "type": "number",
+            "format": "float"
+          },
+          "loadingDock": {
+            "type": "boolean"
+          },
+          "loadingDockCount": {
+            "type": "integer"
+          },
+          "truckAccess": {
+            "type": "boolean"
+          },
+          "railAccess": {
+            "type": "boolean"
+          },
+          "powerCapacity": {
+            "type": "number",
+            "format": "float"
+          },
+          "powerUnit": {
+            "type": "string",
+            "enum": [
+              "kW",
+              "kVA",
+              "HP"
+            ]
+          },
+          "waterSupply": {
+            "type": "boolean"
+          },
+          "sewageSystem": {
+            "type": "boolean"
+          },
+          "fireSuppression": {
+            "type": "boolean"
+          },
+          "securitySystem": {
+            "type": "boolean"
+          },
+          "officeSpace": {
+            "type": "number",
+            "format": "float"
+          },
+          "storageCapacity": {
+            "type": "number",
+            "format": "float"
+          },
+          "zoning": {
+            "type": "string"
           }
         }
       },
@@ -12495,6 +12876,17 @@
                   }
                 }
               },
+              "project": {
+                "oneOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ],
+                "example": "string or id"
+              },
               "locale": {
                 "type": "string"
               },
@@ -12646,19 +13038,7 @@
               }
             }
           },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "publishedAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "createdBy": {
+          "project": {
             "type": "object",
             "properties": {
               "id": {
@@ -12667,29 +13047,664 @@
               "documentId": {
                 "type": "string"
               },
-              "firstname": {
+              "name": {
                 "type": "string"
               },
-              "lastname": {
+              "code": {
                 "type": "string"
               },
-              "username": {
+              "description": {
                 "type": "string"
               },
-              "email": {
+              "categoryId": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "documentId": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "code": {
+                    "type": "string"
+                  },
+                  "isActive": {
+                    "type": "boolean"
+                  },
+                  "sortOrder": {
+                    "type": "integer"
+                  },
+                  "createdAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "updatedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "publishedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "createdBy": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "number"
+                      },
+                      "documentId": {
+                        "type": "string"
+                      },
+                      "firstname": {
+                        "type": "string"
+                      },
+                      "lastname": {
+                        "type": "string"
+                      },
+                      "username": {
+                        "type": "string"
+                      },
+                      "email": {
+                        "type": "string",
+                        "format": "email"
+                      },
+                      "resetPasswordToken": {
+                        "type": "string"
+                      },
+                      "registrationToken": {
+                        "type": "string"
+                      },
+                      "isActive": {
+                        "type": "boolean"
+                      },
+                      "roles": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "number"
+                            },
+                            "documentId": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "code": {
+                              "type": "string"
+                            },
+                            "description": {
+                              "type": "string"
+                            },
+                            "users": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "number"
+                                  },
+                                  "documentId": {
+                                    "type": "string"
+                                  }
+                                }
+                              }
+                            },
+                            "permissions": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "number"
+                                  },
+                                  "documentId": {
+                                    "type": "string"
+                                  },
+                                  "action": {
+                                    "type": "string"
+                                  },
+                                  "actionParameters": {},
+                                  "subject": {
+                                    "type": "string"
+                                  },
+                                  "properties": {},
+                                  "conditions": {},
+                                  "role": {
+                                    "type": "object",
+                                    "properties": {
+                                      "id": {
+                                        "type": "number"
+                                      },
+                                      "documentId": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  },
+                                  "createdAt": {
+                                    "type": "string",
+                                    "format": "date-time"
+                                  },
+                                  "updatedAt": {
+                                    "type": "string",
+                                    "format": "date-time"
+                                  },
+                                  "publishedAt": {
+                                    "type": "string",
+                                    "format": "date-time"
+                                  },
+                                  "createdBy": {
+                                    "type": "object",
+                                    "properties": {
+                                      "id": {
+                                        "type": "number"
+                                      },
+                                      "documentId": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  },
+                                  "updatedBy": {
+                                    "type": "object",
+                                    "properties": {
+                                      "id": {
+                                        "type": "number"
+                                      },
+                                      "documentId": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  },
+                                  "locale": {
+                                    "type": "string"
+                                  },
+                                  "localizations": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "id": {
+                                          "type": "number"
+                                        },
+                                        "documentId": {
+                                          "type": "string"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "createdAt": {
+                              "type": "string",
+                              "format": "date-time"
+                            },
+                            "updatedAt": {
+                              "type": "string",
+                              "format": "date-time"
+                            },
+                            "publishedAt": {
+                              "type": "string",
+                              "format": "date-time"
+                            },
+                            "createdBy": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "documentId": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "updatedBy": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "documentId": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "locale": {
+                              "type": "string"
+                            },
+                            "localizations": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "number"
+                                  },
+                                  "documentId": {
+                                    "type": "string"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "blocked": {
+                        "type": "boolean"
+                      },
+                      "preferedLanguage": {
+                        "type": "string"
+                      },
+                      "createdAt": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "updatedAt": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "publishedAt": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "createdBy": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "number"
+                          },
+                          "documentId": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "updatedBy": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "number"
+                          },
+                          "documentId": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "locale": {
+                        "type": "string"
+                      },
+                      "localizations": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "number"
+                            },
+                            "documentId": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "updatedBy": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "number"
+                      },
+                      "documentId": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "locale": {
+                    "type": "string"
+                  },
+                  "localizations": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "number"
+                        },
+                        "documentId": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "developer": {
+                "type": "string"
+              },
+              "location": {},
+              "startDate": {
                 "type": "string",
-                "format": "email"
+                "format": "date"
               },
-              "resetPasswordToken": {
-                "type": "string"
+              "deliveryDate": {
+                "type": "string",
+                "format": "date"
               },
-              "registrationToken": {
-                "type": "string"
+              "launchDate": {
+                "type": "string",
+                "format": "date"
+              },
+              "totals": {},
+              "projectFinancingParam": {},
+              "projectSegmentRule": {},
+              "projectAmenity": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "documentId": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "type": "string"
+                    },
+                    "icon": {
+                      "type": "string"
+                    },
+                    "category": {
+                      "type": "string",
+                      "enum": [
+                        "recreation",
+                        "wellness",
+                        "leisure",
+                        "outdoor",
+                        "business",
+                        "technology",
+                        "residential",
+                        "parking",
+                        "security",
+                        "sustainability",
+                        "convenience",
+                        "luxury",
+                        "other"
+                      ]
+                    },
+                    "isActive": {
+                      "type": "boolean"
+                    },
+                    "sortOrder": {
+                      "type": "integer"
+                    },
+                    "createdAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "updatedAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "publishedAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "createdBy": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "number"
+                        },
+                        "documentId": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "updatedBy": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "number"
+                        },
+                        "documentId": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "locale": {
+                      "type": "string"
+                    },
+                    "localizations": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "number"
+                          },
+                          "documentId": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "projectService": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "documentId": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "type": "string"
+                    },
+                    "serviceType": {
+                      "type": "string",
+                      "enum": [
+                        "utility",
+                        "security",
+                        "maintenance",
+                        "administrative",
+                        "other"
+                      ]
+                    },
+                    "isEssential": {
+                      "type": "boolean"
+                    },
+                    "isActive": {
+                      "type": "boolean"
+                    },
+                    "sortOrder": {
+                      "type": "integer"
+                    },
+                    "createdAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "updatedAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "publishedAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "createdBy": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "number"
+                        },
+                        "documentId": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "updatedBy": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "number"
+                        },
+                        "documentId": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "locale": {
+                      "type": "string"
+                    },
+                    "localizations": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "number"
+                          },
+                          "documentId": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "projectBankShare": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "documentId": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "type": "string"
+                    },
+                    "swiftCode": {
+                      "type": "string"
+                    },
+                    "country": {
+                      "type": "string"
+                    },
+                    "website": {
+                      "type": "string"
+                    },
+                    "phone": {
+                      "type": "string"
+                    },
+                    "address": {
+                      "type": "string"
+                    },
+                    "isActive": {
+                      "type": "boolean"
+                    },
+                    "sortOrder": {
+                      "type": "integer"
+                    },
+                    "createdAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "updatedAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "publishedAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "createdBy": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "number"
+                        },
+                        "documentId": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "updatedBy": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "number"
+                        },
+                        "documentId": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "locale": {
+                      "type": "string"
+                    },
+                    "localizations": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "number"
+                          },
+                          "documentId": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "availability": {
+                "type": "string",
+                "enum": [
+                  "planning",
+                  "development",
+                  "marketing",
+                  "construction",
+                  "completed",
+                  "cancelled"
+                ]
               },
               "isActive": {
                 "type": "boolean"
               },
-              "roles": {
+              "units": {
                 "type": "array",
                 "items": {
                   "type": "object",
@@ -12709,102 +13724,85 @@
                     "description": {
                       "type": "string"
                     },
-                    "users": {
+                    "unitType": {
+                      "type": "string",
+                      "enum": [
+                        "residential",
+                        "office",
+                        "industrial"
+                      ]
+                    },
+                    "area": {
+                      "type": "number",
+                      "format": "float"
+                    },
+                    "areaUnit": {
+                      "type": "string",
+                      "enum": [
+                        "sqm",
+                        "sqft",
+                        "hectares",
+                        "acres"
+                      ]
+                    },
+                    "price": {
+                      "type": "number",
+                      "format": "float"
+                    },
+                    "rent": {
+                      "type": "number",
+                      "format": "float"
+                    },
+                    "currency": {
+                      "type": "string"
+                    },
+                    "kpis": {},
+                    "availability": {
+                      "type": "string",
+                      "enum": [
+                        "available",
+                        "reserved",
+                        "sold",
+                        "rented",
+                        "maintenance",
+                        "inactive"
+                      ]
+                    },
+                    "isActive": {
+                      "type": "boolean"
+                    },
+                    "type": {
                       "type": "array",
                       "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "number"
+                        "anyOf": [
+                          {
+                            "$ref": "#/components/schemas/UnitTypesResidentialComponent"
                           },
-                          "documentId": {
-                            "type": "string"
+                          {
+                            "$ref": "#/components/schemas/UnitTypesOfficeComponent"
+                          },
+                          {
+                            "$ref": "#/components/schemas/UnitTypesIndustrialComponent"
                           }
+                        ]
+                      },
+                      "discriminator": {
+                        "propertyName": "__component",
+                        "mapping": {
+                          "unit-types.residential": "#/components/schemas/UnitTypesResidentialComponent",
+                          "unit-types.office": "#/components/schemas/UnitTypesOfficeComponent",
+                          "unit-types.industrial": "#/components/schemas/UnitTypesIndustrialComponent"
                         }
                       }
                     },
-                    "permissions": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "number"
-                          },
-                          "documentId": {
-                            "type": "string"
-                          },
-                          "action": {
-                            "type": "string"
-                          },
-                          "actionParameters": {},
-                          "subject": {
-                            "type": "string"
-                          },
-                          "properties": {},
-                          "conditions": {},
-                          "role": {
-                            "type": "object",
-                            "properties": {
-                              "id": {
-                                "type": "number"
-                              },
-                              "documentId": {
-                                "type": "string"
-                              }
-                            }
-                          },
-                          "createdAt": {
-                            "type": "string",
-                            "format": "date-time"
-                          },
-                          "updatedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                          },
-                          "publishedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                          },
-                          "createdBy": {
-                            "type": "object",
-                            "properties": {
-                              "id": {
-                                "type": "number"
-                              },
-                              "documentId": {
-                                "type": "string"
-                              }
-                            }
-                          },
-                          "updatedBy": {
-                            "type": "object",
-                            "properties": {
-                              "id": {
-                                "type": "number"
-                              },
-                              "documentId": {
-                                "type": "string"
-                              }
-                            }
-                          },
-                          "locale": {
-                            "type": "string"
-                          },
-                          "localizations": {
-                            "type": "array",
-                            "items": {
-                              "type": "object",
-                              "properties": {
-                                "id": {
-                                  "type": "number"
-                                },
-                                "documentId": {
-                                  "type": "string"
-                                }
-                              }
-                            }
-                          }
+                    "project": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "number"
+                        },
+                        "documentId": {
+                          "type": "string"
                         }
                       }
                     },
@@ -12862,12 +13860,6 @@
                   }
                 }
               },
-              "blocked": {
-                "type": "boolean"
-              },
-              "preferedLanguage": {
-                "type": "string"
-              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -12921,6 +13913,29 @@
               }
             }
           },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "publishedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createdBy": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "documentId": {
+                "type": "string"
+              }
+            }
+          },
           "updatedBy": {
             "type": "object",
             "properties": {
@@ -12945,137 +13960,6 @@
                 },
                 "documentId": {
                   "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "code": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "unitType": {
-                  "type": "string",
-                  "enum": [
-                    "residential",
-                    "office",
-                    "industrial"
-                  ]
-                },
-                "area": {
-                  "type": "number",
-                  "format": "float"
-                },
-                "areaUnit": {
-                  "type": "string",
-                  "enum": [
-                    "sqm",
-                    "sqft",
-                    "hectares",
-                    "acres"
-                  ]
-                },
-                "price": {
-                  "type": "number",
-                  "format": "float"
-                },
-                "rent": {
-                  "type": "number",
-                  "format": "float"
-                },
-                "currency": {
-                  "type": "string"
-                },
-                "kpis": {},
-                "availability": {
-                  "type": "string",
-                  "enum": [
-                    "available",
-                    "reserved",
-                    "sold",
-                    "rented",
-                    "maintenance",
-                    "inactive"
-                  ]
-                },
-                "isActive": {
-                  "type": "boolean"
-                },
-                "type": {
-                  "type": "array",
-                  "items": {
-                    "anyOf": [
-                      {
-                        "$ref": "#/components/schemas/UnitTypesResidentialComponent"
-                      },
-                      {
-                        "$ref": "#/components/schemas/UnitTypesOfficeComponent"
-                      },
-                      {
-                        "$ref": "#/components/schemas/UnitTypesIndustrialComponent"
-                      }
-                    ]
-                  },
-                  "discriminator": {
-                    "propertyName": "__component",
-                    "mapping": {
-                      "unit-types.residential": "#/components/schemas/UnitTypesResidentialComponent",
-                      "unit-types.office": "#/components/schemas/UnitTypesOfficeComponent",
-                      "unit-types.industrial": "#/components/schemas/UnitTypesIndustrialComponent"
-                    }
-                  }
-                },
-                "createdAt": {
-                  "type": "string",
-                  "format": "date-time"
-                },
-                "updatedAt": {
-                  "type": "string",
-                  "format": "date-time"
-                },
-                "publishedAt": {
-                  "type": "string",
-                  "format": "date-time"
-                },
-                "createdBy": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "number"
-                    },
-                    "documentId": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "updatedBy": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "number"
-                    },
-                    "documentId": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "locale": {
-                  "type": "string"
-                },
-                "localizations": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "type": "number"
-                      },
-                      "documentId": {
-                        "type": "string"
-                      }
-                    }
-                  }
                 }
               }
             }
@@ -13090,203 +13974,6 @@
           },
           "meta": {
             "type": "object"
-          }
-        }
-      },
-      "UnitTypesResidentialComponent": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "number"
-          },
-          "__component": {
-            "type": "string",
-            "enum": [
-              "unit-types.residential"
-            ]
-          },
-          "bedrooms": {
-            "type": "integer"
-          },
-          "bathrooms": {
-            "type": "integer"
-          },
-          "parkingSpaces": {
-            "type": "integer"
-          },
-          "balcony": {
-            "type": "boolean"
-          },
-          "terrace": {
-            "type": "boolean"
-          },
-          "garden": {
-            "type": "boolean"
-          },
-          "floor": {
-            "type": "integer"
-          },
-          "orientation": {
-            "type": "string",
-            "enum": [
-              "north",
-              "south",
-              "east",
-              "west",
-              "northeast",
-              "northwest",
-              "southeast",
-              "southwest"
-            ]
-          },
-          "furnished": {
-            "type": "string",
-            "enum": [
-              "unfurnished",
-              "semi-furnished",
-              "fully-furnished"
-            ]
-          },
-          "petFriendly": {
-            "type": "boolean"
-          },
-          "smokingAllowed": {
-            "type": "boolean"
-          }
-        }
-      },
-      "UnitTypesOfficeComponent": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "number"
-          },
-          "__component": {
-            "type": "string",
-            "enum": [
-              "unit-types.office"
-            ]
-          },
-          "class": {
-            "type": "string",
-            "enum": [
-              "A",
-              "B",
-              "C",
-              "premium",
-              "standard",
-              "basic"
-            ]
-          },
-          "legends": {},
-          "employees": {
-            "type": "integer"
-          },
-          "receptionArea": {
-            "type": "boolean"
-          },
-          "meetingRooms": {
-            "type": "integer"
-          },
-          "privateOffices": {
-            "type": "integer"
-          },
-          "openSpace": {
-            "type": "boolean"
-          },
-          "kitchenette": {
-            "type": "boolean"
-          },
-          "storageRoom": {
-            "type": "boolean"
-          },
-          "floor": {
-            "type": "integer"
-          },
-          "view": {
-            "type": "string",
-            "enum": [
-              "city",
-              "park",
-              "street",
-              "courtyard",
-              "none"
-            ]
-          },
-          "airConditioning": {
-            "type": "boolean"
-          },
-          "elevatorAccess": {
-            "type": "boolean"
-          }
-        }
-      },
-      "UnitTypesIndustrialComponent": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "number"
-          },
-          "__component": {
-            "type": "string",
-            "enum": [
-              "unit-types.industrial"
-            ]
-          },
-          "land": {},
-          "warehouse": {},
-          "mezzanine": {},
-          "dimensions": {},
-          "ceilingHeight": {
-            "type": "number",
-            "format": "float"
-          },
-          "loadingDock": {
-            "type": "boolean"
-          },
-          "loadingDockCount": {
-            "type": "integer"
-          },
-          "truckAccess": {
-            "type": "boolean"
-          },
-          "railAccess": {
-            "type": "boolean"
-          },
-          "powerCapacity": {
-            "type": "number",
-            "format": "float"
-          },
-          "powerUnit": {
-            "type": "string",
-            "enum": [
-              "kW",
-              "kVA",
-              "HP"
-            ]
-          },
-          "waterSupply": {
-            "type": "boolean"
-          },
-          "sewageSystem": {
-            "type": "boolean"
-          },
-          "fireSuppression": {
-            "type": "boolean"
-          },
-          "securitySystem": {
-            "type": "boolean"
-          },
-          "officeSpace": {
-            "type": "number",
-            "format": "float"
-          },
-          "storageCapacity": {
-            "type": "number",
-            "format": "float"
-          },
-          "zoning": {
-            "type": "string"
           }
         }
       },

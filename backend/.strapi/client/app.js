@@ -6,6 +6,7 @@ import strapiCloud from "@strapi/plugin-cloud/strapi-admin";
 import documentation from "@strapi/plugin-documentation/strapi-admin";
 import graphql from "@strapi/plugin-graphql/strapi-admin";
 import usersPermissions from "@strapi/plugin-users-permissions/strapi-admin";
+import advancedFields from "@webbycrown/advanced-fields/strapi-admin";
 import configSync from "strapi-plugin-config-sync/strapi-admin";
 import schemaVisualizer from "strapi-plugin-schema-visualizer/strapi-admin";
 import { renderAdmin } from "@strapi/strapi/admin";
@@ -16,6 +17,7 @@ renderAdmin(document.getElementById("strapi"), {
     documentation: documentation,
     graphql: graphql,
     "users-permissions": usersPermissions,
+    "advanced-fields": advancedFields,
     "config-sync": configSync,
     "schema-visualizer": schemaVisualizer,
   },

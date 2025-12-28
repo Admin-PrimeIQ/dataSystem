@@ -86,6 +86,12 @@
         "unit-types.office",
         "unit-types.industrial"
       ]
+    },
+    "project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project.project",
+      "inversedBy": "units"
     }
   }
 }

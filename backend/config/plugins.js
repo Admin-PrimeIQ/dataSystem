@@ -6,6 +6,8 @@ module.exports = ({ env }) => ({
         autoGenerate: true,     // genera automáticamente la documentación
       },
     },
+    // Hard-disable internationalization plugin
+    i18n: false,
     'schema-visualizer': {
       enabled: true,
     }

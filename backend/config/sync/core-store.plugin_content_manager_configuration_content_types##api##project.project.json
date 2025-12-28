@@ -261,6 +261,21 @@
           "sortable": true
         }
       },
+      "units": {
+        "edit": {
+          "label": "units",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "units",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -329,6 +344,13 @@
       }
     },
     "layouts": {
+      "list": [
+        "name",
+        "code",
+        "availability",
+        "developer",
+        "isActive"
+      ],
       "edit": [
         [
           {
@@ -392,15 +414,12 @@
           {
             "name": "availability",
             "size": 6
+          },
+          {
+            "name": "units",
+            "size": 6
           }
         ]
-      ],
-      "list": [
-        "name",
-        "code",
-        "availability",
-        "developer",
-        "isActive"
       ]
     },
     "uid": "api::project.project"

@@ -6,6 +6,206 @@
   "locale": null,
   "permissions": [
     {
+      "documentId": "m0pygxkrofmjiqj7vgz33c4e",
+      "action": "api::industrial-rule.industrial-rule.create",
+      "locale": null
+    },
+    {
+      "documentId": "zb8bto6v7b6nvdrdy9y9nt4v",
+      "action": "api::industrial-rule.industrial-rule.find",
+      "locale": null
+    },
+    {
+      "documentId": "aazk1fv67z3eogs9ldwf3ang",
+      "action": "api::industrial-rule.industrial-rule.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "dzfvcq2v8tj08s5p02fanq06",
+      "action": "api::industrial-rule.industrial-rule.update",
+      "locale": null
+    },
+    {
+      "documentId": "iohisfw3ghss9ui05zc94lpb",
+      "action": "api::office-rule.office-rule.create",
+      "locale": null
+    },
+    {
+      "documentId": "dz82xj5sqsdypflqlinsy9y6",
+      "action": "api::office-rule.office-rule.find",
+      "locale": null
+    },
+    {
+      "documentId": "ux2waovatarkbgm33zu9pgse",
+      "action": "api::office-rule.office-rule.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "ue20w6hwlmemaynx8m8mkye7",
+      "action": "api::office-rule.office-rule.update",
+      "locale": null
+    },
+    {
+      "documentId": "i10gur3463e6o7q8ceohbi0m",
+      "action": "api::project.project.create",
+      "locale": null
+    },
+    {
+      "documentId": "avsy36on9hvxe4umgkucrhvi",
+      "action": "api::project.project.find",
+      "locale": null
+    },
+    {
+      "documentId": "jlfm9ib6n89n5rcdpkblhbj1",
+      "action": "api::project.project.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "q9dzeh0uuvs1hk9olkenarpi",
+      "action": "api::project.project.update",
+      "locale": null
+    },
+    {
+      "documentId": "px02iauao030115ljplxgsb8",
+      "action": "api::ref-amenity.ref-amenity.create",
+      "locale": null
+    },
+    {
+      "documentId": "x3jsjb3zklwtpfgxuia0uu0a",
+      "action": "api::ref-amenity.ref-amenity.find",
+      "locale": null
+    },
+    {
+      "documentId": "wl8ryfgpbvpfn0nay5ifb3m8",
+      "action": "api::ref-amenity.ref-amenity.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "kl5m8tebme4g8bfh2k2k5jj0",
+      "action": "api::ref-amenity.ref-amenity.update",
+      "locale": null
+    },
+    {
+      "documentId": "ap82uq0nz7yuhpk3pk0ra0np",
+      "action": "api::ref-bank.ref-bank.create",
+      "locale": null
+    },
+    {
+      "documentId": "k58oftlkgz49u9xmfmgx8i1n",
+      "action": "api::ref-bank.ref-bank.find",
+      "locale": null
+    },
+    {
+      "documentId": "ustgkving04hdt1ebl3iz82d",
+      "action": "api::ref-bank.ref-bank.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "n5hs5qi6xm343n3kjqjeb9uy",
+      "action": "api::ref-bank.ref-bank.update",
+      "locale": null
+    },
+    {
+      "documentId": "rwxcea90wykw3edhmzu8ymz7",
+      "action": "api::ref-category.ref-category.create",
+      "locale": null
+    },
+    {
+      "documentId": "hdrwk3g2jzpjfuwfsjk690m4",
+      "action": "api::ref-category.ref-category.find",
+      "locale": null
+    },
+    {
+      "documentId": "gjs6fm6uapmnbdmte4ow8003",
+      "action": "api::ref-category.ref-category.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "qkro59nadeechq8xgitgga5r",
+      "action": "api::ref-category.ref-category.update",
+      "locale": null
+    },
+    {
+      "documentId": "iyua3w6vk0kdbxh4eftv8hcf",
+      "action": "api::ref-feature.ref-feature.create",
+      "locale": null
+    },
+    {
+      "documentId": "ktslj9q6xbmfgokepcvz5g6c",
+      "action": "api::ref-feature.ref-feature.find",
+      "locale": null
+    },
+    {
+      "documentId": "m2n719yars4uw2pbz5wxxtid",
+      "action": "api::ref-feature.ref-feature.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "wjj540icful3pzelfu5gi5f1",
+      "action": "api::ref-feature.ref-feature.update",
+      "locale": null
+    },
+    {
+      "documentId": "lcwplyfra7wzgedfhoesam7p",
+      "action": "api::ref-service.ref-service.create",
+      "locale": null
+    },
+    {
+      "documentId": "r6ttw827wk0xradb8j848alz",
+      "action": "api::ref-service.ref-service.find",
+      "locale": null
+    },
+    {
+      "documentId": "yy45ghe0tkijwko5c4m1wvkx",
+      "action": "api::ref-service.ref-service.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "w17i38bvba6j9ep5t6q0gz3p",
+      "action": "api::ref-service.ref-service.update",
+      "locale": null
+    },
+    {
+      "documentId": "bhn8uqlw3x0wj2wzfdgz82zi",
+      "action": "api::residential-rule.residential-rule.create",
+      "locale": null
+    },
+    {
+      "documentId": "gthdcr33ka32zsoba9zl4txv",
+      "action": "api::residential-rule.residential-rule.find",
+      "locale": null
+    },
+    {
+      "documentId": "yorvhw5wx0ovudsxyx2tu822",
+      "action": "api::residential-rule.residential-rule.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "brkqrehnj47ve3l5oq2wr8b7",
+      "action": "api::residential-rule.residential-rule.update",
+      "locale": null
+    },
+    {
+      "documentId": "ih843wy83tqh5n4n6ixifgrx",
+      "action": "api::unit.unit.create",
+      "locale": null
+    },
+    {
+      "documentId": "xqnbzw0ragema0ewwnku4lwr",
+      "action": "api::unit.unit.find",
+      "locale": null
+    },
+    {
+      "documentId": "knw3zhiatfxwhcdsfs1aobix",
+      "action": "api::unit.unit.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "sdc8z6z1ucvlnd5gqw6jzuuh",
+      "action": "api::unit.unit.update",
+      "locale": null
+    },
+    {
       "documentId": "c8fu2xolhweeuvqy0k1zrrnk",
       "action": "plugin::content-type-builder.components.getComponent",
       "locale": null

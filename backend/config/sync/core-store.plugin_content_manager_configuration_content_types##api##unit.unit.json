@@ -201,6 +201,21 @@
           "sortable": false
         }
       },
+      "project": {
+        "edit": {
+          "label": "project",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "project",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -269,6 +284,12 @@
       }
     },
     "layouts": {
+      "list": [
+        "name",
+        "code",
+        "availability",
+        "isActive"
+      ],
       "edit": [
         [
           {
@@ -335,13 +356,13 @@
             "name": "kpis",
             "size": 12
           }
+        ],
+        [
+          {
+            "name": "project",
+            "size": 6
+          }
         ]
-      ],
-      "list": [
-        "name",
-        "code",
-        "availability",
-        "isActive"
       ]
     },
     "uid": "api::unit.unit"

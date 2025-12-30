@@ -225,7 +225,7 @@
       "locale": null
     },
     {
-      "documentId": "ux95go0kg0ml1a1og6unzdpr",
+      "documentId": "imzxpt4hn3dk83zz5tga4fc4",
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
       "subject": "api::project.project",
@@ -252,7 +252,8 @@
           "fha",
           "fractionalDownPayment",
           "downPaymentPercentage",
-          "amenities"
+          "amenities",
+          "services"
         ]
       },
       "conditions": [],
@@ -277,7 +278,7 @@
       "locale": null
     },
     {
-      "documentId": "s5s3awxrpac55easuvonyetg",
+      "documentId": "j9ycci17ekfdf1xicnb2e6og",
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::project.project",
@@ -304,14 +305,15 @@
           "fha",
           "fractionalDownPayment",
           "downPaymentPercentage",
-          "amenities"
+          "amenities",
+          "services"
         ]
       },
       "conditions": [],
       "locale": null
     },
     {
-      "documentId": "jpib4crpr2mhwrndej4slcjn",
+      "documentId": "r8yvt6b1fdq58iwq3rb8xxf1",
       "action": "plugin::content-manager.explorer.update",
       "actionParameters": {},
       "subject": "api::project.project",
@@ -338,7 +340,77 @@
           "fha",
           "fractionalDownPayment",
           "downPaymentPercentage",
-          "amenities"
+          "amenities",
+          "services"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "f5wvfc1ptjzldxvxk56skjm7",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::service.service",
+      "properties": {
+        "fields": [
+          "code",
+          "name",
+          "description",
+          "category",
+          "projects"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "fqgcggx38gjh5gi9mn0c7sy6",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::service.service",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "yy66uum1rj3jlrh4gwknxpmr",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::service.service",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "vm4i9dti1go7vkenfv8ex7jf",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::service.service",
+      "properties": {
+        "fields": [
+          "code",
+          "name",
+          "description",
+          "category",
+          "projects"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "z6l49siqu1ozooo4qwct6ndg",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::service.service",
+      "properties": {
+        "fields": [
+          "code",
+          "name",
+          "description",
+          "category",
+          "projects"
         ]
       },
       "conditions": [],

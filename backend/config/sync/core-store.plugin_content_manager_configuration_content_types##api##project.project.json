@@ -328,6 +328,21 @@
           "sortable": false
         }
       },
+      "services": {
+        "edit": {
+          "label": "Services",
+          "description": "Services available in this project. Select multiple services that the project offers (e.g., Electricity, Potable Water, Gas, Internet, Cable TV).",
+          "placeholder": "Select services for this project",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "Services",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -500,7 +515,11 @@
         [
           {
             "name": "amenities",
-            "size": 4
+            "size": 6
+          },
+          {
+            "name": "services",
+            "size": 6
           }
         ]
       ],
@@ -508,6 +527,8 @@
         "name",
         "developer",
         "market",
+        "amenities",
+        "services",
         "updatedBy",
         "updatedAt"
       ]

@@ -703,12 +703,61 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     securityType: Schema.Attribute.Enumeration<
       ['None', 'Access System', 'Combined', 'Own', 'Private', 'No']
     >;
+    services: Schema.Attribute.Relation<'manyToMany', 'api::service.service'>;
     showroom: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     subzone: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     zone: Schema.Attribute.String;
+  };
+}
+
+export interface ApiServiceService extends Struct.CollectionTypeSchema {
+  collectionName: 'services';
+  info: {
+    description: 'Services available in real estate projects (electricity, water, etc.)';
+    displayName: 'Service';
+    pluralName: 'services';
+    singularName: 'service';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<
+      [
+        'utility',
+        'security',
+        'maintenance',
+        'administrative',
+        'telecommunications',
+        'waste',
+        'energy',
+        'water',
+        'gas',
+        'internet',
+        'cable',
+        'other',
+      ]
+    >;
+    code: Schema.Attribute.UID<'name'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::service.service'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    projects: Schema.Attribute.Relation<'manyToMany', 'api::project.project'>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1225,6 +1274,7 @@ declare module '@strapi/strapi' {
       'api::amenity.amenity': ApiAmenityAmenity;
       'api::block.block': ApiBlockBlock;
       'api::project.project': ApiProjectProject;
+      'api::service.service': ApiServiceService;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

@@ -131,7 +131,13 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::amenity.amenity",
-      "mappedBy": "projects"
+      "inversedBy": "projects"
+    },
+    "services": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::service.service",
+      "inversedBy": "projects"
     }
   }
 }

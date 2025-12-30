@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "developers",
+  "info": {
+    "singularName": "developer",
+    "pluralName": "developers",
+    "displayName": "Catalog - Project - Developer",
+    "description": "Real estate developers and construction companies"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "uid",
+      "targetField": "name",
+      "required": false
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "address": {
+      "type": "text"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "website": {
+      "type": "string"
+    },
+    "taxId": {
+      "type": "string"
+    },
+    "contactPerson": {
+      "type": "string"
+    },
+    "contactPhone": {
+      "type": "string"
+    },
+    "contactEmail": {
+      "type": "email"
+    }
+  }
+}

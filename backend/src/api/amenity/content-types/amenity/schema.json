@@ -4,8 +4,8 @@
   "info": {
     "singularName": "amenity",
     "pluralName": "amenities",
-    "displayName": "Amenity",
-    "description": "Amenities available in real estate projects"
+    "displayName": "Catalog - Project - Amenities",
+    "description": "Shared property catalog: Amenities available in real estate projects (Swimming Pool, Gym, Parking, etc.)"
   },
   "options": {
     "draftAndPublish": false
@@ -46,7 +46,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::project.project",
-      "inversedBy": "amenities"
+      "mappedBy": "amenities"
     }
   }
 }

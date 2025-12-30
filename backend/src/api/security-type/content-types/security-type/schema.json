@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "security_types",
+  "info": {
+    "singularName": "security-type",
+    "pluralName": "security-types",
+    "displayName": "Catalog - Project - Security Type",
+    "description": "Security type catalog for real estate projects"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "uid",
+      "targetField": "name",
+      "required": false
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
+

@@ -4,8 +4,8 @@
   "info": {
     "singularName": "service",
     "pluralName": "services",
-    "displayName": "Service",
-    "description": "Services available in real estate projects (electricity, water, etc.)"
+    "displayName": "Catalog - Project - Services",
+    "description": "Shared property catalog: Services available in real estate projects (electricity, water, gas, etc.)"
   },
   "options": {
     "draftAndPublish": false
@@ -49,4 +49,3 @@
     }
   }
 }
-

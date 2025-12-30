@@ -1,0 +1,318 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::developer.developer",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "name",
+      "defaultSortBy": "name",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "code": {
+        "edit": {
+          "label": "Developer Code",
+          "description": "Unique identifier code for the developer. Automatically generated from the developer name (converted to URL-friendly format). Can be manually edited if needed.",
+          "placeholder": "Auto-generated from developer name (e.g., constructora-abc, developer-xyz)",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Code",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "name": {
+        "edit": {
+          "label": "Developer Name",
+          "description": "Official name of the real estate developer or construction company.",
+          "placeholder": "e.g., Constructora ABC, Developer XYZ, Real Estate Corp",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "description": {
+        "edit": {
+          "label": "Description",
+          "description": "Detailed description of the developer, their history, specialties, and notable projects.",
+          "placeholder": "e.g., Leading real estate developer with 20+ years of experience...",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Description",
+          "searchable": true,
+          "sortable": false
+        }
+      },
+      "address": {
+        "edit": {
+          "label": "Address",
+          "description": "Corporate address of the developer company.",
+          "placeholder": "e.g., 123 Main Street, Zone 10, Guatemala City",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Address",
+          "searchable": true,
+          "sortable": false
+        }
+      },
+      "phone": {
+        "edit": {
+          "label": "Phone",
+          "description": "Main corporate phone number.",
+          "placeholder": "e.g., +502 1234-5678",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Phone",
+          "searchable": true,
+          "sortable": false
+        }
+      },
+      "email": {
+        "edit": {
+          "label": "Email",
+          "description": "Main corporate email address.",
+          "placeholder": "e.g., info@developer.com",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Email",
+          "searchable": true,
+          "sortable": false
+        }
+      },
+      "website": {
+        "edit": {
+          "label": "Website",
+          "description": "Corporate website URL.",
+          "placeholder": "e.g., https://www.developer.com",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Website",
+          "searchable": true,
+          "sortable": false
+        }
+      },
+      "taxId": {
+        "edit": {
+          "label": "Tax ID",
+          "description": "Tax identification number or business registration number.",
+          "placeholder": "e.g., 12345678-9",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Tax ID",
+          "searchable": true,
+          "sortable": false
+        }
+      },
+      "contactPerson": {
+        "edit": {
+          "label": "Contact Person",
+          "description": "Name of the primary contact person for business inquiries.",
+          "placeholder": "e.g., John Doe, Maria Garcia",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Contact Person",
+          "searchable": true,
+          "sortable": false
+        }
+      },
+      "contactPhone": {
+        "edit": {
+          "label": "Contact Phone",
+          "description": "Direct phone number of the contact person.",
+          "placeholder": "e.g., +502 9876-5432",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Contact Phone",
+          "searchable": true,
+          "sortable": false
+        }
+      },
+      "contactEmail": {
+        "edit": {
+          "label": "Contact Email",
+          "description": "Direct email address of the contact person.",
+          "placeholder": "e.g., contact@developer.com",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Contact Email",
+          "searchable": true,
+          "sortable": false
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "Created At",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "Updated At",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "Updated By",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "documentId": {
+        "edit": {},
+        "list": {
+          "label": "documentId",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "edit": [
+        [
+          {
+            "name": "name",
+            "size": 8
+          },
+          {
+            "name": "code",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "description",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "address",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "phone",
+            "size": 4
+          },
+          {
+            "name": "email",
+            "size": 4
+          },
+          {
+            "name": "website",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "taxId",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "contactPerson",
+            "size": 4
+          },
+          {
+            "name": "contactPhone",
+            "size": 4
+          },
+          {
+            "name": "contactEmail",
+            "size": 4
+          }
+        ]
+      ],
+      "list": [
+        "name",
+        "code",
+        "phone",
+        "email",
+        "contactPerson",
+        "updatedBy",
+        "updatedAt"
+      ]
+    },
+    "uid": "api::developer.developer"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}
+

@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "block_categories",
+  "info": {
+    "singularName": "block-category",
+    "pluralName": "block-categories",
+    "displayName": "Catalog - Block - Categories",
+    "description": "Category catalog for blocks (Residential Horizontal, Commercial, Tourism/Hotel, Hospital, etc.)"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "uid",
+      "targetField": "name",
+      "required": false
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

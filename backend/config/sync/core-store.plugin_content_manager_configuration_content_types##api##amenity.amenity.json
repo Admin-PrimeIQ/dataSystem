@@ -36,7 +36,7 @@
       "name": {
         "edit": {
           "label": "Amenity Name",
-          "description": "Name of the amenity as it appears to users (e.g., Swimming Pool, Gym, Parking, Security).",
+          "description": "Shared property catalog: Name of the amenity as it appears to users (e.g., Swimming Pool, Gym, Parking, Security). This catalog can be shared across multiple projects.",
           "placeholder": "e.g., Swimming Pool, Gym, Parking, Security, Clubhouse",
           "visible": true,
           "editable": true

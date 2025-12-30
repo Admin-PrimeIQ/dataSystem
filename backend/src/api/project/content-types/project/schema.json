@@ -22,17 +22,14 @@
       "required": true
     },
     "developer": {
-      "type": "string"
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::developer.developer"
     },
     "country": {
-      "type": "enumeration",
-      "required": true,
-      "default": "GTM",
-      "enum": [
-        "GTM",
-        "SLV",
-        "HND"
-      ]
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::country.country"
     },
     "department": {
       "type": "string"
@@ -61,30 +58,14 @@
       ]
     },
     "nseProject": {
-      "type": "enumeration",
-      "enum": [
-        "A_PLUS",
-        "A",
-        "A_MINUS",
-        "B_PLUS",
-        "B",
-        "B_MINUS",
-        "C_PLUS",
-        "C",
-        "C_MINUS",
-        "D"
-      ]
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::nse.nse"
     },
     "securityType": {
-      "type": "enumeration",
-      "enum": [
-        "None",
-        "Access System",
-        "Combined",
-        "Own",
-        "Private",
-        "No"
-      ]
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::security-type.security-type"
     },
     "muvi": {
       "type": "boolean",
@@ -137,7 +118,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::service.service",
-      "inversedBy": "projects"
+      "mappedBy": "projects"
     }
   }
 }

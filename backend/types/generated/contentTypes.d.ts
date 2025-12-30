@@ -433,8 +433,8 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiAmenityAmenity extends Struct.CollectionTypeSchema {
   collectionName: 'amenities';
   info: {
-    description: 'Amenities available in real estate projects';
-    displayName: 'Amenity';
+    description: 'Shared property catalog: Amenities available in real estate projects (Swimming Pool, Gym, Parking, etc.)';
+    displayName: 'Catalog - Project - Amenities';
     pluralName: 'amenities';
     singularName: 'amenity';
   };
@@ -472,6 +472,38 @@ export interface ApiAmenityAmenity extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     name: Schema.Attribute.String & Schema.Attribute.Required;
     projects: Schema.Attribute.Relation<'manyToMany', 'api::project.project'>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiBlockCategoryBlockCategory
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'block_categories';
+  info: {
+    description: 'Category catalog for blocks (Residential Horizontal, Commercial, Tourism/Hotel, Hospital, etc.)';
+    displayName: 'Catalog - Block - Categories';
+    pluralName: 'block-categories';
+    singularName: 'block-category';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    code: Schema.Attribute.UID<'name'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::block-category.block-category'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -554,18 +586,10 @@ export interface ApiBlockBlock extends Struct.CollectionTypeSchema {
       ['Residential', 'Commercial', 'Industrial', 'Mixed']
     >;
     blockUsage: Schema.Attribute.Enumeration<['Sale', 'Rent']>;
-    category: Schema.Attribute.Enumeration<
-      [
-        'Housing Lots',
-        'Vertical Housing',
-        'Horizontal Housing',
-        'Warehouses',
-        'Lots',
-        'Commercial Spaces',
-        'Offices',
-      ]
-    > &
-      Schema.Attribute.Required;
+    category: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::block-category.block-category'
+    >;
     code: Schema.Attribute.UID<'name'>;
     collectionDate: Schema.Attribute.Date;
     commercializationMonths: Schema.Attribute.Integer;
@@ -636,6 +660,108 @@ export interface ApiBlockBlock extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCountryCountry extends Struct.CollectionTypeSchema {
+  collectionName: 'countries';
+  info: {
+    description: 'Country catalog for real estate projects (ISO 3166-1 alpha-3 codes)';
+    displayName: 'Catalog - Project - Country';
+    pluralName: 'countries';
+    singularName: 'country';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    code: Schema.Attribute.UID<'name'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    isoCode: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    isoCode2: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::country.country'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiDeveloperDeveloper extends Struct.CollectionTypeSchema {
+  collectionName: 'developers';
+  info: {
+    description: 'Real estate developers and construction companies';
+    displayName: 'Catalog - Project - Developer';
+    pluralName: 'developers';
+    singularName: 'developer';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    address: Schema.Attribute.Text;
+    code: Schema.Attribute.UID<'name'>;
+    contactEmail: Schema.Attribute.Email;
+    contactPerson: Schema.Attribute.String;
+    contactPhone: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    email: Schema.Attribute.Email;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::developer.developer'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    phone: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    taxId: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    website: Schema.Attribute.String;
+  };
+}
+
+export interface ApiNseNse extends Struct.CollectionTypeSchema {
+  collectionName: 'nses';
+  info: {
+    description: 'Socioeconomic level (NSE) catalog for real estate projects';
+    displayName: 'Catalog - Project - NSE';
+    pluralName: 'nses';
+    singularName: 'nse';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    code: Schema.Attribute.UID<'name'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::nse.nse'> &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   collectionName: 'projects';
   info: {
@@ -651,14 +777,15 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     accessQuantity: Schema.Attribute.Integer;
     amenities: Schema.Attribute.Relation<'manyToMany', 'api::amenity.amenity'>;
     code: Schema.Attribute.UID<'name'> & Schema.Attribute.Required;
-    country: Schema.Attribute.Enumeration<['GTM', 'SLV', 'HND']> &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'GTM'>;
+    country: Schema.Attribute.Relation<'manyToOne', 'api::country.country'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     department: Schema.Attribute.String;
-    developer: Schema.Attribute.String;
+    developer: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::developer.developer'
+    >;
     downPaymentPercentage: Schema.Attribute.Decimal &
       Schema.Attribute.SetMinMax<
         {
@@ -685,23 +812,11 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     municipality: Schema.Attribute.String;
     muvi: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     name: Schema.Attribute.String & Schema.Attribute.Required;
-    nseProject: Schema.Attribute.Enumeration<
-      [
-        'A_PLUS',
-        'A',
-        'A_MINUS',
-        'B_PLUS',
-        'B',
-        'B_MINUS',
-        'C_PLUS',
-        'C',
-        'C_MINUS',
-        'D',
-      ]
-    >;
+    nseProject: Schema.Attribute.Relation<'manyToOne', 'api::nse.nse'>;
     publishedAt: Schema.Attribute.DateTime;
-    securityType: Schema.Attribute.Enumeration<
-      ['None', 'Access System', 'Combined', 'Own', 'Private', 'No']
+    securityType: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::security-type.security-type'
     >;
     services: Schema.Attribute.Relation<'manyToMany', 'api::service.service'>;
     showroom: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
@@ -713,11 +828,43 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiSecurityTypeSecurityType
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'security_types';
+  info: {
+    description: 'Security type catalog for real estate projects';
+    displayName: 'Catalog - Project - Security Type';
+    pluralName: 'security-types';
+    singularName: 'security-type';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    code: Schema.Attribute.UID<'name'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::security-type.security-type'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiServiceService extends Struct.CollectionTypeSchema {
   collectionName: 'services';
   info: {
-    description: 'Services available in real estate projects (electricity, water, etc.)';
-    displayName: 'Service';
+    description: 'Shared property catalog: Services available in real estate projects (electricity, water, gas, etc.)';
+    displayName: 'Catalog - Project - Services';
     pluralName: 'services';
     singularName: 'service';
   };
@@ -1272,8 +1419,13 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::amenity.amenity': ApiAmenityAmenity;
+      'api::block-category.block-category': ApiBlockCategoryBlockCategory;
       'api::block.block': ApiBlockBlock;
+      'api::country.country': ApiCountryCountry;
+      'api::developer.developer': ApiDeveloperDeveloper;
+      'api::nse.nse': ApiNseNse;
       'api::project.project': ApiProjectProject;
+      'api::security-type.security-type': ApiSecurityTypeSecurityType;
       'api::service.service': ApiServiceService;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

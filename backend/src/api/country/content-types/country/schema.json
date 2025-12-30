@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "countries",
+  "info": {
+    "singularName": "country",
+    "pluralName": "countries",
+    "displayName": "Catalog - Project - Country",
+    "description": "Country catalog for real estate projects (ISO 3166-1 alpha-3 codes)"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "uid",
+      "targetField": "name",
+      "required": false
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "isoCode": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "isoCode2": {
+      "type": "string"
+    }
+  }
+}
+

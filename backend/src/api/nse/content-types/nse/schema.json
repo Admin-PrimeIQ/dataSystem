@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nses",
+  "info": {
+    "singularName": "nse",
+    "pluralName": "nses",
+    "displayName": "Catalog - Project - NSE",
+    "description": "Socioeconomic level (NSE) catalog for real estate projects"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "uid",
+      "targetField": "name",
+      "required": false
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

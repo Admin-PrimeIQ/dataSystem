@@ -56,17 +56,9 @@
       "type": "date"
     },
     "category": {
-      "type": "enumeration",
-      "required": true,
-      "enum": [
-        "Housing Lots",
-        "Vertical Housing",
-        "Horizontal Housing",
-        "Warehouses",
-        "Lots",
-        "Commercial Spaces",
-        "Offices"
-      ]
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::block-category.block-category"
     },
     "focus": {
       "type": "enumeration",

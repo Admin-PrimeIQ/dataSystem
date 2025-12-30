@@ -50,10 +50,11 @@
       "developer": {
         "edit": {
           "label": "Developer",
-          "description": "Name of the construction company or developer responsible for the project.",
-          "placeholder": "e.g., Constructora ABC, Developer XYZ",
+          "description": "The real estate developer or construction company responsible for this project. Select from the developer catalog.",
+          "placeholder": "Select a developer from the catalog",
           "visible": true,
-          "editable": true
+          "editable": true,
+          "mainField": "name"
         },
         "list": {
           "label": "Developer",
@@ -64,10 +65,11 @@
       "country": {
         "edit": {
           "label": "Country",
-          "description": "Country where the project is located. Uses ISO 3166-1 alpha-3 country codes: GTM (Guatemala), SLV (El Salvador), HND (Honduras), NIC (Nicaragua), CRI (Costa Rica), PAN (Panama), BLZ (Belize).",
-          "placeholder": "Select country code (default: GTM - Guatemala)",
+          "description": "Country where the project is located. Select from the country catalog.",
+          "placeholder": "Select a country from the catalog",
           "visible": true,
-          "editable": true
+          "editable": true,
+          "mainField": "name"
         },
         "list": {
           "label": "Country",
@@ -176,10 +178,11 @@
       "nseProject": {
         "edit": {
           "label": "NSE (Socioeconomic Level)",
-          "description": "Socioeconomic level classification of the project target market.",
-          "placeholder": "Select: A+, A, A-, B+, B, B-, C+, C, C-, or D",
+          "description": "Socioeconomic level classification of the project target market. Select from the NSE catalog.",
+          "placeholder": "Select an NSE level from the catalog",
           "visible": true,
-          "editable": true
+          "editable": true,
+          "mainField": "name"
         },
         "list": {
           "label": "NSE",
@@ -190,10 +193,11 @@
       "securityType": {
         "edit": {
           "label": "Security Type",
-          "description": "Type of security system implemented in the project.",
-          "placeholder": "Select: None, Access System, Combined, Own, Private, or No",
+          "description": "Type of security system implemented in the project. Select from the security type catalog.",
+          "placeholder": "Select a security type from the catalog",
           "visible": true,
-          "editable": true
+          "editable": true,
+          "mainField": "name"
         },
         "list": {
           "label": "Security",

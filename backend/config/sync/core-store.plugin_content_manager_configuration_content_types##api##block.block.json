@@ -163,10 +163,11 @@
       "category": {
         "edit": {
           "label": "Category",
-          "description": "Type of category for this block.",
-          "placeholder": "Select: Housing Lots, Vertical Housing, Horizontal Housing, Warehouses, Lots, Commercial Spaces, or Offices",
+          "description": "Category classification for this block. Select from the shared category catalog (e.g., Residential Horizontal, Commercial, Tourism/Hotel, Hospital).",
+          "placeholder": "Select a category from the catalog",
           "visible": true,
-          "editable": true
+          "editable": true,
+          "mainField": "name"
         },
         "list": {
           "label": "Category",

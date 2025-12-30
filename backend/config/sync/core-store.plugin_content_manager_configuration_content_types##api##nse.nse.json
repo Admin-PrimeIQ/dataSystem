@@ -1,5 +1,5 @@
 {
-  "key": "plugin_content_manager_configuration_content_types::api::service.service",
+  "key": "plugin_content_manager_configuration_content_types::api::nse.nse",
   "value": {
     "settings": {
       "bulkable": true,
@@ -21,9 +21,9 @@
       },
       "code": {
         "edit": {
-          "label": "Service Code",
-          "description": "Unique identifier code for the service. Automatically generated from the service name (converted to URL-friendly format). Can be manually edited if needed.",
-          "placeholder": "Auto-generated from service name (e.g., electricity, potable-water)",
+          "label": "NSE Code",
+          "description": "Unique identifier code for the NSE level. Automatically generated from the NSE name (converted to URL-friendly format). Can be manually edited if needed.",
+          "placeholder": "Auto-generated from NSE name (e.g., a-plus, b-minus)",
           "visible": true,
           "editable": true
         },
@@ -35,9 +35,9 @@
       },
       "name": {
         "edit": {
-          "label": "Service Name",
-          "description": "Shared property catalog: Name of the service as it appears to users (e.g., Electricity, Potable Water, Gas, Internet, Cable TV). This catalog can be shared across multiple projects.",
-          "placeholder": "e.g., Electricity, Potable Water, Gas, Internet, Cable TV, Security Service",
+          "label": "NSE Name",
+          "description": "Name of the socioeconomic level as it appears to users (e.g., A+, A, A-, B+, B, B-, C+, C, C-, D).",
+          "placeholder": "e.g., A+, A, A-, B+, B, B-, C+, C, C-, D",
           "visible": true,
           "editable": true
         },
@@ -50,43 +50,14 @@
       "description": {
         "edit": {
           "label": "Description",
-          "description": "Detailed description of the service, its features, and specifications.",
-          "placeholder": "e.g., 24/7 electricity service with backup generator system",
+          "description": "Detailed description of the socioeconomic level, its characteristics, and target market.",
+          "placeholder": "e.g., High socioeconomic level targeting affluent customers...",
           "visible": true,
           "editable": true
         },
         "list": {
           "label": "Description",
           "searchable": true,
-          "sortable": false
-        }
-      },
-      "category": {
-        "edit": {
-          "label": "Category",
-          "description": "Internal category classification for the service. Used for organization and filtering purposes.",
-          "placeholder": "Select category: utility, security, maintenance, administrative, telecommunications, waste, energy, water, gas, internet, cable, or other",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Category",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "projects": {
-        "edit": {
-          "label": "Projects",
-          "description": "Projects that have this service. This relation is managed from the Project entity, not from here.",
-          "placeholder": "Projects with this service",
-          "visible": false,
-          "editable": false,
-          "mainField": "name"
-        },
-        "list": {
-          "label": "Projects",
-          "searchable": false,
           "sortable": false
         }
       },
@@ -158,6 +129,13 @@
       }
     },
     "layouts": {
+      "list": [
+        "name",
+        "code",
+        "description",
+        "updatedBy",
+        "updatedAt"
+      ],
       "edit": [
         [
           {
@@ -174,27 +152,12 @@
             "name": "description",
             "size": 12
           }
-        ],
-        [
-          {
-            "name": "category",
-            "size": 12
-          }
         ]
-      ],
-      "list": [
-        "name",
-        "code",
-        "category",
-        "description",
-        "updatedBy",
-        "updatedAt"
       ]
     },
-    "uid": "api::service.service"
+    "uid": "api::nse.nse"
   },
   "type": "object",
   "environment": null,
   "tag": null
 }
-

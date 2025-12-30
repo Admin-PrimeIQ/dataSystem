@@ -430,6 +430,55 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiAmenityAmenity extends Struct.CollectionTypeSchema {
+  collectionName: 'amenities';
+  info: {
+    description: 'Amenities available in real estate projects';
+    displayName: 'Amenity';
+    pluralName: 'amenities';
+    singularName: 'amenity';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<
+      [
+        'recreation',
+        'wellness',
+        'leisure',
+        'outdoor',
+        'business',
+        'technology',
+        'residential',
+        'parking',
+        'security',
+        'sustainability',
+        'convenience',
+        'luxury',
+        'other',
+      ]
+    >;
+    code: Schema.Attribute.UID<'name'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::amenity.amenity'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    projects: Schema.Attribute.Relation<'manyToMany', 'api::project.project'>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiBlockBlock extends Struct.CollectionTypeSchema {
   collectionName: 'blocks';
   info: {
@@ -600,6 +649,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   };
   attributes: {
     accessQuantity: Schema.Attribute.Integer;
+    amenities: Schema.Attribute.Relation<'manyToMany', 'api::amenity.amenity'>;
     code: Schema.Attribute.UID<'name'> & Schema.Attribute.Required;
     country: Schema.Attribute.Enumeration<['GTM', 'SLV', 'HND']> &
       Schema.Attribute.Required &
@@ -1172,6 +1222,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::amenity.amenity': ApiAmenityAmenity;
       'api::block.block': ApiBlockBlock;
       'api::project.project': ApiProjectProject;
       'plugin::content-releases.release': PluginContentReleasesRelease;

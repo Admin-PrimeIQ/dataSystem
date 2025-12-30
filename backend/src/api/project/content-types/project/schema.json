@@ -126,6 +126,12 @@
       },
       "min": 0,
       "max": 100
+    },
+    "amenities": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::amenity.amenity",
+      "mappedBy": "projects"
     }
   }
 }

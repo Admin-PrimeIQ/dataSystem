@@ -6,6 +6,75 @@
   "locale": null,
   "permissions": [
     {
+      "documentId": "eq3aog5fx14jjqa71jjapvdn",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::amenity.amenity",
+      "properties": {
+        "fields": [
+          "code",
+          "name",
+          "description",
+          "category",
+          "projects"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "gyur513o4r8c2d0rcuz0i1l2",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::amenity.amenity",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "dvrwa3ot26zq5oyioimxtqs9",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::amenity.amenity",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "kbrxw9wkz8901x6sx0tsjnn1",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::amenity.amenity",
+      "properties": {
+        "fields": [
+          "code",
+          "name",
+          "description",
+          "category",
+          "projects"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "t4vqscve698vn6f42z94ed8k",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::amenity.amenity",
+      "properties": {
+        "fields": [
+          "code",
+          "name",
+          "description",
+          "category",
+          "projects"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
       "documentId": "nypl3lllyqvt6zqlofbffx7g",
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
@@ -156,7 +225,7 @@
       "locale": null
     },
     {
-      "documentId": "ufzazu1qxc9kco3hu3u7pdhg",
+      "documentId": "ux95go0kg0ml1a1og6unzdpr",
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
       "subject": "api::project.project",
@@ -182,7 +251,8 @@
           "imageUrl",
           "fha",
           "fractionalDownPayment",
-          "downPaymentPercentage"
+          "downPaymentPercentage",
+          "amenities"
         ]
       },
       "conditions": [],
@@ -207,7 +277,7 @@
       "locale": null
     },
     {
-      "documentId": "meubn2ok78qd9rtdg3rn331o",
+      "documentId": "s5s3awxrpac55easuvonyetg",
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::project.project",
@@ -233,14 +303,15 @@
           "imageUrl",
           "fha",
           "fractionalDownPayment",
-          "downPaymentPercentage"
+          "downPaymentPercentage",
+          "amenities"
         ]
       },
       "conditions": [],
       "locale": null
     },
     {
-      "documentId": "pvc4lxvujk76sn5ne5zhedb9",
+      "documentId": "jpib4crpr2mhwrndej4slcjn",
       "action": "plugin::content-manager.explorer.update",
       "actionParameters": {},
       "subject": "api::project.project",
@@ -266,7 +337,8 @@
           "imageUrl",
           "fha",
           "fractionalDownPayment",
-          "downPaymentPercentage"
+          "downPaymentPercentage",
+          "amenities"
         ]
       },
       "conditions": [],

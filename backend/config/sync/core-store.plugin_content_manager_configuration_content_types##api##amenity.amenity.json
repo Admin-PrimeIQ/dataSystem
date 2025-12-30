@@ -1,0 +1,199 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::amenity.amenity",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "name",
+      "defaultSortBy": "name",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "code": {
+        "edit": {
+          "label": "Amenity Code",
+          "description": "Unique identifier code for the amenity. Automatically generated from the amenity name (converted to URL-friendly format). Can be manually edited if needed.",
+          "placeholder": "Auto-generated from amenity name (e.g., swimming-pool, gym, parking)",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Code",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "name": {
+        "edit": {
+          "label": "Amenity Name",
+          "description": "Name of the amenity as it appears to users (e.g., Swimming Pool, Gym, Parking, Security).",
+          "placeholder": "e.g., Swimming Pool, Gym, Parking, Security, Clubhouse",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "description": {
+        "edit": {
+          "label": "Description",
+          "description": "Detailed description of the amenity, its features, and benefits.",
+          "placeholder": "e.g., Olympic-size swimming pool with children's area and sun deck",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Description",
+          "searchable": true,
+          "sortable": false
+        }
+      },
+      "category": {
+        "edit": {
+          "label": "Category",
+          "description": "Internal category classification for the amenity. Used for organization and filtering purposes.",
+          "placeholder": "Select category: recreation, wellness, leisure, outdoor, business, technology, residential, parking, security, sustainability, convenience, luxury, or other",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Category",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "projects": {
+        "edit": {
+          "label": "Projects",
+          "description": "Projects that have this amenity. This relation is managed from the Project entity, not from here.",
+          "placeholder": "Projects with this amenity",
+          "visible": false,
+          "editable": false,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "Projects",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "Created At",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "Updated At",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "Updated By",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "documentId": {
+        "edit": {},
+        "list": {
+          "label": "documentId",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "edit": [
+        [
+          {
+            "name": "name",
+            "size": 8
+          },
+          {
+            "name": "code",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "description",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "category",
+            "size": 12
+          }
+        ]
+      ],
+      "list": [
+        "name",
+        "code",
+        "category",
+        "description",
+        "updatedBy",
+        "updatedAt"
+      ]
+    },
+    "uid": "api::amenity.amenity"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

@@ -313,6 +313,21 @@
           "sortable": true
         }
       },
+      "amenities": {
+        "edit": {
+          "label": "Amenities",
+          "description": "Amenities available in this project. Select multiple amenities that the project offers (e.g., Swimming Pool, Gym, Parking, Security).",
+          "placeholder": "Select amenities for this project",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "Amenities",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -480,6 +495,12 @@
           {
             "name": "imageUrl",
             "size": 12
+          }
+        ],
+        [
+          {
+            "name": "amenities",
+            "size": 4
           }
         ]
       ],

@@ -1,11 +1,11 @@
 {
   "kind": "collectionType",
-  "collectionName": "nses",
+  "collectionName": "block_usages",
   "info": {
-    "singularName": "nse",
-    "pluralName": "nses",
-    "displayName": "Catalog - Project - NSEs",
-    "description": "Socioeconomic level (NSE) catalog for real estate projects"
+    "singularName": "block-usage",
+    "pluralName": "block-usages",
+    "displayName": "Catalog - Block - Usages",
+    "description": "Block usage catalog (Sale, Rent)"
   },
   "options": {
     "draftAndPublish": false

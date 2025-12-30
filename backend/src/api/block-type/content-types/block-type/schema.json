@@ -1,11 +1,11 @@
 {
   "kind": "collectionType",
-  "collectionName": "nses",
+  "collectionName": "block_types",
   "info": {
-    "singularName": "nse",
-    "pluralName": "nses",
-    "displayName": "Catalog - Project - NSEs",
-    "description": "Socioeconomic level (NSE) catalog for real estate projects"
+    "singularName": "block-type",
+    "pluralName": "block-types",
+    "displayName": "Catalog - Block - Types",
+    "description": "Block type catalog (Residential, Commercial, Industrial, Mixed)"
   },
   "options": {
     "draftAndPublish": false

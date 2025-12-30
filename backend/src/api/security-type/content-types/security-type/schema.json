@@ -4,7 +4,7 @@
   "info": {
     "singularName": "security-type",
     "pluralName": "security-types",
-    "displayName": "Catalog - Project - Security Type",
+    "displayName": "Catalog - Project - Security Types",
     "description": "Security type catalog for real estate projects"
   },
   "options": {
@@ -26,4 +26,3 @@
     }
   }
 }
-

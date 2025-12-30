@@ -61,64 +61,24 @@
       "target": "api::block-category.block-category"
     },
     "focus": {
-      "type": "enumeration",
-      "enum": [
-        "Residential Complex",
-        "Townhouse",
-        "Apartment",
-        "House",
-        "Loft",
-        "Penthouse",
-        "Warehouses",
-        "Warehouse Complex",
-        "Warehouse Lots",
-        "Office-Warehouses",
-        "Fiscal Warehouses / Free Zones",
-        "Industrial Parks",
-        "Offices",
-        "Class A",
-        "Class B",
-        "Class C",
-        "Professional Building",
-        "Call Center Building",
-        "Entrepreneur Office Building",
-        "Medical Offices",
-        "Medical Office Buildings",
-        "Medical Clinics",
-        "Commercial Spaces"
-      ]
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::focus.focus"
     },
     "blockType": {
-      "type": "enumeration",
-      "enum": [
-        "Residential",
-        "Commercial",
-        "Industrial",
-        "Mixed"
-      ]
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::block-type.block-type"
     },
     "blockUsage": {
-      "type": "enumeration",
-      "enum": [
-        "Sale",
-        "Rent"
-      ]
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::block-usage.block-usage"
     },
     "blockStatus": {
-      "type": "enumeration",
-      "required": true,
-      "enum": [
-        "In Plans",
-        "Under Construction",
-        "Delivered",
-        "Earth Movement",
-        "Unknown",
-        "Stopped",
-        "Built to Order",
-        "Finishes",
-        "Gray Work",
-        "For Sale"
-      ]
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::block-status.block-status"
     },
     "startDate": {
       "type": "date"

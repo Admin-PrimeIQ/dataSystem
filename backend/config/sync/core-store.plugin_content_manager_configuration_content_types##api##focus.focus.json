@@ -1,0 +1,185 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::focus.focus",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "name",
+      "defaultSortBy": "name",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "code": {
+        "edit": {
+          "label": "Focus Code",
+          "description": "Unique identifier code for the focus. Automatically generated from the focus name (converted to URL-friendly format). Can be manually edited if needed.",
+          "placeholder": "Auto-generated from focus name (e.g., residential-complex, class-a)",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Code",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "name": {
+        "edit": {
+          "label": "Focus Name",
+          "description": "Name of the market focus as it appears to users (e.g., Residential Complex, Class A, Office-Warehouses, Medical Offices).",
+          "placeholder": "e.g., Residential Complex, Class A, Office-Warehouses, Medical Offices",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "description": {
+        "edit": {
+          "label": "Description",
+          "description": "Detailed description of the market focus, its characteristics, and target market.",
+          "placeholder": "e.g., High-end residential complex targeting affluent customers...",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Description",
+          "searchable": true,
+          "sortable": false
+        }
+      },
+      "category": {
+        "edit": {
+          "label": "Category",
+          "description": "Category classification for the focus type.",
+          "placeholder": "Select: Housing, Warehouse, Office, Medical, or Commercial",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Category",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "Created At",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "Updated At",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "Updated By",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "documentId": {
+        "edit": {},
+        "list": {
+          "label": "documentId",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "edit": [
+        [
+          {
+            "name": "name",
+            "size": 8
+          },
+          {
+            "name": "code",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "category",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "description",
+            "size": 12
+          }
+        ]
+      ],
+      "list": [
+        "name",
+        "code",
+        "category",
+        "description",
+        "updatedBy",
+        "updatedAt"
+      ]
+    },
+    "uid": "api::focus.focus"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}
+

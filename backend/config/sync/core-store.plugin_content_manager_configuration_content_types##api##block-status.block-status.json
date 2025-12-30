@@ -1,0 +1,222 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::block-status.block-status",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "name",
+      "defaultSortBy": "sortOrder",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "code": {
+        "edit": {
+          "label": "Block Status Code",
+          "description": "Unique identifier code for the block status. Automatically generated from the block status name (converted to URL-friendly format). Can be manually edited if needed.",
+          "placeholder": "Auto-generated from block status name (e.g., in-plans, under-construction)",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Code",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "name": {
+        "edit": {
+          "label": "Block Status Name",
+          "description": "Name of the block status as it appears to users (e.g., In Plans, Under Construction, Delivered, Earth Movement).",
+          "placeholder": "e.g., In Plans, Under Construction, Delivered, Earth Movement",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "description": {
+        "edit": {
+          "label": "Description",
+          "description": "Detailed description of the block status, its meaning, and typical characteristics.",
+          "placeholder": "e.g., Block is in the planning phase, awaiting construction permits...",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Description",
+          "searchable": true,
+          "sortable": false
+        }
+      },
+      "statusCode": {
+        "edit": {
+          "label": "Status Code",
+          "description": "Unique status identifier code (e.g., IN_PLANS, UNDER_CONSTRUCTION, DELIVERED). Used for internal references and integrations.",
+          "placeholder": "e.g., IN_PLANS, UNDER_CONSTRUCTION, DELIVERED",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Status Code",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "isActive": {
+        "edit": {
+          "label": "Is Active",
+          "description": "Indicates if this status is currently active and available for use.",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Active",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "sortOrder": {
+        "edit": {
+          "label": "Sort Order",
+          "description": "Numeric order for sorting statuses in lists and dropdowns. Lower numbers appear first.",
+          "placeholder": "e.g., 0, 1, 2, 10",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Order",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "Created At",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "Updated At",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "Updated By",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "documentId": {
+        "edit": {},
+        "list": {
+          "label": "documentId",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "edit": [
+        [
+          {
+            "name": "name",
+            "size": 8
+          },
+          {
+            "name": "code",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "statusCode",
+            "size": 6
+          },
+          {
+            "name": "sortOrder",
+            "size": 3
+          },
+          {
+            "name": "isActive",
+            "size": 3
+          }
+        ],
+        [
+          {
+            "name": "description",
+            "size": 12
+          }
+        ]
+      ],
+      "list": [
+        "name",
+        "code",
+        "statusCode",
+        "isActive",
+        "sortOrder",
+        "updatedBy",
+        "updatedAt"
+      ]
+    },
+    "uid": "api::block-status.block-status"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}
+

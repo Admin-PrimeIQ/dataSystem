@@ -511,6 +511,104 @@ export interface ApiBlockCategoryBlockCategory
   };
 }
 
+export interface ApiBlockStatusBlockStatus extends Struct.CollectionTypeSchema {
+  collectionName: 'block_statuses';
+  info: {
+    description: 'Block status catalog (In Plans, Under Construction, Delivered, etc.)';
+    displayName: 'Catalog - Block - Statuses';
+    pluralName: 'block-statuses';
+    singularName: 'block-status';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    code: Schema.Attribute.UID<'name'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::block-status.block-status'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    sortOrder: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    statusCode: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiBlockTypeBlockType extends Struct.CollectionTypeSchema {
+  collectionName: 'block_types';
+  info: {
+    description: 'Block type catalog (Residential, Commercial, Industrial, Mixed)';
+    displayName: 'Catalog - Block - Types';
+    pluralName: 'block-types';
+    singularName: 'block-type';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    code: Schema.Attribute.UID<'name'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::block-type.block-type'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiBlockUsageBlockUsage extends Struct.CollectionTypeSchema {
+  collectionName: 'block_usages';
+  info: {
+    description: 'Block usage catalog (Sale, Rent)';
+    displayName: 'Catalog - Block - Usages';
+    pluralName: 'block-usages';
+    singularName: 'block-usage';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    code: Schema.Attribute.UID<'name'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::block-usage.block-usage'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiBlockBlock extends Struct.CollectionTypeSchema {
   collectionName: 'blocks';
   info: {
@@ -567,25 +665,18 @@ export interface ApiBlockBlock extends Struct.CollectionTypeSchema {
           editable: false;
         };
       }>;
-    blockStatus: Schema.Attribute.Enumeration<
-      [
-        'In Plans',
-        'Under Construction',
-        'Delivered',
-        'Earth Movement',
-        'Unknown',
-        'Stopped',
-        'Built to Order',
-        'Finishes',
-        'Gray Work',
-        'For Sale',
-      ]
-    > &
-      Schema.Attribute.Required;
-    blockType: Schema.Attribute.Enumeration<
-      ['Residential', 'Commercial', 'Industrial', 'Mixed']
+    blockStatus: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::block-status.block-status'
     >;
-    blockUsage: Schema.Attribute.Enumeration<['Sale', 'Rent']>;
+    blockType: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::block-type.block-type'
+    >;
+    blockUsage: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::block-usage.block-usage'
+    >;
     category: Schema.Attribute.Relation<
       'manyToOne',
       'api::block-category.block-category'
@@ -597,33 +688,7 @@ export interface ApiBlockBlock extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     deliveryDate: Schema.Attribute.Date;
-    focus: Schema.Attribute.Enumeration<
-      [
-        'Residential Complex',
-        'Townhouse',
-        'Apartment',
-        'House',
-        'Loft',
-        'Penthouse',
-        'Warehouses',
-        'Warehouse Complex',
-        'Warehouse Lots',
-        'Office-Warehouses',
-        'Fiscal Warehouses / Free Zones',
-        'Industrial Parks',
-        'Offices',
-        'Class A',
-        'Class B',
-        'Class C',
-        'Professional Building',
-        'Call Center Building',
-        'Entrepreneur Office Building',
-        'Medical Offices',
-        'Medical Office Buildings',
-        'Medical Clinics',
-        'Commercial Spaces',
-      ]
-    >;
+    focus: Schema.Attribute.Relation<'manyToOne', 'api::focus.focus'>;
     legacyId: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::block.block'> &
@@ -664,7 +729,7 @@ export interface ApiCountryCountry extends Struct.CollectionTypeSchema {
   collectionName: 'countries';
   info: {
     description: 'Country catalog for real estate projects (ISO 3166-1 alpha-3 codes)';
-    displayName: 'Catalog - Project - Country';
+    displayName: 'Catalog - Project - Countries';
     pluralName: 'countries';
     singularName: 'country';
   };
@@ -699,7 +764,7 @@ export interface ApiDeveloperDeveloper extends Struct.CollectionTypeSchema {
   collectionName: 'developers';
   info: {
     description: 'Real estate developers and construction companies';
-    displayName: 'Catalog - Project - Developer';
+    displayName: 'Catalog - Project - Developers';
     pluralName: 'developers';
     singularName: 'developer';
   };
@@ -734,11 +799,42 @@ export interface ApiDeveloperDeveloper extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiFocusFocus extends Struct.CollectionTypeSchema {
+  collectionName: 'focuses';
+  info: {
+    description: 'Market focus catalog for blocks (Residential Complex, Offices, Warehouses, etc.)';
+    displayName: 'Catalog - Block - Focuses';
+    pluralName: 'focuses';
+    singularName: 'focus';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<
+      ['Housing', 'Warehouse', 'Office', 'Medical', 'Commercial']
+    >;
+    code: Schema.Attribute.UID<'name'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::focus.focus'> &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiNseNse extends Struct.CollectionTypeSchema {
   collectionName: 'nses';
   info: {
     description: 'Socioeconomic level (NSE) catalog for real estate projects';
-    displayName: 'Catalog - Project - NSE';
+    displayName: 'Catalog - Project - NSEs';
     pluralName: 'nses';
     singularName: 'nse';
   };
@@ -833,7 +929,7 @@ export interface ApiSecurityTypeSecurityType
   collectionName: 'security_types';
   info: {
     description: 'Security type catalog for real estate projects';
-    displayName: 'Catalog - Project - Security Type';
+    displayName: 'Catalog - Project - Security Types';
     pluralName: 'security-types';
     singularName: 'security-type';
   };
@@ -1420,9 +1516,13 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::amenity.amenity': ApiAmenityAmenity;
       'api::block-category.block-category': ApiBlockCategoryBlockCategory;
+      'api::block-status.block-status': ApiBlockStatusBlockStatus;
+      'api::block-type.block-type': ApiBlockTypeBlockType;
+      'api::block-usage.block-usage': ApiBlockUsageBlockUsage;
       'api::block.block': ApiBlockBlock;
       'api::country.country': ApiCountryCountry;
       'api::developer.developer': ApiDeveloperDeveloper;
+      'api::focus.focus': ApiFocusFocus;
       'api::nse.nse': ApiNseNse;
       'api::project.project': ApiProjectProject;
       'api::security-type.security-type': ApiSecurityTypeSecurityType;

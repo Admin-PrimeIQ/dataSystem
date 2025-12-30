@@ -1,11 +1,11 @@
 {
   "kind": "collectionType",
-  "collectionName": "countries",
+  "collectionName": "block_statuses",
   "info": {
-    "singularName": "country",
-    "pluralName": "countries",
-    "displayName": "Catalog - Project - Countries",
-    "description": "Country catalog for real estate projects (ISO 3166-1 alpha-3 codes)"
+    "singularName": "block-status",
+    "pluralName": "block-statuses",
+    "displayName": "Catalog - Block - Statuses",
+    "description": "Block status catalog (In Plans, Under Construction, Delivered, etc.)"
   },
   "options": {
     "draftAndPublish": false
@@ -24,13 +24,18 @@
     "description": {
       "type": "text"
     },
-    "isoCode": {
+    "statusCode": {
       "type": "string",
       "required": true,
       "unique": true
     },
-    "isoCode2": {
-      "type": "string"
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "sortOrder": {
+      "type": "integer",
+      "default": 0
     }
   }
 }

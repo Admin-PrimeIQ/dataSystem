@@ -1,0 +1,199 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blocks",
+  "info": {
+    "singularName": "block",
+    "pluralName": "blocks",
+    "displayName": "Block",
+    "description": "Individual blocks within a real estate project (phase + tower + sector)"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project.project",
+      "inversedBy": "blocks"
+    },
+    "code": {
+      "type": "uid",
+      "targetField": "name",
+      "required": false
+    },
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "legacyId": {
+      "type": "string"
+    },
+    "phase": {
+      "type": "string"
+    },
+    "tower": {
+      "type": "string"
+    },
+    "sector": {
+      "type": "string"
+    },
+    "year": {
+      "type": "integer",
+      "required": true
+    },
+    "quarter": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "T1",
+        "T2",
+        "T3",
+        "T4"
+      ]
+    },
+    "collectionDate": {
+      "type": "date"
+    },
+    "category": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Housing Lots",
+        "Vertical Housing",
+        "Horizontal Housing"
+      ]
+    },
+    "blockType": {
+      "type": "enumeration",
+      "enum": [
+        "Residential",
+        "Commercial",
+        "Industrial",
+        "Mixed"
+      ]
+    },
+    "blockUsage": {
+      "type": "enumeration",
+      "enum": [
+        "Sale",
+        "Rent"
+      ]
+    },
+    "blockStatus": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "In Plans",
+        "Under Construction",
+        "Delivered",
+        "Earth Movement",
+        "Unknown",
+        "Stopped",
+        "Built to Order",
+        "Finishes",
+        "Gray Work",
+        "For Sale"
+      ]
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "deliveryDate": {
+      "type": "date"
+    },
+    "commercializationMonths": {
+      "type": "integer"
+    },
+    "totalUnits": {
+      "type": "integer",
+      "pluginOptions": {
+        "content-manager": {
+          "editable": false
+        }
+      }
+    },
+    "totalM2": {
+      "type": "decimal",
+      "pluginOptions": {
+        "content-manager": {
+          "editable": false
+        }
+      }
+    },
+    "availableUnits": {
+      "type": "integer",
+      "pluginOptions": {
+        "content-manager": {
+          "editable": false
+        }
+      }
+    },
+    "availableM2": {
+      "type": "decimal",
+      "pluginOptions": {
+        "content-manager": {
+          "editable": false
+        }
+      }
+    },
+    "averagePrice": {
+      "type": "decimal",
+      "pluginOptions": {
+        "content-manager": {
+          "editable": false
+        }
+      }
+    },
+    "averageSize": {
+      "type": "decimal",
+      "pluginOptions": {
+        "content-manager": {
+          "editable": false
+        }
+      }
+    },
+    "averagePricePerM2": {
+      "type": "decimal",
+      "pluginOptions": {
+        "content-manager": {
+          "editable": false
+        }
+      }
+    },
+    "averageInstallment": {
+      "type": "decimal",
+      "pluginOptions": {
+        "content-manager": {
+          "editable": false
+        }
+      }
+    },
+    "averageIncome": {
+      "type": "decimal",
+      "pluginOptions": {
+        "content-manager": {
+          "editable": false
+        }
+      }
+    },
+    "additionalParkingPrice": {
+      "type": "decimal"
+    },
+    "visitorParking": {
+      "type": "integer"
+    },
+    "assignedParking": {
+      "type": "integer"
+    },
+    "totalProjectParking": {
+      "type": "integer",
+      "default": 0
+    },
+    "migNumber": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

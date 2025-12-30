@@ -4,98 +4,115 @@
   "info": {
     "singularName": "project",
     "pluralName": "projects",
-    "displayName": "Projects",
-    "description": "Real estate development projects"
+    "displayName": "Project",
+    "description": "Real estate projects"
   },
   "options": {
     "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
-      "type": "string",
-      "maxLength": 200,
-      "required": true
-    },
     "code": {
-      "type": "string",
-      "maxLength": 20,
+      "type": "uid",
+      "targetField": "name",
       "required": true,
       "unique": true
     },
-    "description": {
-      "type": "text"
-    },
-    "categoryId": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::ref-category.ref-category",
-      "description": "Project category (residential, commercial, industrial, etc.)"
-    },
-    "developer": {
+    "name": {
       "type": "string",
-      "maxLength": 200,
       "required": true
     },
-    "location": {
-      "type": "json"
+    "developer": {
+      "type": "string"
     },
-    "startDate": {
-      "type": "date"
-    },
-    "deliveryDate": {
-      "type": "date"
-    },
-    "launchDate": {
-      "type": "date"
-    },
-    "totals": {
-      "type": "json"
-    },
-    "projectFinancingParam": {
-      "type": "json"
-    },
-    "projectSegmentRule": {
-      "type": "json"
-    },
-    "projectAmenity": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::ref-amenity.ref-amenity",
-      "description": "Available project amenities (pool, gym, park, etc.)"
-    },
-    "projectService": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::ref-service.ref-service",
-      "description": "Services included in the project (concierge, security, maintenance, etc.)"
-    },
-    "projectBankShare": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::ref-bank.ref-bank",
-      "description": "Banks associated with the project for financing"
-    },
-    "availability": {
+    "country": {
       "type": "enumeration",
-      "default": "planning",
+      "required": true,
+      "default": "GTM",
       "enum": [
-        "planning",
-        "development",
-        "marketing",
-        "construction",
-        "completed",
-        "cancelled"
+        "GTM",
+        "SLV",
+        "HND"
       ]
     },
-    "isActive": {
-      "type": "boolean",
-      "default": true
+    "department": {
+      "type": "string"
     },
-    "units": {
+    "municipality": {
+      "type": "string"
+    },
+    "zone": {
+      "type": "string"
+    },
+    "subzone": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "decimal"
+    },
+    "longitude": {
+      "type": "decimal"
+    },
+    "market": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Primary",
+        "Secondary"
+      ]
+    },
+    "nseProject": {
+      "type": "enumeration",
+      "enum": [
+        "A_PLUS",
+        "A",
+        "A_MINUS",
+        "B_PLUS",
+        "B",
+        "B_MINUS",
+        "C_PLUS",
+        "C",
+        "C_MINUS",
+        "D"
+      ]
+    },
+    "securityType": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Access System",
+        "Combined",
+        "Own",
+        "Private",
+        "No"
+      ]
+    },
+    "muvi": {
+      "type": "boolean",
+      "default": false
+    },
+    "showroom": {
+      "type": "boolean",
+      "default": false
+    },
+    "modelHouse": {
+      "type": "boolean",
+      "default": false
+    },
+    "accessQuantity": {
+      "type": "integer"
+    },
+    "imageUrl": {
+      "type": "string"
+    },
+    "fha": {
+      "type": "boolean",
+      "default": false
+    },
+    "blocks": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::unit.unit",
+      "target": "api::block.block",
       "mappedBy": "project"
     }
   }

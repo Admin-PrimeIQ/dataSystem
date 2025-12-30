@@ -6,9 +6,9 @@
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "code",
-      "defaultSortOrder": "ASC",
-      "defaultSortBy": "name"
+      "mainField": "name",
+      "defaultSortBy": "code",
+      "defaultSortOrder": "ASC"
     },
     "metadatas": {
       "id": {
@@ -19,59 +19,30 @@
           "sortable": true
         }
       },
-      "name": {
-        "edit": {
-          "label": "Name",
-          "description": "Commercial name of the real estate project",
-          "placeholder": "Ex: Torres del Sol, Residencial Los Pinos",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "name",
-          "searchable": true,
-          "sortable": true
-        }
-      },
       "code": {
         "edit": {
+          "label": "Project Code",
+          "description": "Unique identifier code for the project. Automatically generated from the project name (converted to URL-friendly format). Can be manually edited if needed. Used for internal references and integrations.",
+          "placeholder": "Auto-generated from project name (e.g., torres-del-sol)",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
           "label": "Code",
-          "description": "Unique identifier code of the project",
-          "placeholder": "Ex: TOR-2024-001, RES-LP-2024",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "code",
           "searchable": true,
           "sortable": true
         }
       },
-      "description": {
+      "name": {
         "edit": {
-          "label": "Description",
-          "description": "Detailed description of the real estate project",
-          "placeholder": "Describe the main features, location, amenities and key aspects of the project",
+          "label": "Project Name",
+          "description": "Commercial name of the real estate project as it appears to customers.",
+          "placeholder": "e.g., Torres del Sol, Residencial Los Pinos, Business Center Plaza",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "description",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "categoryId": {
-        "edit": {
-          "label": "Category",
-          "description": "Project category (residential, commercial, industrial, etc.)",
-          "placeholder": "Select the project category",
-          "visible": true,
-          "editable": true,
-          "mainField": "name"
-        },
-        "list": {
-          "label": "categoryId",
+          "label": "Name",
           "searchable": true,
           "sortable": true
         }
@@ -79,199 +50,252 @@
       "developer": {
         "edit": {
           "label": "Developer",
-          "description": "Enter developer information as JSON object with name, contact, and experience. Example: {\"name\": \"Constructora ABC\", \"contact\": \"contacto@abc.com\", \"experience\": \"20 años\"}",
-          "placeholder": "{\"name\": \"Constructora ABC\", \"contact\": \"contacto@abc.com\", \"phone\": \"+502 1234-5678\", \"experience\": \"20 años en el mercado\"}",
+          "description": "Name of the construction company or developer responsible for the project.",
+          "placeholder": "e.g., Constructora ABC, Developer XYZ",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "developer",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "location": {
-        "edit": {
-          "label": "Location",
-          "description": "Enter project location details as JSON object including address, city, zone, and geographic coordinates. Example: {\"address\": \"Av. Principal 123\", \"city\": \"Guatemala City\", \"zone\": \"Zona 10\", \"coordinates\": {\"lat\": 14.6349, \"lng\": -90.5069}}",
-          "placeholder": "{\"address\": \"Av. Reforma 10-00\", \"city\": \"Guatemala City\", \"zone\": \"Zona 10\", \"country\": \"Guatemala\", \"coordinates\": {\"lat\": 14.6349, \"lng\": -90.5069}}",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "location",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "startDate": {
-        "edit": {
-          "label": "Start Date",
-          "description": "Expected or actual project start date when construction begins",
-          "placeholder": "Select project start date",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Start Date",
+          "label": "Developer",
           "searchable": true,
           "sortable": true
         }
       },
-      "deliveryDate": {
+      "country": {
         "edit": {
-          "label": "Delivery Date",
-          "description": "Expected date for project completion and delivery to clients",
-          "placeholder": "Select expected delivery date",
+          "label": "Country",
+          "description": "Country where the project is located. Uses ISO 3166-1 alpha-3 country codes: GTM (Guatemala), SLV (El Salvador), HND (Honduras), NIC (Nicaragua), CRI (Costa Rica), PAN (Panama), BLZ (Belize).",
+          "placeholder": "Select country code (default: GTM - Guatemala)",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "Delivery Date",
+          "label": "Country",
           "searchable": true,
           "sortable": true
         }
       },
-      "launchDate": {
+      "department": {
         "edit": {
-          "label": "Launch Date",
-          "description": "Marketing launch date when the project is officially announced and sales begin",
-          "placeholder": "Select project launch date",
+          "label": "Department / State",
+          "description": "Department, state, or province where the project is located.",
+          "placeholder": "e.g., Guatemala, San Salvador, Francisco Morazán",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "Launch Date",
+          "label": "Department",
           "searchable": true,
           "sortable": true
         }
       },
-      "totals": {
+      "municipality": {
         "edit": {
-          "label": "Totals",
-          "description": "Project totals (total area, number of units, total investment, etc.)",
-          "placeholder": "Ex: {\"totalArea\": 5000, \"units\": 50, \"investment\": 10000000}",
+          "label": "Municipality / City",
+          "description": "City or municipality where the project is located.",
+          "placeholder": "e.g., Guatemala City, San Salvador, Tegucigalpa",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "totals",
-          "searchable": false,
-          "sortable": false
+          "label": "Municipality",
+          "searchable": true,
+          "sortable": true
         }
       },
-      "projectFinancingParam": {
+      "zone": {
         "edit": {
-          "label": "Financing Parameters",
-          "description": "Project financing parameters (payment options, credits, etc.)",
-          "placeholder": "Ex: {\"paymentOptions\": [\"contado\", \"financiado\"], \"creditBanks\": [\"BCP\", \"Interbank\"]}",
+          "label": "Zone",
+          "description": "Zone or district within the city where the project is located.",
+          "placeholder": "e.g., Zone 10, Zone 14, Colonia Escalón",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "projectFinancingParam",
-          "searchable": false,
-          "sortable": false
+          "label": "Zone",
+          "searchable": true,
+          "sortable": true
         }
       },
-      "projectSegmentRule": {
+      "subzone": {
         "edit": {
-          "label": "Segmentation Rules",
-          "description": "Project segmentation rules (unit types, distribution, etc.)",
-          "placeholder": "Ex: {\"unitTypes\": [\"departamento\", \"casa\"], \"distribution\": \"50-50\"}",
+          "label": "Subzone",
+          "description": "Subzone, neighborhood, or specific area within the zone.",
+          "placeholder": "e.g., Zona Viva, Las Cañas, Residenciales",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "projectSegmentRule",
-          "searchable": false,
-          "sortable": false
+          "label": "Subzone",
+          "searchable": true,
+          "sortable": true
         }
       },
-      "projectAmenity": {
+      "latitude": {
         "edit": {
-          "label": "Amenities",
-          "description": "Available project amenities (pool, gym, park, etc.)",
-          "placeholder": "Select the project amenities",
+          "label": "Latitude",
+          "description": "Geographic latitude coordinate (GPS) for the project location. Format: decimal degrees.",
+          "placeholder": "e.g., 14.634915",
           "visible": true,
-          "editable": true,
-          "mainField": "name"
+          "editable": true
         },
         "list": {
-          "label": "projectAmenity",
-          "searchable": false,
-          "sortable": false
+          "label": "Latitude",
+          "searchable": true,
+          "sortable": true
         }
       },
-      "projectService": {
+      "longitude": {
         "edit": {
-          "label": "Services",
-          "description": "Services included in the project (concierge, security, maintenance, etc.)",
-          "placeholder": "Select the project services",
+          "label": "Longitude",
+          "description": "Geographic longitude coordinate (GPS) for the project location. Format: decimal degrees.",
+          "placeholder": "e.g., -90.506882",
           "visible": true,
-          "editable": true,
-          "mainField": "name"
+          "editable": true
         },
         "list": {
-          "label": "projectService",
-          "searchable": false,
-          "sortable": false
+          "label": "Longitude",
+          "searchable": true,
+          "sortable": true
         }
       },
-      "projectBankShare": {
+      "market": {
         "edit": {
-          "label": "Associated Banks",
-          "description": "Banks associated with the project for financing",
-          "placeholder": "Select the banks for financing",
+          "label": "Market Type",
+          "description": "Market classification: Primary (new construction) or Secondary (resale/used properties).",
+          "placeholder": "Select: Primary or Secondary",
           "visible": true,
-          "editable": true,
-          "mainField": "name"
+          "editable": true
         },
         "list": {
-          "label": "projectBankShare",
-          "searchable": false,
-          "sortable": false
+          "label": "Market",
+          "searchable": true,
+          "sortable": true
         }
       },
-      "availability": {
+      "nseProject": {
         "edit": {
-          "label": "availability",
-          "description": "",
+          "label": "NSE (Socioeconomic Level)",
+          "description": "Socioeconomic level classification of the project target market.",
+          "placeholder": "Select: A+, A, A-, B+, B, B-, C+, C, C-, or D",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "NSE",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "securityType": {
+        "edit": {
+          "label": "Security Type",
+          "description": "Type of security system implemented in the project.",
+          "placeholder": "Select: None, Access System, Combined, Own, Private, or No",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Security",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "muvi": {
+        "edit": {
+          "label": "MUVI",
+          "description": "Indicates if the project has MUVI (Mixed Use Vertical Integration) classification.",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "availability",
+          "label": "MUVI",
           "searchable": true,
           "sortable": true
         }
       },
-      "isActive": {
+      "showroom": {
         "edit": {
-          "label": "Active",
-          "description": "Indicates if the project is active and available for operations",
-          "placeholder": "Activate/deactivate project",
+          "label": "Showroom",
+          "description": "Indicates if the project has a showroom or sales office available for visitors.",
+          "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "isActive",
+          "label": "Showroom",
           "searchable": true,
           "sortable": true
         }
       },
-      "units": {
+      "modelHouse": {
         "edit": {
-          "label": "units",
-          "description": "",
+          "label": "Model House",
+          "description": "Indicates if the project has a model house or sample unit available for viewing.",
           "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Model House",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "accessQuantity": {
+        "edit": {
+          "label": "Access Quantity",
+          "description": "Number of access points or entrances to the project.",
+          "placeholder": "e.g., 1, 2, 3",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Access Qty",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "imageUrl": {
+        "edit": {
+          "label": "Image URL",
+          "description": "URL or path to the main project image. Can be a full URL or relative path.",
+          "placeholder": "e.g., https://example.com/project-image.jpg or /uploads/project.jpg",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Image",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "fha": {
+        "edit": {
+          "label": "FHA",
+          "description": "Indicates if the project has FHA (Federal Housing Administration) approval or classification.",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "FHA",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "blocks": {
+        "edit": {
+          "label": "Blocks",
+          "description": "Blocks (phases, towers, or sectors) associated with this project. Each block represents a distinct development phase or section.",
+          "placeholder": "Add blocks to this project",
           "visible": true,
           "editable": true,
           "mainField": "name"
         },
         "list": {
-          "label": "units",
+          "label": "Blocks",
           "searchable": false,
           "sortable": false
         }
@@ -285,7 +309,7 @@
           "editable": true
         },
         "list": {
-          "label": "createdAt",
+          "label": "Created At",
           "searchable": true,
           "sortable": true
         }
@@ -299,7 +323,7 @@
           "editable": true
         },
         "list": {
-          "label": "updatedAt",
+          "label": "Updated At",
           "searchable": true,
           "sortable": true
         }
@@ -329,7 +353,7 @@
           "mainField": "firstname"
         },
         "list": {
-          "label": "updatedBy",
+          "label": "Updated By",
           "searchable": true,
           "sortable": true
         }
@@ -344,82 +368,114 @@
       }
     },
     "layouts": {
-      "list": [
-        "name",
-        "code",
-        "availability",
-        "developer",
-        "isActive"
-      ],
       "edit": [
         [
           {
-            "name": "name",
-            "size": 4
-          },
-          {
             "name": "code",
-            "size": 4
-          },
-          {
-            "name": "isActive",
-            "size": 4
-          }
-        ],
-        [
-          {
-            "name": "categoryId",
             "size": 12
           },
           {
-            "name": "description",
-            "size": 12
-          }
-        ],
-        [
+            "name": "name",
+            "size": 6
+          },
           {
             "name": "developer",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "country",
+            "size": 6
+          },
+          {
+            "name": "department",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "municipality",
+            "size": 4
+          },
+          {
+            "name": "zone",
+            "size": 4
+          },
+          {
+            "name": "subzone",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "latitude",
+            "size": 4
+          },
+          {
+            "name": "longitude",
+            "size": 4
+          },
+          {
+            "name": "accessQuantity",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "market",
+            "size": 4
+          },
+          {
+            "name": "nseProject",
+            "size": 4
+          },
+          {
+            "name": "securityType",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "showroom",
+            "size": 4
+          },
+          {
+            "name": "modelHouse",
+            "size": 4
+          },
+          {
+            "name": "muvi",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "fha",
             "size": 12
           }
         ],
         [
           {
-            "name": "startDate",
-            "size": 4
-          },
-          {
-            "name": "deliveryDate",
-            "size": 4
-          },
-          {
-            "name": "launchDate",
-            "size": 4
+            "name": "imageUrl",
+            "size": 12
           }
         ],
         [
           {
-            "name": "projectAmenity",
-            "size": 4
-          },
-          {
-            "name": "projectService",
-            "size": 4
-          },
-          {
-            "name": "projectBankShare",
-            "size": 4
-          }
-        ],
-        [
-          {
-            "name": "availability",
-            "size": 6
-          },
-          {
-            "name": "units",
-            "size": 6
+            "name": "blocks",
+            "size": 12
           }
         ]
+      ],
+      "list": [
+        "name",
+        "code",
+        "developer",
+        "blocks",
+        "market",
+        "updatedBy",
+        "updatedAt"
       ]
     },
     "uid": "api::project.project"

@@ -1,0 +1,695 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::block.block",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "name",
+      "defaultSortBy": "name",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "project": {
+        "edit": {
+          "label": "Project",
+          "description": "The parent project this block belongs to. Blocks represent phases, towers, or sectors within a project.",
+          "placeholder": "Select a project",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "Project",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "code": {
+        "edit": {
+          "label": "Block Code",
+          "description": "Unique identifier code for the block. Automatically calculated from project name, phase, sector, and tower (converted to URL-friendly format). This field is read-only and cannot be edited manually.",
+          "placeholder": "Auto-generated (e.g., vistas-de-santa-elena-fase-1-sector-1-torre-a)",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Code",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "name": {
+        "edit": {
+          "label": "Block Name",
+          "description": "Name of the block. Automatically calculated from project name, phase, sector, and tower. Format: 'Project Name - Fase X - Sector Y - Torre Z'. If phase/sector/tower are empty, uses only project name. This field is read-only and cannot be edited manually.",
+          "placeholder": "Auto-generated (e.g., Vistas de Santa Elena - Fase 1 - Sector 1 - Torre A)",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "legacyId": {
+        "edit": {
+          "label": "Legacy ID",
+          "description": "Legacy identifier from the previous Market Scan system. Used for validation and migration purposes. Only fill this for blocks migrated from the old system.",
+          "placeholder": "e.g., hash from Market Scan system",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Legacy ID",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "phase": {
+        "edit": {
+          "label": "Phase",
+          "description": "Development phase of the block within the project (e.g., Phase 1, Phase 2, Phase A).",
+          "placeholder": "e.g., Phase 1, Phase A, First Phase",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Phase",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "tower": {
+        "edit": {
+          "label": "Tower",
+          "description": "Tower or building identifier within the project (e.g., Tower A, Tower 1, Building B).",
+          "placeholder": "e.g., Tower A, Tower 1, Building B",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Tower",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "sector": {
+        "edit": {
+          "label": "Sector",
+          "description": "Sector or area identifier within the project (e.g., Sector A, North Sector, Residential Sector).",
+          "placeholder": "e.g., Sector A, North Sector, Residential",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Sector",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "year": {
+        "edit": {
+          "label": "Year",
+          "description": "Year of the data collection period (e.g., 2024, 2025).",
+          "placeholder": "e.g., 2024",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Year",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "quarter": {
+        "edit": {
+          "label": "Quarter",
+          "description": "Quarter of the year for data collection period: T1 (Q1), T2 (Q2), T3 (Q3), or T4 (Q4).",
+          "placeholder": "Select: T1, T2, T3, or T4",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Quarter",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "collectionDate": {
+        "edit": {
+          "label": "Collection Date",
+          "description": "Date when the data for this block was collected or captured.",
+          "placeholder": "Select collection date",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Collection Date",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "category": {
+        "edit": {
+          "label": "Category",
+          "description": "Type of housing category for this block.",
+          "placeholder": "Select: Housing Lots, Vertical Housing, or Horizontal Housing",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Category",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "blockType": {
+        "edit": {
+          "label": "Block Type",
+          "description": "Type of real estate block based on its primary use.",
+          "placeholder": "Select: Residential, Commercial, Industrial, or Mixed",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Block Type",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "blockUsage": {
+        "edit": {
+          "label": "Block Usage",
+          "description": "Whether the block is for sale or rent.",
+          "placeholder": "Select: Sale or Rent",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Usage",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "blockStatus": {
+        "edit": {
+          "label": "Block Status",
+          "description": "Current construction or development status of the block.",
+          "placeholder": "Select block status",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Status",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "startDate": {
+        "edit": {
+          "label": "Start Date",
+          "description": "Date when construction or development of this block started.",
+          "placeholder": "Select start date",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Start Date",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "deliveryDate": {
+        "edit": {
+          "label": "Delivery Date",
+          "description": "Expected or actual date when the block will be or was delivered to customers.",
+          "placeholder": "Select delivery date",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Delivery Date",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "commercializationMonths": {
+        "edit": {
+          "label": "Commercialization Months",
+          "description": "Number of months the block has been or will be in the market for sale/rent.",
+          "placeholder": "e.g., 6, 12, 24",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Comm. Months",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "totalUnits": {
+        "edit": {
+          "label": "Total Units",
+          "description": "Total number of units in this block. This field is calculated automatically and cannot be edited manually.",
+          "placeholder": "Calculated automatically",
+          "visible": true,
+          "editable": false
+        },
+        "list": {
+          "label": "Total Units",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "totalM2": {
+        "edit": {
+          "label": "Total m²",
+          "description": "Total area in square meters for this block. This field is calculated automatically and cannot be edited manually.",
+          "placeholder": "Calculated automatically",
+          "visible": true,
+          "editable": false
+        },
+        "list": {
+          "label": "Total m²",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "availableUnits": {
+        "edit": {
+          "label": "Available Units",
+          "description": "Number of units currently available for sale/rent in this block. This field is calculated automatically and cannot be edited manually.",
+          "placeholder": "Calculated automatically",
+          "visible": true,
+          "editable": false
+        },
+        "list": {
+          "label": "Available Units",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "availableM2": {
+        "edit": {
+          "label": "Available m²",
+          "description": "Total available area in square meters for this block. This field is calculated automatically and cannot be edited manually.",
+          "placeholder": "Calculated automatically",
+          "visible": true,
+          "editable": false
+        },
+        "list": {
+          "label": "Available m²",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "averagePrice": {
+        "edit": {
+          "label": "Average Price",
+          "description": "Average price of units in this block. This field is calculated automatically and cannot be edited manually.",
+          "placeholder": "Calculated automatically",
+          "visible": true,
+          "editable": false
+        },
+        "list": {
+          "label": "Avg. Price",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "averageSize": {
+        "edit": {
+          "label": "Average Size",
+          "description": "Average size in square meters of units in this block. This field is calculated automatically and cannot be edited manually.",
+          "placeholder": "Calculated automatically",
+          "visible": true,
+          "editable": false
+        },
+        "list": {
+          "label": "Avg. Size",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "averagePricePerM2": {
+        "edit": {
+          "label": "Average Price per m²",
+          "description": "Average price per square meter for units in this block. This field is calculated automatically and cannot be edited manually.",
+          "placeholder": "Calculated automatically",
+          "visible": true,
+          "editable": false
+        },
+        "list": {
+          "label": "Avg. Price/m²",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "averageInstallment": {
+        "edit": {
+          "label": "Average Installment",
+          "description": "Average monthly installment payment for units in this block. This field is calculated automatically and cannot be edited manually.",
+          "placeholder": "Calculated automatically",
+          "visible": true,
+          "editable": false
+        },
+        "list": {
+          "label": "Avg. Installment",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "averageIncome": {
+        "edit": {
+          "label": "Average Income",
+          "description": "Average required income for customers to afford units in this block. This field is calculated automatically and cannot be edited manually.",
+          "placeholder": "Calculated automatically",
+          "visible": true,
+          "editable": false
+        },
+        "list": {
+          "label": "Avg. Income",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "additionalParkingPrice": {
+        "edit": {
+          "label": "Additional Parking Price",
+          "description": "Price for additional parking spaces beyond the standard allocation.",
+          "placeholder": "e.g., 50000, 75000",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Add. Parking Price",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "visitorParking": {
+        "edit": {
+          "label": "Visitor Parking",
+          "description": "Number of parking spaces allocated for visitors.",
+          "placeholder": "e.g., 10, 20, 50",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Visitor Parking",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "assignedParking": {
+        "edit": {
+          "label": "Assigned Parking",
+          "description": "Number of parking spaces assigned to units in this block.",
+          "placeholder": "e.g., 100, 200, 500",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Assigned Parking",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "totalProjectParking": {
+        "edit": {
+          "label": "Total Project Parking",
+          "description": "Total number of parking spaces in the entire project.",
+          "placeholder": "e.g., 500, 1000",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Total Parking",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "migNumber": {
+        "edit": {
+          "label": "Migration Number",
+          "description": "Internal migration tracking number. Used for data migration and tracking purposes.",
+          "placeholder": "e.g., 0, 1, 2",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Mig. Number",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "Created At",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "Updated At",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "Updated By",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "documentId": {
+        "edit": {},
+        "list": {
+          "label": "documentId",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "edit": [
+        [
+          {
+            "name": "project",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "name",
+            "size": 12
+          },
+          {
+            "name": "code",
+            "size": 6
+          },
+          {
+            "name": "legacyId",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "phase",
+            "size": 4
+          },
+          {
+            "name": "sector",
+            "size": 4
+          },
+          {
+            "name": "tower",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "collectionDate",
+            "size": 6
+          },
+          {
+            "name": "category",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "blockType",
+            "size": 6
+          },
+          {
+            "name": "blockUsage",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "blockStatus",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "startDate",
+            "size": 4
+          },
+          {
+            "name": "deliveryDate",
+            "size": 4
+          },
+          {
+            "name": "commercializationMonths",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "year",
+            "size": 6
+          },
+          {
+            "name": "quarter",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "availableUnits",
+            "size": 6
+          },
+          {
+            "name": "availableM2",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "totalUnits",
+            "size": 6
+          },
+          {
+            "name": "totalM2",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "averagePricePerM2",
+            "size": 4
+          },
+          {
+            "name": "averageInstallment",
+            "size": 4
+          },
+          {
+            "name": "averageIncome",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "visitorParking",
+            "size": 4
+          },
+          {
+            "name": "assignedParking",
+            "size": 4
+          },
+          {
+            "name": "totalProjectParking",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "additionalParkingPrice",
+            "size": 6
+          },
+          {
+            "name": "migNumber",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "averagePrice",
+            "size": 6
+          },
+          {
+            "name": "averageSize",
+            "size": 6
+          }
+        ]
+      ],
+      "list": [
+        "name",
+        "project",
+        "phase",
+        "sector",
+        "tower",
+        "blockStatus",
+        "updatedBy",
+        "updatedAt"
+      ]
+    },
+    "uid": "api::block.block"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

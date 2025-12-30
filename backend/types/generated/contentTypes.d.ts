@@ -430,280 +430,133 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiIndustrialRuleIndustrialRule
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'industrial_rules';
+export interface ApiBlockBlock extends Struct.CollectionTypeSchema {
+  collectionName: 'blocks';
   info: {
-    description: 'Business rules for industrial units (min warehouse height, loading area size)';
-    displayName: 'Z - TBD - Industrial Rule';
-    pluralName: 'industrial-rules';
-    singularName: 'industrial-rule';
+    description: 'Individual blocks within a real estate project (phase + tower + sector)';
+    displayName: 'Block';
+    pluralName: 'blocks';
+    singularName: 'block';
   };
   options: {
     draftAndPublish: false;
   };
   attributes: {
-    allowedZoning: Schema.Attribute.JSON;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
-    effectiveDate: Schema.Attribute.Date;
-    expirationDate: Schema.Attribute.Date;
-    fireSuppressionRequired: Schema.Attribute.Boolean &
-      Schema.Attribute.DefaultTo<false>;
-    isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::industrial-rule.industrial-rule'
-    > &
-      Schema.Attribute.Private;
-    maxLoadingAreaSize: Schema.Attribute.Decimal &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    maxLoadingDocks: Schema.Attribute.Integer &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    maxOfficeSpace: Schema.Attribute.Decimal &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    maxPowerCapacity: Schema.Attribute.Decimal &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    maxStorageCapacity: Schema.Attribute.Decimal &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    maxWarehouseHeight: Schema.Attribute.Decimal &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    minLoadingAreaSize: Schema.Attribute.Decimal &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    minLoadingDocks: Schema.Attribute.Integer &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    minOfficeSpace: Schema.Attribute.Decimal &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    minPowerCapacity: Schema.Attribute.Decimal &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    minStorageCapacity: Schema.Attribute.Decimal &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    minWarehouseHeight: Schema.Attribute.Decimal &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    name: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 100;
+    additionalParkingPrice: Schema.Attribute.Decimal;
+    assignedParking: Schema.Attribute.Integer;
+    availableM2: Schema.Attribute.Decimal &
+      Schema.Attribute.SetPluginOptions<{
+        'content-manager': {
+          editable: false;
+        };
       }>;
-    powerUnit: Schema.Attribute.Enumeration<['kW', 'kVA', 'HP']> &
-      Schema.Attribute.DefaultTo<'kW'>;
-    priority: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
-    publishedAt: Schema.Attribute.DateTime;
-    railAccessRequired: Schema.Attribute.Boolean &
-      Schema.Attribute.DefaultTo<false>;
-    restrictedZoning: Schema.Attribute.JSON;
-    ruleType: Schema.Attribute.Enumeration<
+    availableUnits: Schema.Attribute.Integer &
+      Schema.Attribute.SetPluginOptions<{
+        'content-manager': {
+          editable: false;
+        };
+      }>;
+    averageIncome: Schema.Attribute.Decimal &
+      Schema.Attribute.SetPluginOptions<{
+        'content-manager': {
+          editable: false;
+        };
+      }>;
+    averageInstallment: Schema.Attribute.Decimal &
+      Schema.Attribute.SetPluginOptions<{
+        'content-manager': {
+          editable: false;
+        };
+      }>;
+    averagePrice: Schema.Attribute.Decimal &
+      Schema.Attribute.SetPluginOptions<{
+        'content-manager': {
+          editable: false;
+        };
+      }>;
+    averagePricePerM2: Schema.Attribute.Decimal &
+      Schema.Attribute.SetPluginOptions<{
+        'content-manager': {
+          editable: false;
+        };
+      }>;
+    averageSize: Schema.Attribute.Decimal &
+      Schema.Attribute.SetPluginOptions<{
+        'content-manager': {
+          editable: false;
+        };
+      }>;
+    blockStatus: Schema.Attribute.Enumeration<
       [
-        'warehouse_height',
-        'loading_area',
-        'power_capacity',
-        'access_requirements',
-        'zoning',
-        'other',
+        'In Plans',
+        'Under Construction',
+        'Delivered',
+        'Earth Movement',
+        'Unknown',
+        'Stopped',
+        'Built to Order',
+        'Finishes',
+        'Gray Work',
+        'For Sale',
       ]
     > &
       Schema.Attribute.Required;
-    securitySystemRequired: Schema.Attribute.Boolean &
-      Schema.Attribute.DefaultTo<false>;
-    sewageSystemRequired: Schema.Attribute.Boolean &
-      Schema.Attribute.DefaultTo<false>;
-    truckAccessRequired: Schema.Attribute.Boolean &
-      Schema.Attribute.DefaultTo<false>;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    waterSupplyRequired: Schema.Attribute.Boolean &
-      Schema.Attribute.DefaultTo<false>;
-  };
-}
-
-export interface ApiOfficeRuleOfficeRule extends Struct.CollectionTypeSchema {
-  collectionName: 'office_rules';
-  info: {
-    description: 'Business rules for office units (min/max rent per m\u00B2, unit size)';
-    displayName: 'Z - TBD - Office Rule';
-    pluralName: 'office-rules';
-    singularName: 'office-rule';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    airConditioningRequired: Schema.Attribute.Boolean &
-      Schema.Attribute.DefaultTo<false>;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
-    effectiveDate: Schema.Attribute.Date;
-    elevatorAccessRequired: Schema.Attribute.Boolean &
-      Schema.Attribute.DefaultTo<false>;
-    expirationDate: Schema.Attribute.Date;
-    isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
-    kitchenetteRequired: Schema.Attribute.Boolean &
-      Schema.Attribute.DefaultTo<false>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::office-rule.office-rule'
-    > &
-      Schema.Attribute.Private;
-    locationRestrictions: Schema.Attribute.JSON;
-    maxEmployees: Schema.Attribute.Integer &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    maxRentPerSqm: Schema.Attribute.Decimal &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    maxUnitSize: Schema.Attribute.Decimal &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    meetingRoomRequirement: Schema.Attribute.Boolean &
-      Schema.Attribute.DefaultTo<false>;
-    minEmployees: Schema.Attribute.Integer &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    minMeetingRooms: Schema.Attribute.Integer &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    minRentPerSqm: Schema.Attribute.Decimal &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    minUnitSize: Schema.Attribute.Decimal &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    name: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 100;
-      }>;
-    parkingSpacesRequired: Schema.Attribute.Integer &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    priority: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
-    publishedAt: Schema.Attribute.DateTime;
-    receptionAreaRequired: Schema.Attribute.Boolean &
-      Schema.Attribute.DefaultTo<false>;
-    requiredClass: Schema.Attribute.Enumeration<
-      ['A', 'B', 'C', 'premium', 'standard', 'basic']
+    blockType: Schema.Attribute.Enumeration<
+      ['Residential', 'Commercial', 'Industrial', 'Mixed']
     >;
-    ruleType: Schema.Attribute.Enumeration<
-      [
-        'rent_pricing',
-        'unit_size',
-        'class_requirements',
-        'employee_capacity',
-        'location',
-        'other',
-      ]
+    blockUsage: Schema.Attribute.Enumeration<['Sale', 'Rent']>;
+    category: Schema.Attribute.Enumeration<
+      ['Housing Lots', 'Vertical Housing', 'Horizontal Housing']
     > &
       Schema.Attribute.Required;
+    code: Schema.Attribute.UID<'name'>;
+    collectionDate: Schema.Attribute.Date;
+    commercializationMonths: Schema.Attribute.Integer;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    deliveryDate: Schema.Attribute.Date;
+    legacyId: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::block.block'> &
+      Schema.Attribute.Private;
+    migNumber: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    name: Schema.Attribute.String;
+    phase: Schema.Attribute.String;
+    project: Schema.Attribute.Relation<'manyToOne', 'api::project.project'>;
+    publishedAt: Schema.Attribute.DateTime;
+    quarter: Schema.Attribute.Enumeration<['T1', 'T2', 'T3', 'T4']> &
+      Schema.Attribute.Required;
+    sector: Schema.Attribute.String;
+    startDate: Schema.Attribute.Date;
+    totalM2: Schema.Attribute.Decimal &
+      Schema.Attribute.SetPluginOptions<{
+        'content-manager': {
+          editable: false;
+        };
+      }>;
+    totalProjectParking: Schema.Attribute.Integer &
+      Schema.Attribute.DefaultTo<0>;
+    totalUnits: Schema.Attribute.Integer &
+      Schema.Attribute.SetPluginOptions<{
+        'content-manager': {
+          editable: false;
+        };
+      }>;
+    tower: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    visitorParking: Schema.Attribute.Integer;
+    year: Schema.Attribute.Integer & Schema.Attribute.Required;
   };
 }
 
 export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   collectionName: 'projects';
   info: {
-    description: 'Real estate development projects';
-    displayName: 'Projects';
+    description: 'Real estate projects';
+    displayName: 'Project';
     pluralName: 'projects';
     singularName: 'project';
   };
@@ -711,489 +564,59 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
-    availability: Schema.Attribute.Enumeration<
-      [
-        'planning',
-        'development',
-        'marketing',
-        'construction',
-        'completed',
-        'cancelled',
-      ]
-    > &
-      Schema.Attribute.DefaultTo<'planning'>;
-    categoryId: Schema.Attribute.Relation<
-      'manyToOne',
-      'api::ref-category.ref-category'
-    >;
-    code: Schema.Attribute.String &
+    accessQuantity: Schema.Attribute.Integer;
+    blocks: Schema.Attribute.Relation<'oneToMany', 'api::block.block'>;
+    code: Schema.Attribute.UID<'name'> &
       Schema.Attribute.Required &
-      Schema.Attribute.Unique &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 20;
-      }>;
+      Schema.Attribute.Unique;
+    country: Schema.Attribute.Enumeration<['GTM', 'SLV', 'HND']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'GTM'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    deliveryDate: Schema.Attribute.Date;
-    description: Schema.Attribute.Text;
-    developer: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 200;
-      }>;
-    isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
-    launchDate: Schema.Attribute.Date;
+    department: Schema.Attribute.String;
+    developer: Schema.Attribute.String;
+    fha: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    imageUrl: Schema.Attribute.String;
+    latitude: Schema.Attribute.Decimal;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::project.project'
     > &
       Schema.Attribute.Private;
-    location: Schema.Attribute.JSON;
-    name: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 200;
-      }>;
-    projectAmenity: Schema.Attribute.Relation<
-      'manyToMany',
-      'api::ref-amenity.ref-amenity'
-    >;
-    projectBankShare: Schema.Attribute.Relation<
-      'manyToMany',
-      'api::ref-bank.ref-bank'
-    >;
-    projectFinancingParam: Schema.Attribute.JSON;
-    projectSegmentRule: Schema.Attribute.JSON;
-    projectService: Schema.Attribute.Relation<
-      'manyToMany',
-      'api::ref-service.ref-service'
-    >;
-    publishedAt: Schema.Attribute.DateTime;
-    startDate: Schema.Attribute.Date;
-    totals: Schema.Attribute.JSON;
-    units: Schema.Attribute.Relation<'oneToMany', 'api::unit.unit'>;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiRefAmenityRefAmenity extends Struct.CollectionTypeSchema {
-  collectionName: 'ref_amenities';
-  info: {
-    description: 'Property amenities (Pool, Gym, Helipad, etc.)';
-    displayName: 'Projects - Amenities';
-    pluralName: 'ref-amenities';
-    singularName: 'ref-amenity';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    category: Schema.Attribute.Enumeration<
+    longitude: Schema.Attribute.Decimal;
+    market: Schema.Attribute.Enumeration<['Primary', 'Secondary']> &
+      Schema.Attribute.Required;
+    modelHouse: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    municipality: Schema.Attribute.String;
+    muvi: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    nseProject: Schema.Attribute.Enumeration<
       [
-        'recreation',
-        'wellness',
-        'leisure',
-        'outdoor',
-        'business',
-        'technology',
-        'residential',
-        'parking',
-        'security',
-        'sustainability',
-        'convenience',
-        'luxury',
-        'other',
+        'A_PLUS',
+        'A',
+        'A_MINUS',
+        'B_PLUS',
+        'B',
+        'B_MINUS',
+        'C_PLUS',
+        'C',
+        'C_MINUS',
+        'D',
       ]
-    > &
-      Schema.Attribute.DefaultTo<'other'>;
-    code: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Unique;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
-    icon: Schema.Attribute.String &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 50;
-      }>;
-    isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::ref-amenity.ref-amenity'
-    > &
-      Schema.Attribute.Private;
-    name: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Unique &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 100;
-      }>;
-    publishedAt: Schema.Attribute.DateTime;
-    sortOrder: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiRefBankRefBank extends Struct.CollectionTypeSchema {
-  collectionName: 'ref_banks';
-  info: {
-    description: 'Bank references (BAC, BAM, Banrural, etc.)';
-    displayName: 'Projects - Banks';
-    pluralName: 'ref-banks';
-    singularName: 'ref-bank';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    address: Schema.Attribute.Text;
-    code: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Unique;
-    country: Schema.Attribute.String &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 50;
-      }> &
-      Schema.Attribute.DefaultTo<'Guatemala'>;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::ref-bank.ref-bank'
-    > &
-      Schema.Attribute.Private;
-    name: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Unique &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 100;
-      }>;
-    phone: Schema.Attribute.String &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 20;
-      }>;
-    publishedAt: Schema.Attribute.DateTime;
-    sortOrder: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
-    swiftCode: Schema.Attribute.String;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    website: Schema.Attribute.String;
-  };
-}
-
-export interface ApiRefCategoryRefCategory extends Struct.CollectionTypeSchema {
-  collectionName: 'ref_categories';
-  info: {
-    description: 'Categories for property types (Residential, Office, Industrial, etc.)';
-    displayName: 'Projects - Categories';
-    pluralName: 'ref-categories';
-    singularName: 'ref-category';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    code: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Unique;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
-    isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::ref-category.ref-category'
-    > &
-      Schema.Attribute.Private;
-    name: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Unique;
-    publishedAt: Schema.Attribute.DateTime;
-    sortOrder: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiRefFeatureRefFeature extends Struct.CollectionTypeSchema {
-  collectionName: 'ref_features';
-  info: {
-    description: 'Flexible attributes for Project/Unit features';
-    displayName: 'Reference Feature';
-    pluralName: 'ref-features';
-    singularName: 'ref-feature';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    appliesTo: Schema.Attribute.Enumeration<['project', 'unit', 'both']> &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'both'>;
-    category: Schema.Attribute.String &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 50;
-      }>;
-    code: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Unique &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 20;
-      }>;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    dataType: Schema.Attribute.Enumeration<
-      ['string', 'number', 'boolean', 'date', 'text', 'json']
-    > &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'string'>;
-    defaultValue: Schema.Attribute.Text;
-    description: Schema.Attribute.Text;
-    isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
-    isRequired: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::ref-feature.ref-feature'
-    > &
-      Schema.Attribute.Private;
-    name: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Unique &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 100;
-      }>;
-    publishedAt: Schema.Attribute.DateTime;
-    sortOrder: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    validationRules: Schema.Attribute.JSON;
-  };
-}
-
-export interface ApiRefServiceRefService extends Struct.CollectionTypeSchema {
-  collectionName: 'ref_services';
-  info: {
-    description: 'Property services (Water, Power Plant, Security, etc.)';
-    displayName: 'Projects - Service';
-    pluralName: 'ref-services';
-    singularName: 'ref-service';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    code: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Unique;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
-    isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
-    isEssential: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::ref-service.ref-service'
-    > &
-      Schema.Attribute.Private;
-    name: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Unique &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 100;
-      }>;
-    publishedAt: Schema.Attribute.DateTime;
-    serviceType: Schema.Attribute.Enumeration<
-      ['utility', 'security', 'maintenance', 'administrative', 'other']
-    > &
-      Schema.Attribute.DefaultTo<'other'>;
-    sortOrder: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiResidentialRuleResidentialRule
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'residential_rules';
-  info: {
-    description: 'Business rules for residential units (min/max price per m\u00B2)';
-    displayName: 'Residential Rule';
-    pluralName: 'residential-rules';
-    singularName: 'residential-rule';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    amenityRequirements: Schema.Attribute.JSON;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
-    effectiveDate: Schema.Attribute.Date;
-    expirationDate: Schema.Attribute.Date;
-    isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::residential-rule.residential-rule'
-    > &
-      Schema.Attribute.Private;
-    locationRestrictions: Schema.Attribute.JSON;
-    maxArea: Schema.Attribute.Decimal &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    maxBathrooms: Schema.Attribute.Integer &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    maxBedrooms: Schema.Attribute.Integer &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    maxPricePerSqm: Schema.Attribute.Decimal &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    minArea: Schema.Attribute.Decimal &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    minBathrooms: Schema.Attribute.Integer &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    minBedrooms: Schema.Attribute.Integer &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    minPricePerSqm: Schema.Attribute.Decimal &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 0;
-        },
-        number
-      >;
-    name: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 100;
-      }>;
-    priority: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
-    publishedAt: Schema.Attribute.DateTime;
-    ruleType: Schema.Attribute.Enumeration<
-      ['pricing', 'area', 'bedrooms', 'bathrooms', 'location', 'other']
-    > &
-      Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiUnitUnit extends Struct.CollectionTypeSchema {
-  collectionName: 'units';
-  info: {
-    description: 'Generic unit with area, price, rent, and KPIs';
-    displayName: 'Units';
-    pluralName: 'units';
-    singularName: 'unit';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    area: Schema.Attribute.Decimal & Schema.Attribute.Required;
-    areaUnit: Schema.Attribute.Enumeration<
-      ['sqm', 'sqft', 'hectares', 'acres']
-    > &
-      Schema.Attribute.DefaultTo<'sqm'>;
-    availability: Schema.Attribute.Enumeration<
-      ['available', 'reserved', 'sold', 'rented', 'maintenance', 'inactive']
-    > &
-      Schema.Attribute.DefaultTo<'available'>;
-    code: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Unique &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 20;
-      }>;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    currency: Schema.Attribute.String &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 3;
-      }> &
-      Schema.Attribute.DefaultTo<'GTQ'>;
-    description: Schema.Attribute.Text;
-    isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
-    kpis: Schema.Attribute.JSON;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::unit.unit'> &
-      Schema.Attribute.Private;
-    name: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 200;
-      }>;
-    price: Schema.Attribute.Decimal;
-    project: Schema.Attribute.Relation<'manyToOne', 'api::project.project'>;
-    publishedAt: Schema.Attribute.DateTime;
-    rent: Schema.Attribute.Decimal;
-    type: Schema.Attribute.DynamicZone<
-      ['unit-types.residential', 'unit-types.office', 'unit-types.industrial']
     >;
-    unitType: Schema.Attribute.Enumeration<
-      ['residential', 'office', 'industrial']
-    > &
-      Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    securityType: Schema.Attribute.Enumeration<
+      ['None', 'Access System', 'Combined', 'Own', 'Private', 'No']
+    >;
+    showroom: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    subzone: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    zone: Schema.Attribute.String;
   };
 }
 
@@ -1707,16 +1130,8 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::industrial-rule.industrial-rule': ApiIndustrialRuleIndustrialRule;
-      'api::office-rule.office-rule': ApiOfficeRuleOfficeRule;
+      'api::block.block': ApiBlockBlock;
       'api::project.project': ApiProjectProject;
-      'api::ref-amenity.ref-amenity': ApiRefAmenityRefAmenity;
-      'api::ref-bank.ref-bank': ApiRefBankRefBank;
-      'api::ref-category.ref-category': ApiRefCategoryRefCategory;
-      'api::ref-feature.ref-feature': ApiRefFeatureRefFeature;
-      'api::ref-service.ref-service': ApiRefServiceRefService;
-      'api::residential-rule.residential-rule': ApiResidentialRuleResidentialRule;
-      'api::unit.unit': ApiUnitUnit;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

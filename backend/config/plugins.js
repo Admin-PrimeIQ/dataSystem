@@ -10,6 +10,9 @@ module.exports = ({ env }) => ({
     i18n: false,
     'schema-visualizer': {
       enabled: true,
+    },
+    'config-sync': {
+      enabled: true,
     }
   });
   

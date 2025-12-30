@@ -28,7 +28,7 @@
           "editable": true
         },
         "list": {
-          "label": "username",
+          "label": "Username",
           "searchable": true,
           "sortable": true
         }
@@ -42,7 +42,7 @@
           "editable": true
         },
         "list": {
-          "label": "email",
+          "label": "Email",
           "searchable": true,
           "sortable": true
         }
@@ -112,7 +112,7 @@
           "editable": true
         },
         "list": {
-          "label": "confirmed",
+          "label": "Confirmed",
           "searchable": true,
           "sortable": true
         }
@@ -214,12 +214,6 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "username",
-        "email",
-        "confirmed"
-      ],
       "edit": [
         [
           {
@@ -251,6 +245,12 @@
             "size": 6
           }
         ]
+      ],
+      "list": [
+        "id",
+        "username",
+        "email",
+        "confirmed"
       ]
     },
     "uid": "plugin::users-permissions.user"

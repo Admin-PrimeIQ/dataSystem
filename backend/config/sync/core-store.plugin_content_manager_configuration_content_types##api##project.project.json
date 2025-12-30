@@ -175,7 +175,7 @@
           "sortable": true
         }
       },
-      "nseProject": {
+      "nse": {
         "edit": {
           "label": "NSE (Socioeconomic Level)",
           "description": "Socioeconomic level classification of the project target market. Select from the NSE catalog.",
@@ -474,7 +474,7 @@
             "size": 4
           },
           {
-            "name": "nseProject",
+            "name": "nse",
             "size": 4
           },
           {

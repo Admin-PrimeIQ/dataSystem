@@ -511,6 +511,37 @@ export interface ApiBlockCategoryBlockCategory
   };
 }
 
+export interface ApiBlockFocusBlockFocus extends Struct.CollectionTypeSchema {
+  collectionName: 'block_focuses';
+  info: {
+    description: 'Market focus catalog for blocks (Residential Complex, Offices, Warehouses, etc.)';
+    displayName: 'Catalog - Block - Focuses';
+    pluralName: 'block-focuses';
+    singularName: 'block-focus';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    code: Schema.Attribute.UID<'name'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::block-focus.block-focus'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiBlockStatusBlockStatus extends Struct.CollectionTypeSchema {
   collectionName: 'block_statuses';
   info: {
@@ -528,7 +559,6 @@ export interface ApiBlockStatusBlockStatus extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
-    isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -537,10 +567,6 @@ export interface ApiBlockStatusBlockStatus extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     name: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
-    sortOrder: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
-    statusCode: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Unique;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -665,6 +691,14 @@ export interface ApiBlockBlock extends Struct.CollectionTypeSchema {
           editable: false;
         };
       }>;
+    blockCategory: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::block-category.block-category'
+    >;
+    blockFocus: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::block-focus.block-focus'
+    >;
     blockStatus: Schema.Attribute.Relation<
       'manyToOne',
       'api::block-status.block-status'
@@ -677,10 +711,6 @@ export interface ApiBlockBlock extends Struct.CollectionTypeSchema {
       'manyToOne',
       'api::block-usage.block-usage'
     >;
-    category: Schema.Attribute.Relation<
-      'manyToOne',
-      'api::block-category.block-category'
-    >;
     code: Schema.Attribute.UID<'name'>;
     collectionDate: Schema.Attribute.Date;
     commercializationMonths: Schema.Attribute.Integer;
@@ -688,7 +718,6 @@ export interface ApiBlockBlock extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     deliveryDate: Schema.Attribute.Date;
-    focus: Schema.Attribute.Relation<'manyToOne', 'api::focus.focus'>;
     legacyId: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::block.block'> &
@@ -799,37 +828,6 @@ export interface ApiDeveloperDeveloper extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiFocusFocus extends Struct.CollectionTypeSchema {
-  collectionName: 'focuses';
-  info: {
-    description: 'Market focus catalog for blocks (Residential Complex, Offices, Warehouses, etc.)';
-    displayName: 'Catalog - Block - Focuses';
-    pluralName: 'focuses';
-    singularName: 'focus';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    category: Schema.Attribute.Enumeration<
-      ['Housing', 'Warehouse', 'Office', 'Medical', 'Commercial']
-    >;
-    code: Schema.Attribute.UID<'name'>;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::focus.focus'> &
-      Schema.Attribute.Private;
-    name: Schema.Attribute.String & Schema.Attribute.Required;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiNseNse extends Struct.CollectionTypeSchema {
   collectionName: 'nses';
   info: {
@@ -908,7 +906,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     municipality: Schema.Attribute.String;
     muvi: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     name: Schema.Attribute.String & Schema.Attribute.Required;
-    nseProject: Schema.Attribute.Relation<'manyToOne', 'api::nse.nse'>;
+    nse: Schema.Attribute.Relation<'manyToOne', 'api::nse.nse'>;
     publishedAt: Schema.Attribute.DateTime;
     securityType: Schema.Attribute.Relation<
       'manyToOne',
@@ -1516,13 +1514,13 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::amenity.amenity': ApiAmenityAmenity;
       'api::block-category.block-category': ApiBlockCategoryBlockCategory;
+      'api::block-focus.block-focus': ApiBlockFocusBlockFocus;
       'api::block-status.block-status': ApiBlockStatusBlockStatus;
       'api::block-type.block-type': ApiBlockTypeBlockType;
       'api::block-usage.block-usage': ApiBlockUsageBlockUsage;
       'api::block.block': ApiBlockBlock;
       'api::country.country': ApiCountryCountry;
       'api::developer.developer': ApiDeveloperDeveloper;
-      'api::focus.focus': ApiFocusFocus;
       'api::nse.nse': ApiNseNse;
       'api::project.project': ApiProjectProject;
       'api::security-type.security-type': ApiSecurityTypeSecurityType;

@@ -7,7 +7,7 @@
       "searchable": true,
       "pageSize": 10,
       "mainField": "name",
-      "defaultSortBy": "sortOrder",
+      "defaultSortBy": "name",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -59,48 +59,6 @@
           "label": "Description",
           "searchable": true,
           "sortable": false
-        }
-      },
-      "statusCode": {
-        "edit": {
-          "label": "Status Code",
-          "description": "Unique status identifier code (e.g., IN_PLANS, UNDER_CONSTRUCTION, DELIVERED). Used for internal references and integrations.",
-          "placeholder": "e.g., IN_PLANS, UNDER_CONSTRUCTION, DELIVERED",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Status Code",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "isActive": {
-        "edit": {
-          "label": "Is Active",
-          "description": "Indicates if this status is currently active and available for use.",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Active",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "sortOrder": {
-        "edit": {
-          "label": "Sort Order",
-          "description": "Numeric order for sorting statuses in lists and dropdowns. Lower numbers appear first.",
-          "placeholder": "e.g., 0, 1, 2, 10",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Order",
-          "searchable": true,
-          "sortable": true
         }
       },
       "createdAt": {
@@ -171,6 +129,12 @@
       }
     },
     "layouts": {
+      "list": [
+        "name",
+        "code",
+        "updatedBy",
+        "updatedAt"
+      ],
       "edit": [
         [
           {
@@ -184,33 +148,10 @@
         ],
         [
           {
-            "name": "statusCode",
-            "size": 6
-          },
-          {
-            "name": "sortOrder",
-            "size": 3
-          },
-          {
-            "name": "isActive",
-            "size": 3
-          }
-        ],
-        [
-          {
             "name": "description",
             "size": 12
           }
         ]
-      ],
-      "list": [
-        "name",
-        "code",
-        "statusCode",
-        "isActive",
-        "sortOrder",
-        "updatedBy",
-        "updatedAt"
       ]
     },
     "uid": "api::block-status.block-status"
@@ -219,4 +160,3 @@
   "environment": null,
   "tag": null
 }
-

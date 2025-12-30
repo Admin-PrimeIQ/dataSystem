@@ -135,8 +135,8 @@
       "quarter": {
         "edit": {
           "label": "Quarter",
-          "description": "Quarter of the year for data collection period. Select from the quarter catalog (e.g., T1, T2, T3, T4).",
-          "placeholder": "Select a quarter from the catalog",
+          "description": "Quarter of the year for data collection period: T1 (Q1), T2 (Q2), T3 (Q3), or T4 (Q4).",
+          "placeholder": "Select: T1, T2, T3, or T4",
           "visible": true,
           "editable": true
         },
@@ -160,9 +160,9 @@
           "sortable": true
         }
       },
-      "category": {
+      "blockCategory": {
         "edit": {
-          "label": "Category",
+          "label": "Block Category",
           "description": "Category classification for this block. Select from the shared category catalog (e.g., Residential Horizontal, Commercial, Tourism/Hotel, Hospital).",
           "placeholder": "Select a category from the catalog",
           "visible": true,
@@ -175,9 +175,9 @@
           "sortable": true
         }
       },
-      "focus": {
+      "blockFocus": {
         "edit": {
-          "label": "Focus",
+          "label": "Block Focus",
           "description": "Primary or secondary market focus classification for this block. Select from the focus catalog (e.g., Class A, Office-Warehouses, Medical Offices).",
           "placeholder": "Select a focus from the catalog",
           "visible": true,
@@ -185,7 +185,7 @@
           "mainField": "name"
         },
         "list": {
-          "label": "Focus",
+          "label": "Block Focus",
           "searchable": true,
           "sortable": true
         }
@@ -598,11 +598,11 @@
         ],
         [
           {
-            "name": "category",
+            "name": "blockCategory",
             "size": 6
           },
           {
-            "name": "focus",
+            "name": "blockFocus",
             "size": 6
           }
         ],

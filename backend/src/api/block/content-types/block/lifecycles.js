@@ -32,15 +32,48 @@ async function getProjectName(projectData) {
 
     // Case 2: CLONING - projectData has set/connect/disconnect operators
     // Structure: { set: [{ connect: [{ documentId: "...", id: 1 }] }] }
+    // OR: { set: [{ id: "26" }] } or { set: [{ documentId: "26" }] }
     if (typeof projectData === 'object' && 'set' in projectData && Array.isArray(projectData.set)) {
-        // Try to extract documentId from set[0].connect[0] (cloning uses documentId)
-        if (projectData.set.length > 0 && projectData.set[0].connect && Array.isArray(projectData.set[0].connect) && projectData.set[0].connect.length > 0) {
-            const connectItem = projectData.set[0].connect[0];
-            // Cloning: use documentId if available
-            if (connectItem.documentId) {
+        if (projectData.set.length > 0) {
+            const setItem = projectData.set[0];
+            
+            // Case 2a: set[0] has connect array (nested structure)
+            if (setItem.connect && Array.isArray(setItem.connect) && setItem.connect.length > 0) {
+                const connectItem = setItem.connect[0];
+                // Cloning: use documentId if available
+                if (connectItem.documentId) {
+                    try {
+                        const project = await strapi.documents('api::project.project').findOne({
+                            documentId: connectItem.documentId,
+                            fields: ['name'],
+                        });
+                        if (project && project.name) {
+                            return project.name;
+                        }
+                    } catch (error) {
+                        return '';
+                    }
+                }
+                // Fallback: use id if documentId not available
+                if (connectItem.id) {
+                    try {
+                        const project = await strapi.entityService.findOne('api::project.project', connectItem.id, {
+                            fields: ['name'],
+                        });
+                        if (project && project.name) {
+                            return project.name;
+                        }
+                    } catch (error) {
+                        return '';
+                    }
+                }
+            }
+            
+            // Case 2b: set[0] has documentId directly (without connect)
+            if (setItem.documentId) {
                 try {
                     const project = await strapi.documents('api::project.project').findOne({
-                        documentId: connectItem.documentId,
+                        documentId: setItem.documentId,
                         fields: ['name'],
                     });
                     if (project && project.name) {
@@ -50,10 +83,11 @@ async function getProjectName(projectData) {
                     return '';
                 }
             }
-            // Fallback: use id if documentId not available
-            if (connectItem.id) {
+            
+            // Case 2c: set[0] has id directly (without connect)
+            if (setItem.id) {
                 try {
-                    const project = await strapi.entityService.findOne('api::project.project', connectItem.id, {
+                    const project = await strapi.entityService.findOne('api::project.project', setItem.id, {
                         fields: ['name'],
                     });
                     if (project && project.name) {

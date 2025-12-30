@@ -55,15 +55,15 @@
     "collectionDate": {
       "type": "date"
     },
-    "category": {
+    "blockCategory": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::block-category.block-category"
     },
-    "focus": {
+    "blockFocus": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::focus.focus"
+      "target": "api::block-focus.block-focus"
     },
     "blockType": {
       "type": "relation",

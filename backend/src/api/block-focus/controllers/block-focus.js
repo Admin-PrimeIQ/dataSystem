@@ -2,5 +2,5 @@
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::focus.focus');
+module.exports = createCoreController('api::block-focus.block-focus');
 

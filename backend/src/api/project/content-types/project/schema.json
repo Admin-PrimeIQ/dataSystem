@@ -57,7 +57,7 @@
         "Secondary"
       ]
     },
-    "nseProject": {
+    "nse": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::nse.nse"

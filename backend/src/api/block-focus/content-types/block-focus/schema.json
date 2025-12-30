@@ -1,9 +1,9 @@
 {
   "kind": "collectionType",
-  "collectionName": "focuses",
+  "collectionName": "block_focuses",
   "info": {
-    "singularName": "focus",
-    "pluralName": "focuses",
+    "singularName": "block-focus",
+    "pluralName": "block-focuses",
     "displayName": "Catalog - Block - Focuses",
     "description": "Market focus catalog for blocks (Residential Complex, Offices, Warehouses, etc.)"
   },
@@ -23,16 +23,6 @@
     },
     "description": {
       "type": "text"
-    },
-    "category": {
-      "type": "enumeration",
-      "enum": [
-        "Housing",
-        "Warehouse",
-        "Office",
-        "Medical",
-        "Commercial"
-      ]
     }
   }
 }

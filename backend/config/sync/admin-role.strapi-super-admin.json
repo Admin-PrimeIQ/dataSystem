@@ -138,7 +138,70 @@
       "locale": null
     },
     {
-      "documentId": "fogkp87997u65gxruhq42car",
+      "documentId": "bxdnjsr2541u28blsy1gvwhi",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::block-focus.block-focus",
+      "properties": {
+        "fields": [
+          "code",
+          "name",
+          "description"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "zfgxxdgaf8lf0ssw43w6j92j",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::block-focus.block-focus",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "bo3b8x2bwzfmjcz3urwosjig",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::block-focus.block-focus",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "ctx4i4lbnxuzypvudtoyl3uy",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::block-focus.block-focus",
+      "properties": {
+        "fields": [
+          "code",
+          "name",
+          "description"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "gyv3bznrnnmt7mk7kl067y58",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::block-focus.block-focus",
+      "properties": {
+        "fields": [
+          "code",
+          "name",
+          "description"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "o3iyjafqe9esgqwoz4xp5ztk",
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
       "subject": "api::block-status.block-status",
@@ -146,10 +209,7 @@
         "fields": [
           "code",
           "name",
-          "description",
-          "statusCode",
-          "isActive",
-          "sortOrder"
+          "description"
         ]
       },
       "conditions": [],
@@ -174,7 +234,7 @@
       "locale": null
     },
     {
-      "documentId": "v78bbbb8ajun0vdiy2lr873b",
+      "documentId": "mf3w88u28q4a96a7pj67dekm",
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::block-status.block-status",
@@ -182,17 +242,14 @@
         "fields": [
           "code",
           "name",
-          "description",
-          "statusCode",
-          "isActive",
-          "sortOrder"
+          "description"
         ]
       },
       "conditions": [],
       "locale": null
     },
     {
-      "documentId": "b8plnok8e14j16zlwx4e28i3",
+      "documentId": "o6yyy2dvfwjyf9oft5c9o1tv",
       "action": "plugin::content-manager.explorer.update",
       "actionParameters": {},
       "subject": "api::block-status.block-status",
@@ -200,10 +257,7 @@
         "fields": [
           "code",
           "name",
-          "description",
-          "statusCode",
-          "isActive",
-          "sortOrder"
+          "description"
         ]
       },
       "conditions": [],
@@ -336,7 +390,7 @@
       "locale": null
     },
     {
-      "documentId": "nypl3lllyqvt6zqlofbffx7g",
+      "documentId": "kh908zo9ca3r3td3a17uh6qd",
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
       "subject": "api::block.block",
@@ -352,8 +406,8 @@
           "year",
           "quarter",
           "collectionDate",
-          "category",
-          "focus",
+          "blockCategory",
+          "blockFocus",
           "blockType",
           "blockUsage",
           "blockStatus",
@@ -398,7 +452,7 @@
       "locale": null
     },
     {
-      "documentId": "q1i1cznc9f6yst7occnta1ce",
+      "documentId": "meat7l4eqt18gjd0zykiqiai",
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::block.block",
@@ -414,8 +468,8 @@
           "year",
           "quarter",
           "collectionDate",
-          "category",
-          "focus",
+          "blockCategory",
+          "blockFocus",
           "blockType",
           "blockUsage",
           "blockStatus",
@@ -442,7 +496,7 @@
       "locale": null
     },
     {
-      "documentId": "zpxfxa1um8adwkbh0n2cpj8p",
+      "documentId": "cs9vnh8ie88aiwmr0xtb6d74",
       "action": "plugin::content-manager.explorer.update",
       "actionParameters": {},
       "subject": "api::block.block",
@@ -458,8 +512,8 @@
           "year",
           "quarter",
           "collectionDate",
-          "category",
-          "focus",
+          "blockCategory",
+          "blockFocus",
           "blockType",
           "blockUsage",
           "blockStatus",
@@ -642,72 +696,6 @@
       "locale": null
     },
     {
-      "documentId": "e71cxumianwj929b49pk2yyj",
-      "action": "plugin::content-manager.explorer.create",
-      "actionParameters": {},
-      "subject": "api::focus.focus",
-      "properties": {
-        "fields": [
-          "code",
-          "name",
-          "description",
-          "category"
-        ]
-      },
-      "conditions": [],
-      "locale": null
-    },
-    {
-      "documentId": "xe52qhmd47vkfofxuu77h9pp",
-      "action": "plugin::content-manager.explorer.delete",
-      "actionParameters": {},
-      "subject": "api::focus.focus",
-      "properties": {},
-      "conditions": [],
-      "locale": null
-    },
-    {
-      "documentId": "ylextrf71pw1zvgrj1rcer1e",
-      "action": "plugin::content-manager.explorer.publish",
-      "actionParameters": {},
-      "subject": "api::focus.focus",
-      "properties": {},
-      "conditions": [],
-      "locale": null
-    },
-    {
-      "documentId": "nay4svt2mvitzct5yw3pdya8",
-      "action": "plugin::content-manager.explorer.read",
-      "actionParameters": {},
-      "subject": "api::focus.focus",
-      "properties": {
-        "fields": [
-          "code",
-          "name",
-          "description",
-          "category"
-        ]
-      },
-      "conditions": [],
-      "locale": null
-    },
-    {
-      "documentId": "ml6vhcoizlip5gj3c413993f",
-      "action": "plugin::content-manager.explorer.update",
-      "actionParameters": {},
-      "subject": "api::focus.focus",
-      "properties": {
-        "fields": [
-          "code",
-          "name",
-          "description",
-          "category"
-        ]
-      },
-      "conditions": [],
-      "locale": null
-    },
-    {
       "documentId": "wp8ctjuchyaobxlux4wdg9b2",
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
@@ -771,7 +759,7 @@
       "locale": null
     },
     {
-      "documentId": "v8lvzbtbyiz8vdr3020w4g6v",
+      "documentId": "nv1ikcbejrv6mtxndn7oq94h",
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
       "subject": "api::project.project",
@@ -788,7 +776,7 @@
           "latitude",
           "longitude",
           "market",
-          "nseProject",
+          "nse",
           "securityType",
           "muvi",
           "showroom",
@@ -824,7 +812,7 @@
       "locale": null
     },
     {
-      "documentId": "v76tbndef3ziwnfbx2tc9fpg",
+      "documentId": "t5ng8wgovkkr12uvtvtsok8a",
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::project.project",
@@ -841,7 +829,7 @@
           "latitude",
           "longitude",
           "market",
-          "nseProject",
+          "nse",
           "securityType",
           "muvi",
           "showroom",
@@ -859,7 +847,7 @@
       "locale": null
     },
     {
-      "documentId": "q811nudoxujmaea4kn1r46xn",
+      "documentId": "s18yi2qcf7qc8vfkq7sxmluh",
       "action": "plugin::content-manager.explorer.update",
       "actionParameters": {},
       "subject": "api::project.project",
@@ -876,7 +864,7 @@
           "latitude",
           "longitude",
           "market",
-          "nseProject",
+          "nse",
           "securityType",
           "muvi",
           "showroom",

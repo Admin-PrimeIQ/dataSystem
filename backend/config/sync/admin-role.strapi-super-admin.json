@@ -6,7 +6,7 @@
   "locale": null,
   "permissions": [
     {
-      "documentId": "l9ex9vgq9w4hzudvlqggwnhy",
+      "documentId": "nypl3lllyqvt6zqlofbffx7g",
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
       "subject": "api::block.block",
@@ -23,6 +23,7 @@
           "quarter",
           "collectionDate",
           "category",
+          "focus",
           "blockType",
           "blockUsage",
           "blockStatus",
@@ -67,7 +68,7 @@
       "locale": null
     },
     {
-      "documentId": "ge5u041nl83bkqz2988txjc0",
+      "documentId": "q1i1cznc9f6yst7occnta1ce",
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::block.block",
@@ -84,6 +85,7 @@
           "quarter",
           "collectionDate",
           "category",
+          "focus",
           "blockType",
           "blockUsage",
           "blockStatus",
@@ -110,7 +112,7 @@
       "locale": null
     },
     {
-      "documentId": "jlbcqqochvnnz4e3aboebsqn",
+      "documentId": "zpxfxa1um8adwkbh0n2cpj8p",
       "action": "plugin::content-manager.explorer.update",
       "actionParameters": {},
       "subject": "api::block.block",
@@ -127,6 +129,7 @@
           "quarter",
           "collectionDate",
           "category",
+          "focus",
           "blockType",
           "blockUsage",
           "blockStatus",
@@ -153,7 +156,7 @@
       "locale": null
     },
     {
-      "documentId": "xojnndgjd5md4xbcx2eig33i",
+      "documentId": "ufzazu1qxc9kco3hu3u7pdhg",
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
       "subject": "api::project.project",
@@ -178,7 +181,8 @@
           "accessQuantity",
           "imageUrl",
           "fha",
-          "blocks"
+          "fractionalDownPayment",
+          "downPaymentPercentage"
         ]
       },
       "conditions": [],
@@ -203,7 +207,7 @@
       "locale": null
     },
     {
-      "documentId": "gcud8vlklzkyisc4jlt07nqo",
+      "documentId": "meubn2ok78qd9rtdg3rn331o",
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::project.project",
@@ -228,14 +232,15 @@
           "accessQuantity",
           "imageUrl",
           "fha",
-          "blocks"
+          "fractionalDownPayment",
+          "downPaymentPercentage"
         ]
       },
       "conditions": [],
       "locale": null
     },
     {
-      "documentId": "rawpjf8ydal38gimo5pir14k",
+      "documentId": "pvc4lxvujk76sn5ne5zhedb9",
       "action": "plugin::content-manager.explorer.update",
       "actionParameters": {},
       "subject": "api::project.project",
@@ -260,7 +265,8 @@
           "accessQuantity",
           "imageUrl",
           "fha",
-          "blocks"
+          "fractionalDownPayment",
+          "downPaymentPercentage"
         ]
       },
       "conditions": [],

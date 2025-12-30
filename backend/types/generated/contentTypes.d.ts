@@ -434,7 +434,7 @@ export interface ApiBlockBlock extends Struct.CollectionTypeSchema {
   collectionName: 'blocks';
   info: {
     description: 'Individual blocks within a real estate project (phase + tower + sector)';
-    displayName: 'Block';
+    displayName: 'Blocks';
     pluralName: 'blocks';
     singularName: 'block';
   };
@@ -506,7 +506,15 @@ export interface ApiBlockBlock extends Struct.CollectionTypeSchema {
     >;
     blockUsage: Schema.Attribute.Enumeration<['Sale', 'Rent']>;
     category: Schema.Attribute.Enumeration<
-      ['Housing Lots', 'Vertical Housing', 'Horizontal Housing']
+      [
+        'Housing Lots',
+        'Vertical Housing',
+        'Horizontal Housing',
+        'Warehouses',
+        'Lots',
+        'Commercial Spaces',
+        'Offices',
+      ]
     > &
       Schema.Attribute.Required;
     code: Schema.Attribute.UID<'name'>;
@@ -516,6 +524,33 @@ export interface ApiBlockBlock extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     deliveryDate: Schema.Attribute.Date;
+    focus: Schema.Attribute.Enumeration<
+      [
+        'Residential Complex',
+        'Townhouse',
+        'Apartment',
+        'House',
+        'Loft',
+        'Penthouse',
+        'Warehouses',
+        'Warehouse Complex',
+        'Warehouse Lots',
+        'Office-Warehouses',
+        'Fiscal Warehouses / Free Zones',
+        'Industrial Parks',
+        'Offices',
+        'Class A',
+        'Class B',
+        'Class C',
+        'Professional Building',
+        'Call Center Building',
+        'Entrepreneur Office Building',
+        'Medical Offices',
+        'Medical Office Buildings',
+        'Medical Clinics',
+        'Commercial Spaces',
+      ]
+    >;
     legacyId: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::block.block'> &
@@ -523,7 +558,7 @@ export interface ApiBlockBlock extends Struct.CollectionTypeSchema {
     migNumber: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
     name: Schema.Attribute.String;
     phase: Schema.Attribute.String;
-    project: Schema.Attribute.Relation<'manyToOne', 'api::project.project'>;
+    project: Schema.Attribute.Relation<'oneToOne', 'api::project.project'>;
     publishedAt: Schema.Attribute.DateTime;
     quarter: Schema.Attribute.Enumeration<['T1', 'T2', 'T3', 'T4']> &
       Schema.Attribute.Required;
@@ -556,7 +591,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   collectionName: 'projects';
   info: {
     description: 'Real estate projects';
-    displayName: 'Project';
+    displayName: 'Projects';
     pluralName: 'projects';
     singularName: 'project';
   };
@@ -565,10 +600,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   };
   attributes: {
     accessQuantity: Schema.Attribute.Integer;
-    blocks: Schema.Attribute.Relation<'oneToMany', 'api::block.block'>;
-    code: Schema.Attribute.UID<'name'> &
-      Schema.Attribute.Required &
-      Schema.Attribute.Unique;
+    code: Schema.Attribute.UID<'name'> & Schema.Attribute.Required;
     country: Schema.Attribute.Enumeration<['GTM', 'SLV', 'HND']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'GTM'>;
@@ -577,7 +609,17 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     department: Schema.Attribute.String;
     developer: Schema.Attribute.String;
+    downPaymentPercentage: Schema.Attribute.Decimal &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 100;
+          min: 0;
+        },
+        number
+      >;
     fha: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    fractionalDownPayment: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
     imageUrl: Schema.Attribute.String;
     latitude: Schema.Attribute.Decimal;
     locale: Schema.Attribute.String & Schema.Attribute.Private;

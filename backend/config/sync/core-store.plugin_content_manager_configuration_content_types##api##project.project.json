@@ -7,7 +7,7 @@
       "searchable": true,
       "pageSize": 10,
       "mainField": "name",
-      "defaultSortBy": "code",
+      "defaultSortBy": "name",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -285,19 +285,32 @@
           "sortable": true
         }
       },
-      "blocks": {
+      "fractionalDownPayment": {
         "edit": {
-          "label": "Blocks",
-          "description": "Blocks (phases, towers, or sectors) associated with this project. Each block represents a distinct development phase or section.",
-          "placeholder": "Add blocks to this project",
+          "label": "Fractional Down Payment",
+          "description": "Indicates if the down payment can be paid in installments or fractions.",
+          "placeholder": "",
           "visible": true,
-          "editable": true,
-          "mainField": "name"
+          "editable": true
         },
         "list": {
-          "label": "Blocks",
-          "searchable": false,
-          "sortable": false
+          "label": "Fractional Down",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "downPaymentPercentage": {
+        "edit": {
+          "label": "Down Payment Percentage",
+          "description": "Percentage of the down payment required. Value must be between 0 and 100.",
+          "placeholder": "e.g., 10.5, 20, 30.75",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Down Payment %",
+          "searchable": true,
+          "sortable": true
         }
       },
       "createdAt": {
@@ -452,7 +465,15 @@
         [
           {
             "name": "fha",
-            "size": 12
+            "size": 4
+          },
+          {
+            "name": "fractionalDownPayment",
+            "size": 4
+          },
+          {
+            "name": "downPaymentPercentage",
+            "size": 4
           }
         ],
         [
@@ -460,19 +481,11 @@
             "name": "imageUrl",
             "size": 12
           }
-        ],
-        [
-          {
-            "name": "blocks",
-            "size": 12
-          }
         ]
       ],
       "list": [
         "name",
-        "code",
         "developer",
-        "blocks",
         "market",
         "updatedBy",
         "updatedAt"

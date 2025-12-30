@@ -163,13 +163,27 @@
       "category": {
         "edit": {
           "label": "Category",
-          "description": "Type of housing category for this block.",
-          "placeholder": "Select: Housing Lots, Vertical Housing, or Horizontal Housing",
+          "description": "Type of category for this block.",
+          "placeholder": "Select: Housing Lots, Vertical Housing, Horizontal Housing, Warehouses, Lots, Commercial Spaces, or Offices",
           "visible": true,
           "editable": true
         },
         "list": {
           "label": "Category",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "focus": {
+        "edit": {
+          "label": "Focus",
+          "description": "Primary or secondary market focus classification for this block. Defines the specific type or class of the property.",
+          "placeholder": "Select focus type (e.g., Class A, Office-Warehouses, Medical Offices)",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Focus",
           "searchable": true,
           "sortable": true
         }
@@ -559,21 +573,21 @@
         ],
         [
           {
-            "name": "collectionDate",
-            "size": 6
-          },
-          {
-            "name": "category",
-            "size": 6
-          }
-        ],
-        [
-          {
             "name": "blockType",
             "size": 6
           },
           {
             "name": "blockUsage",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "category",
+            "size": 6
+          },
+          {
+            "name": "focus",
             "size": 6
           }
         ],
@@ -585,26 +599,30 @@
         ],
         [
           {
+            "name": "collectionDate",
+            "size": 4
+          },
+          {
             "name": "startDate",
             "size": 4
           },
           {
             "name": "deliveryDate",
             "size": 4
-          },
-          {
-            "name": "commercializationMonths",
-            "size": 4
           }
         ],
         [
           {
+            "name": "commercializationMonths",
+            "size": 4
+          },
+          {
             "name": "year",
-            "size": 6
+            "size": 4
           },
           {
             "name": "quarter",
-            "size": 6
+            "size": 4
           }
         ],
         [

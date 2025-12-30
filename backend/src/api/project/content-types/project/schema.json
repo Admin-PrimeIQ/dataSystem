@@ -4,7 +4,7 @@
   "info": {
     "singularName": "project",
     "pluralName": "projects",
-    "displayName": "Project",
+    "displayName": "Projects",
     "description": "Real estate projects"
   },
   "options": {
@@ -15,8 +15,7 @@
     "code": {
       "type": "uid",
       "targetField": "name",
-      "required": true,
-      "unique": true
+      "required": true
     },
     "name": {
       "type": "string",
@@ -109,11 +108,24 @@
       "type": "boolean",
       "default": false
     },
-    "blocks": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::block.block",
-      "mappedBy": "project"
+    "fractionalDownPayment": {
+      "type": "boolean",
+      "default": false
+    },
+    "downPaymentPercentage": {
+      "type": "decimal",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "fractionalDownPayment"
+            },
+            true
+          ]
+        }
+      },
+      "min": 0,
+      "max": 100
     }
   }
 }

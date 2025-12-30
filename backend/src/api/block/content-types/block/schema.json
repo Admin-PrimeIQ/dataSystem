@@ -4,7 +4,7 @@
   "info": {
     "singularName": "block",
     "pluralName": "blocks",
-    "displayName": "Block",
+    "displayName": "Blocks",
     "description": "Individual blocks within a real estate project (phase + tower + sector)"
   },
   "options": {
@@ -14,9 +14,8 @@
   "attributes": {
     "project": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::project.project",
-      "inversedBy": "blocks"
+      "relation": "oneToOne",
+      "target": "api::project.project"
     },
     "code": {
       "type": "uid",
@@ -62,7 +61,39 @@
       "enum": [
         "Housing Lots",
         "Vertical Housing",
-        "Horizontal Housing"
+        "Horizontal Housing",
+        "Warehouses",
+        "Lots",
+        "Commercial Spaces",
+        "Offices"
+      ]
+    },
+    "focus": {
+      "type": "enumeration",
+      "enum": [
+        "Residential Complex",
+        "Townhouse",
+        "Apartment",
+        "House",
+        "Loft",
+        "Penthouse",
+        "Warehouses",
+        "Warehouse Complex",
+        "Warehouse Lots",
+        "Office-Warehouses",
+        "Fiscal Warehouses / Free Zones",
+        "Industrial Parks",
+        "Offices",
+        "Class A",
+        "Class B",
+        "Class C",
+        "Professional Building",
+        "Call Center Building",
+        "Entrepreneur Office Building",
+        "Medical Offices",
+        "Medical Office Buildings",
+        "Medical Clinics",
+        "Commercial Spaces"
       ]
     },
     "blockType": {

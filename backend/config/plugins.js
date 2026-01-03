@@ -2,6 +2,11 @@ module.exports = ({ env }) => ({
     documentation: {
       enabled: true,
       config: {
+        openapi: '3.0.0',
+        info: {
+          title: 'API Documentation',
+          version: '1.0.0',
+        },
         path: '/documentation', // ruta de la documentación
         autoGenerate: true,     // genera automáticamente la documentación
       },

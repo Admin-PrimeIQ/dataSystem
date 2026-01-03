@@ -1,10 +1,8 @@
 {
-  "path": "/documentation",
-  "autoGenerate": true,
   "openapi": "3.0.0",
   "info": {
+    "title": "API Documentation",
     "version": "1.0.0",
-    "title": "DOCUMENTATION",
     "description": "",
     "termsOfService": "YOUR_TERMS_OF_SERVICE_URL",
     "contact": {
@@ -16,8 +14,10 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-12-30T18:09:33.516Z"
+    "x-generation-date": "2025-12-30T18:18:57.395Z"
   },
+  "path": "/documentation",
+  "autoGenerate": true,
   "x-strapi-config": {
     "plugins": [
       "upload",

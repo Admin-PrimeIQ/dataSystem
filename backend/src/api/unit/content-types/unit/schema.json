@@ -4,7 +4,7 @@
   "info": {
     "singularName": "unit",
     "pluralName": "units",
-    "displayName": "Units",
+    "displayName": "• Units",
     "description": "Individual property units (houses, offices, apartments, etc.) within a block"
   },
   "options": {
@@ -126,7 +126,7 @@
     "parkingType": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::parking-type.parking-type",
+      "target": "api::unit-parking-type.unit-parking-type",
       "conditions": {
         "visible": {
           "==": [
@@ -161,7 +161,7 @@
     "unitUsage": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::block-usage.block-usage"
+      "target": "api::unit-usage.unit-usage"
     },
     "unitType": {
       "type": "dynamiczone",

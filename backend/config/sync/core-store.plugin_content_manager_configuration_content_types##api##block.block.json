@@ -205,21 +205,6 @@
           "sortable": true
         }
       },
-      "blockUsage": {
-        "edit": {
-          "label": "Block Usage",
-          "description": "Whether the block is for sale or rent. Select from the block usage catalog.",
-          "placeholder": "Select a block usage from the catalog",
-          "visible": true,
-          "editable": true,
-          "mainField": "name"
-        },
-        "list": {
-          "label": "Usage",
-          "searchable": true,
-          "sortable": true
-        }
-      },
       "blockStatus": {
         "edit": {
           "label": "Block Status",
@@ -541,16 +526,6 @@
       }
     },
     "layouts": {
-      "list": [
-        "name",
-        "project",
-        "phase",
-        "sector",
-        "tower",
-        "blockStatus",
-        "updatedBy",
-        "updatedAt"
-      ],
       "edit": [
         [
           {
@@ -589,21 +564,15 @@
         [
           {
             "name": "blockType",
-            "size": 6
+            "size": 4
           },
           {
-            "name": "blockUsage",
-            "size": 6
-          }
-        ],
-        [
-          {
             "name": "blockCategory",
-            "size": 6
+            "size": 4
           },
           {
             "name": "blockFocus",
-            "size": 6
+            "size": 4
           }
         ],
         [
@@ -708,6 +677,16 @@
             "size": 6
           }
         ]
+      ],
+      "list": [
+        "name",
+        "project",
+        "phase",
+        "sector",
+        "tower",
+        "blockStatus",
+        "updatedBy",
+        "updatedAt"
       ]
     },
     "uid": "api::block.block"

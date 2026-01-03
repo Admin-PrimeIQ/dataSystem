@@ -4,7 +4,7 @@
   "info": {
     "singularName": "nse",
     "pluralName": "nses",
-    "displayName": "Catalog - Project - NSEs",
+    "displayName": "Project Catalog - NSEs",
     "description": "Socioeconomic level (NSE) catalog for real estate projects"
   },
   "options": {

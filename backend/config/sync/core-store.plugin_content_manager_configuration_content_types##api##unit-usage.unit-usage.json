@@ -1,5 +1,5 @@
 {
-  "key": "plugin_content_manager_configuration_content_types::api::block-usage.block-usage",
+  "key": "plugin_content_manager_configuration_content_types::api::unit-usage.unit-usage",
   "value": {
     "settings": {
       "bulkable": true,
@@ -21,9 +21,9 @@
       },
       "code": {
         "edit": {
-          "label": "Block Usage Code",
-          "description": "Unique identifier code for the block usage. Automatically generated from the block usage name (converted to URL-friendly format). Can be manually edited if needed.",
-          "placeholder": "Auto-generated from block usage name (e.g., sale, rent)",
+          "label": "Unit Usage Code",
+          "description": "Unique identifier code for the unit usage. Automatically generated from the unit usage name (converted to URL-friendly format). Can be manually edited if needed.",
+          "placeholder": "Auto-generated from unit usage name (e.g., sale, rent)",
           "visible": true,
           "editable": true
         },
@@ -35,8 +35,8 @@
       },
       "name": {
         "edit": {
-          "label": "Block Usage Name",
-          "description": "Name of the block usage as it appears to users (e.g., Sale, Rent).",
+          "label": "Unit Usage Name",
+          "description": "Name of the unit usage as it appears to users (e.g., Sale, Rent).",
           "placeholder": "e.g., Sale, Rent",
           "visible": true,
           "editable": true
@@ -50,8 +50,8 @@
       "description": {
         "edit": {
           "label": "Description",
-          "description": "Detailed description of the block usage, its characteristics, and business model.",
-          "placeholder": "e.g., Blocks intended for sale to end customers...",
+          "description": "Detailed description of the unit usage, its characteristics, and business model.",
+          "placeholder": "e.g., Units intended for sale to end customers...",
           "visible": true,
           "editable": true
         },
@@ -155,7 +155,7 @@
         "updatedAt"
       ]
     },
-    "uid": "api::block-usage.block-usage"
+    "uid": "api::unit-usage.unit-usage"
   },
   "type": "object",
   "environment": null,

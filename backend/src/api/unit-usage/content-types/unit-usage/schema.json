@@ -1,11 +1,11 @@
 {
   "kind": "collectionType",
-  "collectionName": "block_usages",
+  "collectionName": "unit_usages",
   "info": {
-    "singularName": "block-usage",
-    "pluralName": "block-usages",
-    "displayName": "Catalog - Block - Usages",
-    "description": "Block usage catalog (Sale, Rent)"
+    "singularName": "unit-usage",
+    "pluralName": "unit-usages",
+    "displayName": "Unit Catalog - Usages",
+    "description": "Unit usage catalog (Sale, Rent)"
   },
   "options": {
     "draftAndPublish": false
@@ -26,3 +26,4 @@
     }
   }
 }
+

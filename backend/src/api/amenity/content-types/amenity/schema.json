@@ -4,7 +4,7 @@
   "info": {
     "singularName": "amenity",
     "pluralName": "amenities",
-    "displayName": "Catalog - Project - Amenities",
+    "displayName": "Project Catalog - Amenities",
     "description": "Shared property catalog: Amenities available in real estate projects (Swimming Pool, Gym, Parking, etc.)"
   },
   "options": {

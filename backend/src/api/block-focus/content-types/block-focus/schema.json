@@ -4,7 +4,7 @@
   "info": {
     "singularName": "block-focus",
     "pluralName": "block-focuses",
-    "displayName": "Catalog - Block - Focuses",
+    "displayName": "Block Catalog - Focuses",
     "description": "Market focus catalog for blocks (Residential Complex, Offices, Warehouses, etc.)"
   },
   "options": {

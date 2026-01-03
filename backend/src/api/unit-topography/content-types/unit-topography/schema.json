@@ -4,7 +4,7 @@
   "info": {
     "singularName": "unit-topography",
     "pluralName": "unit-topographies",
-    "displayName": "Catalog - Unit - Topographies",
+    "displayName": "Unit Catalog - Topographies",
     "description": "Topography catalog for units (Flat, Slightly Inclined, Semi-Flat, Irregular, etc.)"
   },
   "options": {

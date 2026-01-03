@@ -4,7 +4,7 @@
   "info": {
     "singularName": "service",
     "pluralName": "services",
-    "displayName": "Catalog - Project - Services",
+    "displayName": "Project Catalog - Services",
     "description": "Shared property catalog: Services available in real estate projects (electricity, water, gas, etc.)"
   },
   "options": {

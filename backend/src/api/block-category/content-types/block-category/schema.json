@@ -4,7 +4,7 @@
   "info": {
     "singularName": "block-category",
     "pluralName": "block-categories",
-    "displayName": "Catalog - Block - Categories",
+    "displayName": "Block Catalog - Categories",
     "description": "Category catalog for blocks (Residential Horizontal, Commercial, Tourism/Hotel, Hospital, etc.)"
   },
   "options": {

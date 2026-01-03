@@ -434,7 +434,7 @@ export interface ApiAmenityAmenity extends Struct.CollectionTypeSchema {
   collectionName: 'amenities';
   info: {
     description: 'Shared property catalog: Amenities available in real estate projects (Swimming Pool, Gym, Parking, etc.)';
-    displayName: 'Catalog - Project - Amenities';
+    displayName: 'Project Catalog - Amenities';
     pluralName: 'amenities';
     singularName: 'amenity';
   };
@@ -484,7 +484,7 @@ export interface ApiBlockCategoryBlockCategory
   collectionName: 'block_categories';
   info: {
     description: 'Category catalog for blocks (Residential Horizontal, Commercial, Tourism/Hotel, Hospital, etc.)';
-    displayName: 'Catalog - Block - Categories';
+    displayName: 'Block Catalog - Categories';
     pluralName: 'block-categories';
     singularName: 'block-category';
   };
@@ -515,7 +515,7 @@ export interface ApiBlockFocusBlockFocus extends Struct.CollectionTypeSchema {
   collectionName: 'block_focuses';
   info: {
     description: 'Market focus catalog for blocks (Residential Complex, Offices, Warehouses, etc.)';
-    displayName: 'Catalog - Block - Focuses';
+    displayName: 'Block Catalog - Focuses';
     pluralName: 'block-focuses';
     singularName: 'block-focus';
   };
@@ -545,8 +545,8 @@ export interface ApiBlockFocusBlockFocus extends Struct.CollectionTypeSchema {
 export interface ApiBlockStatusBlockStatus extends Struct.CollectionTypeSchema {
   collectionName: 'block_statuses';
   info: {
-    description: 'Block status catalog (In Plans, Under Construction, Delivered, etc.)';
-    displayName: 'Catalog - Block - Statuses';
+    description: 'Block status catalog (In Plans, Under Construction, Delivered, Earth Movement)';
+    displayName: 'Block Catalog - Statuses';
     pluralName: 'block-statuses';
     singularName: 'block-status';
   };
@@ -577,7 +577,7 @@ export interface ApiBlockTypeBlockType extends Struct.CollectionTypeSchema {
   collectionName: 'block_types';
   info: {
     description: 'Block type catalog (Residential, Commercial, Industrial, Mixed)';
-    displayName: 'Catalog - Block - Types';
+    displayName: 'Block Catalog - Types';
     pluralName: 'block-types';
     singularName: 'block-type';
   };
@@ -604,42 +604,11 @@ export interface ApiBlockTypeBlockType extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiBlockUsageBlockUsage extends Struct.CollectionTypeSchema {
-  collectionName: 'block_usages';
-  info: {
-    description: 'Block usage catalog (Sale, Rent)';
-    displayName: 'Catalog - Block - Usages';
-    pluralName: 'block-usages';
-    singularName: 'block-usage';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    code: Schema.Attribute.UID<'name'>;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::block-usage.block-usage'
-    > &
-      Schema.Attribute.Private;
-    name: Schema.Attribute.String & Schema.Attribute.Required;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiBlockBlock extends Struct.CollectionTypeSchema {
   collectionName: 'blocks';
   info: {
     description: 'Individual blocks within a real estate project (phase + tower + sector)';
-    displayName: 'Blocks';
+    displayName: '\u2022 Blocks';
     pluralName: 'blocks';
     singularName: 'block';
   };
@@ -707,10 +676,6 @@ export interface ApiBlockBlock extends Struct.CollectionTypeSchema {
       'manyToOne',
       'api::block-type.block-type'
     >;
-    blockUsage: Schema.Attribute.Relation<
-      'manyToOne',
-      'api::block-usage.block-usage'
-    >;
     code: Schema.Attribute.UID<'name'>;
     collectionDate: Schema.Attribute.Date;
     commercializationMonths: Schema.Attribute.Integer;
@@ -758,7 +723,7 @@ export interface ApiCountryCountry extends Struct.CollectionTypeSchema {
   collectionName: 'countries';
   info: {
     description: 'Country catalog for real estate projects (ISO 3166-1 alpha-3 codes)';
-    displayName: 'Catalog - Project - Countries';
+    displayName: 'Project Catalog - Countries';
     pluralName: 'countries';
     singularName: 'country';
   };
@@ -793,7 +758,7 @@ export interface ApiDeveloperDeveloper extends Struct.CollectionTypeSchema {
   collectionName: 'developers';
   info: {
     description: 'Real estate developers and construction companies';
-    displayName: 'Catalog - Project - Developers';
+    displayName: 'Project Catalog - Developers';
     pluralName: 'developers';
     singularName: 'developer';
   };
@@ -832,7 +797,7 @@ export interface ApiNseNse extends Struct.CollectionTypeSchema {
   collectionName: 'nses';
   info: {
     description: 'Socioeconomic level (NSE) catalog for real estate projects';
-    displayName: 'Catalog - Project - NSEs';
+    displayName: 'Project Catalog - NSEs';
     pluralName: 'nses';
     singularName: 'nse';
   };
@@ -856,42 +821,11 @@ export interface ApiNseNse extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiParkingTypeParkingType extends Struct.CollectionTypeSchema {
-  collectionName: 'parking_types';
-  info: {
-    description: 'Parking type catalog for units (Simple, Tandem, Carlift, Car Lift)';
-    displayName: 'Catalog - Unit - Parking Types';
-    pluralName: 'parking-types';
-    singularName: 'parking-type';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    code: Schema.Attribute.UID<'name'>;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::parking-type.parking-type'
-    > &
-      Schema.Attribute.Private;
-    name: Schema.Attribute.String & Schema.Attribute.Required;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   collectionName: 'projects';
   info: {
     description: 'Real estate projects';
-    displayName: 'Projects';
+    displayName: '\u2022 Projects';
     pluralName: 'projects';
     singularName: 'project';
   };
@@ -958,7 +892,7 @@ export interface ApiSecurityTypeSecurityType
   collectionName: 'security_types';
   info: {
     description: 'Security type catalog for real estate projects';
-    displayName: 'Catalog - Project - Security Types';
+    displayName: 'Project Catalog - Security Types';
     pluralName: 'security-types';
     singularName: 'security-type';
   };
@@ -989,7 +923,7 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
   collectionName: 'services';
   info: {
     description: 'Shared property catalog: Services available in real estate projects (electricity, water, gas, etc.)';
-    displayName: 'Catalog - Project - Services';
+    displayName: 'Project Catalog - Services';
     pluralName: 'services';
     singularName: 'service';
   };
@@ -1033,12 +967,44 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiUnitParkingTypeUnitParkingType
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'unit_parking_types';
+  info: {
+    description: 'Parking type catalog for units (Simple, Tandem, Carlift, Car Lift)';
+    displayName: 'Unit Catalog - Parking Types';
+    pluralName: 'unit-parking-types';
+    singularName: 'unit-parking-type';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    code: Schema.Attribute.UID<'name'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::unit-parking-type.unit-parking-type'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiUnitTopographyUnitTopography
   extends Struct.CollectionTypeSchema {
   collectionName: 'unit_topographies';
   info: {
     description: 'Topography catalog for units (Flat, Slightly Inclined, Semi-Flat, Irregular, etc.)';
-    displayName: 'Catalog - Unit - Topographies';
+    displayName: 'Unit Catalog - Topographies';
     pluralName: 'unit-topographies';
     singularName: 'unit-topography';
   };
@@ -1065,11 +1031,42 @@ export interface ApiUnitTopographyUnitTopography
   };
 }
 
+export interface ApiUnitUsageUnitUsage extends Struct.CollectionTypeSchema {
+  collectionName: 'unit_usages';
+  info: {
+    description: 'Unit usage catalog (Sale, Rent)';
+    displayName: 'Unit Catalog - Usages';
+    pluralName: 'unit-usages';
+    singularName: 'unit-usage';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    code: Schema.Attribute.UID<'name'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::unit-usage.unit-usage'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiUnitUnit extends Struct.CollectionTypeSchema {
   collectionName: 'units';
   info: {
     description: 'Individual property units (houses, offices, apartments, etc.) within a block';
-    displayName: 'Units';
+    displayName: '\u2022 Units';
     pluralName: 'units';
     singularName: 'unit';
   };
@@ -1115,7 +1112,7 @@ export interface ApiUnitUnit extends Struct.CollectionTypeSchema {
     parkingSpaces: Schema.Attribute.Integer;
     parkingType: Schema.Attribute.Relation<
       'manyToOne',
-      'api::parking-type.parking-type'
+      'api::unit-parking-type.unit-parking-type'
     >;
     pricePerM2USD: Schema.Attribute.Decimal;
     pricePerV2USD: Schema.Attribute.Decimal;
@@ -1145,7 +1142,7 @@ export interface ApiUnitUnit extends Struct.CollectionTypeSchema {
     >;
     unitUsage: Schema.Attribute.Relation<
       'manyToOne',
-      'api::block-usage.block-usage'
+      'api::unit-usage.unit-usage'
     >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1668,16 +1665,16 @@ declare module '@strapi/strapi' {
       'api::block-focus.block-focus': ApiBlockFocusBlockFocus;
       'api::block-status.block-status': ApiBlockStatusBlockStatus;
       'api::block-type.block-type': ApiBlockTypeBlockType;
-      'api::block-usage.block-usage': ApiBlockUsageBlockUsage;
       'api::block.block': ApiBlockBlock;
       'api::country.country': ApiCountryCountry;
       'api::developer.developer': ApiDeveloperDeveloper;
       'api::nse.nse': ApiNseNse;
-      'api::parking-type.parking-type': ApiParkingTypeParkingType;
       'api::project.project': ApiProjectProject;
       'api::security-type.security-type': ApiSecurityTypeSecurityType;
       'api::service.service': ApiServiceService;
+      'api::unit-parking-type.unit-parking-type': ApiUnitParkingTypeUnitParkingType;
       'api::unit-topography.unit-topography': ApiUnitTopographyUnitTopography;
+      'api::unit-usage.unit-usage': ApiUnitUsageUnitUsage;
       'api::unit.unit': ApiUnitUnit;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

@@ -4,7 +4,7 @@
   "info": {
     "singularName": "block",
     "pluralName": "blocks",
-    "displayName": "Blocks",
+    "displayName": "• Blocks",
     "description": "Individual blocks within a real estate project (phase + tower + sector)"
   },
   "options": {
@@ -69,11 +69,6 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::block-type.block-type"
-    },
-    "blockUsage": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::block-usage.block-usage"
     },
     "blockStatus": {
       "type": "relation",

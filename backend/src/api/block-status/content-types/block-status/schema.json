@@ -4,8 +4,8 @@
   "info": {
     "singularName": "block-status",
     "pluralName": "block-statuses",
-    "displayName": "Catalog - Block - Statuses",
-    "description": "Block status catalog (In Plans, Under Construction, Delivered, etc.)"
+    "displayName": "Block Catalog - Statuses",
+    "description": "Block status catalog (In Plans, Under Construction, Delivered, Earth Movement)"
   },
   "options": {
     "draftAndPublish": false
@@ -26,3 +26,4 @@
     }
   }
 }
+

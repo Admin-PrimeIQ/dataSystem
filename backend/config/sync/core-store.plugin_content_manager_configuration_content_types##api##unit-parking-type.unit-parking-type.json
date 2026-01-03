@@ -1,5 +1,5 @@
 {
-  "key": "plugin_content_manager_configuration_content_types::api::parking-type.parking-type",
+  "key": "plugin_content_manager_configuration_content_types::api::unit-parking-type.unit-parking-type",
   "value": {
     "settings": {
       "bulkable": true,
@@ -155,10 +155,9 @@
         "updatedAt"
       ]
     },
-    "uid": "api::parking-type.parking-type"
+    "uid": "api::unit-parking-type.unit-parking-type"
   },
   "type": "object",
   "environment": null,
   "tag": null
 }
-

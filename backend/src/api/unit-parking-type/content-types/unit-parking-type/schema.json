@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "parking_types",
+  "collectionName": "unit_parking_types",
   "info": {
-    "singularName": "parking-type",
-    "pluralName": "parking-types",
-    "displayName": "Catalog - Unit - Parking Types",
+    "singularName": "unit-parking-type",
+    "pluralName": "unit-parking-types",
+    "displayName": "Unit Catalog - Parking Types",
     "description": "Parking type catalog for units (Simple, Tandem, Carlift, Car Lift)"
   },
   "options": {

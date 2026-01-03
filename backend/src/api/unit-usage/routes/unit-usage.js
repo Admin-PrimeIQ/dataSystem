@@ -1,10 +1,10 @@
 'use strict';
 
 /**
- * parking-type router
+ * unit-usage router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::parking-type.parking-type');
+module.exports = createCoreRouter('api::unit-usage.unit-usage');
 

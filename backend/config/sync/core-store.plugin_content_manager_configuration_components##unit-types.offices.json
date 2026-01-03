@@ -1,0 +1,275 @@
+{
+  "key": "plugin_content_manager_configuration_components::unit-types.offices",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "officeClassification",
+      "defaultSortBy": "officeClassification",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "ID",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "balconyTerraceSize": {
+        "edit": {
+          "label": "Balcony/Terrace Size (m²)",
+          "description": "Balcony or terrace area in square meters.",
+          "placeholder": "e.g., 12.75",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Balcony/Terrace (m²)",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "balconyTerraceSizeV2": {
+        "edit": {
+          "label": "Balcony/Terrace Size (v²)",
+          "description": "Balcony or terrace area in square varas.",
+          "placeholder": "e.g., 15.30",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Balcony/Terrace (v²)",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "employeeCapacity": {
+        "edit": {
+          "label": "Employee Capacity",
+          "description": "Number of employees the office space can accommodate.",
+          "placeholder": "e.g., 25",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Employee Capacity",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "parkingForSale": {
+        "edit": {
+          "label": "Parking Spaces for Sale",
+          "description": "Number of additional parking spaces available for purchase with this office unit.",
+          "placeholder": "e.g., 2, 3",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Parking for Sale",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "priceWithoutParkingM2USD": {
+        "edit": {
+          "label": "Price per m² (without parking)",
+          "description": "Price per square meter excluding parking in USD.",
+          "placeholder": "e.g., 1250.00",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Price/m² w/o Parking (USD)",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "propertyValueWithoutParkingUSD": {
+        "edit": {
+          "label": "Property Value (without parking)",
+          "description": "Total property value excluding parking in USD.",
+          "placeholder": "e.g., 250000.00",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Value w/o Parking (USD)",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "officeClassification": {
+        "edit": {
+          "label": "Office Classification",
+          "description": "Detailed office size classification with subcategory (e.g., Micro 1, Small 2, Medium 3, Large 5).",
+          "placeholder": "Select classification",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Classification",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "generalSizeClassification": {
+        "edit": {
+          "label": "General Size Classification",
+          "description": "General size category: Micro, Small, Medium, or Large.",
+          "placeholder": "Select size category",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Size Category",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "employeeCapacityRange": {
+        "edit": {
+          "label": "Employee Capacity Range",
+          "description": "Employee capacity range classification. Values: 1 to 5, 6 to 10, 11 to 15, 16 to 20, 21 to 30, 31 to 40, 41 to 50, 51 to 80, 81 to 100, 101 to 140, 141 to 170, More than 171.",
+          "placeholder": "Select capacity range",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Capacity Range",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "m2Range": {
+        "edit": {
+          "label": "Square Meter Range",
+          "description": "Square meter range description (e.g., '10 to 50', '51 to 100', '101 to 200', '201 to 400').",
+          "placeholder": "e.g., 101 to 200",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "m² Range",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "sizeEmployeeCapacityCombined": {
+        "edit": {
+          "label": "Size & Employee Capacity (Combined)",
+          "description": "Combined size and employee capacity description (e.g., 'Large 2 - 81 to 100', 'Medium 1 - 21 to 30').",
+          "placeholder": "e.g., Medium 2 - 31 to 40",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Size & Capacity",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "sizeM2Combined": {
+        "edit": {
+          "label": "Size & Square Meters (Combined)",
+          "description": "Combined size and square meter description (e.g., 'Large 2 - 801 to 1,000', 'Medium 1 - 201 to 300').",
+          "placeholder": "e.g., Medium 2 - 301 to 400",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Size & m²",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "documentId": {
+        "edit": {},
+        "list": {
+          "label": "Document ID",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "officeClassification",
+        "employeeCapacity",
+        "priceWithoutParkingM2USD"
+      ],
+      "edit": [
+        [
+          {
+            "name": "balconyTerraceSize",
+            "size": 6
+          },
+          {
+            "name": "balconyTerraceSizeV2",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "employeeCapacity",
+            "size": 6
+          },
+          {
+            "name": "parkingForSale",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "priceWithoutParkingM2USD",
+            "size": 6
+          },
+          {
+            "name": "propertyValueWithoutParkingUSD",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "generalSizeClassification",
+            "size": 6
+          },
+          {
+            "name": "officeClassification",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "employeeCapacityRange",
+            "size": 6
+          },
+          {
+            "name": "m2Range",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "sizeEmployeeCapacityCombined",
+            "size": 6
+          },
+          {
+            "name": "sizeM2Combined",
+            "size": 6
+          }
+        ]
+      ]
+    },
+    "uid": "unit-types.offices",
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

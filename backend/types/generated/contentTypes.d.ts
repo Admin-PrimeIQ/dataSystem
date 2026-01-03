@@ -856,6 +856,37 @@ export interface ApiNseNse extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiParkingTypeParkingType extends Struct.CollectionTypeSchema {
+  collectionName: 'parking_types';
+  info: {
+    description: 'Parking type catalog for units (Simple, Tandem, Carlift, Car Lift)';
+    displayName: 'Catalog - Unit - Parking Types';
+    pluralName: 'parking-types';
+    singularName: 'parking-type';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    code: Schema.Attribute.UID<'name'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::parking-type.parking-type'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   collectionName: 'projects';
   info: {
@@ -996,6 +1027,126 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String & Schema.Attribute.Required;
     projects: Schema.Attribute.Relation<'manyToMany', 'api::project.project'>;
     publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiUnitTopographyUnitTopography
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'unit_topographies';
+  info: {
+    description: 'Topography catalog for units (Flat, Slightly Inclined, Semi-Flat, Irregular, etc.)';
+    displayName: 'Catalog - Unit - Topographies';
+    pluralName: 'unit-topographies';
+    singularName: 'unit-topography';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    code: Schema.Attribute.UID<'name'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::unit-topography.unit-topography'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiUnitUnit extends Struct.CollectionTypeSchema {
+  collectionName: 'units';
+  info: {
+    description: 'Individual property units (houses, offices, apartments, etc.) within a block';
+    displayName: 'Units';
+    pluralName: 'units';
+    singularName: 'unit';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    absorptionPerM2: Schema.Attribute.Decimal;
+    availability: Schema.Attribute.Enumeration<['Available', 'Not Available']>;
+    bathrooms: Schema.Attribute.Integer;
+    block: Schema.Attribute.Relation<'oneToOne', 'api::block.block'>;
+    code: Schema.Attribute.UID<'name'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    depthM2: Schema.Attribute.Decimal;
+    depthV2: Schema.Attribute.Decimal;
+    frontM2: Schema.Attribute.Decimal;
+    frontV2: Schema.Attribute.Decimal;
+    habitableConstructionM2: Schema.Attribute.Decimal;
+    habitableConstructionV2: Schema.Attribute.Decimal;
+    hasMotorcycleParking: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    hasParking: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    incomeGTQ: Schema.Attribute.Decimal;
+    incomeUSD: Schema.Attribute.Decimal;
+    installmentGTQ: Schema.Attribute.Decimal;
+    installmentUSD: Schema.Attribute.Decimal;
+    landM2: Schema.Attribute.Decimal;
+    landV2: Schema.Attribute.Decimal;
+    legacyId: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::unit.unit'> &
+      Schema.Attribute.Private;
+    maintenancePricePerM2: Schema.Attribute.Decimal;
+    maintenancePricePerV2: Schema.Attribute.Decimal;
+    maintenanceTotalPriceM2: Schema.Attribute.Decimal;
+    maintenanceTotalPriceV2: Schema.Attribute.Decimal;
+    model: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    parkingSizeM2: Schema.Attribute.Decimal;
+    parkingSizeV2: Schema.Attribute.Decimal;
+    parkingSpaces: Schema.Attribute.Integer;
+    parkingType: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::parking-type.parking-type'
+    >;
+    pricePerM2USD: Schema.Attribute.Decimal;
+    pricePerV2USD: Schema.Attribute.Decimal;
+    priceWithoutVATGTQ: Schema.Attribute.Decimal;
+    priceWithoutVATUSD: Schema.Attribute.Decimal;
+    publishedAt: Schema.Attribute.DateTime;
+    rentalPriceGTQ: Schema.Attribute.Decimal;
+    rentalPricePerM2WithoutVATGTQ: Schema.Attribute.Decimal;
+    rentalPricePerM2WithoutVATUSD: Schema.Attribute.Decimal;
+    rentalPriceUSD: Schema.Attribute.Decimal;
+    rentalPriceWithoutVATGTQ: Schema.Attribute.Decimal;
+    rentalPriceWithoutVATUSD: Schema.Attribute.Decimal;
+    topography: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::unit-topography.unit-topography'
+    >;
+    totalPriceGTQ: Schema.Attribute.Decimal;
+    totalPriceUSD: Schema.Attribute.Decimal;
+    totalSizeM2: Schema.Attribute.Decimal;
+    totalSizeV2: Schema.Attribute.Decimal;
+    unitAbsorption: Schema.Attribute.Decimal;
+    unitNumber: Schema.Attribute.String;
+    unitSizeM2: Schema.Attribute.Decimal;
+    unitSizeV2: Schema.Attribute.Decimal;
+    unitType: Schema.Attribute.DynamicZone<
+      ['unit-types.housing', 'unit-types.offices', 'unit-types.industrial']
+    >;
+    unitUsage: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::block-usage.block-usage'
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1522,9 +1673,12 @@ declare module '@strapi/strapi' {
       'api::country.country': ApiCountryCountry;
       'api::developer.developer': ApiDeveloperDeveloper;
       'api::nse.nse': ApiNseNse;
+      'api::parking-type.parking-type': ApiParkingTypeParkingType;
       'api::project.project': ApiProjectProject;
       'api::security-type.security-type': ApiSecurityTypeSecurityType;
       'api::service.service': ApiServiceService;
+      'api::unit-topography.unit-topography': ApiUnitTopographyUnitTopography;
+      'api::unit.unit': ApiUnitUnit;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

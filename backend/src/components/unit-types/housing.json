@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_unit_types_housings",
+  "info": {
+    "name": "Housing",
+    "description": "Housing-specific unit information (apartments, houses, townhouses)",
+    "icon": "house",
+    "displayName": "Housing"
+  },
+  "options": {},
+  "attributes": {
+    "bedrooms": {
+      "type": "integer"
+    },
+    "balconyTerraceSize": {
+      "type": "decimal"
+    },
+    "balconyTerraceSizeV2": {
+      "type": "decimal"
+    }
+  }
+}

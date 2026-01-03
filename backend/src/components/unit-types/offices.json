@@ -1,0 +1,82 @@
+{
+  "collectionName": "components_unit_types_offices",
+  "info": {
+    "name": "Offices",
+    "description": "Office-specific unit information (office spaces, commercial offices)",
+    "icon": "briefcase",
+    "displayName": "Office"
+  },
+  "options": {},
+  "attributes": {
+    "balconyTerraceSize": {
+      "type": "decimal"
+    },
+    "balconyTerraceSizeV2": {
+      "type": "decimal"
+    },
+    "employeeCapacity": {
+      "type": "integer"
+    },
+    "parkingForSale": {
+      "type": "integer"
+    },
+    "priceWithoutParkingM2USD": {
+      "type": "decimal"
+    },
+    "propertyValueWithoutParkingUSD": {
+      "type": "decimal"
+    },
+    "officeClassification": {
+      "type": "enumeration",
+      "enum": [
+        "Micro 1",
+        "Micro 2",
+        "Small 1",
+        "Small 2",
+        "Medium 1",
+        "Medium 2",
+        "Medium 3",
+        "Large 1",
+        "Large 2",
+        "Large 3",
+        "Large 4",
+        "Large 5"
+      ]
+    },
+    "generalSizeClassification": {
+      "type": "enumeration",
+      "enum": [
+        "Micro",
+        "Small",
+        "Medium",
+        "Large"
+      ]
+    },
+    "employeeCapacityRange": {
+      "type": "enumeration",
+      "enum": [
+        "Range_1_To_5",
+        "Range_6_To_10",
+        "Range_11_To_15",
+        "Range_16_To_20",
+        "Range_21_To_30",
+        "Range_31_To_40",
+        "Range_41_To_50",
+        "Range_51_To_80",
+        "Range_81_To_100",
+        "Range_101_To_140",
+        "Range_141_To_170",
+        "Range_More_Than_171"
+      ]
+    },
+    "m2Range": {
+      "type": "string"
+    },
+    "sizeEmployeeCapacityCombined": {
+      "type": "string"
+    },
+    "sizeM2Combined": {
+      "type": "string"
+    }
+  }
+}

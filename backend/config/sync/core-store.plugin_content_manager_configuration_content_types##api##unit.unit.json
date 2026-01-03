@@ -1,0 +1,1083 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::unit.unit",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "name",
+      "defaultSortBy": "name",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "block": {
+        "edit": {
+          "label": "Block",
+          "description": "The parent block this unit belongs to. Units are individual properties (houses, offices, apartments) within a block.",
+          "placeholder": "Select a block",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "Block",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "code": {
+        "edit": {
+          "label": "Unit Code",
+          "description": "Unique identifier code for the unit. Automatically calculated from block name and unit number/model (converted to URL-friendly format).",
+          "placeholder": "Auto-generated (e.g., vistas-de-santa-elena-fase-1-sector-1-torre-a-unit-101)",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Code",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "name": {
+        "edit": {
+          "label": "Unit Name",
+          "description": "Name of the unit. Automatically calculated from block name and unit number/model. Format: 'Block Name - Unit Number' or 'Block Name - Model'.",
+          "placeholder": "Auto-generated (e.g., Vistas de Santa Elena - Fase 1 - Sector 1 - Torre A - Unit 101)",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "legacyId": {
+        "edit": {
+          "label": "Legacy ID",
+          "description": "Legacy identifier from the previous Market Scan system. Used for validation and migration purposes.",
+          "placeholder": "e.g., hash from Market Scan system",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Legacy ID",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "unitNumber": {
+        "edit": {
+          "label": "Unit Number",
+          "description": "Unit number or identifier (e.g., 101, A-12, Unit-5).",
+          "placeholder": "e.g., 101, A-12, Unit-5",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Unit Number",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "model": {
+        "edit": {
+          "label": "Model",
+          "description": "Unit model name or type (e.g., Standard, Premium, Deluxe).",
+          "placeholder": "e.g., Standard, Premium, Deluxe",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Model",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "topography": {
+        "edit": {
+          "label": "Topography",
+          "description": "Terrain topography type for this unit. Select from the topography catalog (e.g., Flat, Slightly Inclined, Semi-Flat, Irregular).",
+          "placeholder": "Select a topography type",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "Topography",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "frontM2": {
+        "edit": {
+          "label": "Front (m²)",
+          "description": "Front measurement in square meters.",
+          "placeholder": "e.g., 10.50",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Front (m²)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "frontV2": {
+        "edit": {
+          "label": "Front (v²)",
+          "description": "Front measurement in square varas.",
+          "placeholder": "e.g., 12.60",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Front (v²)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "depthM2": {
+        "edit": {
+          "label": "Depth (m²)",
+          "description": "Depth measurement in square meters.",
+          "placeholder": "e.g., 15.75",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Depth (m²)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "depthV2": {
+        "edit": {
+          "label": "Depth (v²)",
+          "description": "Depth measurement in square varas.",
+          "placeholder": "e.g., 18.90",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Depth (v²)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "landM2": {
+        "edit": {
+          "label": "Land Area (m²)",
+          "description": "Total land area in square meters.",
+          "placeholder": "e.g., 165.00",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Land (m²)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "landV2": {
+        "edit": {
+          "label": "Land Area (v²)",
+          "description": "Total land area in square varas.",
+          "placeholder": "e.g., 198.00",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Land (v²)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "unitSizeM2": {
+        "edit": {
+          "label": "Unit Size (m²)",
+          "description": "Total unit size in square meters.",
+          "placeholder": "e.g., 120.50",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Unit Size (m²)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "unitSizeV2": {
+        "edit": {
+          "label": "Unit Size (v²)",
+          "description": "Total unit size in square varas.",
+          "placeholder": "e.g., 144.60",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Unit Size (v²)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "parkingSizeM2": {
+        "edit": {
+          "label": "Parking Size (m²)",
+          "description": "Parking space size in square meters.",
+          "placeholder": "e.g., 12.00",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Parking Size (m²)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "parkingSizeV2": {
+        "edit": {
+          "label": "Parking Size (v²)",
+          "description": "Parking space size in square varas.",
+          "placeholder": "e.g., 14.40",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Parking Size (v²)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "totalSizeM2": {
+        "edit": {
+          "label": "Total Size (m²)",
+          "description": "Total unit size including all areas in square meters.",
+          "placeholder": "e.g., 135.75",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Total Size (m²)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "totalSizeV2": {
+        "edit": {
+          "label": "Total Size (v²)",
+          "description": "Total unit size including all areas in square varas.",
+          "placeholder": "e.g., 162.90",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Total Size (v²)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "habitableConstructionM2": {
+        "edit": {
+          "label": "Habitable Construction (m²)",
+          "description": "Habitable construction area in square meters.",
+          "placeholder": "e.g., 100.00",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Habitable (m²)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "habitableConstructionV2": {
+        "edit": {
+          "label": "Habitable Construction (v²)",
+          "description": "Habitable construction area in square varas.",
+          "placeholder": "e.g., 120.00",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Habitable (v²)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "bathrooms": {
+        "edit": {
+          "label": "Bathrooms",
+          "description": "Number of bathrooms in the unit.",
+          "placeholder": "e.g., 1, 2, 2.5",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Bathrooms",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "hasParking": {
+        "edit": {
+          "label": "Has Parking",
+          "description": "Whether the unit includes parking space.",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Parking",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "hasMotorcycleParking": {
+        "edit": {
+          "label": "Has Motorcycle Parking",
+          "description": "Whether the unit includes motorcycle parking space.",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Motorcycle Parking",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "parkingType": {
+        "edit": {
+          "label": "Parking Type",
+          "description": "Type of parking from catalog (Simple, Tandem, Carlift, Car Lift).",
+          "placeholder": "Select a parking type from the catalog",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "Parking Type",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "parkingSpaces": {
+        "edit": {
+          "label": "Parking Spaces",
+          "description": "Number of parking spaces included with the unit.",
+          "placeholder": "e.g., 1, 2",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Parking Spaces",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "availability": {
+        "edit": {
+          "label": "Availability",
+          "description": "Current availability status of the unit.",
+          "placeholder": "Select availability status",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Availability",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "unitUsage": {
+        "edit": {
+          "label": "Unit Usage",
+          "description": "Usage classification for this unit. Select from the unit usage catalog (e.g., Sale, Rent).",
+          "placeholder": "Select a unit usage from the catalog",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "Usage",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "unitType": {
+        "edit": {
+          "label": "Unit Type",
+          "description": "Select the unit type component (Housing, Offices, or Industrial) and fill in the specific information for that type.",
+          "placeholder": "Add a unit type component",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Unit Type",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "totalPriceUSD": {
+        "edit": {
+          "label": "Total Price (USD)",
+          "description": "Total unit price in US Dollars.",
+          "placeholder": "e.g., 150000.00",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Price (USD)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "totalPriceGTQ": {
+        "edit": {
+          "label": "Total Price (GTQ)",
+          "description": "Total unit price in Guatemalan Quetzales.",
+          "placeholder": "e.g., 1170000.00",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Price (GTQ)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "priceWithoutVATUSD": {
+        "edit": {
+          "label": "Price Without VAT (USD)",
+          "description": "Unit price excluding VAT in US Dollars.",
+          "placeholder": "e.g., 130434.78",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Price w/o VAT (USD)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "priceWithoutVATGTQ": {
+        "edit": {
+          "label": "Price Without VAT (GTQ)",
+          "description": "Unit price excluding VAT in Guatemalan Quetzales.",
+          "placeholder": "e.g., 1017391.30",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Price w/o VAT (GTQ)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "pricePerM2USD": {
+        "edit": {
+          "label": "Price per m² (USD)",
+          "description": "Price per square meter in US Dollars.",
+          "placeholder": "e.g., 1244.81",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Price/m² (USD)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "pricePerV2USD": {
+        "edit": {
+          "label": "Price per v² (USD)",
+          "description": "Price per square vara in US Dollars.",
+          "placeholder": "e.g., 1037.34",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Price/v² (USD)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "rentalPriceUSD": {
+        "edit": {
+          "label": "Rental Price (USD)",
+          "description": "Monthly rental price in US Dollars.",
+          "placeholder": "e.g., 800.00",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Rental (USD)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "rentalPriceGTQ": {
+        "edit": {
+          "label": "Rental Price (GTQ)",
+          "description": "Monthly rental price in Guatemalan Quetzales.",
+          "placeholder": "e.g., 6240.00",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Rental (GTQ)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "rentalPriceWithoutVATUSD": {
+        "edit": {
+          "label": "Rental Price Without VAT (USD)",
+          "description": "Monthly rental price excluding VAT in US Dollars.",
+          "placeholder": "e.g., 695.65",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Rental w/o VAT (USD)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "rentalPriceWithoutVATGTQ": {
+        "edit": {
+          "label": "Rental Price Without VAT (GTQ)",
+          "description": "Monthly rental price excluding VAT in Guatemalan Quetzales.",
+          "placeholder": "e.g., 5426.09",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Rental w/o VAT (GTQ)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "rentalPricePerM2WithoutVATUSD": {
+        "edit": {
+          "label": "Rental Price per m² Without VAT (USD)",
+          "description": "Monthly rental price per square meter excluding VAT in US Dollars.",
+          "placeholder": "e.g., 5.77",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Rental/m² w/o VAT (USD)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "rentalPricePerM2WithoutVATGTQ": {
+        "edit": {
+          "label": "Rental Price per m² Without VAT (GTQ)",
+          "description": "Monthly rental price per square meter excluding VAT in Guatemalan Quetzales.",
+          "placeholder": "e.g., 45.00",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Rental/m² w/o VAT (GTQ)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "maintenanceTotalPriceM2": {
+        "edit": {
+          "label": "Maintenance Total Price (m²)",
+          "description": "Total monthly maintenance fee per square meter.",
+          "placeholder": "e.g., 150.00",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Maintenance (m²)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "maintenanceTotalPriceV2": {
+        "edit": {
+          "label": "Maintenance Total Price (v²)",
+          "description": "Total monthly maintenance fee per square vara.",
+          "placeholder": "e.g., 180.00",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Maintenance (v²)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "maintenancePricePerM2": {
+        "edit": {
+          "label": "Maintenance Price per m²",
+          "description": "Monthly maintenance fee per square meter.",
+          "placeholder": "e.g., 1.25",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Maintenance/m²",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "maintenancePricePerV2": {
+        "edit": {
+          "label": "Maintenance Price per v²",
+          "description": "Monthly maintenance fee per square vara.",
+          "placeholder": "e.g., 1.04",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Maintenance/v²",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "installmentUSD": {
+        "edit": {
+          "label": "Installment (USD)",
+          "description": "Monthly installment payment in US Dollars.",
+          "placeholder": "e.g., 750.00",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Installment (USD)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "installmentGTQ": {
+        "edit": {
+          "label": "Installment (GTQ)",
+          "description": "Monthly installment payment in Guatemalan Quetzales.",
+          "placeholder": "e.g., 5850.00",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Installment (GTQ)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "incomeUSD": {
+        "edit": {
+          "label": "Required Income (USD)",
+          "description": "Minimum monthly income required in USD to qualify for this property (based on installment and down payment).",
+          "placeholder": "e.g., 2500.00",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Required Income (USD)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "incomeGTQ": {
+        "edit": {
+          "label": "Required Income (GTQ)",
+          "description": "Minimum monthly income required in GTQ to qualify for this property (based on installment and down payment).",
+          "placeholder": "e.g., 20000.00",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Required Income (GTQ)",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "unitAbsorption": {
+        "edit": {
+          "label": "Unit Absorption",
+          "description": "Unit absorption rate (percentage or ratio).",
+          "placeholder": "e.g., 0.85",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Unit Absorption",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "absorptionPerM2": {
+        "edit": {
+          "label": "Absorption per m²",
+          "description": "Absorption rate per square meter.",
+          "placeholder": "e.g., 0.0071",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Absorption/m²",
+          "searchable": false,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "Created At",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "Updated At",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "Updated By",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "documentId": {
+        "edit": {},
+        "list": {
+          "label": "documentId",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "name",
+        "block",
+        "unitNumber",
+        "availability",
+        "totalPriceUSD",
+        "updatedBy",
+        "updatedAt"
+      ],
+      "edit": [
+        [
+          {
+            "name": "block",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "name",
+            "size": 8
+          },
+          {
+            "name": "code",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "unitNumber",
+            "size": 4
+          },
+          {
+            "name": "model",
+            "size": 4
+          },
+          {
+            "name": "legacyId",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "topography",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "frontM2",
+            "size": 6
+          },
+          {
+            "name": "frontV2",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "depthM2",
+            "size": 6
+          },
+          {
+            "name": "depthV2",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "landM2",
+            "size": 6
+          },
+          {
+            "name": "landV2",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "habitableConstructionM2",
+            "size": 6
+          },
+          {
+            "name": "habitableConstructionV2",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "unitSizeM2",
+            "size": 6
+          },
+          {
+            "name": "unitSizeV2",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "totalSizeM2",
+            "size": 6
+          },
+          {
+            "name": "totalSizeV2",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "hasParking",
+            "size": 4
+          },
+          {
+            "name": "hasMotorcycleParking",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "parkingType",
+            "size": 4
+          },
+          {
+            "name": "parkingSizeM2",
+            "size": 6
+          },
+          {
+            "name": "parkingSizeV2",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "parkingSpaces",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "bathrooms",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "unitUsage",
+            "size": 6
+          },
+          {
+            "name": "availability",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "unitType",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "totalPriceUSD",
+            "size": 6
+          },
+          {
+            "name": "totalPriceGTQ",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "priceWithoutVATUSD",
+            "size": 6
+          },
+          {
+            "name": "priceWithoutVATGTQ",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "pricePerM2USD",
+            "size": 6
+          },
+          {
+            "name": "pricePerV2USD",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "rentalPriceUSD",
+            "size": 6
+          },
+          {
+            "name": "rentalPriceGTQ",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "rentalPriceWithoutVATUSD",
+            "size": 6
+          },
+          {
+            "name": "rentalPriceWithoutVATGTQ",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "rentalPricePerM2WithoutVATUSD",
+            "size": 6
+          },
+          {
+            "name": "rentalPricePerM2WithoutVATGTQ",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "maintenanceTotalPriceM2",
+            "size": 6
+          },
+          {
+            "name": "maintenanceTotalPriceV2",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "maintenancePricePerM2",
+            "size": 6
+          },
+          {
+            "name": "maintenancePricePerV2",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "installmentUSD",
+            "size": 6
+          },
+          {
+            "name": "installmentGTQ",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "incomeUSD",
+            "size": 6
+          },
+          {
+            "name": "incomeGTQ",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "unitAbsorption",
+            "size": 6
+          },
+          {
+            "name": "absorptionPerM2",
+            "size": 6
+          }
+        ]
+      ]
+    },
+    "uid": "api::unit.unit"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

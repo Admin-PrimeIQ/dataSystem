@@ -1,0 +1,241 @@
+{
+  "kind": "collectionType",
+  "collectionName": "units",
+  "info": {
+    "singularName": "unit",
+    "pluralName": "units",
+    "displayName": "Units",
+    "description": "Individual property units (houses, offices, apartments, etc.) within a block"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "block": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::block.block"
+    },
+    "code": {
+      "type": "uid",
+      "targetField": "name",
+      "required": false
+    },
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "legacyId": {
+      "type": "string"
+    },
+    "unitNumber": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "topography": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::unit-topography.unit-topography"
+    },
+    "frontM2": {
+      "type": "decimal"
+    },
+    "frontV2": {
+      "type": "decimal"
+    },
+    "depthM2": {
+      "type": "decimal"
+    },
+    "depthV2": {
+      "type": "decimal"
+    },
+    "landM2": {
+      "type": "decimal"
+    },
+    "landV2": {
+      "type": "decimal"
+    },
+    "unitSizeM2": {
+      "type": "decimal"
+    },
+    "unitSizeV2": {
+      "type": "decimal"
+    },
+    "parkingSizeM2": {
+      "type": "decimal",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "hasParking"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "parkingSizeV2": {
+      "type": "decimal",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "hasParking"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "totalSizeM2": {
+      "type": "decimal"
+    },
+    "totalSizeV2": {
+      "type": "decimal"
+    },
+    "habitableConstructionM2": {
+      "type": "decimal"
+    },
+    "habitableConstructionV2": {
+      "type": "decimal"
+    },
+    "bathrooms": {
+      "type": "integer"
+    },
+    "hasParking": {
+      "type": "boolean",
+      "default": false
+    },
+    "hasMotorcycleParking": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "hasParking"
+            },
+            true
+          ]
+        }
+      },
+      "default": false
+    },
+    "parkingType": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::parking-type.parking-type",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "hasParking"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "parkingSpaces": {
+      "type": "integer",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "hasParking"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "availability": {
+      "type": "enumeration",
+      "enum": [
+        "Available",
+        "Not Available"
+      ]
+    },
+    "unitUsage": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::block-usage.block-usage"
+    },
+    "unitType": {
+      "type": "dynamiczone",
+      "components": [
+        "unit-types.housing",
+        "unit-types.offices",
+        "unit-types.industrial"
+      ]
+    },
+    "totalPriceUSD": {
+      "type": "decimal"
+    },
+    "totalPriceGTQ": {
+      "type": "decimal"
+    },
+    "priceWithoutVATUSD": {
+      "type": "decimal"
+    },
+    "priceWithoutVATGTQ": {
+      "type": "decimal"
+    },
+    "pricePerM2USD": {
+      "type": "decimal"
+    },
+    "pricePerV2USD": {
+      "type": "decimal"
+    },
+    "rentalPriceUSD": {
+      "type": "decimal"
+    },
+    "rentalPriceGTQ": {
+      "type": "decimal"
+    },
+    "rentalPriceWithoutVATUSD": {
+      "type": "decimal"
+    },
+    "rentalPriceWithoutVATGTQ": {
+      "type": "decimal"
+    },
+    "rentalPricePerM2WithoutVATUSD": {
+      "type": "decimal"
+    },
+    "rentalPricePerM2WithoutVATGTQ": {
+      "type": "decimal"
+    },
+    "maintenanceTotalPriceM2": {
+      "type": "decimal"
+    },
+    "maintenanceTotalPriceV2": {
+      "type": "decimal"
+    },
+    "maintenancePricePerM2": {
+      "type": "decimal"
+    },
+    "maintenancePricePerV2": {
+      "type": "decimal"
+    },
+    "installmentUSD": {
+      "type": "decimal"
+    },
+    "installmentGTQ": {
+      "type": "decimal"
+    },
+    "incomeUSD": {
+      "type": "decimal"
+    },
+    "incomeGTQ": {
+      "type": "decimal"
+    },
+    "unitAbsorption": {
+      "type": "decimal"
+    },
+    "absorptionPerM2": {
+      "type": "decimal"
+    }
+  }
+}

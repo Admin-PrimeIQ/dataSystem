@@ -390,7 +390,7 @@
       "locale": null
     },
     {
-      "documentId": "kh908zo9ca3r3td3a17uh6qd",
+      "documentId": "k1fpnfpoxb2kq5atg8u9f88q",
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
       "subject": "api::block.block",
@@ -452,7 +452,7 @@
       "locale": null
     },
     {
-      "documentId": "meat7l4eqt18gjd0zykiqiai",
+      "documentId": "zjmu7p69tw2r77l3p86tg22s",
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::block.block",
@@ -496,7 +496,7 @@
       "locale": null
     },
     {
-      "documentId": "cs9vnh8ie88aiwmr0xtb6d74",
+      "documentId": "lxxukidmog8er0fmwdr9lp2m",
       "action": "plugin::content-manager.explorer.update",
       "actionParameters": {},
       "subject": "api::block.block",
@@ -759,6 +759,69 @@
       "locale": null
     },
     {
+      "documentId": "avkma1le0rphxctisac17kc5",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::parking-type.parking-type",
+      "properties": {
+        "fields": [
+          "code",
+          "name",
+          "description"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "hp0smwn506d64u96s1j63cmn",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::parking-type.parking-type",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "yx2g5qdz528flzqr5m7au8yz",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::parking-type.parking-type",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "euwpek9eqglfa8lyv59bp60w",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::parking-type.parking-type",
+      "properties": {
+        "fields": [
+          "code",
+          "name",
+          "description"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "kew3dju8uafzyhudboalplrd",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::parking-type.parking-type",
+      "properties": {
+        "fields": [
+          "code",
+          "name",
+          "description"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
       "documentId": "nv1ikcbejrv6mtxndn7oq94h",
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
@@ -1008,6 +1071,276 @@
           "description",
           "category",
           "projects"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "vgb9dazowdc10nswgvwjzu31",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::unit-topography.unit-topography",
+      "properties": {
+        "fields": [
+          "code",
+          "name",
+          "description"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "i6q3s4snp8fnxlic417lk0pf",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::unit-topography.unit-topography",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "n76reyrecmfeohqnhsb8vhwp",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::unit-topography.unit-topography",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "cdn3he15sayrrt1r1uesikt8",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::unit-topography.unit-topography",
+      "properties": {
+        "fields": [
+          "code",
+          "name",
+          "description"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "g2co5ihz96mhpr3sz18h4z35",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::unit-topography.unit-topography",
+      "properties": {
+        "fields": [
+          "code",
+          "name",
+          "description"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "m5ncx65dykthu66josr6ps3j",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::unit.unit",
+      "properties": {
+        "fields": [
+          "block",
+          "code",
+          "name",
+          "legacyId",
+          "unitNumber",
+          "model",
+          "topography",
+          "frontM2",
+          "frontV2",
+          "depthM2",
+          "depthV2",
+          "landM2",
+          "landV2",
+          "unitSizeM2",
+          "unitSizeV2",
+          "parkingSizeM2",
+          "parkingSizeV2",
+          "totalSizeM2",
+          "totalSizeV2",
+          "habitableConstructionM2",
+          "habitableConstructionV2",
+          "bathrooms",
+          "hasParking",
+          "hasMotorcycleParking",
+          "parkingType",
+          "parkingSpaces",
+          "availability",
+          "unitUsage",
+          "unitType",
+          "totalPriceUSD",
+          "totalPriceGTQ",
+          "priceWithoutVATUSD",
+          "priceWithoutVATGTQ",
+          "pricePerM2USD",
+          "pricePerV2USD",
+          "rentalPriceUSD",
+          "rentalPriceGTQ",
+          "rentalPriceWithoutVATUSD",
+          "rentalPriceWithoutVATGTQ",
+          "rentalPricePerM2WithoutVATUSD",
+          "rentalPricePerM2WithoutVATGTQ",
+          "maintenanceTotalPriceM2",
+          "maintenanceTotalPriceV2",
+          "maintenancePricePerM2",
+          "maintenancePricePerV2",
+          "installmentUSD",
+          "installmentGTQ",
+          "incomeUSD",
+          "incomeGTQ",
+          "unitAbsorption",
+          "absorptionPerM2"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "rjt7com4gwziijffan6d9it3",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::unit.unit",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "c4outa40a46df9fx258pfzlg",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::unit.unit",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "wdirfziozsriywofyw2nl63j",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::unit.unit",
+      "properties": {
+        "fields": [
+          "block",
+          "code",
+          "name",
+          "legacyId",
+          "unitNumber",
+          "model",
+          "topography",
+          "frontM2",
+          "frontV2",
+          "depthM2",
+          "depthV2",
+          "landM2",
+          "landV2",
+          "unitSizeM2",
+          "unitSizeV2",
+          "parkingSizeM2",
+          "parkingSizeV2",
+          "totalSizeM2",
+          "totalSizeV2",
+          "habitableConstructionM2",
+          "habitableConstructionV2",
+          "bathrooms",
+          "hasParking",
+          "hasMotorcycleParking",
+          "parkingType",
+          "parkingSpaces",
+          "availability",
+          "unitUsage",
+          "unitType",
+          "totalPriceUSD",
+          "totalPriceGTQ",
+          "priceWithoutVATUSD",
+          "priceWithoutVATGTQ",
+          "pricePerM2USD",
+          "pricePerV2USD",
+          "rentalPriceUSD",
+          "rentalPriceGTQ",
+          "rentalPriceWithoutVATUSD",
+          "rentalPriceWithoutVATGTQ",
+          "rentalPricePerM2WithoutVATUSD",
+          "rentalPricePerM2WithoutVATGTQ",
+          "maintenanceTotalPriceM2",
+          "maintenanceTotalPriceV2",
+          "maintenancePricePerM2",
+          "maintenancePricePerV2",
+          "installmentUSD",
+          "installmentGTQ",
+          "incomeUSD",
+          "incomeGTQ",
+          "unitAbsorption",
+          "absorptionPerM2"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "kucsw0inzb9vstt1e1m4wyt2",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::unit.unit",
+      "properties": {
+        "fields": [
+          "block",
+          "code",
+          "name",
+          "legacyId",
+          "unitNumber",
+          "model",
+          "topography",
+          "frontM2",
+          "frontV2",
+          "depthM2",
+          "depthV2",
+          "landM2",
+          "landV2",
+          "unitSizeM2",
+          "unitSizeV2",
+          "parkingSizeM2",
+          "parkingSizeV2",
+          "totalSizeM2",
+          "totalSizeV2",
+          "habitableConstructionM2",
+          "habitableConstructionV2",
+          "bathrooms",
+          "hasParking",
+          "hasMotorcycleParking",
+          "parkingType",
+          "parkingSpaces",
+          "availability",
+          "unitUsage",
+          "unitType",
+          "totalPriceUSD",
+          "totalPriceGTQ",
+          "priceWithoutVATUSD",
+          "priceWithoutVATGTQ",
+          "pricePerM2USD",
+          "pricePerV2USD",
+          "rentalPriceUSD",
+          "rentalPriceGTQ",
+          "rentalPriceWithoutVATUSD",
+          "rentalPriceWithoutVATGTQ",
+          "rentalPricePerM2WithoutVATUSD",
+          "rentalPricePerM2WithoutVATGTQ",
+          "maintenanceTotalPriceM2",
+          "maintenanceTotalPriceV2",
+          "maintenancePricePerM2",
+          "maintenancePricePerV2",
+          "installmentUSD",
+          "installmentGTQ",
+          "incomeUSD",
+          "incomeGTQ",
+          "unitAbsorption",
+          "absorptionPerM2"
         ]
       },
       "conditions": [],

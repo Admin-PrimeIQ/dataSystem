@@ -1,0 +1,104 @@
+{
+  "key": "plugin_content_manager_configuration_components::unit-types.housing",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "documentId",
+      "defaultSortBy": "documentId",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "ID",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "bedrooms": {
+        "edit": {
+          "label": "Bedrooms",
+          "description": "Number of bedrooms in the housing unit.",
+          "placeholder": "e.g., 2, 3, 4",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Bedrooms",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "balconyTerraceSize": {
+        "edit": {
+          "label": "Balcony/Terrace Size (m²)",
+          "description": "Balcony or terrace area in square meters.",
+          "placeholder": "e.g., 15.50",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Balcony/Terrace (m²)",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "balconyTerraceSizeV2": {
+        "edit": {
+          "label": "Balcony/Terrace Size (v²)",
+          "description": "Balcony or terrace area in square varas.",
+          "placeholder": "e.g., 18.60",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Balcony/Terrace (v²)",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "documentId": {
+        "edit": {},
+        "list": {
+          "label": "Document ID",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "edit": [
+        [
+          {
+            "name": "bedrooms",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "balconyTerraceSize",
+            "size": 6
+          },
+          {
+            "name": "balconyTerraceSizeV2",
+            "size": 6
+          }
+        ]
+      ],
+      "list": [
+        "id",
+        "bedrooms",
+        "balconyTerraceSize"
+      ]
+    },
+    "uid": "unit-types.housing",
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

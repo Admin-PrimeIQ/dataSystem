@@ -1,0 +1,63 @@
+{
+  "collectionName": "components_unit_types_industrials",
+  "info": {
+    "name": "Industrial",
+    "description": "Industrial warehouse-specific unit information (warehouses, storage facilities)",
+    "icon": "store",
+    "displayName": "Industrial"
+  },
+  "options": {},
+  "attributes": {
+    "warehouseStorageSizeM2": {
+      "type": "decimal"
+    },
+    "warehouseStorageSizeV2": {
+      "type": "decimal"
+    },
+    "officeSizeM2": {
+      "type": "decimal"
+    },
+    "officeSizeV2": {
+      "type": "decimal"
+    },
+    "mezzanineSizeM2": {
+      "type": "decimal"
+    },
+    "mezzanineSizeV2": {
+      "type": "decimal"
+    },
+    "loadingAreaM2": {
+      "type": "decimal"
+    },
+    "loadingAreaV2": {
+      "type": "decimal"
+    },
+    "width1M2": {
+      "type": "decimal"
+    },
+    "width1V2": {
+      "type": "decimal"
+    },
+    "depth1M2": {
+      "type": "decimal"
+    },
+    "depth1V2": {
+      "type": "decimal"
+    },
+    "depth2M2": {
+      "type": "decimal"
+    },
+    "depth2V2": {
+      "type": "decimal"
+    },
+    "heightM2": {
+      "type": "decimal"
+    },
+    "heightV2": {
+      "type": "decimal"
+    },
+    "additionalParkingPriceUSD": {
+      "type": "decimal"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "unit_topographies",
+  "info": {
+    "singularName": "unit-topography",
+    "pluralName": "unit-topographies",
+    "displayName": "Catalog - Unit - Topographies",
+    "description": "Topography catalog for units (Flat, Slightly Inclined, Semi-Flat, Irregular, etc.)"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "uid",
+      "targetField": "name",
+      "required": false
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
+

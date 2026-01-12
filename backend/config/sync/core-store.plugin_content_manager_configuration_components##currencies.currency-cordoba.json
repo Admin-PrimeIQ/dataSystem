@@ -1,0 +1,83 @@
+{
+  "key": "plugin_content_manager_configuration_components::currencies.currency-cordoba",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "documentId",
+      "defaultSortBy": "documentId",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "ID",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "buyRate": {
+        "edit": {
+          "label": "Buy Rate (NIO/USD)",
+          "description": "Exchange rate to buy NIO with USD. Example: 36.50 means 1 USD = 36.50 NIO",
+          "placeholder": "e.g., 36.500000",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Buy Rate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "sellRate": {
+        "edit": {
+          "label": "Sell Rate (NIO/USD)",
+          "description": "Exchange rate to sell NIO for USD. Example: 36.45 means 1 USD = 36.45 NIO",
+          "placeholder": "e.g., 36.450000",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Sell Rate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "documentId": {
+        "edit": {},
+        "list": {
+          "label": "Document ID",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "edit": [
+        [
+          {
+            "name": "buyRate",
+            "size": 6
+          },
+          {
+            "name": "sellRate",
+            "size": 6
+          }
+        ]
+      ],
+      "list": [
+        "buyRate",
+        "sellRate"
+      ]
+    },
+    "uid": "currencies.currency-cordoba",
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

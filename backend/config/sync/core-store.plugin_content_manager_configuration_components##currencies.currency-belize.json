@@ -1,0 +1,83 @@
+{
+  "key": "plugin_content_manager_configuration_components::currencies.currency-belize",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "documentId",
+      "defaultSortBy": "documentId",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "ID",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "buyRate": {
+        "edit": {
+          "label": "Buy Rate (BZD/USD)",
+          "description": "Exchange rate to buy BZD with USD. Example: 2.00 means 1 USD = 2.00 BZD (pegged rate)",
+          "placeholder": "e.g., 2.000000",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Buy Rate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "sellRate": {
+        "edit": {
+          "label": "Sell Rate (BZD/USD)",
+          "description": "Exchange rate to sell BZD for USD. Example: 2.00 means 1 USD = 2.00 BZD (pegged rate)",
+          "placeholder": "e.g., 2.000000",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Sell Rate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "documentId": {
+        "edit": {},
+        "list": {
+          "label": "Document ID",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "edit": [
+        [
+          {
+            "name": "buyRate",
+            "size": 6
+          },
+          {
+            "name": "sellRate",
+            "size": 6
+          }
+        ]
+      ],
+      "list": [
+        "buyRate",
+        "sellRate"
+      ]
+    },
+    "uid": "currencies.currency-belize",
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

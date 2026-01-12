@@ -1,0 +1,83 @@
+{
+  "key": "plugin_content_manager_configuration_components::currencies.currency-lempira",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "documentId",
+      "defaultSortBy": "documentId",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "ID",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "buyRate": {
+        "edit": {
+          "label": "Buy Rate (HNL/USD)",
+          "description": "Exchange rate to buy HNL with USD. Example: 24.50 means 1 USD = 24.50 HNL",
+          "placeholder": "e.g., 24.500000",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Buy Rate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "sellRate": {
+        "edit": {
+          "label": "Sell Rate (HNL/USD)",
+          "description": "Exchange rate to sell HNL for USD. Example: 24.45 means 1 USD = 24.45 HNL",
+          "placeholder": "e.g., 24.450000",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Sell Rate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "documentId": {
+        "edit": {},
+        "list": {
+          "label": "Document ID",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "edit": [
+        [
+          {
+            "name": "buyRate",
+            "size": 6
+          },
+          {
+            "name": "sellRate",
+            "size": 6
+          }
+        ]
+      ],
+      "list": [
+        "buyRate",
+        "sellRate"
+      ]
+    },
+    "uid": "currencies.currency-lempira",
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

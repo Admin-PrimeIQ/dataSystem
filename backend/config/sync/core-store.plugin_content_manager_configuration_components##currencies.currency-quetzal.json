@@ -1,0 +1,83 @@
+{
+  "key": "plugin_content_manager_configuration_components::currencies.currency-quetzal",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "documentId",
+      "defaultSortBy": "documentId",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "ID",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "buyRate": {
+        "edit": {
+          "label": "Buy Rate (GTQ/USD)",
+          "description": "Exchange rate to buy GTQ with USD. Example: 7.85 means 1 USD = 7.85 GTQ",
+          "placeholder": "e.g., 7.850000",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Buy Rate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "sellRate": {
+        "edit": {
+          "label": "Sell Rate (GTQ/USD)",
+          "description": "Exchange rate to sell GTQ for USD. Example: 7.80 means 1 USD = 7.80 GTQ",
+          "placeholder": "e.g., 7.800000",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Sell Rate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "documentId": {
+        "edit": {},
+        "list": {
+          "label": "Document ID",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "edit": [
+        [
+          {
+            "name": "buyRate",
+            "size": 6
+          },
+          {
+            "name": "sellRate",
+            "size": 6
+          }
+        ]
+      ],
+      "list": [
+        "buyRate",
+        "sellRate"
+      ]
+    },
+    "uid": "currencies.currency-quetzal",
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

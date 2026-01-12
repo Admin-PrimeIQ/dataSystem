@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_currencies_currency_colon_salvadorenos",
+  "info": {
+    "name": "Currency Colon Salvadoreno",
+    "description": "El Salvador uses USD (US Dollar) as its official currency. Rates are 1:1 with USD.",
+    "icon": "dollar-sign",
+    "displayName": "El Salvador (USD)"
+  },
+  "options": {},
+  "attributes": {
+    "buyRate": {
+      "type": "decimal",
+      "precision": 10,
+      "scale": 6,
+      "default": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "description": "Buy rate for USD in El Salvador (always 1.0 as it uses USD - fixed, not editable)"
+    },
+    "sellRate": {
+      "type": "decimal",
+      "precision": 10,
+      "scale": 6,
+      "default": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "description": "Sell rate for USD in El Salvador (always 1.0 as it uses USD - fixed, not editable)"
+    }
+  }
+}

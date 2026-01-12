@@ -1,0 +1,83 @@
+{
+  "key": "plugin_content_manager_configuration_components::currencies.currency-colon-costarricense",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "documentId",
+      "defaultSortBy": "documentId",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "ID",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "buyRate": {
+        "edit": {
+          "label": "Buy Rate (CRC/USD)",
+          "description": "Exchange rate to buy CRC with USD. Example: 520.00 means 1 USD = 520.00 CRC",
+          "placeholder": "e.g., 520.000000",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Buy Rate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "sellRate": {
+        "edit": {
+          "label": "Sell Rate (CRC/USD)",
+          "description": "Exchange rate to sell CRC for USD. Example: 515.00 means 1 USD = 515.00 CRC",
+          "placeholder": "e.g., 515.000000",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Sell Rate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "documentId": {
+        "edit": {},
+        "list": {
+          "label": "Document ID",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "edit": [
+        [
+          {
+            "name": "buyRate",
+            "size": 6
+          },
+          {
+            "name": "sellRate",
+            "size": 6
+          }
+        ]
+      ],
+      "list": [
+        "buyRate",
+        "sellRate"
+      ]
+    },
+    "uid": "currencies.currency-colon-costarricense",
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

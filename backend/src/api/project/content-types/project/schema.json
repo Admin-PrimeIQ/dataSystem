@@ -123,6 +123,11 @@
       "relation": "manyToMany",
       "target": "api::service.service",
       "mappedBy": "projects"
+    },
+    "currencies": {
+      "type": "component",
+      "repeatable": false,
+      "component": "currencies.currencies"
     }
   }
 }

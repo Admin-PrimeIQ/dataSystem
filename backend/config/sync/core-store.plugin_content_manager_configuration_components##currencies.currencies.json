@@ -1,0 +1,219 @@
+{
+  "key": "plugin_content_manager_configuration_components::currencies.currencies",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "documentId",
+      "defaultSortBy": "documentId",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "ID",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "usd": {
+        "edit": {
+          "label": "US Dollar (USD) - Base Currency",
+          "description": "USD is the BASE CURRENCY. All prices are stored in USD. Configure USD rates (typically 1.0 for both buy and sell).",
+          "placeholder": "Add USD configuration",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "USD",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "mxn": {
+        "edit": {
+          "label": "Mexican Peso (MXN)",
+          "description": "Mexican Peso exchange rates relative to USD (base currency)",
+          "placeholder": "Add MXN with buy/sell rates",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "MXN",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "gtq": {
+        "edit": {
+          "label": "Guatemalan Quetzal (GTQ)",
+          "description": "Guatemalan Quetzal exchange rates relative to USD (base currency)",
+          "placeholder": "Add GTQ with buy/sell rates",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "GTQ",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "svc": {
+        "edit": {
+          "label": "El Salvador (USD)",
+          "description": "El Salvador uses USD (US Dollar) as its official currency. Rates are 1:1 with USD (fixed, not editable).",
+          "placeholder": "El Salvador uses USD",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "SVC",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "hnl": {
+        "edit": {
+          "label": "Honduran Lempira (HNL)",
+          "description": "Honduran Lempira exchange rates relative to USD (base currency)",
+          "placeholder": "Add HNL with buy/sell rates",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "HNL",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "crc": {
+        "edit": {
+          "label": "Costa Rican Colon (CRC)",
+          "description": "Costa Rican Colon exchange rates relative to USD (base currency)",
+          "placeholder": "Add CRC with buy/sell rates",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "CRC",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "nio": {
+        "edit": {
+          "label": "Nicaraguan Cordoba (NIO)",
+          "description": "Nicaraguan Cordoba exchange rates relative to USD (base currency)",
+          "placeholder": "Add NIO with buy/sell rates",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "NIO",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "pab": {
+        "edit": {
+          "label": "Panamanian Balboa (PAB)",
+          "description": "Panamanian Balboa exchange rates relative to USD (base currency). PAB is pegged 1:1 with USD.",
+          "placeholder": "Add PAB with buy/sell rates",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "PAB",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "bzd": {
+        "edit": {
+          "label": "Belize Dollar (BZD)",
+          "description": "Belize Dollar exchange rates relative to USD (base currency). BZD is pegged 2:1 with USD.",
+          "placeholder": "Add BZD with buy/sell rates",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "BZD",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "documentId": {
+        "edit": {},
+        "list": {
+          "label": "Document ID",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "edit": [
+        [
+          {
+            "name": "usd",
+            "size": 6
+          },
+          {
+            "name": "gtq",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "svc",
+            "size": 6
+          },
+          {
+            "name": "hnl",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "nio",
+            "size": 6
+          },
+          {
+            "name": "crc",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "pab",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "mxn",
+            "size": 6
+          },
+          {
+            "name": "bzd",
+            "size": 6
+          }
+        ]
+      ],
+      "list": [
+        "id",
+        "usd",
+        "mxn",
+        "gtq"
+      ]
+    },
+    "uid": "currencies.currencies",
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

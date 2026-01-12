@@ -840,6 +840,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    currencies: Schema.Attribute.Component<'currencies.currencies', false>;
     department: Schema.Attribute.String;
     developer: Schema.Attribute.Relation<
       'manyToOne',

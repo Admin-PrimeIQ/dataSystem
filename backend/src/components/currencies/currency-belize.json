@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_currencies_currency_belizes",
+  "info": {
+    "name": "Currency Belize",
+    "description": "Belize Dollar (BZD) exchange rates relative to USD (base currency). BZD is pegged 2:1 with USD.",
+    "icon": "dollar-sign",
+    "displayName": "Belize Dollar (BZD)"
+  },
+  "options": {},
+  "attributes": {
+    "buyRate": {
+      "type": "decimal",
+      "precision": 10,
+      "scale": 6,
+      "default": 2.000000,
+      "description": "Exchange rate to buy BZD with USD. Example: 2.00 means 1 USD = 2.00 BZD (pegged rate)"
+    },
+    "sellRate": {
+      "type": "decimal",
+      "precision": 10,
+      "scale": 6,
+      "default": 2.000000,
+      "description": "Exchange rate to sell BZD for USD. Example: 2.00 means 1 USD = 2.00 BZD (pegged rate)"
+    }
+  }
+}

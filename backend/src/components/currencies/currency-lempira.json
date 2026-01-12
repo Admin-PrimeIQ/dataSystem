@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_currencies_currency_lempiras",
+  "info": {
+    "name": "Currency Lempira",
+    "description": "Honduran Lempira (HNL) exchange rates relative to USD (base currency)",
+    "icon": "dollar-sign",
+    "displayName": "Honduran Lempira (HNL)"
+  },
+  "options": {},
+  "attributes": {
+    "buyRate": {
+      "type": "decimal",
+      "precision": 10,
+      "scale": 6,
+      "default": 24.500000,
+      "description": "Exchange rate to buy HNL with USD. Example: 26.407 means 1 USD = 26.407 HNL"
+    },
+    "sellRate": {
+      "type": "decimal",
+      "precision": 10,
+      "scale": 6,
+      "default": 24.450000,
+      "description": "Exchange rate to sell HNL for USD. Example: 26.40 means 1 USD = 26.40 HNL"
+    }
+  }
+}

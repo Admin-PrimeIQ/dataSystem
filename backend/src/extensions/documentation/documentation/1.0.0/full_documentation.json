@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-01-12T16:25:18.648Z"
+    "x-generation-date": "2026-01-12T22:35:15.620Z"
   },
   "path": "/documentation",
   "autoGenerate": true,
@@ -10584,6 +10584,9 @@
                     }
                   }
                 },
+                "currencies": {
+                  "$ref": "#/components/schemas/CurrenciesCurrenciesComponent"
+                },
                 "createdAt": {
                   "type": "string",
                   "format": "date-time"
@@ -10699,6 +10702,185 @@
           },
           "meta": {
             "type": "object"
+          }
+        }
+      },
+      "CurrenciesCurrencyDollarComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "buyRate": {
+            "type": "number",
+            "format": "float"
+          },
+          "sellRate": {
+            "type": "number",
+            "format": "float"
+          }
+        }
+      },
+      "CurrenciesCurrencyPesoMexicanoComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "buyRate": {
+            "type": "number",
+            "format": "float"
+          },
+          "sellRate": {
+            "type": "number",
+            "format": "float"
+          }
+        }
+      },
+      "CurrenciesCurrencyQuetzalComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "buyRate": {
+            "type": "number",
+            "format": "float"
+          },
+          "sellRate": {
+            "type": "number",
+            "format": "float"
+          }
+        }
+      },
+      "CurrenciesCurrencyColonSalvadorenoComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "buyRate": {
+            "type": "number",
+            "format": "float"
+          },
+          "sellRate": {
+            "type": "number",
+            "format": "float"
+          }
+        }
+      },
+      "CurrenciesCurrencyLempiraComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "buyRate": {
+            "type": "number",
+            "format": "float"
+          },
+          "sellRate": {
+            "type": "number",
+            "format": "float"
+          }
+        }
+      },
+      "CurrenciesCurrencyColonCostarricenseComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "buyRate": {
+            "type": "number",
+            "format": "float"
+          },
+          "sellRate": {
+            "type": "number",
+            "format": "float"
+          }
+        }
+      },
+      "CurrenciesCurrencyCordobaComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "buyRate": {
+            "type": "number",
+            "format": "float"
+          },
+          "sellRate": {
+            "type": "number",
+            "format": "float"
+          }
+        }
+      },
+      "CurrenciesCurrencyBalboaComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "buyRate": {
+            "type": "number",
+            "format": "float"
+          },
+          "sellRate": {
+            "type": "number",
+            "format": "float"
+          }
+        }
+      },
+      "CurrenciesCurrencyBelizeComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "buyRate": {
+            "type": "number",
+            "format": "float"
+          },
+          "sellRate": {
+            "type": "number",
+            "format": "float"
+          }
+        }
+      },
+      "CurrenciesCurrenciesComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "usd": {
+            "$ref": "#/components/schemas/CurrenciesCurrencyDollarComponent"
+          },
+          "mxn": {
+            "$ref": "#/components/schemas/CurrenciesCurrencyPesoMexicanoComponent"
+          },
+          "gtq": {
+            "$ref": "#/components/schemas/CurrenciesCurrencyQuetzalComponent"
+          },
+          "svc": {
+            "$ref": "#/components/schemas/CurrenciesCurrencyColonSalvadorenoComponent"
+          },
+          "hnl": {
+            "$ref": "#/components/schemas/CurrenciesCurrencyLempiraComponent"
+          },
+          "crc": {
+            "$ref": "#/components/schemas/CurrenciesCurrencyColonCostarricenseComponent"
+          },
+          "nio": {
+            "$ref": "#/components/schemas/CurrenciesCurrencyCordobaComponent"
+          },
+          "pab": {
+            "$ref": "#/components/schemas/CurrenciesCurrencyBalboaComponent"
+          },
+          "bzd": {
+            "$ref": "#/components/schemas/CurrenciesCurrencyBelizeComponent"
           }
         }
       },
@@ -11779,6 +11961,9 @@
                     }
                   }
                 }
+              },
+              "currencies": {
+                "$ref": "#/components/schemas/CurrenciesCurrenciesComponent"
               },
               "createdAt": {
                 "type": "string",
@@ -16037,6 +16222,9 @@
                   "example": "string or id"
                 }
               },
+              "currencies": {
+                "$ref": "#/components/schemas/CurrenciesCurrenciesComponent"
+              },
               "locale": {
                 "type": "string"
               },
@@ -17003,6 +17191,9 @@
                           }
                         }
                       },
+                      "currencies": {
+                        "$ref": "#/components/schemas/CurrenciesCurrenciesComponent"
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -17124,6 +17315,9 @@
                 }
               }
             }
+          },
+          "currencies": {
+            "$ref": "#/components/schemas/CurrenciesCurrenciesComponent"
           },
           "createdAt": {
             "type": "string",
@@ -18657,6 +18851,9 @@
                     }
                   }
                 },
+                "currencies": {
+                  "$ref": "#/components/schemas/CurrenciesCurrenciesComponent"
+                },
                 "createdAt": {
                   "type": "string",
                   "format": "date-time"
@@ -19949,6 +20146,9 @@
                         }
                       }
                     }
+                  },
+                  "currencies": {
+                    "$ref": "#/components/schemas/CurrenciesCurrenciesComponent"
                   },
                   "createdAt": {
                     "type": "string",

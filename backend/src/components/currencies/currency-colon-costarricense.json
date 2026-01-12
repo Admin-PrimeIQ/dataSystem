@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_currencies_currency_colon_costarricenses",
+  "info": {
+    "name": "Currency Colon Costarricense",
+    "description": "Costa Rican Colon (CRC) exchange rates relative to USD (base currency)",
+    "icon": "dollar-sign",
+    "displayName": "Costa Rican Colon (CRC)"
+  },
+  "options": {},
+  "attributes": {
+    "buyRate": {
+      "type": "decimal",
+      "precision": 10,
+      "scale": 6,
+      "default": 520.000000,
+      "description": "Exchange rate to buy CRC with USD. Example: 497.55 means 1 USD = 497.55 CRC"
+    },
+    "sellRate": {
+      "type": "decimal",
+      "precision": 10,
+      "scale": 6,
+      "default": 515.000000,
+      "description": "Exchange rate to sell CRC for USD. Example: 497.00 means 1 USD = 497.00 CRC"
+    }
+  }
+}

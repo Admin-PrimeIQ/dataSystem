@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_currencies_currency_peso_mexicanos",
+  "info": {
+    "name": "Currency Peso Mexicano",
+    "description": "Mexican Peso (MXN) exchange rates relative to USD (base currency)",
+    "icon": "dollar-sign",
+    "displayName": "Mexican Peso (MXN)"
+  },
+  "options": {},
+  "attributes": {
+    "buyRate": {
+      "type": "decimal",
+      "precision": 10,
+      "scale": 6,
+      "default": 18.500000,
+      "description": "Exchange rate to buy MXN with USD. Example: 17.72 means 1 USD = 17.72 MXN"
+    },
+    "sellRate": {
+      "type": "decimal",
+      "precision": 10,
+      "scale": 6,
+      "default": 18.450000,
+      "description": "Exchange rate to sell MXN for USD. Example: 17.70 means 1 USD = 17.70 MXN"
+    }
+  }
+}

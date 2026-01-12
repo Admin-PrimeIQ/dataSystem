@@ -347,6 +347,20 @@
           "sortable": false
         }
       },
+      "currencies": {
+        "edit": {
+          "label": "Currencies Configuration",
+          "description": "USD (US Dollar) is the BASE CURRENCY - all prices are stored in USD. Add alternative currencies (MXN, GTQ, SVC, HNL, CRC, NIO, PAB) with their buy/sell exchange rates relative to USD. Example: If you add GTQ with buyRate 7.85, it means 1 USD = 7.85 GTQ to buy GTQ with USD.",
+          "placeholder": "Configure currencies and exchange rates",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Currencies",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -524,6 +538,12 @@
           {
             "name": "services",
             "size": 6
+          }
+        ],
+        [
+          {
+            "name": "currencies",
+            "size": 12
           }
         ]
       ],

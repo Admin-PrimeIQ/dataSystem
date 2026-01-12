@@ -1,0 +1,77 @@
+{
+  "collectionName": "components_currencies_currencies",
+  "info": {
+    "name": "Currencies",
+    "description": "Currency configuration for the project. USD (US Dollar) is the BASE CURRENCY - all prices are stored in USD. Add alternative currencies with their buy/sell exchange rates relative to USD.",
+    "icon": "coins",
+    "displayName": "Currencies Configuration"
+  },
+  "options": {
+    "timestamps": false
+  },
+  "attributes": {
+    "usd": {
+      "type": "component",
+      "repeatable": false,
+      "component": "currencies.currency-dollar",
+      "required": false,
+      "description": "US Dollar (USD) - Base currency. All prices are stored in USD."
+    },
+    "mxn": {
+      "type": "component",
+      "repeatable": false,
+      "component": "currencies.currency-peso-mexicano",
+      "required": false,
+      "description": "Mexican Peso (MXN) exchange rates relative to USD"
+    },
+    "gtq": {
+      "type": "component",
+      "repeatable": false,
+      "component": "currencies.currency-quetzal",
+      "required": false,
+      "description": "Guatemalan Quetzal (GTQ) exchange rates relative to USD"
+    },
+    "svc": {
+      "type": "component",
+      "repeatable": false,
+      "component": "currencies.currency-colon-salvadoreno",
+      "required": false,
+      "description": "El Salvador uses USD (US Dollar) as its official currency. Rates are 1:1 with USD."
+    },
+    "hnl": {
+      "type": "component",
+      "repeatable": false,
+      "component": "currencies.currency-lempira",
+      "required": false,
+      "description": "Honduran Lempira (HNL) exchange rates relative to USD"
+    },
+    "crc": {
+      "type": "component",
+      "repeatable": false,
+      "component": "currencies.currency-colon-costarricense",
+      "required": false,
+      "description": "Costa Rican Colon (CRC) exchange rates relative to USD"
+    },
+    "nio": {
+      "type": "component",
+      "repeatable": false,
+      "component": "currencies.currency-cordoba",
+      "required": false,
+      "description": "Nicaraguan Cordoba (NIO) exchange rates relative to USD"
+    },
+    "pab": {
+      "type": "component",
+      "repeatable": false,
+      "component": "currencies.currency-balboa",
+      "required": false,
+      "description": "Panamanian Balboa (PAB) exchange rates relative to USD (pegged 1:1 with USD)"
+    },
+    "bzd": {
+      "type": "component",
+      "repeatable": false,
+      "component": "currencies.currency-belize",
+      "required": false,
+      "description": "Belize Dollar (BZD) exchange rates relative to USD (pegged 2:1 with USD)"
+    }
+  }
+}

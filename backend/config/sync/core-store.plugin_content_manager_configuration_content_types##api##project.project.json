@@ -136,8 +136,8 @@
       "latitude": {
         "edit": {
           "label": "Latitude",
-          "description": "Geographic latitude coordinate (GPS) for the project location. Format: decimal degrees.",
-          "placeholder": "e.g., 14.634915",
+          "description": "Geographic latitude coordinate (GPS) for the project location. Format: decimal degrees (supports up to 8 decimal places for high precision).",
+          "placeholder": "e.g., 14.63491567",
           "visible": true,
           "editable": true
         },
@@ -150,8 +150,8 @@
       "longitude": {
         "edit": {
           "label": "Longitude",
-          "description": "Geographic longitude coordinate (GPS) for the project location. Format: decimal degrees.",
-          "placeholder": "e.g., -90.506882",
+          "description": "Geographic longitude coordinate (GPS) for the project location. Format: decimal degrees (supports up to 8 decimal places for high precision).",
+          "placeholder": "e.g., -90.50688234",
           "visible": true,
           "editable": true
         },

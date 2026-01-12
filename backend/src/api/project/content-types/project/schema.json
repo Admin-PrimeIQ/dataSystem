@@ -44,10 +44,14 @@
       "type": "string"
     },
     "latitude": {
-      "type": "decimal"
+      "type": "decimal",
+      "precision": 10,
+      "scale": 8
     },
     "longitude": {
-      "type": "decimal"
+      "type": "decimal",
+      "precision": 10,
+      "scale": 8
     },
     "market": {
       "type": "enumeration",

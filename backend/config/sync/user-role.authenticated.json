@@ -6,6 +6,406 @@
   "locale": null,
   "permissions": [
     {
+      "documentId": "d0c41n543x2yoaf5disidiox",
+      "action": "api::amenity.amenity.create",
+      "locale": null
+    },
+    {
+      "documentId": "hg6ns0anlq721qhgsn0yt48z",
+      "action": "api::amenity.amenity.delete",
+      "locale": null
+    },
+    {
+      "documentId": "lpdz7uzayo2hyeg0cwckp6ad",
+      "action": "api::amenity.amenity.find",
+      "locale": null
+    },
+    {
+      "documentId": "uk55e023qbzsredsuxeijdfk",
+      "action": "api::amenity.amenity.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "s7hx3k8bboz7papmjsu571vb",
+      "action": "api::amenity.amenity.update",
+      "locale": null
+    },
+    {
+      "documentId": "e40n972230nuyrncllg4vrr5",
+      "action": "api::block-category.block-category.create",
+      "locale": null
+    },
+    {
+      "documentId": "l0nelqemfx7bbfkihz9spelf",
+      "action": "api::block-category.block-category.delete",
+      "locale": null
+    },
+    {
+      "documentId": "orixce4ivdxyecq0yinyfnip",
+      "action": "api::block-category.block-category.find",
+      "locale": null
+    },
+    {
+      "documentId": "wpl66tzax2uerdlfn5ykghye",
+      "action": "api::block-category.block-category.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "fssew8mlysw2z6v9j7c67fvh",
+      "action": "api::block-category.block-category.update",
+      "locale": null
+    },
+    {
+      "documentId": "rwp759g65df6e03g8xdxrowz",
+      "action": "api::block-focus.block-focus.create",
+      "locale": null
+    },
+    {
+      "documentId": "nh5kcc1s4def46o9plm3sbdg",
+      "action": "api::block-focus.block-focus.delete",
+      "locale": null
+    },
+    {
+      "documentId": "y3mq2dkc4130dj9xk0fgv9d1",
+      "action": "api::block-focus.block-focus.find",
+      "locale": null
+    },
+    {
+      "documentId": "uvlerib1ca18udpjx9357gpv",
+      "action": "api::block-focus.block-focus.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "hy0or4qnf51ikml7pd7bhsep",
+      "action": "api::block-focus.block-focus.update",
+      "locale": null
+    },
+    {
+      "documentId": "r645invuhhgk69lwqyy3yrgt",
+      "action": "api::block-status.block-status.create",
+      "locale": null
+    },
+    {
+      "documentId": "z85cz93yryo9zdvh44tj6gtc",
+      "action": "api::block-status.block-status.delete",
+      "locale": null
+    },
+    {
+      "documentId": "qpr596y0myev96uppbxi4wxs",
+      "action": "api::block-status.block-status.find",
+      "locale": null
+    },
+    {
+      "documentId": "xmziemcm8bnq7hwxpzmvpek1",
+      "action": "api::block-status.block-status.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "srbip9imnizse7yw9wg1zj0l",
+      "action": "api::block-status.block-status.update",
+      "locale": null
+    },
+    {
+      "documentId": "vdain6zxdl9fes2kn6zllp9c",
+      "action": "api::block-type.block-type.create",
+      "locale": null
+    },
+    {
+      "documentId": "ftgy4tf79xy6y0jkh4oitjb6",
+      "action": "api::block-type.block-type.delete",
+      "locale": null
+    },
+    {
+      "documentId": "wuz57lsvwjo2lh387u1b6rsu",
+      "action": "api::block-type.block-type.find",
+      "locale": null
+    },
+    {
+      "documentId": "x9s3l2o2ds2193vmevc8wli6",
+      "action": "api::block-type.block-type.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "vlsp9mbyylatm2ftjjdswif6",
+      "action": "api::block-type.block-type.update",
+      "locale": null
+    },
+    {
+      "documentId": "wsyui50nm2shqfo5wx8n7bxq",
+      "action": "api::block.block.create",
+      "locale": null
+    },
+    {
+      "documentId": "cwlij7cm7m6fmy8sfg308poi",
+      "action": "api::block.block.delete",
+      "locale": null
+    },
+    {
+      "documentId": "ifwvtl3ovovf2wbg9kouzhrh",
+      "action": "api::block.block.find",
+      "locale": null
+    },
+    {
+      "documentId": "us7mm3sp4po9fqzuzi9hx915",
+      "action": "api::block.block.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "vyngigj53hagkyzu948h90t9",
+      "action": "api::block.block.update",
+      "locale": null
+    },
+    {
+      "documentId": "jsyf41399ovpl1o9ej700933",
+      "action": "api::country.country.create",
+      "locale": null
+    },
+    {
+      "documentId": "i138g4jpoqk1o422mq587hf5",
+      "action": "api::country.country.delete",
+      "locale": null
+    },
+    {
+      "documentId": "nystm0iistl8hyyllaj6am1n",
+      "action": "api::country.country.find",
+      "locale": null
+    },
+    {
+      "documentId": "u4ntjisxos8zch7fwj9k9s49",
+      "action": "api::country.country.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "gyimfv7uevt5sv6m9gvvivj6",
+      "action": "api::country.country.update",
+      "locale": null
+    },
+    {
+      "documentId": "jsejek2qxu0hphdt8daxfr2w",
+      "action": "api::developer.developer.create",
+      "locale": null
+    },
+    {
+      "documentId": "fxcptf6otop8icwxv2fajupd",
+      "action": "api::developer.developer.delete",
+      "locale": null
+    },
+    {
+      "documentId": "v85khrlfr2bokaw9pymxce23",
+      "action": "api::developer.developer.find",
+      "locale": null
+    },
+    {
+      "documentId": "sj9xk5ejustxecsob9jw57ay",
+      "action": "api::developer.developer.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "dkin0z53aa9t7q10u86n2cum",
+      "action": "api::developer.developer.update",
+      "locale": null
+    },
+    {
+      "documentId": "a5x7urgjgvwhchm5p3me5dv7",
+      "action": "api::nse.nse.create",
+      "locale": null
+    },
+    {
+      "documentId": "zfdzttnzb7aa43pkkxhzbuxa",
+      "action": "api::nse.nse.delete",
+      "locale": null
+    },
+    {
+      "documentId": "vrnyu3dsg2wd23oheq0dlmry",
+      "action": "api::nse.nse.find",
+      "locale": null
+    },
+    {
+      "documentId": "hq5pwb1xt0gbr7326dm1yu8j",
+      "action": "api::nse.nse.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "v6o02y0tfkpce24w4yyqsrau",
+      "action": "api::nse.nse.update",
+      "locale": null
+    },
+    {
+      "documentId": "mdlfu49vi9ojd1g1dbm5vlh6",
+      "action": "api::project.project.create",
+      "locale": null
+    },
+    {
+      "documentId": "zpf13be8jxz1ks0szwkqs1sx",
+      "action": "api::project.project.delete",
+      "locale": null
+    },
+    {
+      "documentId": "tp7ktunaow8qispxnv7jcuno",
+      "action": "api::project.project.find",
+      "locale": null
+    },
+    {
+      "documentId": "ci28ggt8z8n05bd6scsy0yp9",
+      "action": "api::project.project.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "hp4gnn3bmtet9dh4rjfranzm",
+      "action": "api::project.project.update",
+      "locale": null
+    },
+    {
+      "documentId": "l6oyn6zzlyl05w8gr866pq9g",
+      "action": "api::security-type.security-type.create",
+      "locale": null
+    },
+    {
+      "documentId": "td7m7vixge3ojv5wwklp8ui3",
+      "action": "api::security-type.security-type.delete",
+      "locale": null
+    },
+    {
+      "documentId": "huhp40smjo1vhyxvwz9o5bm0",
+      "action": "api::security-type.security-type.find",
+      "locale": null
+    },
+    {
+      "documentId": "vowdwdnrit3i5dtv02ogpmid",
+      "action": "api::security-type.security-type.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "ifnu33yahpu5wcew2sswchsj",
+      "action": "api::security-type.security-type.update",
+      "locale": null
+    },
+    {
+      "documentId": "e5fpvqxsmf2yomck4yyqhjtk",
+      "action": "api::service.service.create",
+      "locale": null
+    },
+    {
+      "documentId": "f5pu14kvac6rtwk70q9dqlz0",
+      "action": "api::service.service.delete",
+      "locale": null
+    },
+    {
+      "documentId": "dx2v8hhe6kzl1icji47dq39z",
+      "action": "api::service.service.find",
+      "locale": null
+    },
+    {
+      "documentId": "jvmhfwkk6qng4tt3bb2sgxby",
+      "action": "api::service.service.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "i55xw7fr6esfbu00n55737h6",
+      "action": "api::service.service.update",
+      "locale": null
+    },
+    {
+      "documentId": "p9wnfk6hlm756ccpledgdajp",
+      "action": "api::unit-parking-type.unit-parking-type.create",
+      "locale": null
+    },
+    {
+      "documentId": "r31a7m24u8p3ufr0e75yu681",
+      "action": "api::unit-parking-type.unit-parking-type.delete",
+      "locale": null
+    },
+    {
+      "documentId": "fkgh6rb5j20vqwodlkgy36jr",
+      "action": "api::unit-parking-type.unit-parking-type.find",
+      "locale": null
+    },
+    {
+      "documentId": "qgb9treltyl3yvsthh8ujnhn",
+      "action": "api::unit-parking-type.unit-parking-type.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "pba4gs3brhiyepmh7nnf3nau",
+      "action": "api::unit-parking-type.unit-parking-type.update",
+      "locale": null
+    },
+    {
+      "documentId": "twqic5as3w9oid11xhg2cft0",
+      "action": "api::unit-topography.unit-topography.create",
+      "locale": null
+    },
+    {
+      "documentId": "qpw2wttbxamq8yzk0pucnd6b",
+      "action": "api::unit-topography.unit-topography.delete",
+      "locale": null
+    },
+    {
+      "documentId": "zo8ojwebupln9nk2y7v7m777",
+      "action": "api::unit-topography.unit-topography.find",
+      "locale": null
+    },
+    {
+      "documentId": "uh2qdgnfa4p8pvaj0u6bhwwm",
+      "action": "api::unit-topography.unit-topography.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "uhsykdx5gskp9g109ygqcw1c",
+      "action": "api::unit-topography.unit-topography.update",
+      "locale": null
+    },
+    {
+      "documentId": "naeqgxjiskqeddrj58o13suw",
+      "action": "api::unit-usage.unit-usage.create",
+      "locale": null
+    },
+    {
+      "documentId": "zmdtqu9jfwc1xsbqq0ruw4w2",
+      "action": "api::unit-usage.unit-usage.delete",
+      "locale": null
+    },
+    {
+      "documentId": "mq9i7wpv5f3y9256vbsa2vjv",
+      "action": "api::unit-usage.unit-usage.find",
+      "locale": null
+    },
+    {
+      "documentId": "criwqpxcu8wkfgz1vh2jz6eb",
+      "action": "api::unit-usage.unit-usage.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "z6u54ij1mpm9him9igq1gv6s",
+      "action": "api::unit-usage.unit-usage.update",
+      "locale": null
+    },
+    {
+      "documentId": "tjrms0w4e9a9n7dfhrl176qg",
+      "action": "api::unit.unit.create",
+      "locale": null
+    },
+    {
+      "documentId": "dacvndfgtydg9lrigu65pq05",
+      "action": "api::unit.unit.delete",
+      "locale": null
+    },
+    {
+      "documentId": "f2xgqv8kgy30pglzolflh0hm",
+      "action": "api::unit.unit.find",
+      "locale": null
+    },
+    {
+      "documentId": "ksff0tteuhi8bhcy860x2bbn",
+      "action": "api::unit.unit.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "jv45m9l8osu213992mbtejmj",
+      "action": "api::unit.unit.update",
+      "locale": null
+    },
+    {
       "documentId": "c8fu2xolhweeuvqy0k1zrrnk",
       "action": "plugin::content-type-builder.components.getComponent",
       "locale": null

@@ -19,20 +19,6 @@
           "sortable": false
         }
       },
-      "usd": {
-        "edit": {
-          "label": "US Dollar (USD) - Base Currency",
-          "description": "USD is the BASE CURRENCY. All prices are stored in USD. Configure USD rates (typically 1.0 for both buy and sell).",
-          "placeholder": "Add USD configuration",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "USD",
-          "searchable": false,
-          "sortable": false
-        }
-      },
       "mxn": {
         "edit": {
           "label": "Mexican Peso (MXN)",
@@ -57,20 +43,6 @@
         },
         "list": {
           "label": "GTQ",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "svc": {
-        "edit": {
-          "label": "El Salvador (USD)",
-          "description": "El Salvador uses USD (US Dollar) as its official currency. Rates are 1:1 with USD (fixed, not editable).",
-          "placeholder": "El Salvador uses USD",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "SVC",
           "searchable": false,
           "sortable": false
         }
@@ -157,26 +129,13 @@
     "layouts": {
       "list": [
         "id",
-        "usd",
         "mxn",
         "gtq"
       ],
-      "edit": [        
-        [
-          {
-            "name": "usd",
-            "size": 12
-          }
-        ],
+      "edit": [
         [
           {
             "name": "gtq",
-            "size": 12
-          }
-        ],
-        [
-          {
-            "name": "svc",
             "size": 12
           }
         ],

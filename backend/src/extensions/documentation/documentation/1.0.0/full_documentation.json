@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-01-14T05:27:23.059Z"
+    "x-generation-date": "2026-01-14T05:32:34.202Z"
   },
   "path": "/documentation",
   "autoGenerate": true,
@@ -10705,22 +10705,6 @@
           }
         }
       },
-      "CurrenciesCurrencyDollarComponent": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "number"
-          },
-          "buyRate": {
-            "type": "number",
-            "format": "float"
-          },
-          "sellRate": {
-            "type": "number",
-            "format": "float"
-          }
-        }
-      },
       "CurrenciesCurrencyPesoMexicanoComponent": {
         "type": "object",
         "properties": {
@@ -10738,22 +10722,6 @@
         }
       },
       "CurrenciesCurrencyQuetzalComponent": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "number"
-          },
-          "buyRate": {
-            "type": "number",
-            "format": "float"
-          },
-          "sellRate": {
-            "type": "number",
-            "format": "float"
-          }
-        }
-      },
-      "CurrenciesCurrencyColonSalvadorenoComponent": {
         "type": "object",
         "properties": {
           "id": {
@@ -10855,17 +10823,11 @@
           "id": {
             "type": "number"
           },
-          "usd": {
-            "$ref": "#/components/schemas/CurrenciesCurrencyDollarComponent"
-          },
           "mxn": {
             "$ref": "#/components/schemas/CurrenciesCurrencyPesoMexicanoComponent"
           },
           "gtq": {
             "$ref": "#/components/schemas/CurrenciesCurrencyQuetzalComponent"
-          },
-          "svc": {
-            "$ref": "#/components/schemas/CurrenciesCurrencyColonSalvadorenoComponent"
           },
           "hnl": {
             "$ref": "#/components/schemas/CurrenciesCurrencyLempiraComponent"

@@ -22,11 +22,6 @@ export interface CurrenciesCurrencies extends Struct.ComponentSchema {
     mxn: Schema.Attribute.Component<'currencies.currency-peso-mexicano', false>;
     nio: Schema.Attribute.Component<'currencies.currency-cordoba', false>;
     pab: Schema.Attribute.Component<'currencies.currency-balboa', false>;
-    svc: Schema.Attribute.Component<
-      'currencies.currency-colon-salvadoreno',
-      false
-    >;
-    usd: Schema.Attribute.Component<'currencies.currency-dollar', false>;
   };
 }
 
@@ -73,37 +68,6 @@ export interface CurrenciesCurrencyColonCostarricense
   };
 }
 
-export interface CurrenciesCurrencyColonSalvadoreno
-  extends Struct.ComponentSchema {
-  collectionName: 'components_currencies_currency_colon_salvadorenos';
-  info: {
-    description: 'El Salvador uses USD (US Dollar) as its official currency. Rates are 1:1 with USD.';
-    displayName: 'El Salvador (USD)';
-    icon: 'dollar-sign';
-    name: 'Currency Colon Salvadoreno';
-  };
-  attributes: {
-    buyRate: Schema.Attribute.Decimal &
-      Schema.Attribute.SetMinMax<
-        {
-          max: 1;
-          min: 1;
-        },
-        number
-      > &
-      Schema.Attribute.DefaultTo<1>;
-    sellRate: Schema.Attribute.Decimal &
-      Schema.Attribute.SetMinMax<
-        {
-          max: 1;
-          min: 1;
-        },
-        number
-      > &
-      Schema.Attribute.DefaultTo<1>;
-  };
-}
-
 export interface CurrenciesCurrencyCordoba extends Struct.ComponentSchema {
   collectionName: 'components_currencies_currency_cordobas';
   info: {
@@ -115,36 +79,6 @@ export interface CurrenciesCurrencyCordoba extends Struct.ComponentSchema {
   attributes: {
     buyRate: Schema.Attribute.Decimal & Schema.Attribute.DefaultTo<36.5>;
     sellRate: Schema.Attribute.Decimal & Schema.Attribute.DefaultTo<36.45>;
-  };
-}
-
-export interface CurrenciesCurrencyDollar extends Struct.ComponentSchema {
-  collectionName: 'components_currencies_currency_dollars';
-  info: {
-    description: 'US Dollar (USD) - Base currency. All prices are stored in USD.';
-    displayName: 'US Dollar (USD)';
-    icon: 'dollar-sign';
-    name: 'Currency Dollar';
-  };
-  attributes: {
-    buyRate: Schema.Attribute.Decimal &
-      Schema.Attribute.SetMinMax<
-        {
-          max: 1;
-          min: 1;
-        },
-        number
-      > &
-      Schema.Attribute.DefaultTo<1>;
-    sellRate: Schema.Attribute.Decimal &
-      Schema.Attribute.SetMinMax<
-        {
-          max: 1;
-          min: 1;
-        },
-        number
-      > &
-      Schema.Attribute.DefaultTo<1>;
   };
 }
 
@@ -287,9 +221,7 @@ declare module '@strapi/strapi' {
       'currencies.currency-balboa': CurrenciesCurrencyBalboa;
       'currencies.currency-belize': CurrenciesCurrencyBelize;
       'currencies.currency-colon-costarricense': CurrenciesCurrencyColonCostarricense;
-      'currencies.currency-colon-salvadoreno': CurrenciesCurrencyColonSalvadoreno;
       'currencies.currency-cordoba': CurrenciesCurrencyCordoba;
-      'currencies.currency-dollar': CurrenciesCurrencyDollar;
       'currencies.currency-lempira': CurrenciesCurrencyLempira;
       'currencies.currency-peso-mexicano': CurrenciesCurrencyPesoMexicano;
       'currencies.currency-quetzal': CurrenciesCurrencyQuetzal;

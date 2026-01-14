@@ -33,20 +33,6 @@
           "sortable": true
         }
       },
-      "warehouseStorageSizeV2": {
-        "edit": {
-          "label": "Warehouse Storage Size (v²)",
-          "description": "Warehouse storage area in square varas.",
-          "placeholder": "e.g., 600.00",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Storage (v²)",
-          "searchable": true,
-          "sortable": true
-        }
-      },
       "officeSizeM2": {
         "edit": {
           "label": "Office Size (m²)",
@@ -57,20 +43,6 @@
         },
         "list": {
           "label": "Office (m²)",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "officeSizeV2": {
-        "edit": {
-          "label": "Office Size (v²)",
-          "description": "Office area within the warehouse in square varas.",
-          "placeholder": "e.g., 60.00",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Office (v²)",
           "searchable": true,
           "sortable": true
         }
@@ -89,20 +61,6 @@
           "sortable": true
         }
       },
-      "mezzanineSizeV2": {
-        "edit": {
-          "label": "Mezzanine Size (v²)",
-          "description": "Mezzanine area in square varas.",
-          "placeholder": "e.g., 120.00",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Mezzanine (v²)",
-          "searchable": true,
-          "sortable": true
-        }
-      },
       "loadingAreaM2": {
         "edit": {
           "label": "Loading Area (m²)",
@@ -113,20 +71,6 @@
         },
         "list": {
           "label": "Loading Area (m²)",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "loadingAreaV2": {
-        "edit": {
-          "label": "Loading Area (v²)",
-          "description": "Loading area in square varas.",
-          "placeholder": "e.g., 96.00",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Loading Area (v²)",
           "searchable": true,
           "sortable": true
         }
@@ -145,20 +89,6 @@
           "sortable": true
         }
       },
-      "width1V2": {
-        "edit": {
-          "label": "Width (v²)",
-          "description": "Primary width measurement in square varas.",
-          "placeholder": "e.g., 30.00",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Width (v²)",
-          "searchable": true,
-          "sortable": true
-        }
-      },
       "depth1M2": {
         "edit": {
           "label": "Depth (Primary) (m²)",
@@ -169,20 +99,6 @@
         },
         "list": {
           "label": "Depth 1 (m²)",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "depth1V2": {
-        "edit": {
-          "label": "Depth (Primary) (v²)",
-          "description": "Primary depth measurement in square varas.",
-          "placeholder": "e.g., 24.00",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Depth 1 (v²)",
           "searchable": true,
           "sortable": true
         }
@@ -201,20 +117,6 @@
           "sortable": true
         }
       },
-      "depth2V2": {
-        "edit": {
-          "label": "Depth (Secondary) (v²)",
-          "description": "Secondary depth measurement in square varas.",
-          "placeholder": "e.g., 21.60",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Depth 2 (v²)",
-          "searchable": true,
-          "sortable": true
-        }
-      },
       "heightM2": {
         "edit": {
           "label": "Height (m²)",
@@ -229,24 +131,10 @@
           "sortable": true
         }
       },
-      "heightV2": {
-        "edit": {
-          "label": "Height (v²)",
-          "description": "Height measurement in square varas.",
-          "placeholder": "e.g., 7.20",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Height (v²)",
-          "searchable": true,
-          "sortable": true
-        }
-      },
       "additionalParkingPriceUSD": {
         "edit": {
-          "label": "Additional Parking Price",
-          "description": "Price for additional parking space in USD.",
+          "label": "Additional Parking Price (USD)",
+          "description": "Price in USD (US Dollars) for additional parking space. USD is the base currency - all prices are stored in USD.",
           "placeholder": "e.g., 5000.00",
           "visible": true,
           "editable": true
@@ -280,17 +168,7 @@
             "size": 6
           },
           {
-            "name": "warehouseStorageSizeV2",
-            "size": 6
-          }
-        ],
-        [
-          {
             "name": "officeSizeM2",
-            "size": 6
-          },
-          {
-            "name": "officeSizeV2",
             "size": 6
           }
         ],
@@ -300,17 +178,7 @@
             "size": 6
           },
           {
-            "name": "mezzanineSizeV2",
-            "size": 6
-          }
-        ],
-        [
-          {
             "name": "loadingAreaM2",
-            "size": 6
-          },
-          {
-            "name": "loadingAreaV2",
             "size": 6
           }
         ],
@@ -320,17 +188,7 @@
             "size": 6
           },
           {
-            "name": "width1V2",
-            "size": 6
-          }
-        ],
-        [
-          {
             "name": "depth1M2",
-            "size": 6
-          },
-          {
-            "name": "depth1V2",
             "size": 6
           }
         ],
@@ -340,24 +198,14 @@
             "size": 6
           },
           {
-            "name": "depth2V2",
-            "size": 6
-          }
-        ],
-        [
-          {
             "name": "heightM2",
-            "size": 6
-          },
-          {
-            "name": "heightV2",
             "size": 6
           }
         ],
         [
           {
             "name": "additionalParkingPriceUSD",
-            "size": 12
+            "size": 6
           }
         ]
       ]

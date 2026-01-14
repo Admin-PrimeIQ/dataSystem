@@ -7,7 +7,7 @@
       "searchable": true,
       "pageSize": 10,
       "mainField": "name",
-      "defaultSortBy": "name",
+      "defaultSortBy": "id",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -133,20 +133,6 @@
           "sortable": true
         }
       },
-      "frontV2": {
-        "edit": {
-          "label": "Front (v²)",
-          "description": "Front measurement in square varas.",
-          "placeholder": "e.g., 12.60",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Front (v²)",
-          "searchable": false,
-          "sortable": true
-        }
-      },
       "depthM2": {
         "edit": {
           "label": "Depth (m²)",
@@ -157,20 +143,6 @@
         },
         "list": {
           "label": "Depth (m²)",
-          "searchable": false,
-          "sortable": true
-        }
-      },
-      "depthV2": {
-        "edit": {
-          "label": "Depth (v²)",
-          "description": "Depth measurement in square varas.",
-          "placeholder": "e.g., 18.90",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Depth (v²)",
           "searchable": false,
           "sortable": true
         }
@@ -189,20 +161,6 @@
           "sortable": true
         }
       },
-      "landV2": {
-        "edit": {
-          "label": "Land Area (v²)",
-          "description": "Total land area in square varas.",
-          "placeholder": "e.g., 198.00",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Land (v²)",
-          "searchable": false,
-          "sortable": true
-        }
-      },
       "unitSizeM2": {
         "edit": {
           "label": "Unit Size (m²)",
@@ -213,20 +171,6 @@
         },
         "list": {
           "label": "Unit Size (m²)",
-          "searchable": false,
-          "sortable": true
-        }
-      },
-      "unitSizeV2": {
-        "edit": {
-          "label": "Unit Size (v²)",
-          "description": "Total unit size in square varas.",
-          "placeholder": "e.g., 144.60",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Unit Size (v²)",
           "searchable": false,
           "sortable": true
         }
@@ -245,20 +189,6 @@
           "sortable": true
         }
       },
-      "parkingSizeV2": {
-        "edit": {
-          "label": "Parking Size (v²)",
-          "description": "Parking space size in square varas.",
-          "placeholder": "e.g., 14.40",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Parking Size (v²)",
-          "searchable": false,
-          "sortable": true
-        }
-      },
       "totalSizeM2": {
         "edit": {
           "label": "Total Size (m²)",
@@ -273,20 +203,6 @@
           "sortable": true
         }
       },
-      "totalSizeV2": {
-        "edit": {
-          "label": "Total Size (v²)",
-          "description": "Total unit size including all areas in square varas.",
-          "placeholder": "e.g., 162.90",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Total Size (v²)",
-          "searchable": false,
-          "sortable": true
-        }
-      },
       "habitableConstructionM2": {
         "edit": {
           "label": "Habitable Construction (m²)",
@@ -297,20 +213,6 @@
         },
         "list": {
           "label": "Habitable (m²)",
-          "searchable": false,
-          "sortable": true
-        }
-      },
-      "habitableConstructionV2": {
-        "edit": {
-          "label": "Habitable Construction (v²)",
-          "description": "Habitable construction area in square varas.",
-          "placeholder": "e.g., 120.00",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Habitable (v²)",
           "searchable": false,
           "sortable": true
         }
@@ -432,7 +334,7 @@
       "totalPriceUSD": {
         "edit": {
           "label": "Total Price (USD)",
-          "description": "Total unit price in US Dollars.",
+          "description": "Total unit price in USD (US Dollars). USD is the base currency - all prices are stored in USD.",
           "placeholder": "e.g., 150000.00",
           "visible": true,
           "editable": true
@@ -443,24 +345,10 @@
           "sortable": true
         }
       },
-      "totalPriceGTQ": {
-        "edit": {
-          "label": "Total Price (GTQ)",
-          "description": "Total unit price in Guatemalan Quetzales.",
-          "placeholder": "e.g., 1170000.00",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Price (GTQ)",
-          "searchable": false,
-          "sortable": true
-        }
-      },
       "priceWithoutVATUSD": {
         "edit": {
           "label": "Price Without VAT (USD)",
-          "description": "Unit price excluding VAT in US Dollars.",
+          "description": "Unit price excluding VAT in USD (US Dollars). USD is the base currency - all prices are stored in USD.",
           "placeholder": "e.g., 130434.78",
           "visible": true,
           "editable": true
@@ -471,24 +359,10 @@
           "sortable": true
         }
       },
-      "priceWithoutVATGTQ": {
-        "edit": {
-          "label": "Price Without VAT (GTQ)",
-          "description": "Unit price excluding VAT in Guatemalan Quetzales.",
-          "placeholder": "e.g., 1017391.30",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Price w/o VAT (GTQ)",
-          "searchable": false,
-          "sortable": true
-        }
-      },
       "pricePerM2USD": {
         "edit": {
           "label": "Price per m² (USD)",
-          "description": "Price per square meter in US Dollars.",
+          "description": "Price per square meter in USD (US Dollars). USD is the base currency - all prices are stored in USD.",
           "placeholder": "e.g., 1244.81",
           "visible": true,
           "editable": true
@@ -499,24 +373,10 @@
           "sortable": true
         }
       },
-      "pricePerV2USD": {
-        "edit": {
-          "label": "Price per v² (USD)",
-          "description": "Price per square vara in US Dollars.",
-          "placeholder": "e.g., 1037.34",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Price/v² (USD)",
-          "searchable": false,
-          "sortable": true
-        }
-      },
       "rentalPriceUSD": {
         "edit": {
           "label": "Rental Price (USD)",
-          "description": "Monthly rental price in US Dollars.",
+          "description": "Monthly rental price in USD (US Dollars). USD is the base currency - all prices are stored in USD.",
           "placeholder": "e.g., 800.00",
           "visible": true,
           "editable": true
@@ -527,24 +387,10 @@
           "sortable": true
         }
       },
-      "rentalPriceGTQ": {
-        "edit": {
-          "label": "Rental Price (GTQ)",
-          "description": "Monthly rental price in Guatemalan Quetzales.",
-          "placeholder": "e.g., 6240.00",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Rental (GTQ)",
-          "searchable": false,
-          "sortable": true
-        }
-      },
       "rentalPriceWithoutVATUSD": {
         "edit": {
           "label": "Rental Price Without VAT (USD)",
-          "description": "Monthly rental price excluding VAT in US Dollars.",
+          "description": "Monthly rental price excluding VAT in USD (US Dollars). USD is the base currency - all prices are stored in USD.",
           "placeholder": "e.g., 695.65",
           "visible": true,
           "editable": true
@@ -555,24 +401,10 @@
           "sortable": true
         }
       },
-      "rentalPriceWithoutVATGTQ": {
-        "edit": {
-          "label": "Rental Price Without VAT (GTQ)",
-          "description": "Monthly rental price excluding VAT in Guatemalan Quetzales.",
-          "placeholder": "e.g., 5426.09",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Rental w/o VAT (GTQ)",
-          "searchable": false,
-          "sortable": true
-        }
-      },
       "rentalPricePerM2WithoutVATUSD": {
         "edit": {
           "label": "Rental Price per m² Without VAT (USD)",
-          "description": "Monthly rental price per square meter excluding VAT in US Dollars.",
+          "description": "Monthly rental price per square meter excluding VAT in USD (US Dollars). USD is the base currency - all prices are stored in USD.",
           "placeholder": "e.g., 5.77",
           "visible": true,
           "editable": true
@@ -583,72 +415,30 @@
           "sortable": true
         }
       },
-      "rentalPricePerM2WithoutVATGTQ": {
+      "maintenanceTotalPriceM2USD": {
         "edit": {
-          "label": "Rental Price per m² Without VAT (GTQ)",
-          "description": "Monthly rental price per square meter excluding VAT in Guatemalan Quetzales.",
-          "placeholder": "e.g., 45.00",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Rental/m² w/o VAT (GTQ)",
-          "searchable": false,
-          "sortable": true
-        }
-      },
-      "maintenanceTotalPriceM2": {
-        "edit": {
-          "label": "Maintenance Total Price (m²)",
+          "label": "Maintenance Total Price (m²) (USD)",
           "description": "Total monthly maintenance fee per square meter.",
           "placeholder": "e.g., 150.00",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "Maintenance (m²)",
+          "label": "Maintenance (m²) (USD)",
           "searchable": false,
           "sortable": true
         }
       },
-      "maintenanceTotalPriceV2": {
+      "maintenancePricePerM2USD": {
         "edit": {
-          "label": "Maintenance Total Price (v²)",
-          "description": "Total monthly maintenance fee per square vara.",
-          "placeholder": "e.g., 180.00",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Maintenance (v²)",
-          "searchable": false,
-          "sortable": true
-        }
-      },
-      "maintenancePricePerM2": {
-        "edit": {
-          "label": "Maintenance Price per m²",
+          "label": "Maintenance Price per m² (USD)",
           "description": "Monthly maintenance fee per square meter.",
           "placeholder": "e.g., 1.25",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "Maintenance/m²",
-          "searchable": false,
-          "sortable": true
-        }
-      },
-      "maintenancePricePerV2": {
-        "edit": {
-          "label": "Maintenance Price per v²",
-          "description": "Monthly maintenance fee per square vara.",
-          "placeholder": "e.g., 1.04",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Maintenance/v²",
+          "label": "Maintenance/m² (USD)",
           "searchable": false,
           "sortable": true
         }
@@ -656,7 +446,7 @@
       "installmentUSD": {
         "edit": {
           "label": "Installment (USD)",
-          "description": "Monthly installment payment in US Dollars.",
+          "description": "Monthly installment payment in USD (US Dollars). USD is the base currency - all prices are stored in USD.",
           "placeholder": "e.g., 750.00",
           "visible": true,
           "editable": true
@@ -667,44 +457,16 @@
           "sortable": true
         }
       },
-      "installmentGTQ": {
-        "edit": {
-          "label": "Installment (GTQ)",
-          "description": "Monthly installment payment in Guatemalan Quetzales.",
-          "placeholder": "e.g., 5850.00",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Installment (GTQ)",
-          "searchable": false,
-          "sortable": true
-        }
-      },
       "incomeUSD": {
         "edit": {
           "label": "Required Income (USD)",
-          "description": "Minimum monthly income required in USD to qualify for this property (based on installment and down payment).",
+          "description": "Minimum monthly income required in USD (US Dollars) to qualify for this property (based on installment and down payment). USD is the base currency - all prices are stored in USD.",
           "placeholder": "e.g., 2500.00",
           "visible": true,
           "editable": true
         },
         "list": {
           "label": "Required Income (USD)",
-          "searchable": false,
-          "sortable": true
-        }
-      },
-      "incomeGTQ": {
-        "edit": {
-          "label": "Required Income (GTQ)",
-          "description": "Minimum monthly income required in GTQ to qualify for this property (based on installment and down payment).",
-          "placeholder": "e.g., 20000.00",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Required Income (GTQ)",
           "searchable": false,
           "sortable": true
         }
@@ -857,17 +619,7 @@
             "size": 6
           },
           {
-            "name": "frontV2",
-            "size": 6
-          }
-        ],
-        [
-          {
             "name": "depthM2",
-            "size": 6
-          },
-          {
-            "name": "depthV2",
             "size": 6
           }
         ],
@@ -877,17 +629,7 @@
             "size": 6
           },
           {
-            "name": "landV2",
-            "size": 6
-          }
-        ],
-        [
-          {
             "name": "habitableConstructionM2",
-            "size": 6
-          },
-          {
-            "name": "habitableConstructionV2",
             "size": 6
           }
         ],
@@ -897,17 +639,7 @@
             "size": 6
           },
           {
-            "name": "unitSizeV2",
-            "size": 6
-          }
-        ],
-        [
-          {
             "name": "totalSizeM2",
-            "size": 6
-          },
-          {
-            "name": "totalSizeV2",
             "size": 6
           }
         ],
@@ -919,26 +651,20 @@
           {
             "name": "hasMotorcycleParking",
             "size": 4
-          }
-        ],
-        [
+          },
           {
             "name": "parkingType",
             "size": 4
-          },
+          }
+        ],
+        [ 
           {
             "name": "parkingSizeM2",
             "size": 6
           },
           {
-            "name": "parkingSizeV2",
-            "size": 6
-          }
-        ],
-        [
-          {
             "name": "parkingSpaces",
-            "size": 4
+            "size": 6
           }
         ],
         [
@@ -969,17 +695,7 @@
             "size": 6
           },
           {
-            "name": "totalPriceGTQ",
-            "size": 6
-          }
-        ],
-        [
-          {
             "name": "priceWithoutVATUSD",
-            "size": 6
-          },
-          {
-            "name": "priceWithoutVATGTQ",
             "size": 6
           }
         ],
@@ -989,17 +705,7 @@
             "size": 6
           },
           {
-            "name": "pricePerV2USD",
-            "size": 6
-          }
-        ],
-        [
-          {
             "name": "rentalPriceUSD",
-            "size": 6
-          },
-          {
-            "name": "rentalPriceGTQ",
             "size": 6
           }
         ],
@@ -1009,37 +715,17 @@
             "size": 6
           },
           {
-            "name": "rentalPriceWithoutVATGTQ",
-            "size": 6
-          }
-        ],
-        [
-          {
             "name": "rentalPricePerM2WithoutVATUSD",
             "size": 6
-          },
-          {
-            "name": "rentalPricePerM2WithoutVATGTQ",
-            "size": 6
           }
         ],
         [
           {
-            "name": "maintenanceTotalPriceM2",
+            "name": "maintenanceTotalPriceM2USD",
             "size": 6
           },
           {
-            "name": "maintenanceTotalPriceV2",
-            "size": 6
-          }
-        ],
-        [
-          {
-            "name": "maintenancePricePerM2",
-            "size": 6
-          },
-          {
-            "name": "maintenancePricePerV2",
+            "name": "maintenancePricePerM2USD",
             "size": 6
           }
         ],
@@ -1049,17 +735,7 @@
             "size": 6
           },
           {
-            "name": "installmentGTQ",
-            "size": 6
-          }
-        ],
-        [
-          {
             "name": "incomeUSD",
-            "size": 6
-          },
-          {
-            "name": "incomeGTQ",
             "size": 6
           }
         ],

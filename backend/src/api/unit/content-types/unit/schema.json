@@ -43,25 +43,13 @@
     "frontM2": {
       "type": "decimal"
     },
-    "frontV2": {
-      "type": "decimal"
-    },
     "depthM2": {
-      "type": "decimal"
-    },
-    "depthV2": {
       "type": "decimal"
     },
     "landM2": {
       "type": "decimal"
     },
-    "landV2": {
-      "type": "decimal"
-    },
     "unitSizeM2": {
-      "type": "decimal"
-    },
-    "unitSizeV2": {
       "type": "decimal"
     },
     "parkingSizeM2": {
@@ -77,29 +65,10 @@
         }
       }
     },
-    "parkingSizeV2": {
-      "type": "decimal",
-      "conditions": {
-        "visible": {
-          "==": [
-            {
-              "var": "hasParking"
-            },
-            true
-          ]
-        }
-      }
-    },
     "totalSizeM2": {
       "type": "decimal"
     },
-    "totalSizeV2": {
-      "type": "decimal"
-    },
     "habitableConstructionM2": {
-      "type": "decimal"
-    },
-    "habitableConstructionV2": {
       "type": "decimal"
     },
     "bathrooms": {
@@ -174,61 +143,31 @@
     "totalPriceUSD": {
       "type": "decimal"
     },
-    "totalPriceGTQ": {
-      "type": "decimal"
-    },
     "priceWithoutVATUSD": {
-      "type": "decimal"
-    },
-    "priceWithoutVATGTQ": {
       "type": "decimal"
     },
     "pricePerM2USD": {
       "type": "decimal"
     },
-    "pricePerV2USD": {
-      "type": "decimal"
-    },
     "rentalPriceUSD": {
-      "type": "decimal"
-    },
-    "rentalPriceGTQ": {
       "type": "decimal"
     },
     "rentalPriceWithoutVATUSD": {
       "type": "decimal"
     },
-    "rentalPriceWithoutVATGTQ": {
-      "type": "decimal"
-    },
     "rentalPricePerM2WithoutVATUSD": {
       "type": "decimal"
     },
-    "rentalPricePerM2WithoutVATGTQ": {
+    "maintenanceTotalPriceM2USD": {
       "type": "decimal"
     },
-    "maintenanceTotalPriceM2": {
-      "type": "decimal"
-    },
-    "maintenanceTotalPriceV2": {
-      "type": "decimal"
-    },
-    "maintenancePricePerM2": {
-      "type": "decimal"
-    },
-    "maintenancePricePerV2": {
+    "maintenancePricePerM2USD": {
       "type": "decimal"
     },
     "installmentUSD": {
       "type": "decimal"
     },
-    "installmentGTQ": {
-      "type": "decimal"
-    },
     "incomeUSD": {
-      "type": "decimal"
-    },
-    "incomeGTQ": {
       "type": "decimal"
     },
     "unitAbsorption": {

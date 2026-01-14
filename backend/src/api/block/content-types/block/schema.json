@@ -116,7 +116,7 @@
         }
       }
     },
-    "averagePrice": {
+    "averagePriceUSD": {
       "type": "decimal",
       "pluginOptions": {
         "content-manager": {
@@ -124,7 +124,7 @@
         }
       }
     },
-    "averageSize": {
+    "averageSizeM2": {
       "type": "decimal",
       "pluginOptions": {
         "content-manager": {
@@ -132,7 +132,7 @@
         }
       }
     },
-    "averagePricePerM2": {
+    "averagePricePerM2USD": {
       "type": "decimal",
       "pluginOptions": {
         "content-manager": {
@@ -140,7 +140,7 @@
         }
       }
     },
-    "averageInstallment": {
+    "averageInstallmentUSD": {
       "type": "decimal",
       "pluginOptions": {
         "content-manager": {
@@ -148,7 +148,7 @@
         }
       }
     },
-    "averageIncome": {
+    "averageIncomeUSD": {
       "type": "decimal",
       "pluginOptions": {
         "content-manager": {
@@ -156,7 +156,7 @@
         }
       }
     },
-    "additionalParkingPrice": {
+    "additionalParkingPriceUSD": {
       "type": "decimal"
     },
     "visitorParking": {

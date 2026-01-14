@@ -616,7 +616,7 @@ export interface ApiBlockBlock extends Struct.CollectionTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
-    additionalParkingPrice: Schema.Attribute.Decimal;
+    additionalParkingPriceUSD: Schema.Attribute.Decimal;
     assignedParking: Schema.Attribute.Integer;
     availableM2: Schema.Attribute.Decimal &
       Schema.Attribute.SetPluginOptions<{
@@ -630,31 +630,31 @@ export interface ApiBlockBlock extends Struct.CollectionTypeSchema {
           editable: false;
         };
       }>;
-    averageIncome: Schema.Attribute.Decimal &
+    averageIncomeUSD: Schema.Attribute.Decimal &
       Schema.Attribute.SetPluginOptions<{
         'content-manager': {
           editable: false;
         };
       }>;
-    averageInstallment: Schema.Attribute.Decimal &
+    averageInstallmentUSD: Schema.Attribute.Decimal &
       Schema.Attribute.SetPluginOptions<{
         'content-manager': {
           editable: false;
         };
       }>;
-    averagePrice: Schema.Attribute.Decimal &
+    averagePricePerM2USD: Schema.Attribute.Decimal &
       Schema.Attribute.SetPluginOptions<{
         'content-manager': {
           editable: false;
         };
       }>;
-    averagePricePerM2: Schema.Attribute.Decimal &
+    averagePriceUSD: Schema.Attribute.Decimal &
       Schema.Attribute.SetPluginOptions<{
         'content-manager': {
           editable: false;
         };
       }>;
-    averageSize: Schema.Attribute.Decimal &
+    averageSizeM2: Schema.Attribute.Decimal &
       Schema.Attribute.SetPluginOptions<{
         'content-manager': {
           editable: false;
@@ -1084,60 +1084,43 @@ export interface ApiUnitUnit extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     depthM2: Schema.Attribute.Decimal;
-    depthV2: Schema.Attribute.Decimal;
     frontM2: Schema.Attribute.Decimal;
-    frontV2: Schema.Attribute.Decimal;
     habitableConstructionM2: Schema.Attribute.Decimal;
-    habitableConstructionV2: Schema.Attribute.Decimal;
     hasMotorcycleParking: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     hasParking: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    incomeGTQ: Schema.Attribute.Decimal;
     incomeUSD: Schema.Attribute.Decimal;
-    installmentGTQ: Schema.Attribute.Decimal;
     installmentUSD: Schema.Attribute.Decimal;
     landM2: Schema.Attribute.Decimal;
-    landV2: Schema.Attribute.Decimal;
     legacyId: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::unit.unit'> &
       Schema.Attribute.Private;
-    maintenancePricePerM2: Schema.Attribute.Decimal;
-    maintenancePricePerV2: Schema.Attribute.Decimal;
-    maintenanceTotalPriceM2: Schema.Attribute.Decimal;
-    maintenanceTotalPriceV2: Schema.Attribute.Decimal;
+    maintenancePricePerM2USD: Schema.Attribute.Decimal;
+    maintenanceTotalPriceM2USD: Schema.Attribute.Decimal;
     model: Schema.Attribute.String;
     name: Schema.Attribute.String;
     parkingSizeM2: Schema.Attribute.Decimal;
-    parkingSizeV2: Schema.Attribute.Decimal;
     parkingSpaces: Schema.Attribute.Integer;
     parkingType: Schema.Attribute.Relation<
       'manyToOne',
       'api::unit-parking-type.unit-parking-type'
     >;
     pricePerM2USD: Schema.Attribute.Decimal;
-    pricePerV2USD: Schema.Attribute.Decimal;
-    priceWithoutVATGTQ: Schema.Attribute.Decimal;
     priceWithoutVATUSD: Schema.Attribute.Decimal;
     publishedAt: Schema.Attribute.DateTime;
-    rentalPriceGTQ: Schema.Attribute.Decimal;
-    rentalPricePerM2WithoutVATGTQ: Schema.Attribute.Decimal;
     rentalPricePerM2WithoutVATUSD: Schema.Attribute.Decimal;
     rentalPriceUSD: Schema.Attribute.Decimal;
-    rentalPriceWithoutVATGTQ: Schema.Attribute.Decimal;
     rentalPriceWithoutVATUSD: Schema.Attribute.Decimal;
     topography: Schema.Attribute.Relation<
       'manyToOne',
       'api::unit-topography.unit-topography'
     >;
-    totalPriceGTQ: Schema.Attribute.Decimal;
     totalPriceUSD: Schema.Attribute.Decimal;
     totalSizeM2: Schema.Attribute.Decimal;
-    totalSizeV2: Schema.Attribute.Decimal;
     unitAbsorption: Schema.Attribute.Decimal;
     unitNumber: Schema.Attribute.String;
     unitSizeM2: Schema.Attribute.Decimal;
-    unitSizeV2: Schema.Attribute.Decimal;
     unitType: Schema.Attribute.DynamicZone<
       ['unit-types.housing', 'unit-types.offices', 'unit-types.industrial']
     >;

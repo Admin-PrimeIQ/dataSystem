@@ -155,35 +155,47 @@
       }
     },
     "layouts": {
-      "edit": [
+      "list": [
+        "id",
+        "usd",
+        "mxn",
+        "gtq"
+      ],
+      "edit": [        
         [
           {
             "name": "usd",
-            "size": 6
-          },
+            "size": 12
+          }
+        ],
+        [
           {
             "name": "gtq",
-            "size": 6
+            "size": 12
           }
         ],
         [
           {
             "name": "svc",
-            "size": 6
-          },
+            "size": 12
+          }
+        ],
+        [
           {
             "name": "hnl",
-            "size": 6
+            "size": 12
           }
         ],
         [
           {
             "name": "nio",
-            "size": 6
-          },
+            "size": 12
+          }
+        ],
+        [
           {
             "name": "crc",
-            "size": 6
+            "size": 12
           }
         ],
         [
@@ -195,19 +207,15 @@
         [
           {
             "name": "mxn",
-            "size": 6
-          },
+            "size": 12
+          }
+        ],
+        [
           {
             "name": "bzd",
-            "size": 6
+            "size": 12
           }
         ]
-      ],
-      "list": [
-        "id",
-        "usd",
-        "mxn",
-        "gtq"
       ]
     },
     "uid": "currencies.currencies",

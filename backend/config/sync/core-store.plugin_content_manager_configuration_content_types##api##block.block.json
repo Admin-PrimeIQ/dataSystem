@@ -318,86 +318,86 @@
           "sortable": true
         }
       },
-      "averagePrice": {
+      "averagePriceUSD": {
         "edit": {
-          "label": "Average Price",
-          "description": "Average price of units in this block. This field is calculated automatically and cannot be edited manually.",
+          "label": "Average Price (USD)",
+          "description": "Average price in USD (US Dollars) of units in this block. All prices are stored in USD as the base currency. This field is calculated automatically and cannot be edited manually.",
           "placeholder": "Calculated automatically",
           "visible": true,
           "editable": false
         },
         "list": {
-          "label": "Avg. Price",
+          "label": "Avg. Price (USD)",
           "searchable": true,
           "sortable": true
         }
       },
-      "averageSize": {
+      "averageSizeM2": {
         "edit": {
-          "label": "Average Size",
-          "description": "Average size in square meters of units in this block. This field is calculated automatically and cannot be edited manually.",
+          "label": "Average Size (m²)",
+          "description": "Average size in square meters (m²) of units in this block. This field is calculated automatically and cannot be edited manually.",
           "placeholder": "Calculated automatically",
           "visible": true,
           "editable": false
         },
         "list": {
-          "label": "Avg. Size",
+          "label": "Avg. Size (m²)",
           "searchable": true,
           "sortable": true
         }
       },
-      "averagePricePerM2": {
+      "averagePricePerM2USD": {
         "edit": {
-          "label": "Average Price per m²",
-          "description": "Average price per square meter for units in this block. This field is calculated automatically and cannot be edited manually.",
+          "label": "Average Price per m² (USD)",
+          "description": "Average price per square meter in USD (US Dollars) for units in this block. All prices are stored in USD as the base currency. This field is calculated automatically and cannot be edited manually.",
           "placeholder": "Calculated automatically",
           "visible": true,
           "editable": false
         },
         "list": {
-          "label": "Avg. Price/m²",
+          "label": "Avg. Price/m² (USD)",
           "searchable": true,
           "sortable": true
         }
       },
-      "averageInstallment": {
+      "averageInstallmentUSD": {
         "edit": {
-          "label": "Average Installment",
-          "description": "Average monthly installment payment for units in this block. This field is calculated automatically and cannot be edited manually.",
+          "label": "Average Installment (USD)",
+          "description": "Average monthly installment payment in USD (US Dollars) for units in this block. All prices are stored in USD as the base currency. This field is calculated automatically and cannot be edited manually.",
           "placeholder": "Calculated automatically",
           "visible": true,
           "editable": false
         },
         "list": {
-          "label": "Avg. Installment",
+          "label": "Avg. Installment (USD)",
           "searchable": true,
           "sortable": true
         }
       },
-      "averageIncome": {
+      "averageIncomeUSD": {
         "edit": {
-          "label": "Average Income",
-          "description": "Average required income for customers to afford units in this block. This field is calculated automatically and cannot be edited manually.",
+          "label": "Average Income (USD)",
+          "description": "Average required income in USD (US Dollars) for customers to afford units in this block. All prices are stored in USD as the base currency. This field is calculated automatically and cannot be edited manually.",
           "placeholder": "Calculated automatically",
           "visible": true,
           "editable": false
         },
         "list": {
-          "label": "Avg. Income",
+          "label": "Avg. Income (USD)",
           "searchable": true,
           "sortable": true
         }
       },
-      "additionalParkingPrice": {
+      "additionalParkingPriceUSD": {
         "edit": {
-          "label": "Additional Parking Price",
-          "description": "Price for additional parking spaces beyond the standard allocation.",
+          "label": "Additional Parking Price (USD)",
+          "description": "Price in USD (US Dollars) for additional parking spaces beyond the standard allocation. All prices are stored in USD as the base currency.",
           "placeholder": "e.g., 50000, 75000",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "Add. Parking Price",
+          "label": "Add. Parking Price (USD)",
           "searchable": true,
           "sortable": true
         }
@@ -631,15 +631,15 @@
         ],
         [
           {
-            "name": "averagePricePerM2",
+            "name": "averagePricePerM2USD",
             "size": 4
           },
           {
-            "name": "averageInstallment",
+            "name": "averageInstallmentUSD",
             "size": 4
           },
           {
-            "name": "averageIncome",
+            "name": "averageIncomeUSD",
             "size": 4
           }
         ],
@@ -659,7 +659,7 @@
         ],
         [
           {
-            "name": "additionalParkingPrice",
+            "name": "additionalParkingPriceUSD",
             "size": 6
           },
           {
@@ -669,11 +669,11 @@
         ],
         [
           {
-            "name": "averagePrice",
+            "name": "averagePriceUSD",
             "size": 6
           },
           {
-            "name": "averageSize",
+            "name": "averageSizeM2",
             "size": 6
           }
         ]

@@ -199,8 +199,7 @@ export interface UnitTypesHousing extends Struct.ComponentSchema {
     name: 'Housing';
   };
   attributes: {
-    balconyTerraceSize: Schema.Attribute.Decimal;
-    balconyTerraceSizeV2: Schema.Attribute.Decimal;
+    balconyTerraceSizeM2: Schema.Attribute.Decimal;
     bedrooms: Schema.Attribute.Integer;
   };
 }
@@ -216,21 +215,13 @@ export interface UnitTypesIndustrial extends Struct.ComponentSchema {
   attributes: {
     additionalParkingPriceUSD: Schema.Attribute.Decimal;
     depth1M2: Schema.Attribute.Decimal;
-    depth1V2: Schema.Attribute.Decimal;
     depth2M2: Schema.Attribute.Decimal;
-    depth2V2: Schema.Attribute.Decimal;
     heightM2: Schema.Attribute.Decimal;
-    heightV2: Schema.Attribute.Decimal;
     loadingAreaM2: Schema.Attribute.Decimal;
-    loadingAreaV2: Schema.Attribute.Decimal;
     mezzanineSizeM2: Schema.Attribute.Decimal;
-    mezzanineSizeV2: Schema.Attribute.Decimal;
     officeSizeM2: Schema.Attribute.Decimal;
-    officeSizeV2: Schema.Attribute.Decimal;
     warehouseStorageSizeM2: Schema.Attribute.Decimal;
-    warehouseStorageSizeV2: Schema.Attribute.Decimal;
     width1M2: Schema.Attribute.Decimal;
-    width1V2: Schema.Attribute.Decimal;
   };
 }
 
@@ -243,8 +234,7 @@ export interface UnitTypesOffices extends Struct.ComponentSchema {
     name: 'Offices';
   };
   attributes: {
-    balconyTerraceSize: Schema.Attribute.Decimal;
-    balconyTerraceSizeV2: Schema.Attribute.Decimal;
+    balconyTerraceSizeM2: Schema.Attribute.Decimal;
     employeeCapacity: Schema.Attribute.Integer;
     employeeCapacityRange: Schema.Attribute.Enumeration<
       [

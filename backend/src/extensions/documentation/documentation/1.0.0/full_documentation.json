@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-01-12T22:35:15.620Z"
+    "x-generation-date": "2026-01-14T05:27:23.059Z"
   },
   "path": "/documentation",
   "autoGenerate": true,
@@ -11011,27 +11011,27 @@
                 "type": "number",
                 "format": "float"
               },
-              "averagePrice": {
+              "averagePriceUSD": {
                 "type": "number",
                 "format": "float"
               },
-              "averageSize": {
+              "averageSizeM2": {
                 "type": "number",
                 "format": "float"
               },
-              "averagePricePerM2": {
+              "averagePricePerM2USD": {
                 "type": "number",
                 "format": "float"
               },
-              "averageInstallment": {
+              "averageInstallmentUSD": {
                 "type": "number",
                 "format": "float"
               },
-              "averageIncome": {
+              "averageIncomeUSD": {
                 "type": "number",
                 "format": "float"
               },
-              "additionalParkingPrice": {
+              "additionalParkingPriceUSD": {
                 "type": "number",
                 "format": "float"
               },
@@ -12361,27 +12361,27 @@
             "type": "number",
             "format": "float"
           },
-          "averagePrice": {
+          "averagePriceUSD": {
             "type": "number",
             "format": "float"
           },
-          "averageSize": {
+          "averageSizeM2": {
             "type": "number",
             "format": "float"
           },
-          "averagePricePerM2": {
+          "averagePricePerM2USD": {
             "type": "number",
             "format": "float"
           },
-          "averageInstallment": {
+          "averageInstallmentUSD": {
             "type": "number",
             "format": "float"
           },
-          "averageIncome": {
+          "averageIncomeUSD": {
             "type": "number",
             "format": "float"
           },
-          "additionalParkingPrice": {
+          "additionalParkingPriceUSD": {
             "type": "number",
             "format": "float"
           },
@@ -12559,27 +12559,27 @@
                   "type": "number",
                   "format": "float"
                 },
-                "averagePrice": {
+                "averagePriceUSD": {
                   "type": "number",
                   "format": "float"
                 },
-                "averageSize": {
+                "averageSizeM2": {
                   "type": "number",
                   "format": "float"
                 },
-                "averagePricePerM2": {
+                "averagePricePerM2USD": {
                   "type": "number",
                   "format": "float"
                 },
-                "averageInstallment": {
+                "averageInstallmentUSD": {
                   "type": "number",
                   "format": "float"
                 },
-                "averageIncome": {
+                "averageIncomeUSD": {
                   "type": "number",
                   "format": "float"
                 },
-                "additionalParkingPrice": {
+                "additionalParkingPriceUSD": {
                   "type": "number",
                   "format": "float"
                 },
@@ -19022,15 +19022,7 @@
                 "type": "number",
                 "format": "float"
               },
-              "frontV2": {
-                "type": "number",
-                "format": "float"
-              },
               "depthM2": {
-                "type": "number",
-                "format": "float"
-              },
-              "depthV2": {
                 "type": "number",
                 "format": "float"
               },
@@ -19038,15 +19030,7 @@
                 "type": "number",
                 "format": "float"
               },
-              "landV2": {
-                "type": "number",
-                "format": "float"
-              },
               "unitSizeM2": {
-                "type": "number",
-                "format": "float"
-              },
-              "unitSizeV2": {
                 "type": "number",
                 "format": "float"
               },
@@ -19054,23 +19038,11 @@
                 "type": "number",
                 "format": "float"
               },
-              "parkingSizeV2": {
-                "type": "number",
-                "format": "float"
-              },
               "totalSizeM2": {
                 "type": "number",
                 "format": "float"
               },
-              "totalSizeV2": {
-                "type": "number",
-                "format": "float"
-              },
               "habitableConstructionM2": {
-                "type": "number",
-                "format": "float"
-              },
-              "habitableConstructionV2": {
                 "type": "number",
                 "format": "float"
               },
@@ -19143,15 +19115,7 @@
                 "type": "number",
                 "format": "float"
               },
-              "totalPriceGTQ": {
-                "type": "number",
-                "format": "float"
-              },
               "priceWithoutVATUSD": {
-                "type": "number",
-                "format": "float"
-              },
-              "priceWithoutVATGTQ": {
                 "type": "number",
                 "format": "float"
               },
@@ -19159,15 +19123,7 @@
                 "type": "number",
                 "format": "float"
               },
-              "pricePerV2USD": {
-                "type": "number",
-                "format": "float"
-              },
               "rentalPriceUSD": {
-                "type": "number",
-                "format": "float"
-              },
-              "rentalPriceGTQ": {
                 "type": "number",
                 "format": "float"
               },
@@ -19175,31 +19131,15 @@
                 "type": "number",
                 "format": "float"
               },
-              "rentalPriceWithoutVATGTQ": {
-                "type": "number",
-                "format": "float"
-              },
               "rentalPricePerM2WithoutVATUSD": {
                 "type": "number",
                 "format": "float"
               },
-              "rentalPricePerM2WithoutVATGTQ": {
+              "maintenanceTotalPriceM2USD": {
                 "type": "number",
                 "format": "float"
               },
-              "maintenanceTotalPriceM2": {
-                "type": "number",
-                "format": "float"
-              },
-              "maintenanceTotalPriceV2": {
-                "type": "number",
-                "format": "float"
-              },
-              "maintenancePricePerM2": {
-                "type": "number",
-                "format": "float"
-              },
-              "maintenancePricePerV2": {
+              "maintenancePricePerM2USD": {
                 "type": "number",
                 "format": "float"
               },
@@ -19207,15 +19147,7 @@
                 "type": "number",
                 "format": "float"
               },
-              "installmentGTQ": {
-                "type": "number",
-                "format": "float"
-              },
               "incomeUSD": {
-                "type": "number",
-                "format": "float"
-              },
-              "incomeGTQ": {
                 "type": "number",
                 "format": "float"
               },
@@ -20546,27 +20478,27 @@
                 "type": "number",
                 "format": "float"
               },
-              "averagePrice": {
+              "averagePriceUSD": {
                 "type": "number",
                 "format": "float"
               },
-              "averageSize": {
+              "averageSizeM2": {
                 "type": "number",
                 "format": "float"
               },
-              "averagePricePerM2": {
+              "averagePricePerM2USD": {
                 "type": "number",
                 "format": "float"
               },
-              "averageInstallment": {
+              "averageInstallmentUSD": {
                 "type": "number",
                 "format": "float"
               },
-              "averageIncome": {
+              "averageIncomeUSD": {
                 "type": "number",
                 "format": "float"
               },
-              "additionalParkingPrice": {
+              "additionalParkingPriceUSD": {
                 "type": "number",
                 "format": "float"
               },
@@ -20725,15 +20657,7 @@
             "type": "number",
             "format": "float"
           },
-          "frontV2": {
-            "type": "number",
-            "format": "float"
-          },
           "depthM2": {
-            "type": "number",
-            "format": "float"
-          },
-          "depthV2": {
             "type": "number",
             "format": "float"
           },
@@ -20741,15 +20665,7 @@
             "type": "number",
             "format": "float"
           },
-          "landV2": {
-            "type": "number",
-            "format": "float"
-          },
           "unitSizeM2": {
-            "type": "number",
-            "format": "float"
-          },
-          "unitSizeV2": {
             "type": "number",
             "format": "float"
           },
@@ -20757,23 +20673,11 @@
             "type": "number",
             "format": "float"
           },
-          "parkingSizeV2": {
-            "type": "number",
-            "format": "float"
-          },
           "totalSizeM2": {
             "type": "number",
             "format": "float"
           },
-          "totalSizeV2": {
-            "type": "number",
-            "format": "float"
-          },
           "habitableConstructionM2": {
-            "type": "number",
-            "format": "float"
-          },
-          "habitableConstructionV2": {
             "type": "number",
             "format": "float"
           },
@@ -20966,15 +20870,7 @@
             "type": "number",
             "format": "float"
           },
-          "totalPriceGTQ": {
-            "type": "number",
-            "format": "float"
-          },
           "priceWithoutVATUSD": {
-            "type": "number",
-            "format": "float"
-          },
-          "priceWithoutVATGTQ": {
             "type": "number",
             "format": "float"
           },
@@ -20982,15 +20878,7 @@
             "type": "number",
             "format": "float"
           },
-          "pricePerV2USD": {
-            "type": "number",
-            "format": "float"
-          },
           "rentalPriceUSD": {
-            "type": "number",
-            "format": "float"
-          },
-          "rentalPriceGTQ": {
             "type": "number",
             "format": "float"
           },
@@ -20998,31 +20886,15 @@
             "type": "number",
             "format": "float"
           },
-          "rentalPriceWithoutVATGTQ": {
-            "type": "number",
-            "format": "float"
-          },
           "rentalPricePerM2WithoutVATUSD": {
             "type": "number",
             "format": "float"
           },
-          "rentalPricePerM2WithoutVATGTQ": {
+          "maintenanceTotalPriceM2USD": {
             "type": "number",
             "format": "float"
           },
-          "maintenanceTotalPriceM2": {
-            "type": "number",
-            "format": "float"
-          },
-          "maintenanceTotalPriceV2": {
-            "type": "number",
-            "format": "float"
-          },
-          "maintenancePricePerM2": {
-            "type": "number",
-            "format": "float"
-          },
-          "maintenancePricePerV2": {
+          "maintenancePricePerM2USD": {
             "type": "number",
             "format": "float"
           },
@@ -21030,15 +20902,7 @@
             "type": "number",
             "format": "float"
           },
-          "installmentGTQ": {
-            "type": "number",
-            "format": "float"
-          },
           "incomeUSD": {
-            "type": "number",
-            "format": "float"
-          },
-          "incomeGTQ": {
             "type": "number",
             "format": "float"
           },
@@ -21139,15 +21003,7 @@
                   "type": "number",
                   "format": "float"
                 },
-                "frontV2": {
-                  "type": "number",
-                  "format": "float"
-                },
                 "depthM2": {
-                  "type": "number",
-                  "format": "float"
-                },
-                "depthV2": {
                   "type": "number",
                   "format": "float"
                 },
@@ -21155,15 +21011,7 @@
                   "type": "number",
                   "format": "float"
                 },
-                "landV2": {
-                  "type": "number",
-                  "format": "float"
-                },
                 "unitSizeM2": {
-                  "type": "number",
-                  "format": "float"
-                },
-                "unitSizeV2": {
                   "type": "number",
                   "format": "float"
                 },
@@ -21171,23 +21019,11 @@
                   "type": "number",
                   "format": "float"
                 },
-                "parkingSizeV2": {
-                  "type": "number",
-                  "format": "float"
-                },
                 "totalSizeM2": {
                   "type": "number",
                   "format": "float"
                 },
-                "totalSizeV2": {
-                  "type": "number",
-                  "format": "float"
-                },
                 "habitableConstructionM2": {
-                  "type": "number",
-                  "format": "float"
-                },
-                "habitableConstructionV2": {
                   "type": "number",
                   "format": "float"
                 },
@@ -21260,15 +21096,7 @@
                   "type": "number",
                   "format": "float"
                 },
-                "totalPriceGTQ": {
-                  "type": "number",
-                  "format": "float"
-                },
                 "priceWithoutVATUSD": {
-                  "type": "number",
-                  "format": "float"
-                },
-                "priceWithoutVATGTQ": {
                   "type": "number",
                   "format": "float"
                 },
@@ -21276,15 +21104,7 @@
                   "type": "number",
                   "format": "float"
                 },
-                "pricePerV2USD": {
-                  "type": "number",
-                  "format": "float"
-                },
                 "rentalPriceUSD": {
-                  "type": "number",
-                  "format": "float"
-                },
-                "rentalPriceGTQ": {
                   "type": "number",
                   "format": "float"
                 },
@@ -21292,31 +21112,15 @@
                   "type": "number",
                   "format": "float"
                 },
-                "rentalPriceWithoutVATGTQ": {
-                  "type": "number",
-                  "format": "float"
-                },
                 "rentalPricePerM2WithoutVATUSD": {
                   "type": "number",
                   "format": "float"
                 },
-                "rentalPricePerM2WithoutVATGTQ": {
+                "maintenanceTotalPriceM2USD": {
                   "type": "number",
                   "format": "float"
                 },
-                "maintenanceTotalPriceM2": {
-                  "type": "number",
-                  "format": "float"
-                },
-                "maintenanceTotalPriceV2": {
-                  "type": "number",
-                  "format": "float"
-                },
-                "maintenancePricePerM2": {
-                  "type": "number",
-                  "format": "float"
-                },
-                "maintenancePricePerV2": {
+                "maintenancePricePerM2USD": {
                   "type": "number",
                   "format": "float"
                 },
@@ -21324,15 +21128,7 @@
                   "type": "number",
                   "format": "float"
                 },
-                "installmentGTQ": {
-                  "type": "number",
-                  "format": "float"
-                },
                 "incomeUSD": {
-                  "type": "number",
-                  "format": "float"
-                },
-                "incomeGTQ": {
                   "type": "number",
                   "format": "float"
                 },
@@ -21426,11 +21222,7 @@
           "bedrooms": {
             "type": "integer"
           },
-          "balconyTerraceSize": {
-            "type": "number",
-            "format": "float"
-          },
-          "balconyTerraceSizeV2": {
+          "balconyTerraceSizeM2": {
             "type": "number",
             "format": "float"
           }
@@ -21448,11 +21240,7 @@
               "unit-types.offices"
             ]
           },
-          "balconyTerraceSize": {
-            "type": "number",
-            "format": "float"
-          },
-          "balconyTerraceSizeV2": {
+          "balconyTerraceSizeM2": {
             "type": "number",
             "format": "float"
           },
@@ -21540,15 +21328,7 @@
             "type": "number",
             "format": "float"
           },
-          "warehouseStorageSizeV2": {
-            "type": "number",
-            "format": "float"
-          },
           "officeSizeM2": {
-            "type": "number",
-            "format": "float"
-          },
-          "officeSizeV2": {
             "type": "number",
             "format": "float"
           },
@@ -21556,15 +21336,7 @@
             "type": "number",
             "format": "float"
           },
-          "mezzanineSizeV2": {
-            "type": "number",
-            "format": "float"
-          },
           "loadingAreaM2": {
-            "type": "number",
-            "format": "float"
-          },
-          "loadingAreaV2": {
             "type": "number",
             "format": "float"
           },
@@ -21572,15 +21344,7 @@
             "type": "number",
             "format": "float"
           },
-          "width1V2": {
-            "type": "number",
-            "format": "float"
-          },
           "depth1M2": {
-            "type": "number",
-            "format": "float"
-          },
-          "depth1V2": {
             "type": "number",
             "format": "float"
           },
@@ -21588,15 +21352,7 @@
             "type": "number",
             "format": "float"
           },
-          "depth2V2": {
-            "type": "number",
-            "format": "float"
-          },
           "heightM2": {
-            "type": "number",
-            "format": "float"
-          },
-          "heightV2": {
             "type": "number",
             "format": "float"
           },

@@ -11,10 +11,7 @@
     "bedrooms": {
       "type": "integer"
     },
-    "balconyTerraceSize": {
-      "type": "decimal"
-    },
-    "balconyTerraceSizeV2": {
+    "balconyTerraceSizeM2": {
       "type": "decimal"
     }
   }

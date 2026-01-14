@@ -8,10 +8,7 @@
   },
   "options": {},
   "attributes": {
-    "balconyTerraceSize": {
-      "type": "decimal"
-    },
-    "balconyTerraceSizeV2": {
+    "balconyTerraceSizeM2": {
       "type": "decimal"
     },
     "employeeCapacity": {

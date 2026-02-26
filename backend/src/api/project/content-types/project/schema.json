@@ -53,14 +53,6 @@
       "precision": 10,
       "scale": 8
     },
-    "market": {
-      "type": "enumeration",
-      "required": true,
-      "enum": [
-        "Primary",
-        "Secondary"
-      ]
-    },
     "nse": {
       "type": "relation",
       "relation": "manyToOne",

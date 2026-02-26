@@ -65,15 +65,18 @@
       "relation": "manyToOne",
       "target": "api::block-focus.block-focus"
     },
-    "blockType": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::block-type.block-type"
-    },
     "blockStatus": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::block-status.block-status"
+    },
+    "market": {
+      "type": "enumeration",
+      "required": false,
+      "enum": [
+        "Primary",
+        "Secondary"
+      ]
     },
     "startDate": {
       "type": "date"

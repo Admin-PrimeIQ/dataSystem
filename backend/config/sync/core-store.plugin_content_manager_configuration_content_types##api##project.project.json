@@ -161,20 +161,6 @@
           "sortable": true
         }
       },
-      "market": {
-        "edit": {
-          "label": "Market Type",
-          "description": "Market classification: Primary (new construction) or Secondary (resale/used properties).",
-          "placeholder": "Select: Primary or Secondary",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Market",
-          "searchable": true,
-          "sortable": true
-        }
-      },
       "nse": {
         "edit": {
           "label": "NSE (Socioeconomic Level)",
@@ -484,10 +470,6 @@
         ],
         [
           {
-            "name": "market",
-            "size": 4
-          },
-          {
             "name": "nse",
             "size": 4
           },
@@ -550,7 +532,6 @@
       "list": [
         "name",
         "developer",
-        "market",
         "amenities",
         "services",
         "updatedBy",

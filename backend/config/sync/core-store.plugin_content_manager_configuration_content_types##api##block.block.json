@@ -190,21 +190,6 @@
           "sortable": true
         }
       },
-      "blockType": {
-        "edit": {
-          "label": "Block Type",
-          "description": "Type of real estate block based on its primary use. Select from the block type catalog.",
-          "placeholder": "Select a block type from the catalog",
-          "visible": true,
-          "editable": true,
-          "mainField": "name"
-        },
-        "list": {
-          "label": "Block Type",
-          "searchable": true,
-          "sortable": true
-        }
-      },
       "blockStatus": {
         "edit": {
           "label": "Block Status",
@@ -216,6 +201,20 @@
         },
         "list": {
           "label": "Status",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "market": {
+        "edit": {
+          "label": "Market Type",
+          "description": "Market classification: Primary (new construction) or Secondary (resale/used properties).",
+          "placeholder": "Select: Primary or Secondary",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Market",
           "searchable": true,
           "sortable": true
         }
@@ -563,7 +562,7 @@
         ],
         [
           {
-            "name": "blockType",
+            "name": "market",
             "size": 4
           },
           {
@@ -681,6 +680,7 @@
       "list": [
         "name",
         "project",
+        "market",
         "phase",
         "sector",
         "tower",

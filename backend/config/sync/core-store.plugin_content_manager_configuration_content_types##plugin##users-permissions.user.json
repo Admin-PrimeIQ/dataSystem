@@ -133,15 +133,15 @@
       },
       "role": {
         "edit": {
-          "label": "role",
-          "description": "",
-          "placeholder": "",
+          "label": "Permisos",
+          "description": "Access level: Operator, Supervisor, Administrator or Super Administrator. Defines what this user can do in the system.",
+          "placeholder": "Seleccionar rol",
           "visible": true,
           "editable": true,
           "mainField": "name"
         },
         "list": {
-          "label": "role",
+          "label": "Permisos",
           "searchable": true,
           "sortable": true
         }
@@ -250,6 +250,7 @@
         "id",
         "username",
         "email",
+        "role",
         "confirmed"
       ]
     },

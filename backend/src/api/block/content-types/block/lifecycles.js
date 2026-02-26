@@ -221,104 +221,104 @@ async function buildBlockName(data) {
 }
 
 module.exports = {
-    // CREATION: Triggered when creating a new block
-    // project structure: { connect: [{ id: 1 }] }
-    async beforeCreate(event) {
-        const { data } = event.params;
+    // // CREATION: Triggered when creating a new block
+    // // project structure: { connect: [{ id: 1 }] }
+    // async beforeCreate(event) {
+    //     const { data } = event.params;
 
-        // Validate that project is required and can be resolved
-        const projectName = await getProjectName(data.project);
-        if (!projectName || projectName.trim() === '') {
-            throw createError(400, 'Project is required. A block cannot be created without a valid project.');
-        }
+    //     // Validate that project is required and can be resolved
+    //     const projectName = await getProjectName(data.project);
+    //     if (!projectName || projectName.trim() === '') {
+    //         throw createError(400, 'Project is required. A block cannot be created without a valid project.');
+    //     }
 
-        // Build the block name dynamically (getProjectName handles creation format)
-        const blockName = await buildBlockName(data);
+    //     // Build the block name dynamically (getProjectName handles creation format)
+    //     const blockName = await buildBlockName(data);
 
-        if (blockName) {
-            data.name = blockName;
-            // Generate code from name using slugify
-            // @ts-ignore - slugify is callable at runtime
-            data.code = slugify(blockName, {
-                lower: true,
-                strict: true,
-                locale: 'es'
-            });
-        }
+    //     if (blockName) {
+    //         data.name = blockName;
+    //         // Generate code from name using slugify
+    //         // @ts-ignore - slugify is callable at runtime
+    //         data.code = slugify(blockName, {
+    //             lower: true,
+    //             strict: true,
+    //             locale: 'es'
+    //         });
+    //     }
 
-        return event;
-    },
+    //     return event;
+    // },
 
-    // UPDATE: Triggered when updating an existing block
-    // project structure: { connect: [], disconnect: [] } (relation not being changed)
-    // CLONING: Also triggered when cloning, but project has set structure (handled in getProjectName)
-    async beforeUpdate(event) {
-        const { data } = event.params;
+    // // UPDATE: Triggered when updating an existing block
+    // // project structure: { connect: [], disconnect: [] } (relation not being changed)
+    // // CLONING: Also triggered when cloning, but project has set structure (handled in getProjectName)
+    // async beforeUpdate(event) {
+    //     const { data } = event.params;
 
-        // If project has connect/disconnect operators with empty arrays (UPDATE scenario),
-        // we need to get the project from the existing block
-        let projectData = data.project;
+    //     // If project has connect/disconnect operators with empty arrays (UPDATE scenario),
+    //     // we need to get the project from the existing block
+    //     let projectData = data.project;
 
-        // UPDATE: Check if both connect and disconnect exist and are empty arrays
-        // This indicates the relation is not being changed
-        if (
-            projectData &&
-            typeof projectData === 'object' &&
-            'connect' in projectData &&
-            'disconnect' in projectData &&
-            Array.isArray(projectData.connect) &&
-            Array.isArray(projectData.disconnect) &&
-            projectData.connect.length === 0 &&
-            projectData.disconnect.length === 0
-        ) {
-            // UPDATE: Extract block documentId from data to fetch existing project
-            const blockDocumentId = data.documentId;
+    //     // UPDATE: Check if both connect and disconnect exist and are empty arrays
+    //     // This indicates the relation is not being changed
+    //     if (
+    //         projectData &&
+    //         typeof projectData === 'object' &&
+    //         'connect' in projectData &&
+    //         'disconnect' in projectData &&
+    //         Array.isArray(projectData.connect) &&
+    //         Array.isArray(projectData.disconnect) &&
+    //         projectData.connect.length === 0 &&
+    //         projectData.disconnect.length === 0
+    //     ) {
+    //         // UPDATE: Extract block documentId from data to fetch existing project
+    //         const blockDocumentId = data.documentId;
 
-            if (blockDocumentId) {
-                try {
-                    // In Strapi 5, use Document Service API to find by documentId
-                    const existingBlock = await strapi.documents('api::block.block').findOne({
-                        documentId: blockDocumentId,
-                        populate: ['project'],
-                    });
+    //         if (blockDocumentId) {
+    //             try {
+    //                 // In Strapi 5, use Document Service API to find by documentId
+    //                 const existingBlock = await strapi.documents('api::block.block').findOne({
+    //                     documentId: blockDocumentId,
+    //                     populate: ['project'],
+    //                 });
 
-                    if (existingBlock && existingBlock.project) {
-                        // Use the existing project instead of the connect/disconnect operators
-                        projectData = existingBlock.project;
-                    }
-                } catch (error) {
-                    // Silently fail - continue without project name
-                }
-            }
-        }
+    //                 if (existingBlock && existingBlock.project) {
+    //                     // Use the existing project instead of the connect/disconnect operators
+    //                     projectData = existingBlock.project;
+    //                 }
+    //             } catch (error) {
+    //                 // Silently fail - continue without project name
+    //             }
+    //         }
+    //     }
 
-        // Create a copy of data with the correct project
-        const dataWithProject = {
-            ...data,
-            project: projectData,
-        };
+    //     // Create a copy of data with the correct project
+    //     const dataWithProject = {
+    //         ...data,
+    //         project: projectData,
+    //     };
 
-        // Validate that project is required and can be resolved
-        const projectName = await getProjectName(dataWithProject.project);
-        if (!projectName || projectName.trim() === '') {
-            throw createError(400, 'Project is required. A block cannot exist without a valid project. (please insert again all the information)');
-        }
+    //     // Validate that project is required and can be resolved
+    //     const projectName = await getProjectName(dataWithProject.project);
+    //     if (!projectName || projectName.trim() === '') {
+    //         throw createError(400, 'Project is required. A block cannot exist without a valid project. (please insert again all the information)');
+    //     }
 
-        // Build the block name dynamically
-        const blockName = await buildBlockName(dataWithProject);
+    //     // Build the block name dynamically
+    //     const blockName = await buildBlockName(dataWithProject);
 
-        if (blockName) {
-            data.name = blockName;
-            // Generate code from name using slugify
-            // @ts-ignore - slugify is callable at runtime
-            data.code = slugify(blockName, {
-                lower: true,
-                strict: true,
-                locale: 'es'
-            });
-        }
+    //     if (blockName) {
+    //         data.name = blockName;
+    //         // Generate code from name using slugify
+    //         // @ts-ignore - slugify is callable at runtime
+    //         data.code = slugify(blockName, {
+    //             lower: true,
+    //             strict: true,
+    //             locale: 'es'
+    //         });
+    //     }
 
-        return event;
-    },
+    //     return event;
+    // },
 };
 

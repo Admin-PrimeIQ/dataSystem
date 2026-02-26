@@ -213,103 +213,103 @@ async function buildUnitName(data) {
 }
 
 module.exports = {
-    // CREATION: Triggered when creating a new unit
-    async beforeCreate(event) {
-        const { data } = event.params;
+    // // CREATION: Triggered when creating a new unit
+    // async beforeCreate(event) {
+    //     const { data } = event.params;
 
-        // Validate that block is required and can be resolved
-        const blockName = await getBlockName(data.block);
-        if (!blockName || blockName.trim() === '') {
-            const createError = require('http-errors');
-            throw createError(400, 'Block is required. A unit cannot be created without a valid block.');
-        }
+    //     // Validate that block is required and can be resolved
+    //     const blockName = await getBlockName(data.block);
+    //     if (!blockName || blockName.trim() === '') {
+    //         const createError = require('http-errors');
+    //         throw createError(400, 'Block is required. A unit cannot be created without a valid block.');
+    //     }
 
-        // Build the unit name dynamically
-        const unitName = await buildUnitName(data);
+    //     // Build the unit name dynamically
+    //     const unitName = await buildUnitName(data);
 
-        if (unitName) {
-            data.name = unitName;
-            // Generate code from name using slugify
-            // @ts-ignore - slugify is callable at runtime
-            data.code = slugify(unitName, {
-                lower: true,
-                strict: true,
-                locale: 'es'
-            });
-        }
+    //     if (unitName) {
+    //         data.name = unitName;
+    //         // Generate code from name using slugify
+    //         // @ts-ignore - slugify is callable at runtime
+    //         data.code = slugify(unitName, {
+    //             lower: true,
+    //             strict: true,
+    //             locale: 'es'
+    //         });
+    //     }
 
-        return event;
-    },
+    //     return event;
+    // },
 
-    // UPDATE: Triggered when updating an existing unit
-    async beforeUpdate(event) {
-        const { data } = event.params;
+    // // UPDATE: Triggered when updating an existing unit
+    // async beforeUpdate(event) {
+    //     const { data } = event.params;
 
-        // If block has connect/disconnect operators with empty arrays (UPDATE scenario),
-        // we need to get the block from the existing unit
-        let blockData = data.block;
+    //     // If block has connect/disconnect operators with empty arrays (UPDATE scenario),
+    //     // we need to get the block from the existing unit
+    //     let blockData = data.block;
 
-        // UPDATE: Check if both connect and disconnect exist and are empty arrays
-        // This indicates the relation is not being changed
-        if (
-            blockData &&
-            typeof blockData === 'object' &&
-            'connect' in blockData &&
-            'disconnect' in blockData &&
-            Array.isArray(blockData.connect) &&
-            Array.isArray(blockData.disconnect) &&
-            blockData.connect.length === 0 &&
-            blockData.disconnect.length === 0
-        ) {
-            // UPDATE: Extract unit documentId from data to fetch existing block
-            const unitDocumentId = data.documentId;
+    //     // UPDATE: Check if both connect and disconnect exist and are empty arrays
+    //     // This indicates the relation is not being changed
+    //     if (
+    //         blockData &&
+    //         typeof blockData === 'object' &&
+    //         'connect' in blockData &&
+    //         'disconnect' in blockData &&
+    //         Array.isArray(blockData.connect) &&
+    //         Array.isArray(blockData.disconnect) &&
+    //         blockData.connect.length === 0 &&
+    //         blockData.disconnect.length === 0
+    //     ) {
+    //         // UPDATE: Extract unit documentId from data to fetch existing block
+    //         const unitDocumentId = data.documentId;
 
-            if (unitDocumentId) {
-                try {
-                    // In Strapi 5, use Document Service API to find by documentId
-                    const existingUnit = await strapi.documents('api::unit.unit').findOne({
-                        documentId: unitDocumentId,
-                        populate: ['block'],
-                    });
+    //         if (unitDocumentId) {
+    //             try {
+    //                 // In Strapi 5, use Document Service API to find by documentId
+    //                 const existingUnit = await strapi.documents('api::unit.unit').findOne({
+    //                     documentId: unitDocumentId,
+    //                     populate: ['block'],
+    //                 });
 
-                    if (existingUnit && existingUnit.block) {
-                        // Use the existing block instead of the connect/disconnect operators
-                        blockData = existingUnit.block;
-                    }
-                } catch (error) {
-                    // Silently fail - continue without block name
-                }
-            }
-        }
+    //                 if (existingUnit && existingUnit.block) {
+    //                     // Use the existing block instead of the connect/disconnect operators
+    //                     blockData = existingUnit.block;
+    //                 }
+    //             } catch (error) {
+    //                 // Silently fail - continue without block name
+    //             }
+    //         }
+    //     }
 
-        // Create a copy of data with the correct block
-        const dataWithBlock = {
-            ...data,
-            block: blockData,
-        };
+    //     // Create a copy of data with the correct block
+    //     const dataWithBlock = {
+    //         ...data,
+    //         block: blockData,
+    //     };
 
-        // Validate that block is required and can be resolved
-        const blockName = await getBlockName(dataWithBlock.block);
-        if (!blockName || blockName.trim() === '') {
-            const createError = require('http-errors');
-            throw createError(400, 'Block is required. A unit cannot exist without a valid block. (please insert again all the information)');
-        }
+    //     // Validate that block is required and can be resolved
+    //     const blockName = await getBlockName(dataWithBlock.block);
+    //     if (!blockName || blockName.trim() === '') {
+    //         const createError = require('http-errors');
+    //         throw createError(400, 'Block is required. A unit cannot exist without a valid block. (please insert again all the information)');
+    //     }
 
-        // Build the unit name dynamically
-        const unitName = await buildUnitName(dataWithBlock);
+    //     // Build the unit name dynamically
+    //     const unitName = await buildUnitName(dataWithBlock);
 
-        if (unitName) {
-            data.name = unitName;
-            // Generate code from name using slugify
-            // @ts-ignore - slugify is callable at runtime
-            data.code = slugify(unitName, {
-                lower: true,
-                strict: true,
-                locale: 'es'
-            });
-        }
+    //     if (unitName) {
+    //         data.name = unitName;
+    //         // Generate code from name using slugify
+    //         // @ts-ignore - slugify is callable at runtime
+    //         data.code = slugify(unitName, {
+    //             lower: true,
+    //             strict: true,
+    //             locale: 'es'
+    //         });
+    //     }
 
-        return event;
-    },
+    //     return event;
+    // },
 };
 

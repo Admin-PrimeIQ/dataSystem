@@ -106,31 +106,6 @@
       "locale": null
     },
     {
-      "documentId": "vdain6zxdl9fes2kn6zllp9c",
-      "action": "api::block-type.block-type.create",
-      "locale": null
-    },
-    {
-      "documentId": "ftgy4tf79xy6y0jkh4oitjb6",
-      "action": "api::block-type.block-type.delete",
-      "locale": null
-    },
-    {
-      "documentId": "wuz57lsvwjo2lh387u1b6rsu",
-      "action": "api::block-type.block-type.find",
-      "locale": null
-    },
-    {
-      "documentId": "x9s3l2o2ds2193vmevc8wli6",
-      "action": "api::block-type.block-type.findOne",
-      "locale": null
-    },
-    {
-      "documentId": "vlsp9mbyylatm2ftjjdswif6",
-      "action": "api::block-type.block-type.update",
-      "locale": null
-    },
-    {
       "documentId": "wsyui50nm2shqfo5wx8n7bxq",
       "action": "api::block.block.create",
       "locale": null

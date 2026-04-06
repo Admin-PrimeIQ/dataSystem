@@ -573,37 +573,6 @@ export interface ApiBlockStatusBlockStatus extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiBlockTypeBlockType extends Struct.CollectionTypeSchema {
-  collectionName: 'block_types';
-  info: {
-    description: 'Block type catalog (Residential, Commercial, Industrial, Mixed)';
-    displayName: 'Block Catalog - Types';
-    pluralName: 'block-types';
-    singularName: 'block-type';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    code: Schema.Attribute.UID<'name'>;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::block-type.block-type'
-    > &
-      Schema.Attribute.Private;
-    name: Schema.Attribute.String & Schema.Attribute.Required;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiBlockBlock extends Struct.CollectionTypeSchema {
   collectionName: 'blocks';
   info: {
@@ -672,10 +641,6 @@ export interface ApiBlockBlock extends Struct.CollectionTypeSchema {
       'manyToOne',
       'api::block-status.block-status'
     >;
-    blockType: Schema.Attribute.Relation<
-      'manyToOne',
-      'api::block-type.block-type'
-    >;
     code: Schema.Attribute.UID<'name'>;
     collectionDate: Schema.Attribute.Date;
     commercializationMonths: Schema.Attribute.Integer;
@@ -687,6 +652,7 @@ export interface ApiBlockBlock extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::block.block'> &
       Schema.Attribute.Private;
+    market: Schema.Attribute.Enumeration<['Primary', 'Secondary']>;
     migNumber: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
     name: Schema.Attribute.String;
     phase: Schema.Attribute.String;
@@ -866,8 +832,6 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     longitude: Schema.Attribute.Decimal;
-    market: Schema.Attribute.Enumeration<['Primary', 'Secondary']> &
-      Schema.Attribute.Required;
     modelHouse: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     municipality: Schema.Attribute.String;
     muvi: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
@@ -1648,7 +1612,6 @@ declare module '@strapi/strapi' {
       'api::block-category.block-category': ApiBlockCategoryBlockCategory;
       'api::block-focus.block-focus': ApiBlockFocusBlockFocus;
       'api::block-status.block-status': ApiBlockStatusBlockStatus;
-      'api::block-type.block-type': ApiBlockTypeBlockType;
       'api::block.block': ApiBlockBlock;
       'api::country.country': ApiCountryCountry;
       'api::developer.developer': ApiDeveloperDeveloper;

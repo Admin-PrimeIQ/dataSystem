@@ -264,70 +264,7 @@
       "locale": null
     },
     {
-      "documentId": "indhf5tqj7c9ihay4u1ivfcj",
-      "action": "plugin::content-manager.explorer.create",
-      "actionParameters": {},
-      "subject": "api::block-type.block-type",
-      "properties": {
-        "fields": [
-          "code",
-          "name",
-          "description"
-        ]
-      },
-      "conditions": [],
-      "locale": null
-    },
-    {
-      "documentId": "vhb8q3hwvo654hgd6qlule74",
-      "action": "plugin::content-manager.explorer.delete",
-      "actionParameters": {},
-      "subject": "api::block-type.block-type",
-      "properties": {},
-      "conditions": [],
-      "locale": null
-    },
-    {
-      "documentId": "u9fhrbefakf5wzvnd6761g04",
-      "action": "plugin::content-manager.explorer.publish",
-      "actionParameters": {},
-      "subject": "api::block-type.block-type",
-      "properties": {},
-      "conditions": [],
-      "locale": null
-    },
-    {
-      "documentId": "dvmneqqks3105va1iph6d5y8",
-      "action": "plugin::content-manager.explorer.read",
-      "actionParameters": {},
-      "subject": "api::block-type.block-type",
-      "properties": {
-        "fields": [
-          "code",
-          "name",
-          "description"
-        ]
-      },
-      "conditions": [],
-      "locale": null
-    },
-    {
-      "documentId": "k7xnt0dny952bk73frb46q7x",
-      "action": "plugin::content-manager.explorer.update",
-      "actionParameters": {},
-      "subject": "api::block-type.block-type",
-      "properties": {
-        "fields": [
-          "code",
-          "name",
-          "description"
-        ]
-      },
-      "conditions": [],
-      "locale": null
-    },
-    {
-      "documentId": "rnzuexi44go0nvbw21vctqj6",
+      "documentId": "in1ehfp8tcvxtj3llmg5073n",
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
       "subject": "api::block.block",
@@ -345,8 +282,8 @@
           "collectionDate",
           "blockCategory",
           "blockFocus",
-          "blockType",
           "blockStatus",
+          "market",
           "startDate",
           "deliveryDate",
           "commercializationMonths",
@@ -388,7 +325,7 @@
       "locale": null
     },
     {
-      "documentId": "tsyqwmb7cm4fb8lcwsgt86yr",
+      "documentId": "bii0r3xgxymwlnemd9316vyu",
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::block.block",
@@ -406,8 +343,8 @@
           "collectionDate",
           "blockCategory",
           "blockFocus",
-          "blockType",
           "blockStatus",
+          "market",
           "startDate",
           "deliveryDate",
           "commercializationMonths",
@@ -431,7 +368,7 @@
       "locale": null
     },
     {
-      "documentId": "pnf2oxv66sjo8z513l5wr45y",
+      "documentId": "bkl2j8bm05iz3sbjj6zek1mi",
       "action": "plugin::content-manager.explorer.update",
       "actionParameters": {},
       "subject": "api::block.block",
@@ -449,8 +386,8 @@
           "collectionDate",
           "blockCategory",
           "blockFocus",
-          "blockType",
           "blockStatus",
+          "market",
           "startDate",
           "deliveryDate",
           "commercializationMonths",
@@ -693,7 +630,7 @@
       "locale": null
     },
     {
-      "documentId": "sc56fewt0kumn3c142a40lgg",
+      "documentId": "fxxqm8o7j6lzr7xct92gy1wb",
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
       "subject": "api::project.project",
@@ -709,7 +646,6 @@
           "subzone",
           "latitude",
           "longitude",
-          "market",
           "nse",
           "securityType",
           "muvi",
@@ -760,7 +696,7 @@
       "locale": null
     },
     {
-      "documentId": "bfjap0ixa9jxmx6anm54xwjk",
+      "documentId": "mify7h521vvdp344mbvizc93",
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::project.project",
@@ -776,7 +712,6 @@
           "subzone",
           "latitude",
           "longitude",
-          "market",
           "nse",
           "securityType",
           "muvi",
@@ -809,7 +744,7 @@
       "locale": null
     },
     {
-      "documentId": "c7j88nwshh0d082niv84kuje",
+      "documentId": "li7jbxbvsuiv0qi70s1gdv52",
       "action": "plugin::content-manager.explorer.update",
       "actionParameters": {},
       "subject": "api::project.project",
@@ -825,7 +760,6 @@
           "subzone",
           "latitude",
           "longitude",
-          "market",
           "nse",
           "securityType",
           "muvi",

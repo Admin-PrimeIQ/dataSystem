@@ -24,10 +24,10 @@ module.exports = {
     }
 
     const ROLES = [
-      { type: 'operador', name: 'Operator', description: 'Operator. Basic system usage permissions.' },
-      { type: 'supervisor', name: 'Supervisor', description: 'Supervisor. Manages and supervises operators.' },
-      { type: 'administrador', name: 'Administrator', description: 'Administrator. Broad configuration and management.' },
-      { type: 'super_administrador', name: 'Super Administrator', description: 'Super Administrator. Full access to the system.' },
+      { type: 'operator', name: 'Operator', description: 'Operator. Basic system usage permissions' },
+      { type: 'supervisor', name: 'Supervisor', description: 'Supervisor. Manages and supervises operators' },
+      { type: 'administrator', name: 'Administrator', description: 'Administrator. Broad configuration and management' },
+      { type: 'super_administrator', name: 'Super Administrator', description: 'Super Administrator. Full access to the system' },
     ];
 
     for (const role of ROLES) {

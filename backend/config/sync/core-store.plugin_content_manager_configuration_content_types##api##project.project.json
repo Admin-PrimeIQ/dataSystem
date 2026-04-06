@@ -333,18 +333,19 @@
           "sortable": false
         }
       },
-      "currencies": {
+      "exchangeRateProfile": {
         "edit": {
-          "label": "Currencies Configuration",
-          "description": "USD (US Dollar) is the BASE CURRENCY - all prices are stored in USD. Add alternative currencies (MXN, GTQ, SVC, HNL, CRC, NIO, PAB) with their buy/sell exchange rates relative to USD. Example: If you add GTQ with buyRate 7.85, it means 1 USD = 7.85 GTQ to buy GTQ with USD.",
-          "placeholder": "Configure currencies and exchange rates",
+          "label": "Exchange rate profile",
+          "description": "Shared buy/sell rates vs USD. Create profiles under Exchange rate profiles and assign this project to one profile (rates are edited on the profile, not here).",
+          "placeholder": "Select an exchange rate profile",
           "visible": true,
-          "editable": true
+          "editable": true,
+          "mainField": "name"
         },
         "list": {
-          "label": "Currencies",
-          "searchable": false,
-          "sortable": false
+          "label": "FX profile",
+          "searchable": true,
+          "sortable": true
         }
       },
       "createdAt": {
@@ -524,7 +525,7 @@
         ],
         [
           {
-            "name": "currencies",
+            "name": "exchangeRateProfile",
             "size": 12
           }
         ]
@@ -532,6 +533,7 @@
       "list": [
         "name",
         "developer",
+        "exchangeRateProfile",
         "amenities",
         "services",
         "updatedBy",

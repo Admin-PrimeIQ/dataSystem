@@ -10,15 +10,15 @@
   "attributes": {
     "buyRate": {
       "type": "decimal",
-      "precision": 10,
-      "scale": 6,
+      "precision": 18,
+      "scale": 8,
       "default": 2.000000,
       "description": "Exchange rate to buy BZD with USD. Example: 2.00 means 1 USD = 2.00 BZD (pegged rate)"
     },
     "sellRate": {
       "type": "decimal",
-      "precision": 10,
-      "scale": 6,
+      "precision": 18,
+      "scale": 8,
       "default": 2.000000,
       "description": "Exchange rate to sell BZD for USD. Example: 2.00 means 1 USD = 2.00 BZD (pegged rate)"
     }

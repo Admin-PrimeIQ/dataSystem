@@ -181,6 +181,31 @@
       "locale": null
     },
     {
+      "documentId": "erpfsv0123456789abcdwx01",
+      "action": "api::exchange-rate-profile.exchange-rate-profile.create",
+      "locale": null
+    },
+    {
+      "documentId": "erpfsv0123456789abcdwx02",
+      "action": "api::exchange-rate-profile.exchange-rate-profile.delete",
+      "locale": null
+    },
+    {
+      "documentId": "erpfsv0123456789abcdwx03",
+      "action": "api::exchange-rate-profile.exchange-rate-profile.find",
+      "locale": null
+    },
+    {
+      "documentId": "erpfsv0123456789abcdwx04",
+      "action": "api::exchange-rate-profile.exchange-rate-profile.findOne",
+      "locale": null
+    },
+    {
+      "documentId": "erpfsv0123456789abcdwx05",
+      "action": "api::exchange-rate-profile.exchange-rate-profile.update",
+      "locale": null
+    },
+    {
       "documentId": "dorz10drpi7g5vihgiulmwmw",
       "action": "api::nse.nse.create",
       "locale": null

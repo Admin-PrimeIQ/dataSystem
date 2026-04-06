@@ -116,10 +116,11 @@
       "target": "api::service.service",
       "mappedBy": "projects"
     },
-    "currencies": {
-      "type": "component",
-      "repeatable": false,
-      "component": "currencies.currencies"
+    "exchangeRateProfile": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::exchange-rate-profile.exchange-rate-profile",
+      "inversedBy": "projects"
     }
   }
 }

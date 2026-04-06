@@ -10,15 +10,15 @@
   "attributes": {
     "buyRate": {
       "type": "decimal",
-      "precision": 10,
-      "scale": 6,
+      "precision": 18,
+      "scale": 8,
       "default": 36.500000,
       "description": "Exchange rate to buy NIO with USD. Example: 36.821 means 1 USD = 36.821 NIO"
     },
     "sellRate": {
       "type": "decimal",
-      "precision": 10,
-      "scale": 6,
+      "precision": 18,
+      "scale": 8,
       "default": 36.450000,
       "description": "Exchange rate to sell NIO for USD. Example: 36.80 means 1 USD = 36.80 NIO"
     }

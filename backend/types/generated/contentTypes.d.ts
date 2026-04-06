@@ -759,6 +759,40 @@ export interface ApiDeveloperDeveloper extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiExchangeRateProfileExchangeRateProfile
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'exchange_rate_profiles';
+  info: {
+    description: 'Shared buy/sell rates vs USD; assign many projects to one profile from here';
+    displayName: '\u2022 Exchange rate profiles';
+    pluralName: 'exchange-rate-profiles';
+    singularName: 'exchange-rate-profile';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    code: Schema.Attribute.UID<'name'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    currencies: Schema.Attribute.Component<'currencies.currencies', false>;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::exchange-rate-profile.exchange-rate-profile'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    projects: Schema.Attribute.Relation<'oneToMany', 'api::project.project'>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiNseNse extends Struct.CollectionTypeSchema {
   collectionName: 'nses';
   info: {
@@ -806,7 +840,6 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    currencies: Schema.Attribute.Component<'currencies.currencies', false>;
     department: Schema.Attribute.String;
     developer: Schema.Attribute.Relation<
       'manyToOne',
@@ -820,6 +853,10 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
         },
         number
       >;
+    exchangeRateProfile: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::exchange-rate-profile.exchange-rate-profile'
+    >;
     fha: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     fractionalDownPayment: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
@@ -1612,6 +1649,7 @@ declare module '@strapi/strapi' {
       'api::block.block': ApiBlockBlock;
       'api::country.country': ApiCountryCountry;
       'api::developer.developer': ApiDeveloperDeveloper;
+      'api::exchange-rate-profile.exchange-rate-profile': ApiExchangeRateProfileExchangeRateProfile;
       'api::nse.nse': ApiNseNse;
       'api::project.project': ApiProjectProject;
       'api::security-type.security-type': ApiSecurityTypeSecurityType;

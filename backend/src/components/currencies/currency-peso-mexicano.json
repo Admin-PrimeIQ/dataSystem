@@ -10,15 +10,15 @@
   "attributes": {
     "buyRate": {
       "type": "decimal",
-      "precision": 10,
-      "scale": 6,
+      "precision": 18,
+      "scale": 8,
       "default": 18.500000,
       "description": "Exchange rate to buy MXN with USD. Example: 17.72 means 1 USD = 17.72 MXN"
     },
     "sellRate": {
       "type": "decimal",
-      "precision": 10,
-      "scale": 6,
+      "precision": 18,
+      "scale": 8,
       "default": 18.450000,
       "description": "Exchange rate to sell MXN for USD. Example: 17.70 means 1 USD = 17.70 MXN"
     }

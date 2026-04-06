@@ -10,15 +10,15 @@
   "attributes": {
     "buyRate": {
       "type": "decimal",
-      "precision": 10,
-      "scale": 6,
+      "precision": 18,
+      "scale": 8,
       "default": 520.000000,
       "description": "Exchange rate to buy CRC with USD. Example: 497.55 means 1 USD = 497.55 CRC"
     },
     "sellRate": {
       "type": "decimal",
-      "precision": 10,
-      "scale": 6,
+      "precision": 18,
+      "scale": 8,
       "default": 515.000000,
       "description": "Exchange rate to sell CRC for USD. Example: 497.00 means 1 USD = 497.00 CRC"
     }

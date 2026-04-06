@@ -10,15 +10,15 @@
   "attributes": {
     "buyRate": {
       "type": "decimal",
-      "precision": 10,
-      "scale": 6,
+      "precision": 18,
+      "scale": 8,
       "default": 7.850000,
       "description": "Exchange rate to buy GTQ with USD. Example: 7.6741 means 1 USD = 7.6741 GTQ"
     },
     "sellRate": {
       "type": "decimal",
-      "precision": 10,
-      "scale": 6,
+      "precision": 18,
+      "scale": 8,
       "default": 7.800000,
       "description": "Exchange rate to sell GTQ for USD. Example: 7.67 means 1 USD = 7.67 GTQ"
     }

@@ -567,6 +567,114 @@
       "locale": null
     },
     {
+      "documentId": "exrpcr8k2m9n1p4q7s3t6u01a",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::exchange-rate-profile.exchange-rate-profile",
+      "properties": {
+        "fields": [
+          "code",
+          "name",
+          "description",
+          "currencies.mxn.buyRate",
+          "currencies.mxn.sellRate",
+          "currencies.gtq.buyRate",
+          "currencies.gtq.sellRate",
+          "currencies.hnl.buyRate",
+          "currencies.hnl.sellRate",
+          "currencies.crc.buyRate",
+          "currencies.crc.sellRate",
+          "currencies.nio.buyRate",
+          "currencies.nio.sellRate",
+          "currencies.pab.buyRate",
+          "currencies.pab.sellRate",
+          "currencies.bzd.buyRate",
+          "currencies.bzd.sellRate",
+          "projects"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "exrpdl8k2m9n1p4q7s3t6u01b",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::exchange-rate-profile.exchange-rate-profile",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "exrpps8k2m9n1p4q7s3t6u01c",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::exchange-rate-profile.exchange-rate-profile",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "exrprd8k2m9n1p4q7s3t6u01d",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::exchange-rate-profile.exchange-rate-profile",
+      "properties": {
+        "fields": [
+          "code",
+          "name",
+          "description",
+          "currencies.mxn.buyRate",
+          "currencies.mxn.sellRate",
+          "currencies.gtq.buyRate",
+          "currencies.gtq.sellRate",
+          "currencies.hnl.buyRate",
+          "currencies.hnl.sellRate",
+          "currencies.crc.buyRate",
+          "currencies.crc.sellRate",
+          "currencies.nio.buyRate",
+          "currencies.nio.sellRate",
+          "currencies.pab.buyRate",
+          "currencies.pab.sellRate",
+          "currencies.bzd.buyRate",
+          "currencies.bzd.sellRate",
+          "projects"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "exrpup8k2m9n1p4q7s3t6u01e",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::exchange-rate-profile.exchange-rate-profile",
+      "properties": {
+        "fields": [
+          "code",
+          "name",
+          "description",
+          "currencies.mxn.buyRate",
+          "currencies.mxn.sellRate",
+          "currencies.gtq.buyRate",
+          "currencies.gtq.sellRate",
+          "currencies.hnl.buyRate",
+          "currencies.hnl.sellRate",
+          "currencies.crc.buyRate",
+          "currencies.crc.sellRate",
+          "currencies.nio.buyRate",
+          "currencies.nio.sellRate",
+          "currencies.pab.buyRate",
+          "currencies.pab.sellRate",
+          "currencies.bzd.buyRate",
+          "currencies.bzd.sellRate",
+          "projects"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
       "documentId": "wp8ctjuchyaobxlux4wdg9b2",
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
@@ -658,20 +766,7 @@
           "downPaymentPercentage",
           "amenities",
           "services",
-          "currencies.mxn.buyRate",
-          "currencies.mxn.sellRate",
-          "currencies.gtq.buyRate",
-          "currencies.gtq.sellRate",
-          "currencies.hnl.buyRate",
-          "currencies.hnl.sellRate",
-          "currencies.crc.buyRate",
-          "currencies.crc.sellRate",
-          "currencies.nio.buyRate",
-          "currencies.nio.sellRate",
-          "currencies.pab.buyRate",
-          "currencies.pab.sellRate",
-          "currencies.bzd.buyRate",
-          "currencies.bzd.sellRate"
+          "exchangeRateProfile"
         ]
       },
       "conditions": [],
@@ -724,20 +819,7 @@
           "downPaymentPercentage",
           "amenities",
           "services",
-          "currencies.mxn.buyRate",
-          "currencies.mxn.sellRate",
-          "currencies.gtq.buyRate",
-          "currencies.gtq.sellRate",
-          "currencies.hnl.buyRate",
-          "currencies.hnl.sellRate",
-          "currencies.crc.buyRate",
-          "currencies.crc.sellRate",
-          "currencies.nio.buyRate",
-          "currencies.nio.sellRate",
-          "currencies.pab.buyRate",
-          "currencies.pab.sellRate",
-          "currencies.bzd.buyRate",
-          "currencies.bzd.sellRate"
+          "exchangeRateProfile"
         ]
       },
       "conditions": [],
@@ -772,20 +854,7 @@
           "downPaymentPercentage",
           "amenities",
           "services",
-          "currencies.mxn.buyRate",
-          "currencies.mxn.sellRate",
-          "currencies.gtq.buyRate",
-          "currencies.gtq.sellRate",
-          "currencies.hnl.buyRate",
-          "currencies.hnl.sellRate",
-          "currencies.crc.buyRate",
-          "currencies.crc.sellRate",
-          "currencies.nio.buyRate",
-          "currencies.nio.sellRate",
-          "currencies.pab.buyRate",
-          "currencies.pab.sellRate",
-          "currencies.bzd.buyRate",
-          "currencies.bzd.sellRate"
+          "exchangeRateProfile"
         ]
       },
       "conditions": [],

@@ -3,7 +3,7 @@ import type { Schema, Struct } from '@strapi/strapi';
 export interface CurrenciesCurrencies extends Struct.ComponentSchema {
   collectionName: 'components_currencies_currencies';
   info: {
-    description: 'Currency configuration for the project. USD (US Dollar) is the BASE CURRENCY - all prices are stored in USD. Add alternative currencies with their buy/sell exchange rates relative to USD.';
+    description: 'Currency configuration for an exchange rate profile. USD (US Dollar) is the BASE CURRENCY - all prices are stored in USD. Add alternative currencies with their buy/sell exchange rates relative to USD. Projects link to a profile to use these rates.';
     displayName: 'Currencies Configuration';
     icon: 'coins';
     name: 'Currencies';

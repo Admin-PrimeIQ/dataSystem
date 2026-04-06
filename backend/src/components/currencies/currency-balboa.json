@@ -10,15 +10,15 @@
   "attributes": {
     "buyRate": {
       "type": "decimal",
-      "precision": 10,
-      "scale": 6,
+      "precision": 18,
+      "scale": 8,
       "default": 1.000000,
       "description": "Buy rate for PAB (always 1.0 as it is pegged to USD)"
     },
     "sellRate": {
       "type": "decimal",
-      "precision": 10,
-      "scale": 6,
+      "precision": 18,
+      "scale": 8,
       "default": 1.000000,
       "description": "Sell rate for PAB (always 1.0 as it is pegged to USD)"
     }

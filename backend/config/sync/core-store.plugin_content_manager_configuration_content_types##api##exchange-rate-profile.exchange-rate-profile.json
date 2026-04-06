@@ -1,0 +1,204 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::exchange-rate-profile.exchange-rate-profile",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "name",
+      "defaultSortBy": "name",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "code": {
+        "edit": {
+          "label": "Profile code",
+          "description": "Optional unique code, often auto-generated from the profile name.",
+          "placeholder": "e.g., gtq-gam-q1-2026",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Code",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "name": {
+        "edit": {
+          "label": "Profile name",
+          "description": "Descriptive name (e.g. GAM standard, Interior, single-project exception).",
+          "placeholder": "e.g., Guatemala — GAM — standard rate",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "description": {
+        "edit": {
+          "label": "Description",
+          "description": "Internal notes about when to use this profile.",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Description",
+          "searchable": true,
+          "sortable": false
+        }
+      },
+      "currencies": {
+        "edit": {
+          "label": "Currencies & rates",
+          "description": "USD is the base currency. Configure buy/sell rates for other currencies vs USD.",
+          "placeholder": "Configure currencies",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Currencies",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "projects": {
+        "edit": {
+          "label": "Projects",
+          "description": "Projects that use this exchange rate profile. You can assign many projects here.",
+          "placeholder": "Select projects",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "Projects",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "Created At",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "Updated At",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "Updated By",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "documentId": {
+        "edit": {},
+        "list": {
+          "label": "documentId",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "edit": [
+        [
+          {
+            "name": "name",
+            "size": 8
+          },
+          {
+            "name": "code",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "description",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "currencies",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "projects",
+            "size": 12
+          }
+        ]
+      ],
+      "list": [
+        "name",
+        "code",
+        "description",
+        "updatedBy",
+        "updatedAt"
+      ]
+    },
+    "uid": "api::exchange-rate-profile.exchange-rate-profile"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

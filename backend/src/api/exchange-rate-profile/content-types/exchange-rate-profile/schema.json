@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "exchange_rate_profiles",
+  "info": {
+    "singularName": "exchange-rate-profile",
+    "pluralName": "exchange-rate-profiles",
+    "displayName": "• Exchange rate profiles",
+    "description": "Shared buy/sell rates vs USD; assign many projects to one profile from here"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "uid",
+      "targetField": "name",
+      "required": false
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "currencies": {
+      "type": "component",
+      "repeatable": false,
+      "component": "currencies.currencies"
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project",
+      "mappedBy": "exchangeRateProfile"
+    }
+  }
+}

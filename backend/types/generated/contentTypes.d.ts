@@ -1503,10 +1503,7 @@ export interface PluginUsersPermissionsRole
   };
   pluginOptions: {
     'content-manager': {
-      visible: false;
-    };
-    'content-type-builder': {
-      visible: false;
+      visible: true;
     };
   };
   attributes: {

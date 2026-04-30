@@ -14,8 +14,9 @@
   "attributes": {
     "project": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::project.project"
+      "relation": "manyToOne",
+      "target": "api::project.project",
+      "inversedBy": "blocks"
     },
     "code": {
       "type": "uid",
@@ -49,7 +50,9 @@
         "T1",
         "T2",
         "T3",
-        "T4"
+        "T4",
+        "S1",
+        "S2"
       ]
     },
     "collectionDate": {

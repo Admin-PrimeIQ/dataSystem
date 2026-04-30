@@ -348,6 +348,21 @@
           "sortable": true
         }
       },
+      "blocks": {
+        "edit": {
+          "label": "Blocks",
+          "description": "Building blocks or sections that make up this real estate project. Select multiple blocks that are part of this project.",
+          "placeholder": "Select the blocks that belong to this project",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "Blocks",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -416,6 +431,15 @@
       }
     },
     "layouts": {
+      "list": [
+        "name",
+        "developer",
+        "exchangeRateProfile",
+        "amenities",
+        "services",
+        "updatedBy",
+        "updatedAt"
+      ],
       "edit": [
         [
           {
@@ -528,16 +552,13 @@
             "name": "exchangeRateProfile",
             "size": 12
           }
+        ],
+        [
+          {
+            "name": "blocks",
+            "size": 6
+          }
         ]
-      ],
-      "list": [
-        "name",
-        "developer",
-        "exchangeRateProfile",
-        "amenities",
-        "services",
-        "updatedBy",
-        "updatedAt"
       ]
     },
     "uid": "api::project.project"

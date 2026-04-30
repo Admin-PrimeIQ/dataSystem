@@ -738,7 +738,7 @@
       "locale": null
     },
     {
-      "documentId": "fxxqm8o7j6lzr7xct92gy1wb",
+      "documentId": "pmerf7uh7qash3eo44lsa4x6",
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
       "subject": "api::project.project",
@@ -766,7 +766,8 @@
           "downPaymentPercentage",
           "amenities",
           "services",
-          "exchangeRateProfile"
+          "exchangeRateProfile",
+          "blocks"
         ]
       },
       "conditions": [],
@@ -791,7 +792,7 @@
       "locale": null
     },
     {
-      "documentId": "mify7h521vvdp344mbvizc93",
+      "documentId": "f6ssywm4epoyzqxffxzyjdr3",
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::project.project",
@@ -819,14 +820,15 @@
           "downPaymentPercentage",
           "amenities",
           "services",
-          "exchangeRateProfile"
+          "exchangeRateProfile",
+          "blocks"
         ]
       },
       "conditions": [],
       "locale": null
     },
     {
-      "documentId": "li7jbxbvsuiv0qi70s1gdv52",
+      "documentId": "fq0cmr8fgulxlrwrh36pt1d2",
       "action": "plugin::content-manager.explorer.update",
       "actionParameters": {},
       "subject": "api::project.project",
@@ -854,7 +856,8 @@
           "downPaymentPercentage",
           "amenities",
           "services",
-          "exchangeRateProfile"
+          "exchangeRateProfile",
+          "blocks"
         ]
       },
       "conditions": [],

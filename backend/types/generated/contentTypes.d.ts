@@ -656,9 +656,11 @@ export interface ApiBlockBlock extends Struct.CollectionTypeSchema {
     migNumber: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
     name: Schema.Attribute.String;
     phase: Schema.Attribute.String;
-    project: Schema.Attribute.Relation<'oneToOne', 'api::project.project'>;
+    project: Schema.Attribute.Relation<'manyToOne', 'api::project.project'>;
     publishedAt: Schema.Attribute.DateTime;
-    quarter: Schema.Attribute.Enumeration<['T1', 'T2', 'T3', 'T4']> &
+    quarter: Schema.Attribute.Enumeration<
+      ['T1', 'T2', 'T3', 'T4', 'S1', 'S2']
+    > &
       Schema.Attribute.Required;
     sector: Schema.Attribute.String;
     startDate: Schema.Attribute.Date;
@@ -835,6 +837,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   attributes: {
     accessQuantity: Schema.Attribute.Integer;
     amenities: Schema.Attribute.Relation<'manyToMany', 'api::amenity.amenity'>;
+    blocks: Schema.Attribute.Relation<'oneToMany', 'api::block.block'>;
     code: Schema.Attribute.UID<'name'> & Schema.Attribute.Required;
     country: Schema.Attribute.Relation<'manyToOne', 'api::country.country'>;
     createdAt: Schema.Attribute.DateTime;

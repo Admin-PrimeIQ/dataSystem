@@ -135,8 +135,8 @@
       "quarter": {
         "edit": {
           "label": "Quarter",
-          "description": "Quarter of the year for data collection period: T1 (Q1), T2 (Q2), T3 (Q3), or T4 (Q4).",
-          "placeholder": "Select: T1, T2, T3, or T4",
+          "description": "Data collection period.",
+          "placeholder": "Select: T1, T2, T3, T4, S1 or S2",
           "visible": true,
           "editable": true
         },

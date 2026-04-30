@@ -44,14 +44,10 @@
       "type": "string"
     },
     "latitude": {
-      "type": "decimal",
-      "precision": 10,
-      "scale": 8
+      "type": "decimal"
     },
     "longitude": {
-      "type": "decimal",
-      "precision": 10,
-      "scale": 8
+      "type": "decimal"
     },
     "nse": {
       "type": "relation",
@@ -121,6 +117,12 @@
       "relation": "manyToOne",
       "target": "api::exchange-rate-profile.exchange-rate-profile",
       "inversedBy": "projects"
+    },
+    "blocks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::block.block",
+      "mappedBy": "project"
     }
   }
 }

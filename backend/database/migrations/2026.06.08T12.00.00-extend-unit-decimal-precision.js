@@ -58,7 +58,7 @@ async function postgresColumnExists(knex, column) {
 async function assertNoOverflow(knex, targets) {
   for (const { column, precision, scale } of targets) {
     const intDigits = precision - scale;
-    if (intDigits >= 8) continue; // current is (10,2) => 8 int digits; >=8 means capacity grows or stays
+    if (intDigits >= 8) continue; // all decimal cols default to (10,2) = 8 int digits; >=8 means capacity grows/stays. (bathrooms is INT but intDigits=3<8 so it is still checked.)
     const limit = Math.pow(10, intDigits); // values must satisfy |v| < 10^intDigits
     const [rows] = await knex.raw(
       `SELECT MAX(ABS(\`${column}\`)) AS max_abs FROM \`${TABLE}\``
@@ -90,6 +90,7 @@ module.exports = {
           console.warn(`[extend-unit-decimal-precision] skip missing column: ${t.column}`);
           continue;
         }
+        // All target unit columns are nullable with no default (verified in schema.json), so forcing NULL is safe.
         clauses.push(`MODIFY COLUMN \`${t.column}\` DECIMAL(${t.precision}, ${t.scale}) NULL`);
       }
       if (clauses.length) {

@@ -1081,7 +1081,7 @@ export interface ApiUnitUnit extends Struct.CollectionTypeSchema {
   attributes: {
     absorptionPerM2: Schema.Attribute.Decimal;
     availability: Schema.Attribute.Enumeration<['Available', 'Not Available']>;
-    bathrooms: Schema.Attribute.Integer;
+    bathrooms: Schema.Attribute.Decimal;
     block: Schema.Attribute.Relation<'oneToOne', 'api::block.block'>;
     code: Schema.Attribute.UID<'name'>;
     createdAt: Schema.Attribute.DateTime;

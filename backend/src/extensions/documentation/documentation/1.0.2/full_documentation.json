@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-05-06T06:22:04.673Z"
+    "x-generation-date": "2026-06-08T08:34:06.070Z"
   },
   "path": "/documentation",
   "autoGenerate": true,
@@ -21560,7 +21560,8 @@
                 "format": "float"
               },
               "bathrooms": {
-                "type": "integer"
+                "type": "number",
+                "format": "float"
               },
               "hasParking": {
                 "type": "boolean"
@@ -23225,7 +23226,8 @@
             "format": "float"
           },
           "bathrooms": {
-            "type": "integer"
+            "type": "number",
+            "format": "float"
           },
           "hasParking": {
             "type": "boolean"
@@ -23571,7 +23573,8 @@
                   "format": "float"
                 },
                 "bathrooms": {
-                  "type": "integer"
+                  "type": "number",
+                  "format": "float"
                 },
                 "hasParking": {
                   "type": "boolean"

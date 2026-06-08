@@ -41,16 +41,20 @@
       "target": "api::unit-topography.unit-topography"
     },
     "frontM2": {
-      "type": "decimal"
+      "type": "decimal",
+      "column": { "type": "decimal", "args": [14, 4] }
     },
     "depthM2": {
-      "type": "decimal"
+      "type": "decimal",
+      "column": { "type": "decimal", "args": [14, 4] }
     },
     "landM2": {
-      "type": "decimal"
+      "type": "decimal",
+      "column": { "type": "decimal", "args": [14, 4] }
     },
     "unitSizeM2": {
-      "type": "decimal"
+      "type": "decimal",
+      "column": { "type": "decimal", "args": [14, 4] }
     },
     "parkingSizeM2": {
       "type": "decimal",
@@ -63,16 +67,20 @@
             true
           ]
         }
-      }
+      },
+      "column": { "type": "decimal", "args": [14, 4] }
     },
     "totalSizeM2": {
-      "type": "decimal"
+      "type": "decimal",
+      "column": { "type": "decimal", "args": [14, 4] }
     },
     "habitableConstructionM2": {
-      "type": "decimal"
+      "type": "decimal",
+      "column": { "type": "decimal", "args": [14, 4] }
     },
     "bathrooms": {
-      "type": "integer"
+      "type": "decimal",
+      "column": { "type": "decimal", "args": [4, 1] }
     },
     "hasParking": {
       "type": "boolean",
@@ -141,40 +149,52 @@
       ]
     },
     "totalPriceUSD": {
-      "type": "decimal"
+      "type": "decimal",
+      "column": { "type": "decimal", "args": [15, 2] }
     },
     "priceWithoutVATUSD": {
-      "type": "decimal"
+      "type": "decimal",
+      "column": { "type": "decimal", "args": [15, 2] }
     },
     "pricePerM2USD": {
-      "type": "decimal"
+      "type": "decimal",
+      "column": { "type": "decimal", "args": [15, 2] }
     },
     "rentalPriceUSD": {
-      "type": "decimal"
+      "type": "decimal",
+      "column": { "type": "decimal", "args": [15, 2] }
     },
     "rentalPriceWithoutVATUSD": {
-      "type": "decimal"
+      "type": "decimal",
+      "column": { "type": "decimal", "args": [15, 2] }
     },
     "rentalPricePerM2WithoutVATUSD": {
-      "type": "decimal"
+      "type": "decimal",
+      "column": { "type": "decimal", "args": [15, 2] }
     },
     "maintenanceTotalPriceM2USD": {
-      "type": "decimal"
+      "type": "decimal",
+      "column": { "type": "decimal", "args": [15, 2] }
     },
     "maintenancePricePerM2USD": {
-      "type": "decimal"
+      "type": "decimal",
+      "column": { "type": "decimal", "args": [15, 2] }
     },
     "installmentUSD": {
-      "type": "decimal"
+      "type": "decimal",
+      "column": { "type": "decimal", "args": [15, 2] }
     },
     "incomeUSD": {
-      "type": "decimal"
+      "type": "decimal",
+      "column": { "type": "decimal", "args": [15, 2] }
     },
     "unitAbsorption": {
-      "type": "decimal"
+      "type": "decimal",
+      "column": { "type": "decimal", "args": [18, 12] }
     },
     "absorptionPerM2": {
-      "type": "decimal"
+      "type": "decimal",
+      "column": { "type": "decimal", "args": [18, 12] }
     }
   }
 }

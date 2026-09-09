@@ -76,6 +76,20 @@
           "sortable": true
         }
       },
+      "domain": {
+        "edit": {
+          "label": "Domain",
+          "description": "Universo del warehouse del que salió este bloque. Decide qué tablas lee y escribe el sync (housing_*, office_*, industrial_*). No es una etiqueta: cambiarlo cambia el origen de los datos.",
+          "placeholder": "housing / office / industrial",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Domain",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "phase": {
         "edit": {
           "label": "Phase",
@@ -522,6 +536,20 @@
           "searchable": true,
           "sortable": true
         }
+      },
+      "parkingForSale": {
+        "edit": {
+          "label": "Parking For Sale",
+          "description": "Parqueos del bloque ofrecidos a la venta por separado. Sólo aplica a oficinas (office_universe.parqueos_para_venta).",
+          "placeholder": "e.g., 0, 5, 50",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Parking For Sale",
+          "searchable": true,
+          "sortable": true
+        }
       }
     },
     "layouts": {
@@ -675,11 +703,22 @@
             "name": "averageSizeM2",
             "size": 6
           }
+        ],
+        [
+          {
+            "name": "domain",
+            "size": 6
+          },
+          {
+            "name": "parkingForSale",
+            "size": 6
+          }
         ]
       ],
       "list": [
         "name",
         "project",
+        "domain",
         "market",
         "phase",
         "sector",

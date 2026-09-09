@@ -648,6 +648,8 @@ export interface ApiBlockBlock extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     deliveryDate: Schema.Attribute.Date;
+    domain: Schema.Attribute.Enumeration<['housing', 'office', 'industrial']> &
+      Schema.Attribute.DefaultTo<'housing'>;
     legacyId: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::block.block'> &
@@ -655,6 +657,7 @@ export interface ApiBlockBlock extends Struct.CollectionTypeSchema {
     market: Schema.Attribute.Enumeration<['Primary', 'Secondary']>;
     migNumber: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
     name: Schema.Attribute.String;
+    parkingForSale: Schema.Attribute.Integer;
     phase: Schema.Attribute.String;
     project: Schema.Attribute.Relation<'manyToOne', 'api::project.project'>;
     publishedAt: Schema.Attribute.DateTime;

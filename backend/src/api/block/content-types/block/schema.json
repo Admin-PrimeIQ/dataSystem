@@ -30,6 +30,16 @@
     "legacyId": {
       "type": "string"
     },
+    "domain": {
+      "type": "enumeration",
+      "enum": [
+        "housing",
+        "office",
+        "industrial"
+      ],
+      "default": "housing",
+      "required": false
+    },
     "phase": {
       "type": "string"
     },
@@ -178,6 +188,9 @@
     "migNumber": {
       "type": "integer",
       "default": 0
+    },
+    "parkingForSale": {
+      "type": "integer"
     }
   }
 }

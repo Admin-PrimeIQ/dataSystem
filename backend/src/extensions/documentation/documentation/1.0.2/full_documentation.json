@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-06-08T08:34:06.070Z"
+    "x-generation-date": "2026-09-09T07:18:26.387Z"
   },
   "path": "/documentation",
   "autoGenerate": true,
@@ -10696,6 +10696,14 @@
                       "legacyId": {
                         "type": "string"
                       },
+                      "domain": {
+                        "type": "string",
+                        "enum": [
+                          "housing",
+                          "office",
+                          "industrial"
+                        ]
+                      },
                       "phase": {
                         "type": "string"
                       },
@@ -11002,6 +11010,9 @@
                         "type": "integer"
                       },
                       "migNumber": {
+                        "type": "integer"
+                      },
+                      "parkingForSale": {
                         "type": "integer"
                       },
                       "createdAt": {
@@ -11350,6 +11361,14 @@
               "legacyId": {
                 "type": "string"
               },
+              "domain": {
+                "type": "string",
+                "enum": [
+                  "housing",
+                  "office",
+                  "industrial"
+                ]
+              },
               "phase": {
                 "type": "string"
               },
@@ -11476,6 +11495,9 @@
                 "type": "integer"
               },
               "migNumber": {
+                "type": "integer"
+              },
+              "parkingForSale": {
                 "type": "integer"
               },
               "locale": {
@@ -12505,6 +12527,14 @@
                     "legacyId": {
                       "type": "string"
                     },
+                    "domain": {
+                      "type": "string",
+                      "enum": [
+                        "housing",
+                        "office",
+                        "industrial"
+                      ]
+                    },
                     "phase": {
                       "type": "string"
                     },
@@ -12813,6 +12843,9 @@
                     "migNumber": {
                       "type": "integer"
                     },
+                    "parkingForSale": {
+                      "type": "integer"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -12928,6 +12961,14 @@
           },
           "legacyId": {
             "type": "string"
+          },
+          "domain": {
+            "type": "string",
+            "enum": [
+              "housing",
+              "office",
+              "industrial"
+            ]
           },
           "phase": {
             "type": "string"
@@ -13055,6 +13096,9 @@
             "type": "integer"
           },
           "migNumber": {
+            "type": "integer"
+          },
+          "parkingForSale": {
             "type": "integer"
           },
           "createdAt": {
@@ -16667,6 +16711,14 @@
                       "legacyId": {
                         "type": "string"
                       },
+                      "domain": {
+                        "type": "string",
+                        "enum": [
+                          "housing",
+                          "office",
+                          "industrial"
+                        ]
+                      },
                       "phase": {
                         "type": "string"
                       },
@@ -16973,6 +17025,9 @@
                         "type": "integer"
                       },
                       "migNumber": {
+                        "type": "integer"
+                      },
+                      "parkingForSale": {
                         "type": "integer"
                       },
                       "createdAt": {
@@ -18852,6 +18907,14 @@
                             "legacyId": {
                               "type": "string"
                             },
+                            "domain": {
+                              "type": "string",
+                              "enum": [
+                                "housing",
+                                "office",
+                                "industrial"
+                              ]
+                            },
                             "phase": {
                               "type": "string"
                             },
@@ -19158,6 +19221,9 @@
                               "type": "integer"
                             },
                             "migNumber": {
+                              "type": "integer"
+                            },
+                            "parkingForSale": {
                               "type": "integer"
                             },
                             "createdAt": {
@@ -21005,6 +21071,14 @@
                       "legacyId": {
                         "type": "string"
                       },
+                      "domain": {
+                        "type": "string",
+                        "enum": [
+                          "housing",
+                          "office",
+                          "industrial"
+                        ]
+                      },
                       "phase": {
                         "type": "string"
                       },
@@ -21311,6 +21385,9 @@
                         "type": "integer"
                       },
                       "migNumber": {
+                        "type": "integer"
+                      },
+                      "parkingForSale": {
                         "type": "integer"
                       },
                       "createdAt": {
@@ -22750,6 +22827,14 @@
               "legacyId": {
                 "type": "string"
               },
+              "domain": {
+                "type": "string",
+                "enum": [
+                  "housing",
+                  "office",
+                  "industrial"
+                ]
+              },
               "phase": {
                 "type": "string"
               },
@@ -23056,6 +23141,9 @@
                 "type": "integer"
               },
               "migNumber": {
+                "type": "integer"
+              },
+              "parkingForSale": {
                 "type": "integer"
               },
               "createdAt": {

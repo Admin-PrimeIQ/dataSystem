@@ -8,6 +8,9 @@
   },
   "options": {},
   "attributes": {
+    "qualityClassification": {
+      "type": "string"
+    },
     "warehouseStorageSizeM2": {
       "type": "decimal"
     },

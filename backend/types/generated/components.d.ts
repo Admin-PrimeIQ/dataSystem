@@ -154,6 +154,7 @@ export interface UnitTypesIndustrial extends Struct.ComponentSchema {
     loadingAreaM2: Schema.Attribute.Decimal;
     mezzanineSizeM2: Schema.Attribute.Decimal;
     officeSizeM2: Schema.Attribute.Decimal;
+    qualityClassification: Schema.Attribute.String;
     warehouseStorageSizeM2: Schema.Attribute.Decimal;
     width1M2: Schema.Attribute.Decimal;
   };

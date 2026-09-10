@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-09-09T07:18:26.387Z"
+    "x-generation-date": "2026-09-10T15:11:07.611Z"
   },
   "path": "/documentation",
   "autoGenerate": true,
@@ -23957,6 +23957,9 @@
             "enum": [
               "unit-types.industrial"
             ]
+          },
+          "qualityClassification": {
+            "type": "string"
           },
           "warehouseStorageSizeM2": {
             "type": "number",

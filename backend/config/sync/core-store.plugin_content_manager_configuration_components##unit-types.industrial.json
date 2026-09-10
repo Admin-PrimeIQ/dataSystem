@@ -19,6 +19,20 @@
           "sortable": false
         }
       },
+      "qualityClassification": {
+        "edit": {
+          "label": "Quality Classification",
+          "description": "Warehouse quality grade as the warehouse records it (A++, A+, A1–A4, B1, B2, C, C-).",
+          "placeholder": "e.g., A+",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Class",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "warehouseStorageSizeM2": {
         "edit": {
           "label": "Warehouse Storage Size (m²)",
@@ -162,6 +176,12 @@
         "mezzanineSizeM2"
       ],
       "edit": [
+        [
+          {
+            "name": "qualityClassification",
+            "size": 6
+          }
+        ],
         [
           {
             "name": "warehouseStorageSizeM2",

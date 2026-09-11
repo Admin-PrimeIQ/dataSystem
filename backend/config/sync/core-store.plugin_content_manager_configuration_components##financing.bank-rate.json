@@ -32,12 +32,21 @@
           "searchable": true,
           "sortable": true
         }
+      },
+      "documentId": {
+        "edit": {},
+        "list": {
+          "label": "documentId",
+          "searchable": true,
+          "sortable": true
+        }
       }
     },
     "layouts": {
       "list": [
         "id",
-        "annualRatePercent"
+        "annualRatePercent",
+        "documentId"
       ],
       "edit": [
         [
@@ -50,5 +59,8 @@
     },
     "uid": "financing.bank-rate",
     "isComponent": true
-  }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
 }

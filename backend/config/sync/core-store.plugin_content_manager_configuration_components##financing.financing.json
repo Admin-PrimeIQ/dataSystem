@@ -155,8 +155,8 @@
         },
         "list": {
           "label": "BAC",
-          "searchable": true,
-          "sortable": true
+          "searchable": false,
+          "sortable": false
         }
       },
       "bam": {
@@ -169,8 +169,8 @@
         },
         "list": {
           "label": "BAM",
-          "searchable": true,
-          "sortable": true
+          "searchable": false,
+          "sortable": false
         }
       },
       "azteca": {
@@ -183,8 +183,8 @@
         },
         "list": {
           "label": "Banco Azteca",
-          "searchable": true,
-          "sortable": true
+          "searchable": false,
+          "sortable": false
         }
       },
       "credicorp": {
@@ -197,8 +197,8 @@
         },
         "list": {
           "label": "Credicorp",
-          "searchable": true,
-          "sortable": true
+          "searchable": false,
+          "sortable": false
         }
       },
       "banrural": {
@@ -211,8 +211,8 @@
         },
         "list": {
           "label": "Banrural",
-          "searchable": true,
-          "sortable": true
+          "searchable": false,
+          "sortable": false
         }
       },
       "bantrab": {
@@ -225,8 +225,8 @@
         },
         "list": {
           "label": "Bantrab",
-          "searchable": true,
-          "sortable": true
+          "searchable": false,
+          "sortable": false
         }
       },
       "bi": {
@@ -239,8 +239,8 @@
         },
         "list": {
           "label": "Banco Industrial (BI)",
-          "searchable": true,
-          "sortable": true
+          "searchable": false,
+          "sortable": false
         }
       },
       "inmobiliario": {
@@ -253,8 +253,8 @@
         },
         "list": {
           "label": "Banco Inmobiliario",
-          "searchable": true,
-          "sortable": true
+          "searchable": false,
+          "sortable": false
         }
       },
       "internacional": {
@@ -267,8 +267,8 @@
         },
         "list": {
           "label": "Banco Internacional",
-          "searchable": true,
-          "sortable": true
+          "searchable": false,
+          "sortable": false
         }
       },
       "inv": {
@@ -281,8 +281,8 @@
         },
         "list": {
           "label": "Banco INV",
-          "searchable": true,
-          "sortable": true
+          "searchable": false,
+          "sortable": false
         }
       },
       "antigua": {
@@ -295,8 +295,8 @@
         },
         "list": {
           "label": "Banco de Antigua",
-          "searchable": true,
-          "sortable": true
+          "searchable": false,
+          "sortable": false
         }
       },
       "chn": {
@@ -309,8 +309,8 @@
         },
         "list": {
           "label": "CHN",
-          "searchable": true,
-          "sortable": true
+          "searchable": false,
+          "sortable": false
         }
       },
       "fha": {
@@ -323,8 +323,8 @@
         },
         "list": {
           "label": "FHA",
-          "searchable": true,
-          "sortable": true
+          "searchable": false,
+          "sortable": false
         }
       },
       "ficohsa": {
@@ -337,8 +337,8 @@
         },
         "list": {
           "label": "Ficohsa",
-          "searchable": true,
-          "sortable": true
+          "searchable": false,
+          "sortable": false
         }
       },
       "gtc": {
@@ -351,8 +351,8 @@
         },
         "list": {
           "label": "G&T Continental",
-          "searchable": true,
-          "sortable": true
+          "searchable": false,
+          "sortable": false
         }
       },
       "promerica": {
@@ -365,8 +365,8 @@
         },
         "list": {
           "label": "Promerica",
-          "searchable": true,
-          "sortable": true
+          "searchable": false,
+          "sortable": false
         }
       },
       "vivibanco": {
@@ -379,8 +379,8 @@
         },
         "list": {
           "label": "Vivibanco",
-          "searchable": true,
-          "sortable": true
+          "searchable": false,
+          "sortable": false
         }
       },
       "ownerFinancing": {
@@ -393,6 +393,14 @@
         },
         "list": {
           "label": "Financiamiento propio",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "documentId": {
+        "edit": {},
+        "list": {
+          "label": "documentId",
           "searchable": true,
           "sortable": true
         }
@@ -562,5 +570,8 @@
     },
     "uid": "financing.financing",
     "isComponent": true
-  }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
 }

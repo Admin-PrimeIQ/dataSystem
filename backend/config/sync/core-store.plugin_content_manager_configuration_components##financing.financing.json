@@ -1,0 +1,566 @@
+{
+  "key": "plugin_content_manager_configuration_components::financing.financing",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "documentId",
+      "defaultSortBy": "documentId",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "ID",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "downPaymentPercent": {
+        "edit": {
+          "label": "Enganche (%)",
+          "description": "Enganche del desarrollo, en porcentaje.",
+          "placeholder": "ej. 20",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Enganche",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "fractionalDownPayment": {
+        "edit": {
+          "label": "Enganche fraccionado",
+          "description": "Si el enganche se puede pagar en cuotas.",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Fraccionado",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "fractionalDownPaymentFHA": {
+        "edit": {
+          "label": "Enganche fraccionado FHA (%)",
+          "description": "",
+          "placeholder": "ej. 15",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Frac. FHA",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "fractionalInstallmentsOtherBanks": {
+        "edit": {
+          "label": "Cuotas de enganche, otros bancos",
+          "description": "",
+          "placeholder": "ej. 12",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Cuotas otros",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "minDownPaymentFHA": {
+        "edit": {
+          "label": "Enganche mínimo FHA (%)",
+          "description": "",
+          "placeholder": "ej. 5",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Mín. FHA",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "minDownPaymentOtherBanks": {
+        "edit": {
+          "label": "Enganche mínimo, otros bancos (%)",
+          "description": "",
+          "placeholder": "ej. 10",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Mín. otros",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "maxLoanTermYearsFHA": {
+        "edit": {
+          "label": "Plazo máximo FHA (años)",
+          "description": "",
+          "placeholder": "ej. 25",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Plazo FHA",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "maxLoanTermYearsBanks": {
+        "edit": {
+          "label": "Plazo máximo bancos (años)",
+          "description": "Uno solo para los dieciséis bancos comerciales: el warehouse no guarda un plazo por banco.",
+          "placeholder": "ej. 30",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Plazo bancos",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "maxLoanTermYearsOwner": {
+        "edit": {
+          "label": "Plazo máximo financiamiento propio (años)",
+          "description": "",
+          "placeholder": "ej. 10",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Plazo propio",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "bac": {
+        "edit": {
+          "label": "BAC",
+          "description": "Dejalo vacío si el desarrollo no trabaja con este banco.",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "BAC",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "bam": {
+        "edit": {
+          "label": "BAM",
+          "description": "Dejalo vacío si el desarrollo no trabaja con este banco.",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "BAM",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "azteca": {
+        "edit": {
+          "label": "Banco Azteca",
+          "description": "Dejalo vacío si el desarrollo no trabaja con este banco.",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Banco Azteca",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "credicorp": {
+        "edit": {
+          "label": "Credicorp",
+          "description": "Dejalo vacío si el desarrollo no trabaja con este banco.",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Credicorp",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "banrural": {
+        "edit": {
+          "label": "Banrural",
+          "description": "Dejalo vacío si el desarrollo no trabaja con este banco.",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Banrural",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "bantrab": {
+        "edit": {
+          "label": "Bantrab",
+          "description": "Dejalo vacío si el desarrollo no trabaja con este banco.",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Bantrab",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "bi": {
+        "edit": {
+          "label": "Banco Industrial (BI)",
+          "description": "Dejalo vacío si el desarrollo no trabaja con este banco.",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Banco Industrial (BI)",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "inmobiliario": {
+        "edit": {
+          "label": "Banco Inmobiliario",
+          "description": "Dejalo vacío si el desarrollo no trabaja con este banco.",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Banco Inmobiliario",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "internacional": {
+        "edit": {
+          "label": "Banco Internacional",
+          "description": "Dejalo vacío si el desarrollo no trabaja con este banco.",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Banco Internacional",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "inv": {
+        "edit": {
+          "label": "Banco INV",
+          "description": "Dejalo vacío si el desarrollo no trabaja con este banco.",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Banco INV",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "antigua": {
+        "edit": {
+          "label": "Banco de Antigua",
+          "description": "Dejalo vacío si el desarrollo no trabaja con este banco.",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Banco de Antigua",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "chn": {
+        "edit": {
+          "label": "CHN",
+          "description": "Dejalo vacío si el desarrollo no trabaja con este banco.",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "CHN",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "fha": {
+        "edit": {
+          "label": "FHA",
+          "description": "Dejalo vacío si el desarrollo no trabaja con este banco.",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "FHA",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "ficohsa": {
+        "edit": {
+          "label": "Ficohsa",
+          "description": "Dejalo vacío si el desarrollo no trabaja con este banco.",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Ficohsa",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "gtc": {
+        "edit": {
+          "label": "G&T Continental",
+          "description": "Dejalo vacío si el desarrollo no trabaja con este banco.",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "G&T Continental",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "promerica": {
+        "edit": {
+          "label": "Promerica",
+          "description": "Dejalo vacío si el desarrollo no trabaja con este banco.",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Promerica",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "vivibanco": {
+        "edit": {
+          "label": "Vivibanco",
+          "description": "Dejalo vacío si el desarrollo no trabaja con este banco.",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Vivibanco",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "ownerFinancing": {
+        "edit": {
+          "label": "Financiamiento propio",
+          "description": "Dejalo vacío si el desarrollo no trabaja con este banco.",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Financiamiento propio",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "downPaymentPercent",
+        "maxLoanTermYearsFHA",
+        "maxLoanTermYearsBanks"
+      ],
+      "edit": [
+        [
+          {
+            "name": "downPaymentPercent",
+            "size": 6
+          },
+          {
+            "name": "fractionalDownPayment",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "minDownPaymentFHA",
+            "size": 6
+          },
+          {
+            "name": "minDownPaymentOtherBanks",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "fractionalDownPaymentFHA",
+            "size": 6
+          },
+          {
+            "name": "fractionalInstallmentsOtherBanks",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "maxLoanTermYearsFHA",
+            "size": 4
+          },
+          {
+            "name": "maxLoanTermYearsBanks",
+            "size": 4
+          },
+          {
+            "name": "maxLoanTermYearsOwner",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "bac",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "bam",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "azteca",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "credicorp",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "banrural",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "bantrab",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "bi",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "inmobiliario",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "internacional",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "inv",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "antigua",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "chn",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "fha",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "ficohsa",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "gtc",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "promerica",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "vivibanco",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "ownerFinancing",
+            "size": 12
+          }
+        ]
+      ]
+    },
+    "uid": "financing.financing",
+    "isComponent": true
+  }
+}

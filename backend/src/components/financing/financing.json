@@ -1,0 +1,156 @@
+{
+  "collectionName": "components_financing_financings",
+  "info": {
+    "name": "Financing",
+    "description": "Términos de financiamiento de un bloque de VIVIENDA: enganche, plazos y la tasa de cada banco. Espejo de `banking_info`, que sólo existe para vivienda. Cada banco es un espacio con nombre y opcional — llenás los que el desarrollo usa y dejás el resto vacíos. Un campo con nombre no puede duplicarse, a diferencia de una zona dinámica.",
+    "icon": "bank",
+    "displayName": "Financiamiento"
+  },
+  "options": {},
+  "attributes": {
+    "downPaymentPercent": {
+      "type": "decimal",
+      "description": "Enganche en porcentaje. MySQL: `enganche`."
+    },
+    "fractionalDownPayment": {
+      "type": "boolean",
+      "description": "Si el enganche se puede fraccionar. MySQL guarda texto con siete formas distintas (`Sí`, `s`, `No`, `0`, `0.0`, `24`, null); acá es un booleano y el push escribe de vuelta la forma canónica `Sí`/`No`."
+    },
+    "fractionalDownPaymentFHA": {
+      "type": "decimal",
+      "description": "MySQL: `enganche_fraccionado_fha`."
+    },
+    "fractionalInstallmentsOtherBanks": {
+      "type": "decimal",
+      "description": "MySQL: `cuotas_enganche_fraccionado_otros_bancos`."
+    },
+    "minDownPaymentFHA": {
+      "type": "decimal",
+      "description": "Enganche mínimo con FHA. MySQL: `enganche_minimo_fha`."
+    },
+    "minDownPaymentOtherBanks": {
+      "type": "decimal",
+      "description": "Enganche mínimo con otros bancos. MySQL: `enganche_minimo_otros_bancos`."
+    },
+    "maxLoanTermYearsFHA": {
+      "type": "integer",
+      "description": "Plazo máximo en años con FHA. MySQL: `max_loan_term_years_FHA`."
+    },
+    "maxLoanTermYearsBanks": {
+      "type": "integer",
+      "description": "Plazo máximo en años con los bancos comerciales. Es UNO para los dieciséis: MySQL no guarda un plazo por banco, sino tres por grupo. MySQL: `max_loan_term_years_Banks`."
+    },
+    "maxLoanTermYearsOwner": {
+      "type": "integer",
+      "description": "Plazo máximo en años con financiamiento propio. MySQL: `max_loan_term_years_Owner`."
+    },
+    "bac": {
+      "type": "component",
+      "repeatable": false,
+      "component": "financing.bank-rate",
+      "description": "MySQL: `percentage_bac`. Vacío = el bloque no trabaja con este banco; el push escribe 0 en esa columna."
+    },
+    "bam": {
+      "type": "component",
+      "repeatable": false,
+      "component": "financing.bank-rate",
+      "description": "MySQL: `percentage_bam`. Vacío = el bloque no trabaja con este banco; el push escribe 0 en esa columna."
+    },
+    "azteca": {
+      "type": "component",
+      "repeatable": false,
+      "component": "financing.bank-rate",
+      "description": "MySQL: `banco_azteca`. Vacío = el bloque no trabaja con este banco; el push escribe 0 en esa columna."
+    },
+    "credicorp": {
+      "type": "component",
+      "repeatable": false,
+      "component": "financing.bank-rate",
+      "description": "MySQL: `banco_credicorp`. Vacío = el bloque no trabaja con este banco; el push escribe 0 en esa columna."
+    },
+    "banrural": {
+      "type": "component",
+      "repeatable": false,
+      "component": "financing.bank-rate",
+      "description": "MySQL: `banrural`. Vacío = el bloque no trabaja con este banco; el push escribe 0 en esa columna."
+    },
+    "bantrab": {
+      "type": "component",
+      "repeatable": false,
+      "component": "financing.bank-rate",
+      "description": "MySQL: `bantrab`. Vacío = el bloque no trabaja con este banco; el push escribe 0 en esa columna."
+    },
+    "bi": {
+      "type": "component",
+      "repeatable": false,
+      "component": "financing.bank-rate",
+      "description": "MySQL: `bi`. Vacío = el bloque no trabaja con este banco; el push escribe 0 en esa columna."
+    },
+    "inmobiliario": {
+      "type": "component",
+      "repeatable": false,
+      "component": "financing.bank-rate",
+      "description": "MySQL: `banco_inmobiliario`. Vacío = el bloque no trabaja con este banco; el push escribe 0 en esa columna."
+    },
+    "internacional": {
+      "type": "component",
+      "repeatable": false,
+      "component": "financing.bank-rate",
+      "description": "MySQL: `banco_internacional`. Vacío = el bloque no trabaja con este banco; el push escribe 0 en esa columna."
+    },
+    "inv": {
+      "type": "component",
+      "repeatable": false,
+      "component": "financing.bank-rate",
+      "description": "MySQL: `banco_inv`. Vacío = el bloque no trabaja con este banco; el push escribe 0 en esa columna."
+    },
+    "antigua": {
+      "type": "component",
+      "repeatable": false,
+      "component": "financing.bank-rate",
+      "description": "MySQL: `banco_de_antigua`. Vacío = el bloque no trabaja con este banco; el push escribe 0 en esa columna."
+    },
+    "chn": {
+      "type": "component",
+      "repeatable": false,
+      "component": "financing.bank-rate",
+      "description": "MySQL: `chn`. Vacío = el bloque no trabaja con este banco; el push escribe 0 en esa columna."
+    },
+    "fha": {
+      "type": "component",
+      "repeatable": false,
+      "component": "financing.bank-rate",
+      "description": "MySQL: `fha`. Vacío = el bloque no trabaja con este banco; el push escribe 0 en esa columna."
+    },
+    "ficohsa": {
+      "type": "component",
+      "repeatable": false,
+      "component": "financing.bank-rate",
+      "description": "MySQL: `ficohsa`. Vacío = el bloque no trabaja con este banco; el push escribe 0 en esa columna."
+    },
+    "gtc": {
+      "type": "component",
+      "repeatable": false,
+      "component": "financing.bank-rate",
+      "description": "MySQL: `gtc`. Vacío = el bloque no trabaja con este banco; el push escribe 0 en esa columna."
+    },
+    "promerica": {
+      "type": "component",
+      "repeatable": false,
+      "component": "financing.bank-rate",
+      "description": "MySQL: `promerica`. Vacío = el bloque no trabaja con este banco; el push escribe 0 en esa columna."
+    },
+    "vivibanco": {
+      "type": "component",
+      "repeatable": false,
+      "component": "financing.bank-rate",
+      "description": "MySQL: `vivibanco`. Vacío = el bloque no trabaja con este banco; el push escribe 0 en esa columna."
+    },
+    "ownerFinancing": {
+      "type": "component",
+      "repeatable": false,
+      "component": "financing.bank-rate",
+      "description": "MySQL: `financiamiento_propio`. Vacío = el bloque no trabaja con este banco; el push escribe 0 en esa columna."
+    }
+  }
+}

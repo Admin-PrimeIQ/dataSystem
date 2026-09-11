@@ -1,0 +1,54 @@
+{
+  "key": "plugin_content_manager_configuration_components::financing.bank-rate",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "documentId",
+      "defaultSortBy": "documentId",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "ID",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "annualRatePercent": {
+        "edit": {
+          "label": "Tasa anual (%)",
+          "description": "Tasa de interés anual que ofrece el banco. Ejemplo: 7.26 = 7.26%.",
+          "placeholder": "ej. 7.26",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Tasa",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "annualRatePercent"
+      ],
+      "edit": [
+        [
+          {
+            "name": "annualRatePercent",
+            "size": 6
+          }
+        ]
+      ]
+    },
+    "uid": "financing.bank-rate",
+    "isComponent": true
+  }
+}

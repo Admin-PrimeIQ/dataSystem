@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_financing_bank_rates",
+  "info": {
+    "name": "Bank rate",
+    "description": "Tasa anual que un banco ofrece para un bloque. Se reutiliza en los 18 espacios de `financing.financing`: los 18 bancos tienen la misma forma, así que un solo componente los sirve a todos y crea UNA tabla en vez de dieciocho.",
+    "icon": "percent",
+    "displayName": "Tasa de banco"
+  },
+  "options": {},
+  "attributes": {
+    "annualRatePercent": {
+      "type": "decimal",
+      "description": "Tasa de interés anual en porcentaje. Ejemplo: 7.26 = 7.26%. En MySQL es decimal(5,2) y el 0 significa que el bloque no trabaja con ese banco."
+    }
+  }
+}

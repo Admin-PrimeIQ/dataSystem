@@ -650,6 +650,7 @@ export interface ApiBlockBlock extends Struct.CollectionTypeSchema {
     deliveryDate: Schema.Attribute.Date;
     domain: Schema.Attribute.Enumeration<['housing', 'office', 'industrial']> &
       Schema.Attribute.DefaultTo<'housing'>;
+    financing: Schema.Attribute.Component<'financing.financing', false>;
     legacyId: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::block.block'> &

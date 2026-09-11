@@ -550,6 +550,20 @@
           "searchable": true,
           "sortable": true
         }
+      },
+      "financing": {
+        "edit": {
+          "label": "Financiamiento",
+          "description": "Enganche, plazos y la tasa de cada banco. Sólo aplica a bloques de Vivienda: el warehouse no guarda financiamiento para oficinas ni industrial.",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Financiamiento",
+          "searchable": false,
+          "sortable": false
+        }
       }
     },
     "layouts": {
@@ -712,6 +726,12 @@
           {
             "name": "parkingForSale",
             "size": 6
+          }
+        ],
+        [
+          {
+            "name": "financing",
+            "size": 12
           }
         ]
       ],

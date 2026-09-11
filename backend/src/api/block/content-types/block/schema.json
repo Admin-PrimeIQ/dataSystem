@@ -191,6 +191,12 @@
     },
     "parkingForSale": {
       "type": "integer"
+    },
+    "financing": {
+      "type": "component",
+      "repeatable": false,
+      "component": "financing.financing",
+      "description": "Términos de financiamiento. SÓLO aplica a vivienda: banking_info no existe para oficinas ni industrial. No se marca requerido porque el bloque es una sola colección para los tres dominios y obligaría también a los otros dos; la regla vive en el formulario del admin, como parkingForSale."
     }
   }
 }

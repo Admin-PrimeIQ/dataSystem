@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-09-10T15:11:07.611Z"
+    "x-generation-date": "2026-09-11T07:37:37.125Z"
   },
   "path": "/documentation",
   "autoGenerate": true,
@@ -11015,6 +11015,9 @@
                       "parkingForSale": {
                         "type": "integer"
                       },
+                      "financing": {
+                        "$ref": "#/components/schemas/FinancingFinancingComponent"
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -11328,6 +11331,112 @@
           }
         }
       },
+      "FinancingBankRateComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "annualRatePercent": {
+            "type": "number",
+            "format": "float"
+          }
+        }
+      },
+      "FinancingFinancingComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "downPaymentPercent": {
+            "type": "number",
+            "format": "float"
+          },
+          "fractionalDownPayment": {
+            "type": "boolean"
+          },
+          "fractionalDownPaymentFHA": {
+            "type": "number",
+            "format": "float"
+          },
+          "fractionalInstallmentsOtherBanks": {
+            "type": "number",
+            "format": "float"
+          },
+          "minDownPaymentFHA": {
+            "type": "number",
+            "format": "float"
+          },
+          "minDownPaymentOtherBanks": {
+            "type": "number",
+            "format": "float"
+          },
+          "maxLoanTermYearsFHA": {
+            "type": "integer"
+          },
+          "maxLoanTermYearsBanks": {
+            "type": "integer"
+          },
+          "maxLoanTermYearsOwner": {
+            "type": "integer"
+          },
+          "bac": {
+            "$ref": "#/components/schemas/FinancingBankRateComponent"
+          },
+          "bam": {
+            "$ref": "#/components/schemas/FinancingBankRateComponent"
+          },
+          "azteca": {
+            "$ref": "#/components/schemas/FinancingBankRateComponent"
+          },
+          "credicorp": {
+            "$ref": "#/components/schemas/FinancingBankRateComponent"
+          },
+          "banrural": {
+            "$ref": "#/components/schemas/FinancingBankRateComponent"
+          },
+          "bantrab": {
+            "$ref": "#/components/schemas/FinancingBankRateComponent"
+          },
+          "bi": {
+            "$ref": "#/components/schemas/FinancingBankRateComponent"
+          },
+          "inmobiliario": {
+            "$ref": "#/components/schemas/FinancingBankRateComponent"
+          },
+          "internacional": {
+            "$ref": "#/components/schemas/FinancingBankRateComponent"
+          },
+          "inv": {
+            "$ref": "#/components/schemas/FinancingBankRateComponent"
+          },
+          "antigua": {
+            "$ref": "#/components/schemas/FinancingBankRateComponent"
+          },
+          "chn": {
+            "$ref": "#/components/schemas/FinancingBankRateComponent"
+          },
+          "fha": {
+            "$ref": "#/components/schemas/FinancingBankRateComponent"
+          },
+          "ficohsa": {
+            "$ref": "#/components/schemas/FinancingBankRateComponent"
+          },
+          "gtc": {
+            "$ref": "#/components/schemas/FinancingBankRateComponent"
+          },
+          "promerica": {
+            "$ref": "#/components/schemas/FinancingBankRateComponent"
+          },
+          "vivibanco": {
+            "$ref": "#/components/schemas/FinancingBankRateComponent"
+          },
+          "ownerFinancing": {
+            "$ref": "#/components/schemas/FinancingBankRateComponent"
+          }
+        }
+      },
       "BlockRequest": {
         "type": "object",
         "required": [
@@ -11499,6 +11608,9 @@
               },
               "parkingForSale": {
                 "type": "integer"
+              },
+              "financing": {
+                "$ref": "#/components/schemas/FinancingFinancingComponent"
               },
               "locale": {
                 "type": "string"
@@ -12846,6 +12958,9 @@
                     "parkingForSale": {
                       "type": "integer"
                     },
+                    "financing": {
+                      "$ref": "#/components/schemas/FinancingFinancingComponent"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -13100,6 +13215,9 @@
           },
           "parkingForSale": {
             "type": "integer"
+          },
+          "financing": {
+            "$ref": "#/components/schemas/FinancingFinancingComponent"
           },
           "createdAt": {
             "type": "string",
@@ -17030,6 +17148,9 @@
                       "parkingForSale": {
                         "type": "integer"
                       },
+                      "financing": {
+                        "$ref": "#/components/schemas/FinancingFinancingComponent"
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -19226,6 +19347,9 @@
                             "parkingForSale": {
                               "type": "integer"
                             },
+                            "financing": {
+                              "$ref": "#/components/schemas/FinancingFinancingComponent"
+                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -21390,6 +21514,9 @@
                       "parkingForSale": {
                         "type": "integer"
                       },
+                      "financing": {
+                        "$ref": "#/components/schemas/FinancingFinancingComponent"
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -23145,6 +23272,9 @@
               },
               "parkingForSale": {
                 "type": "integer"
+              },
+              "financing": {
+                "$ref": "#/components/schemas/FinancingFinancingComponent"
               },
               "createdAt": {
                 "type": "string",

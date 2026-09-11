@@ -124,6 +124,58 @@ export interface CurrenciesCurrencyQuetzal extends Struct.ComponentSchema {
   };
 }
 
+export interface FinancingBankRate extends Struct.ComponentSchema {
+  collectionName: 'components_financing_bank_rates';
+  info: {
+    description: 'Tasa anual que un banco ofrece para un bloque. Se reutiliza en los 18 espacios de `financing.financing`: los 18 bancos tienen la misma forma, as\u00ED que un solo componente los sirve a todos y crea UNA tabla en vez de dieciocho.';
+    displayName: 'Tasa de banco';
+    icon: 'percent';
+    name: 'Bank rate';
+  };
+  attributes: {
+    annualRatePercent: Schema.Attribute.Decimal;
+  };
+}
+
+export interface FinancingFinancing extends Struct.ComponentSchema {
+  collectionName: 'components_financing_financings';
+  info: {
+    description: 'T\u00E9rminos de financiamiento de un bloque de VIVIENDA: enganche, plazos y la tasa de cada banco. Espejo de `banking_info`, que s\u00F3lo existe para vivienda. Cada banco es un espacio con nombre y opcional \u2014 llen\u00E1s los que el desarrollo usa y dej\u00E1s el resto vac\u00EDos. Un campo con nombre no puede duplicarse, a diferencia de una zona din\u00E1mica.';
+    displayName: 'Financiamiento';
+    icon: 'bank';
+    name: 'Financing';
+  };
+  attributes: {
+    antigua: Schema.Attribute.Component<'financing.bank-rate', false>;
+    azteca: Schema.Attribute.Component<'financing.bank-rate', false>;
+    bac: Schema.Attribute.Component<'financing.bank-rate', false>;
+    bam: Schema.Attribute.Component<'financing.bank-rate', false>;
+    banrural: Schema.Attribute.Component<'financing.bank-rate', false>;
+    bantrab: Schema.Attribute.Component<'financing.bank-rate', false>;
+    bi: Schema.Attribute.Component<'financing.bank-rate', false>;
+    chn: Schema.Attribute.Component<'financing.bank-rate', false>;
+    credicorp: Schema.Attribute.Component<'financing.bank-rate', false>;
+    downPaymentPercent: Schema.Attribute.Decimal;
+    fha: Schema.Attribute.Component<'financing.bank-rate', false>;
+    ficohsa: Schema.Attribute.Component<'financing.bank-rate', false>;
+    fractionalDownPayment: Schema.Attribute.Boolean;
+    fractionalDownPaymentFHA: Schema.Attribute.Decimal;
+    fractionalInstallmentsOtherBanks: Schema.Attribute.Decimal;
+    gtc: Schema.Attribute.Component<'financing.bank-rate', false>;
+    inmobiliario: Schema.Attribute.Component<'financing.bank-rate', false>;
+    internacional: Schema.Attribute.Component<'financing.bank-rate', false>;
+    inv: Schema.Attribute.Component<'financing.bank-rate', false>;
+    maxLoanTermYearsBanks: Schema.Attribute.Integer;
+    maxLoanTermYearsFHA: Schema.Attribute.Integer;
+    maxLoanTermYearsOwner: Schema.Attribute.Integer;
+    minDownPaymentFHA: Schema.Attribute.Decimal;
+    minDownPaymentOtherBanks: Schema.Attribute.Decimal;
+    ownerFinancing: Schema.Attribute.Component<'financing.bank-rate', false>;
+    promerica: Schema.Attribute.Component<'financing.bank-rate', false>;
+    vivibanco: Schema.Attribute.Component<'financing.bank-rate', false>;
+  };
+}
+
 export interface UnitTypesHousing extends Struct.ComponentSchema {
   collectionName: 'components_unit_types_housings';
   info: {
@@ -226,6 +278,8 @@ declare module '@strapi/strapi' {
       'currencies.currency-lempira': CurrenciesCurrencyLempira;
       'currencies.currency-peso-mexicano': CurrenciesCurrencyPesoMexicano;
       'currencies.currency-quetzal': CurrenciesCurrencyQuetzal;
+      'financing.bank-rate': FinancingBankRate;
+      'financing.financing': FinancingFinancing;
       'unit-types.housing': UnitTypesHousing;
       'unit-types.industrial': UnitTypesIndustrial;
       'unit-types.offices': UnitTypesOffices;
